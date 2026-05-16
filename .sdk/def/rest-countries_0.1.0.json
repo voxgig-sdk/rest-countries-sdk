@@ -1,0 +1,551 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "REST Countries API",
+    "description": "The REST Countries API provides detailed information about countries around the world in a simple RESTful interface. Users can retrieve data such as country names, codes, capital cities, languages, and more.",
+    "version": "3.1.0",
+    "contact": {
+      "url": "https://restcountries.com/"
+    },
+    "license": {
+      "name": "Mozilla Public License MPL 2.0",
+      "url": "https://www.mozilla.org/en-US/MPL/2.0/"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://restcountries.com/v3.1",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/all": {
+      "get": {
+        "summary": "Get all countries",
+        "description": "Retrieves information about all countries",
+        "operationId": "getAllCountries",
+        "parameters": [
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma-separated list of fields to return",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "name,capital,population"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Country"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/name/{name}": {
+      "get": {
+        "summary": "Get countries by name",
+        "description": "Search for countries by their name",
+        "operationId": "getCountriesByName",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "Name of the country to search for",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "germany"
+          },
+          {
+            "name": "fullText",
+            "in": "query",
+            "description": "Search by exact country name match",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma-separated list of fields to return",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Country"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Country not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/alpha/{code}": {
+      "get": {
+        "summary": "Get country by code",
+        "description": "Search for a country by its ISO 3166-1 alpha-2, alpha-3 code or CIOC code",
+        "operationId": "getCountryByCode",
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "description": "Alpha-2, alpha-3 or CIOC country code",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "de"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma-separated list of fields to return",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Country"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Country not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/capital/{capital}": {
+      "get": {
+        "summary": "Get countries by capital city",
+        "description": "Search for countries by their capital city",
+        "operationId": "getCountriesByCapital",
+        "parameters": [
+          {
+            "name": "capital",
+            "in": "path",
+            "description": "Name of the capital city",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "berlin"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Comma-separated list of fields to return",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Country"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Country not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Country": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "object",
+            "properties": {
+              "common": {
+                "type": "string",
+                "description": "Common country name"
+              },
+              "official": {
+                "type": "string",
+                "description": "Official country name"
+              },
+              "nativeName": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "object",
+                  "properties": {
+                    "official": {
+                      "type": "string"
+                    },
+                    "common": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "tld": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Top-level domains"
+          },
+          "cca2": {
+            "type": "string",
+            "description": "ISO 3166-1 alpha-2 code"
+          },
+          "ccn3": {
+            "type": "string",
+            "description": "ISO 3166-1 numeric code"
+          },
+          "cca3": {
+            "type": "string",
+            "description": "ISO 3166-1 alpha-3 code"
+          },
+          "cioc": {
+            "type": "string",
+            "description": "International Olympic Committee code"
+          },
+          "independent": {
+            "type": "boolean",
+            "description": "Independence status"
+          },
+          "status": {
+            "type": "string",
+            "description": "ISO 3166-1 assignment status"
+          },
+          "unMember": {
+            "type": "boolean",
+            "description": "UN membership status"
+          },
+          "currencies": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "symbol": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "idd": {
+            "type": "object",
+            "properties": {
+              "root": {
+                "type": "string"
+              },
+              "suffixes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "description": "International direct dialing"
+          },
+          "capital": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Capital city or cities"
+          },
+          "altSpellings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Alternative country name spellings"
+          },
+          "region": {
+            "type": "string",
+            "description": "Geographic region"
+          },
+          "subregion": {
+            "type": "string",
+            "description": "Geographic subregion"
+          },
+          "languages": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": "Languages spoken"
+          },
+          "translations": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "official": {
+                  "type": "string"
+                },
+                "common": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "latlng": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2,
+            "description": "Latitude and longitude"
+          },
+          "landlocked": {
+            "type": "boolean",
+            "description": "Landlocked status"
+          },
+          "borders": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Border countries (ISO 3166-1 alpha-3 codes)"
+          },
+          "area": {
+            "type": "number",
+            "description": "Country area in square kilometers"
+          },
+          "demonyms": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "f": {
+                  "type": "string"
+                },
+                "m": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "flag": {
+            "type": "string",
+            "description": "Flag emoji"
+          },
+          "maps": {
+            "type": "object",
+            "properties": {
+              "googleMaps": {
+                "type": "string",
+                "format": "uri"
+              },
+              "openStreetMaps": {
+                "type": "string",
+                "format": "uri"
+              }
+            }
+          },
+          "population": {
+            "type": "integer",
+            "description": "Country population"
+          },
+          "gini": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number"
+            },
+            "description": "Gini coefficient"
+          },
+          "fifa": {
+            "type": "string",
+            "description": "FIFA country code"
+          },
+          "car": {
+            "type": "object",
+            "properties": {
+              "signs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "side": {
+                "type": "string",
+                "enum": [
+                  "left",
+                  "right"
+                ]
+              }
+            }
+          },
+          "timezones": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Timezones"
+          },
+          "continents": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Continents"
+          },
+          "flags": {
+            "type": "object",
+            "properties": {
+              "png": {
+                "type": "string",
+                "format": "uri"
+              },
+              "svg": {
+                "type": "string",
+                "format": "uri"
+              },
+              "alt": {
+                "type": "string"
+              }
+            }
+          },
+          "coatOfArms": {
+            "type": "object",
+            "properties": {
+              "png": {
+                "type": "string",
+                "format": "uri"
+              },
+              "svg": {
+                "type": "string",
+                "format": "uri"
+              }
+            }
+          },
+          "startOfWeek": {
+            "type": "string",
+            "description": "Start of week day"
+          },
+          "capitalInfo": {
+            "type": "object",
+            "properties": {
+              "latlng": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              }
+            }
+          },
+          "postalCode": {
+            "type": "object",
+            "properties": {
+              "format": {
+                "type": "string"
+              },
+              "regex": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "Error message"
+          }
+        }
+      }
+    }
+  }
+}

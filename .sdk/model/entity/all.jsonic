@@ -1,0 +1,219 @@
+# Entity: all
+
+main: kit: entity: all: {
+
+  alias: field: {}
+
+  fields: [
+    {
+      name: "alt_spelling"
+      req: false
+      type: "`$ARRAY`"
+    }
+    {
+      name: "area"
+      req: false
+      type: "`$NUMBER`"
+    }
+    {
+      name: "border"
+      req: false
+      type: "`$ARRAY`"
+    }
+    {
+      name: "capital"
+      req: false
+      type: "`$ARRAY`"
+    }
+    {
+      name: "capital_info"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "car"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "cca2"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "cca3"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "ccn3"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "cioc"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "coat_of_arm"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "continent"
+      req: false
+      type: "`$ARRAY`"
+    }
+    {
+      name: "currency"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "demonym"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "fifa"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "flag"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "gini"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "idd"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "independent"
+      req: false
+      type: "`$BOOLEAN`"
+    }
+    {
+      name: "landlocked"
+      req: false
+      type: "`$BOOLEAN`"
+    }
+    {
+      name: "language"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "latlng"
+      req: false
+      type: "`$ARRAY`"
+    }
+    {
+      name: "map"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "name"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "population"
+      req: false
+      type: "`$INTEGER`"
+    }
+    {
+      name: "postal_code"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "region"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "start_of_week"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "status"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "subregion"
+      req: false
+      type: "`$STRING`"
+    }
+    {
+      name: "timezone"
+      req: false
+      type: "`$ARRAY`"
+    }
+    {
+      name: "tld"
+      req: false
+      type: "`$ARRAY`"
+    }
+    {
+      name: "translation"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "un_member"
+      req: false
+      type: "`$BOOLEAN`"
+    }
+  ]
+
+  name: "all"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          args: {
+            query: [
+              {
+                example: "name,capital,population"
+                kind: "query"
+                name: "field"
+                orig: "field"
+                reqd: false
+                type: "`$STRING`"
+              }
+            ]
+          }
+          method: "GET"
+          orig: "/all"
+          parts: [
+            "all"
+          ]
+          select: {
+            exist: [
+              "field"
+            ]
+          }
+          transform: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

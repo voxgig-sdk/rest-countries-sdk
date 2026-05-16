@@ -1,0 +1,27 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      contact: {
+        url: "https://restcountries.com/"
+      }
+      description: "The REST Countries API provides detailed information about countries around the world in a simple RESTful interface. Users can retrieve data such as country names, codes, capital cities, languages, and more."
+      license: {
+        name: "Mozilla Public License MPL 2.0"
+        url: "https://www.mozilla.org/en-US/MPL/2.0/"
+      }
+      servers: [
+        {
+          description: "Production server"
+          url: "https://restcountries.com/v3.1"
+        }
+      ]
+      title: "REST Countries API"
+      version: "3.1.0"
+    }
+  }
+}
+
+}

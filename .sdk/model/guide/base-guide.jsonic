@@ -1,0 +1,35 @@
+# Guide
+
+guide: {
+  metrics: count: entity: 4
+  metrics: count: path: 4
+  metrics: count: method: 4
+
+  entity: all: {
+    path: "/all": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: alpha: {
+    path: "/alpha/{code}": {
+      rename: param: "code": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: capital: {
+    path: "/capital/{capital}": {
+      rename: param: "capital": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: name: {
+    path: "/name/{name}": {
+      rename: param: "name": *"id"
+      op: load: method: *GET
+    }
+  }
+
+}

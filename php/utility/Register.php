@@ -1,0 +1,67 @@
+<?php
+declare(strict_types=1);
+
+// RestCountries SDK utility registration
+
+require_once __DIR__ . '/../core/UtilityType.php';
+require_once __DIR__ . '/Clean.php';
+require_once __DIR__ . '/Done.php';
+require_once __DIR__ . '/MakeError.php';
+require_once __DIR__ . '/FeatureAdd.php';
+require_once __DIR__ . '/FeatureHook.php';
+require_once __DIR__ . '/FeatureInit.php';
+require_once __DIR__ . '/Fetcher.php';
+require_once __DIR__ . '/MakeFetchDef.php';
+require_once __DIR__ . '/MakeContext.php';
+require_once __DIR__ . '/MakeOptions.php';
+require_once __DIR__ . '/MakeRequest.php';
+require_once __DIR__ . '/MakeResponse.php';
+require_once __DIR__ . '/MakeResult.php';
+require_once __DIR__ . '/MakePoint.php';
+require_once __DIR__ . '/MakeSpec.php';
+require_once __DIR__ . '/MakeUrl.php';
+require_once __DIR__ . '/Param.php';
+require_once __DIR__ . '/PrepareAuth.php';
+require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/PrepareHeaders.php';
+require_once __DIR__ . '/PrepareMethod.php';
+require_once __DIR__ . '/PrepareParams.php';
+require_once __DIR__ . '/PreparePath.php';
+require_once __DIR__ . '/PrepareQuery.php';
+require_once __DIR__ . '/ResultBasic.php';
+require_once __DIR__ . '/ResultBody.php';
+require_once __DIR__ . '/ResultHeaders.php';
+require_once __DIR__ . '/TransformRequest.php';
+require_once __DIR__ . '/TransformResponse.php';
+
+RestCountriesUtility::setRegistrar(function (RestCountriesUtility $u): void {
+    $u->clean = [RestCountriesClean::class, 'call'];
+    $u->done = [RestCountriesDone::class, 'call'];
+    $u->make_error = [RestCountriesMakeError::class, 'call'];
+    $u->feature_add = [RestCountriesFeatureAdd::class, 'call'];
+    $u->feature_hook = [RestCountriesFeatureHook::class, 'call'];
+    $u->feature_init = [RestCountriesFeatureInit::class, 'call'];
+    $u->fetcher = [RestCountriesFetcher::class, 'call'];
+    $u->make_fetch_def = [RestCountriesMakeFetchDef::class, 'call'];
+    $u->make_context = [RestCountriesMakeContext::class, 'call'];
+    $u->make_options = [RestCountriesMakeOptions::class, 'call'];
+    $u->make_request = [RestCountriesMakeRequest::class, 'call'];
+    $u->make_response = [RestCountriesMakeResponse::class, 'call'];
+    $u->make_result = [RestCountriesMakeResult::class, 'call'];
+    $u->make_point = [RestCountriesMakePoint::class, 'call'];
+    $u->make_spec = [RestCountriesMakeSpec::class, 'call'];
+    $u->make_url = [RestCountriesMakeUrl::class, 'call'];
+    $u->param = [RestCountriesParam::class, 'call'];
+    $u->prepare_auth = [RestCountriesPrepareAuth::class, 'call'];
+    $u->prepare_body = [RestCountriesPrepareBody::class, 'call'];
+    $u->prepare_headers = [RestCountriesPrepareHeaders::class, 'call'];
+    $u->prepare_method = [RestCountriesPrepareMethod::class, 'call'];
+    $u->prepare_params = [RestCountriesPrepareParams::class, 'call'];
+    $u->prepare_path = [RestCountriesPreparePath::class, 'call'];
+    $u->prepare_query = [RestCountriesPrepareQuery::class, 'call'];
+    $u->result_basic = [RestCountriesResultBasic::class, 'call'];
+    $u->result_body = [RestCountriesResultBody::class, 'call'];
+    $u->result_headers = [RestCountriesResultHeaders::class, 'call'];
+    $u->transform_request = [RestCountriesTransformRequest::class, 'call'];
+    $u->transform_response = [RestCountriesTransformResponse::class, 'call'];
+});
