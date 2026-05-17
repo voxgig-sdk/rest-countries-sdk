@@ -35,7 +35,8 @@
         "timezone": [],
         "tld": [],
         "translation": {},
-        "un_member": false
+        "un_member": false,
+        "id": "NAME00"
       },
       "NAME01": {
         "alt_spelling": [],
@@ -71,7 +72,8 @@
         "timezone": [],
         "tld": [],
         "translation": {},
-        "un_member": false
+        "un_member": false,
+        "id": "NAME01"
       },
       "NAME02": {
         "alt_spelling": [],
@@ -107,7 +109,8 @@
         "timezone": [],
         "tld": [],
         "translation": {},
-        "un_member": false
+        "un_member": false,
+        "id": "NAME02"
       }
     }
   },

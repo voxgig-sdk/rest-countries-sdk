@@ -35,7 +35,8 @@
         "timezone": [],
         "tld": [],
         "translation": {},
-        "un_member": false
+        "un_member": false,
+        "id": "ALPHA00"
       },
       "ALPHA01": {
         "alt_spelling": [],
@@ -71,7 +72,8 @@
         "timezone": [],
         "tld": [],
         "translation": {},
-        "un_member": false
+        "un_member": false,
+        "id": "ALPHA01"
       },
       "ALPHA02": {
         "alt_spelling": [],
@@ -107,7 +109,8 @@
         "timezone": [],
         "tld": [],
         "translation": {},
-        "un_member": false
+        "un_member": false,
+        "id": "ALPHA02"
       }
     }
   },

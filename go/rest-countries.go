@@ -1,10 +1,10 @@
 package voxgigrestcountriessdk
 
 import (
-	"github.com/voxgig-sdk/rest-countries-sdk/core"
-	"github.com/voxgig-sdk/rest-countries-sdk/entity"
-	"github.com/voxgig-sdk/rest-countries-sdk/feature"
-	_ "github.com/voxgig-sdk/rest-countries-sdk/utility"
+	"github.com/voxgig-sdk/rest-countries-sdk/go/core"
+	"github.com/voxgig-sdk/rest-countries-sdk/go/entity"
+	"github.com/voxgig-sdk/rest-countries-sdk/go/feature"
+	_ "github.com/voxgig-sdk/rest-countries-sdk/go/utility"
 )
 
 // Type aliases preserve external API.

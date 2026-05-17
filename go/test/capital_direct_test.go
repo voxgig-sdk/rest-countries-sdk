@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	sdk "github.com/voxgig-sdk/rest-countries-sdk"
-	"github.com/voxgig-sdk/rest-countries-sdk/core"
+	sdk "github.com/voxgig-sdk/rest-countries-sdk/go"
+	"github.com/voxgig-sdk/rest-countries-sdk/go/core"
 )
 
 func TestCapitalDirect(t *testing.T) {
