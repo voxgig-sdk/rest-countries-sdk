@@ -91,7 +91,6 @@ function alpha_basic_setup(extra)
     ["RESTCOUNTRIES_TEST_ALPHA_ENTID"] = idmap,
     ["RESTCOUNTRIES_TEST_LIVE"] = "FALSE",
     ["RESTCOUNTRIES_TEST_EXPLAIN"] = "FALSE",
-    ["RESTCOUNTRIES_APIKEY"] = "NONE",
   })
 
   local idmap_resolved = helpers.to_map(
@@ -103,7 +102,6 @@ function alpha_basic_setup(extra)
   if env["RESTCOUNTRIES_TEST_LIVE"] == "TRUE" then
     local merged_opts = vs.merge({
       {
-        apikey = env["RESTCOUNTRIES_APIKEY"],
       },
       extra or {},
     })

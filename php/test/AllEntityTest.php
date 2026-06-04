@@ -86,7 +86,6 @@ function all_basic_setup($extra)
         "RESTCOUNTRIES_TEST_ALL_ENTID" => $idmap,
         "RESTCOUNTRIES_TEST_LIVE" => "FALSE",
         "RESTCOUNTRIES_TEST_EXPLAIN" => "FALSE",
-        "RESTCOUNTRIES_APIKEY" => "NONE",
     ]);
 
     $idmap_resolved = Helpers::to_map(
@@ -98,7 +97,6 @@ function all_basic_setup($extra)
     if ($env["RESTCOUNTRIES_TEST_LIVE"] === "TRUE") {
         $merged_opts = Vs::merge([
             [
-                "apikey" => $env["RESTCOUNTRIES_APIKEY"],
             ],
             $extra ?? [],
         ]);

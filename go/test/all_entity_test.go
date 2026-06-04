@@ -119,7 +119,6 @@ func allBasicSetup(extra map[string]any) *entityTestSetup {
 		"RESTCOUNTRIES_TEST_ALL_ENTID": idmap,
 		"RESTCOUNTRIES_TEST_LIVE":      "FALSE",
 		"RESTCOUNTRIES_TEST_EXPLAIN":   "FALSE",
-		"RESTCOUNTRIES_APIKEY":         "NONE",
 	})
 
 	idmapResolved := core.ToMapAny(env["RESTCOUNTRIES_TEST_ALL_ENTID"])
@@ -130,7 +129,6 @@ func allBasicSetup(extra map[string]any) *entityTestSetup {
 	if env["RESTCOUNTRIES_TEST_LIVE"] == "TRUE" {
 		mergedOpts := vs.Merge([]any{
 			map[string]any{
-				"apikey": env["RESTCOUNTRIES_APIKEY"],
 			},
 			extra,
 		})

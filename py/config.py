@@ -15,9 +15,6 @@ def make_config():
         },
         "options": {
             "base": "https://restcountries.com/v3.1",
-            "auth": {
-                "prefix": "Bearer",
-            },
             "headers": {
         "content-type": "application/json",
       },

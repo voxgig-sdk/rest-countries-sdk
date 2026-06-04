@@ -111,7 +111,6 @@ function basicSetup(extra?: any) {
     'REST_COUNTRIES_TEST_ALPHA_ENTID': idmap,
     'REST_COUNTRIES_TEST_LIVE': 'FALSE',
     'REST_COUNTRIES_TEST_EXPLAIN': 'FALSE',
-    'REST_COUNTRIES_APIKEY': 'NONE',
   })
 
   idmap = env['REST_COUNTRIES_TEST_ALPHA_ENTID']
@@ -121,7 +120,6 @@ function basicSetup(extra?: any) {
   if (live) {
     client = new RestCountriesSDK(merge([
       {
-        apikey: env.REST_COUNTRIES_APIKEY,
       },
       extra
     ]))
