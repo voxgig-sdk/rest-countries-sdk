@@ -10,13 +10,13 @@ The Ruby SDK for the RestCountries API — an entity-oriented client using idiom
 
 ## Install
 ```bash
-gem install rest-countries-sdk
+gem install voxgig-sdk-rest-countries
 ```
 
 Or add to your `Gemfile`:
 
 ```ruby
-gem "rest-countries-sdk"
+gem "voxgig-sdk-rest-countries"
 ```
 
 Then run:

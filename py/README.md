@@ -10,7 +10,7 @@ The Python SDK for the RestCountries API — an entity-oriented client following
 
 ## Install
 ```bash
-pip install rest-countries-sdk
+pip install voxgig-sdk-rest-countries
 ```
 
 Or install from source:

@@ -10,7 +10,7 @@ The PHP SDK for the RestCountries API — an entity-oriented client using PHP co
 
 ## Install
 ```bash
-composer require voxgig/rest-countries-sdk
+composer require voxgig-sdk/rest-countries
 ```
 
 

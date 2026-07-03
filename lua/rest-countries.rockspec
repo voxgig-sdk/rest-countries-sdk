@@ -8,12 +8,14 @@ source = {
   dir = "rest-countries-sdk/lua"
 }
 description = {
-  summary = "RestCountries SDK for Lua",
-  license = "MIT"
+  summary = "Unofficial generated Lua SDK for the REST Countries public API. Not affiliated with or endorsed by the upstream API provider.",
+  homepage = "https://github.com/voxgig-sdk/rest-countries-sdk",
+  issues_url = "https://github.com/voxgig-sdk/rest-countries-sdk/issues",
+  license = "MIT",
+  labels = { "voxgig", "sdk", "generated-sdk", "openapi", "api-client", "rest-countries" }
 }
 dependencies = {
   "lua >= 5.3",
-  "dkjson >= 2.5",
   "dkjson >= 2.5",
 }
 build = {

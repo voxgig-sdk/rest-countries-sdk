@@ -10,7 +10,7 @@ The TypeScript SDK for the RestCountries API — a type-safe, entity-oriented cl
 
 ## Install
 ```bash
-npm install rest-countries
+npm install @voxgig-sdk/rest-countries
 ```
 ## Tutorial: your first API call
 
