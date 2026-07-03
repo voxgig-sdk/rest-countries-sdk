@@ -1,22 +1,8 @@
 # RestCountries SDK
 
-Look up countries by name, code, capital, currency, language, or region with a simple REST API
+REST Countries API client, generated from the OpenAPI spec.
 
 > TypeScript, Python, PHP, Golang, Ruby, Lua SDKs, a CLI, an interactive REPL, and an MCP server for AI agents — all generated from one OpenAPI spec by [@voxgig/sdkgen](https://github.com/voxgig/sdkgen).
-
-## About REST Countries API
-
-REST Countries is an open-source public API that returns information about the world's countries. It is maintained by the [REST Countries](https://restcountries.com/) project, which was inspired by the original restcountries.eu service, and serves several million requests per day.
-
-What you get from the API:
-
-- Lookup by name, full or partial: `/v3.1/name/{name}`
-- Lookup by ISO code (cca2, cca3, ccn3, cioc) singly or in batches: `/v3.1/alpha/{code}` and `/v3.1/alpha?codes={code},{code}`
-- Lookup by capital city: `/v3.1/capital/{capital}`
-- Filter by currency, language, region, subregion, demonym, or translation: `/v3.1/currency/{currency}`, `/v3.1/lang/{language}`, `/v3.1/region/{region}`, `/v3.1/subregion/{subregion}`, `/v3.1/demonym/{demonym}`, `/v3.1/translation/{translation}`
-- Bulk listing: `/v3.1/all` (a `fields` parameter is required)
-
-Operational notes: no authentication is required. The `/all` endpoint requires a `fields` query parameter, and individual requests may return up to 10 fields. CORS is reported as disabled, so browser callers may need a proxy. The current production version is v3.1; a v4 preview exists but is not yet production-ready.
 
 ## Try it
 
@@ -50,29 +36,31 @@ gem install rest-countries-sdk
 luarocks install rest-countries-sdk
 ```
 
-## 30-second quickstart
+## Quickstart
 
 ### TypeScript
 
 ```ts
 import { RestCountriesSDK } from 'rest-countries'
 
-const client = new RestCountriesSDK({})
+const client = new RestCountriesSDK({
+  apikey: process.env.REST-COUNTRIES_APIKEY,
+})
 
 // List all alls
 const alls = await client.All().list()
+console.log(alls.data)
 ```
 
-See the [TypeScript README](ts/README.md) for the
-full guide, or scroll down for the same example in other languages.
+See the [TypeScript README](ts/README.md) for the full guide.
 
-## What's in the box
+## Surfaces
 
-| Surface | Use it for | Path |
-| --- | --- | --- |
-| **SDK** (TypeScript, Python, PHP, Golang, Ruby, Lua) | App integration | `ts/` `py/` `php/` `go/` `rb/` `lua/` |
-| **CLI** | Scripts, CI, ops, one-off API calls | `go-cli/` |
-| **MCP server** | AI agents (Claude, Cursor, Cline) | `go-mcp/` |
+| Surface | Path |
+| --- | --- |
+| **SDK** (TypeScript, Python, PHP, Golang, Ruby, Lua) | `ts/` `py/` `php/` `go/` `rb/` `lua/` |
+| **CLI** | `go-cli/` |
+| **MCP server** | `go-mcp/` |
 
 ## Use it from an AI agent (MCP)
 
@@ -102,10 +90,10 @@ The API exposes 4 entities:
 
 | Entity | Description | API path |
 | --- | --- | --- |
-| **All** | Bulk listing of every country; served by `/v3.1/all` and requires a `fields` query parameter selecting which fields to return. | `/all` |
-| **Alpha** | Lookup by ISO country code (cca2, cca3, ccn3, or cioc) via `/v3.1/alpha/{code}`, with batch lookups via `/v3.1/alpha?codes={code},{code}`. | `/alpha/{code}` |
-| **Capital** | Lookup of countries by capital city via `/v3.1/capital/{capital}`. | `/capital/{capital}` |
-| **Name** | Lookup of countries by full or partial name via `/v3.1/name/{name}`. | `/name/{name}` |
+| **All** |  | `/all` |
+| **Alpha** |  | `/alpha/{code}` |
+| **Capital** |  | `/capital/{capital}` |
+| **Name** |  | `/name/{name}` |
 
 Each entity supports the following operations where available: **load**,
 **list**, **create**, **update**, and **remove**.
@@ -115,12 +103,16 @@ Each entity supports the following operations where available: **load**,
 ### Python
 
 ```python
+import os
 from restcountries_sdk import RestCountriesSDK
 
-client = RestCountriesSDK({})
+client = RestCountriesSDK({
+    "apikey": os.environ.get("REST-COUNTRIES_APIKEY"),
+})
 
 # List all alls
-alls, err = client.All(None).list(None, None)
+alls, err = client.All().list()
+print(alls)
 ```
 
 ### PHP
@@ -129,10 +121,13 @@ alls, err = client.All(None).list(None, None)
 <?php
 require_once 'restcountries_sdk.php';
 
-$client = new RestCountriesSDK([]);
+$client = new RestCountriesSDK([
+    "apikey" => getenv("REST-COUNTRIES_APIKEY"),
+]);
 
 // List all alls
-[$alls, $err] = $client->All(null)->list(null, null);
+[$alls, $err] = $client->All()->list();
+print_r($alls);
 ```
 
 ### Golang
@@ -140,10 +135,13 @@ $client = new RestCountriesSDK([]);
 ```go
 import sdk "github.com/voxgig-sdk/rest-countries-sdk/go"
 
-client := sdk.NewRestCountriesSDK(map[string]any{})
+client := sdk.NewRestCountriesSDK(map[string]any{
+    "apikey": os.Getenv("REST-COUNTRIES_APIKEY"),
+})
 
 // List all alls
 alls, err := client.All(nil).List(nil, nil)
+fmt.Println(alls)
 ```
 
 ### Ruby
@@ -151,10 +149,13 @@ alls, err := client.All(nil).List(nil, nil)
 ```ruby
 require_relative "RestCountries_sdk"
 
-client = RestCountriesSDK.new({})
+client = RestCountriesSDK.new({
+  "apikey" => ENV["REST-COUNTRIES_APIKEY"],
+})
 
 # List all alls
-alls, err = client.All(nil).list(nil, nil)
+alls, err = client.All().list
+puts alls
 ```
 
 ### Lua
@@ -162,10 +163,13 @@ alls, err = client.All(nil).list(nil, nil)
 ```lua
 local sdk = require("rest-countries_sdk")
 
-local client = sdk.new({})
+local client = sdk.new({
+  apikey = os.getenv("REST-COUNTRIES_APIKEY"),
+})
 
 -- List all alls
-local alls, err = client:All(nil):list(nil, nil)
+local alls, err = client:All():list()
+print(alls)
 ```
 
 ## Unit testing in offline mode
@@ -184,25 +188,21 @@ const result = await client.All().load({ id: 'test01' })
 ### Python
 
 ```python
-client = RestCountriesSDK.test(None, None)
-result, err = client.All(None).load(
-    {"id": "test01"}, None
-)
+client = RestCountriesSDK.test()
+result, err = client.All().load({"id": "test01"})
 ```
 
 ### PHP
 
 ```php
-$client = RestCountriesSDK::test(null, null);
-[$result, $err] = $client->All(null)->load(
-    ["id" => "test01"], null
-);
+$client = RestCountriesSDK::test();
+[$result, $err] = $client->All()->load(["id" => "test01"]);
 ```
 
 ### Golang
 
 ```go
-client := sdk.TestSDK(nil, nil)
+client := sdk.Test()
 result, err := client.All(nil).Load(
     map[string]any{"id": "test01"}, nil,
 )
@@ -211,19 +211,15 @@ result, err := client.All(nil).Load(
 ### Ruby
 
 ```ruby
-client = RestCountriesSDK.test(nil, nil)
-result, err = client.All(nil).load(
-  { "id" => "test01" }, nil
-)
+client = RestCountriesSDK.test
+result, err = client.All().load({ "id" => "test01" })
 ```
 
 ### Lua
 
 ```lua
-local client = sdk.test(nil, nil)
-local result, err = client:All(nil):load(
-  { id = "test01" }, nil
-)
+local client = sdk.test()
+local result, err = client:All():load({ id = "test01" })
 ```
 
 ## How it works
@@ -327,14 +323,6 @@ local result, err = client:direct({
 - [Golang](go/README.md)
 - [Ruby](rb/README.md)
 - [Lua](lua/README.md)
-
-## Using the REST Countries API
-
-- Upstream: [https://restcountries.com/](https://restcountries.com/)
-
-- Licensed under the Mozilla Public License 2.0 (MPL-2.0).
-- Free to use without authentication or API keys.
-- The project is community-maintained and runs on donations; consider supporting it if you depend on the service.
 
 ---
 

@@ -38,6 +38,10 @@ class Config {
   options = {
     base: 'https://restcountries.com/v3.1',
 
+    auth: {
+      prefix: 'Bearer',
+    },
+
     headers: {
       "content-type": "application/json"
     },
@@ -64,260 +68,262 @@ class Config {
     "all": {
       "fields": [
         {
+          "active": true,
           "name": "alt_spelling",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 0
         },
         {
+          "active": true,
           "name": "area",
           "req": false,
           "type": "`$NUMBER`",
-          "active": true,
           "index$": 1
         },
         {
+          "active": true,
           "name": "border",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 2
         },
         {
+          "active": true,
           "name": "capital",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 3
         },
         {
+          "active": true,
           "name": "capital_info",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 4
         },
         {
+          "active": true,
           "name": "car",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 5
         },
         {
+          "active": true,
           "name": "cca2",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 6
         },
         {
+          "active": true,
           "name": "cca3",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 7
         },
         {
+          "active": true,
           "name": "ccn3",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 8
         },
         {
+          "active": true,
           "name": "cioc",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 9
         },
         {
+          "active": true,
           "name": "coat_of_arm",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 10
         },
         {
+          "active": true,
           "name": "continent",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 11
         },
         {
+          "active": true,
           "name": "currency",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 12
         },
         {
+          "active": true,
           "name": "demonym",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 13
         },
         {
+          "active": true,
           "name": "fifa",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 14
         },
         {
+          "active": true,
           "name": "flag",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 15
         },
         {
+          "active": true,
           "name": "gini",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 16
         },
         {
+          "active": true,
           "name": "idd",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 17
         },
         {
+          "active": true,
           "name": "independent",
           "req": false,
           "type": "`$BOOLEAN`",
-          "active": true,
           "index$": 18
         },
         {
+          "active": true,
           "name": "landlocked",
           "req": false,
           "type": "`$BOOLEAN`",
-          "active": true,
           "index$": 19
         },
         {
+          "active": true,
           "name": "language",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 20
         },
         {
+          "active": true,
           "name": "latlng",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 21
         },
         {
+          "active": true,
           "name": "map",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 22
         },
         {
+          "active": true,
           "name": "name",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 23
         },
         {
+          "active": true,
           "name": "population",
           "req": false,
           "type": "`$INTEGER`",
-          "active": true,
           "index$": 24
         },
         {
+          "active": true,
           "name": "postal_code",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 25
         },
         {
+          "active": true,
           "name": "region",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 26
         },
         {
+          "active": true,
           "name": "start_of_week",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 27
         },
         {
+          "active": true,
           "name": "status",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 28
         },
         {
+          "active": true,
           "name": "subregion",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 29
         },
         {
+          "active": true,
           "name": "timezone",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 30
         },
         {
+          "active": true,
           "name": "tld",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 31
         },
         {
+          "active": true,
           "name": "translation",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 32
         },
         {
+          "active": true,
           "name": "un_member",
           "req": false,
           "type": "`$BOOLEAN`",
-          "active": true,
           "index$": 33
         }
       ],
       "name": "all",
       "op": {
         "list": {
+          "input": "data",
           "name": "list",
           "points": [
             {
+              "active": true,
               "args": {
                 "query": [
                   {
+                    "active": true,
                     "example": "name,capital,population",
                     "kind": "query",
                     "name": "field",
                     "orig": "field",
                     "reqd": false,
-                    "type": "`$STRING`",
-                    "active": true
+                    "type": "`$STRING`"
                   }
                 ]
               },
@@ -335,11 +341,9 @@ class Config {
                 "req": "`reqdata`",
                 "res": "`body`"
               },
-              "active": true,
               "index$": 0
             }
           ],
-          "input": "data",
           "key$": "list"
         }
       },
@@ -350,270 +354,272 @@ class Config {
     "alpha": {
       "fields": [
         {
+          "active": true,
           "name": "alt_spelling",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 0
         },
         {
+          "active": true,
           "name": "area",
           "req": false,
           "type": "`$NUMBER`",
-          "active": true,
           "index$": 1
         },
         {
+          "active": true,
           "name": "border",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 2
         },
         {
+          "active": true,
           "name": "capital",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 3
         },
         {
+          "active": true,
           "name": "capital_info",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 4
         },
         {
+          "active": true,
           "name": "car",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 5
         },
         {
+          "active": true,
           "name": "cca2",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 6
         },
         {
+          "active": true,
           "name": "cca3",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 7
         },
         {
+          "active": true,
           "name": "ccn3",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 8
         },
         {
+          "active": true,
           "name": "cioc",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 9
         },
         {
+          "active": true,
           "name": "coat_of_arm",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 10
         },
         {
+          "active": true,
           "name": "continent",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 11
         },
         {
+          "active": true,
           "name": "currency",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 12
         },
         {
+          "active": true,
           "name": "demonym",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 13
         },
         {
+          "active": true,
           "name": "fifa",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 14
         },
         {
+          "active": true,
           "name": "flag",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 15
         },
         {
+          "active": true,
           "name": "gini",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 16
         },
         {
+          "active": true,
           "name": "idd",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 17
         },
         {
+          "active": true,
           "name": "independent",
           "req": false,
           "type": "`$BOOLEAN`",
-          "active": true,
           "index$": 18
         },
         {
+          "active": true,
           "name": "landlocked",
           "req": false,
           "type": "`$BOOLEAN`",
-          "active": true,
           "index$": 19
         },
         {
+          "active": true,
           "name": "language",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 20
         },
         {
+          "active": true,
           "name": "latlng",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 21
         },
         {
+          "active": true,
           "name": "map",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 22
         },
         {
+          "active": true,
           "name": "name",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 23
         },
         {
+          "active": true,
           "name": "population",
           "req": false,
           "type": "`$INTEGER`",
-          "active": true,
           "index$": 24
         },
         {
+          "active": true,
           "name": "postal_code",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 25
         },
         {
+          "active": true,
           "name": "region",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 26
         },
         {
+          "active": true,
           "name": "start_of_week",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 27
         },
         {
+          "active": true,
           "name": "status",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 28
         },
         {
+          "active": true,
           "name": "subregion",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 29
         },
         {
+          "active": true,
           "name": "timezone",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 30
         },
         {
+          "active": true,
           "name": "tld",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 31
         },
         {
+          "active": true,
           "name": "translation",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 32
         },
         {
+          "active": true,
           "name": "un_member",
           "req": false,
           "type": "`$BOOLEAN`",
-          "active": true,
           "index$": 33
         }
       ],
       "name": "alpha",
       "op": {
         "load": {
+          "input": "data",
           "name": "load",
           "points": [
             {
+              "active": true,
               "args": {
                 "params": [
                   {
+                    "active": true,
                     "example": "de",
                     "kind": "param",
                     "name": "id",
                     "orig": "code",
                     "reqd": true,
-                    "type": "`$STRING`",
-                    "active": true
+                    "type": "`$STRING`"
                   }
                 ],
                 "query": [
                   {
+                    "active": true,
                     "kind": "query",
                     "name": "field",
                     "orig": "field",
                     "reqd": false,
-                    "type": "`$STRING`",
-                    "active": true
+                    "type": "`$STRING`"
                   }
                 ]
               },
@@ -638,11 +644,9 @@ class Config {
                 "req": "`reqdata`",
                 "res": "`body`"
               },
-              "active": true,
               "index$": 0
             }
           ],
-          "input": "data",
           "key$": "load"
         }
       },
@@ -653,270 +657,272 @@ class Config {
     "capital": {
       "fields": [
         {
+          "active": true,
           "name": "alt_spelling",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 0
         },
         {
+          "active": true,
           "name": "area",
           "req": false,
           "type": "`$NUMBER`",
-          "active": true,
           "index$": 1
         },
         {
+          "active": true,
           "name": "border",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 2
         },
         {
+          "active": true,
           "name": "capital",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 3
         },
         {
+          "active": true,
           "name": "capital_info",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 4
         },
         {
+          "active": true,
           "name": "car",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 5
         },
         {
+          "active": true,
           "name": "cca2",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 6
         },
         {
+          "active": true,
           "name": "cca3",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 7
         },
         {
+          "active": true,
           "name": "ccn3",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 8
         },
         {
+          "active": true,
           "name": "cioc",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 9
         },
         {
+          "active": true,
           "name": "coat_of_arm",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 10
         },
         {
+          "active": true,
           "name": "continent",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 11
         },
         {
+          "active": true,
           "name": "currency",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 12
         },
         {
+          "active": true,
           "name": "demonym",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 13
         },
         {
+          "active": true,
           "name": "fifa",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 14
         },
         {
+          "active": true,
           "name": "flag",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 15
         },
         {
+          "active": true,
           "name": "gini",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 16
         },
         {
+          "active": true,
           "name": "idd",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 17
         },
         {
+          "active": true,
           "name": "independent",
           "req": false,
           "type": "`$BOOLEAN`",
-          "active": true,
           "index$": 18
         },
         {
+          "active": true,
           "name": "landlocked",
           "req": false,
           "type": "`$BOOLEAN`",
-          "active": true,
           "index$": 19
         },
         {
+          "active": true,
           "name": "language",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 20
         },
         {
+          "active": true,
           "name": "latlng",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 21
         },
         {
+          "active": true,
           "name": "map",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 22
         },
         {
+          "active": true,
           "name": "name",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 23
         },
         {
+          "active": true,
           "name": "population",
           "req": false,
           "type": "`$INTEGER`",
-          "active": true,
           "index$": 24
         },
         {
+          "active": true,
           "name": "postal_code",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 25
         },
         {
+          "active": true,
           "name": "region",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 26
         },
         {
+          "active": true,
           "name": "start_of_week",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 27
         },
         {
+          "active": true,
           "name": "status",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 28
         },
         {
+          "active": true,
           "name": "subregion",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 29
         },
         {
+          "active": true,
           "name": "timezone",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 30
         },
         {
+          "active": true,
           "name": "tld",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 31
         },
         {
+          "active": true,
           "name": "translation",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 32
         },
         {
+          "active": true,
           "name": "un_member",
           "req": false,
           "type": "`$BOOLEAN`",
-          "active": true,
           "index$": 33
         }
       ],
       "name": "capital",
       "op": {
         "load": {
+          "input": "data",
           "name": "load",
           "points": [
             {
+              "active": true,
               "args": {
                 "params": [
                   {
+                    "active": true,
                     "example": "berlin",
                     "kind": "param",
                     "name": "id",
                     "orig": "capital",
                     "reqd": true,
-                    "type": "`$STRING`",
-                    "active": true
+                    "type": "`$STRING`"
                   }
                 ],
                 "query": [
                   {
+                    "active": true,
                     "kind": "query",
                     "name": "field",
                     "orig": "field",
                     "reqd": false,
-                    "type": "`$STRING`",
-                    "active": true
+                    "type": "`$STRING`"
                   }
                 ]
               },
@@ -941,11 +947,9 @@ class Config {
                 "req": "`reqdata`",
                 "res": "`body`"
               },
-              "active": true,
               "index$": 0
             }
           ],
-          "input": "data",
           "key$": "load"
         }
       },
@@ -956,279 +960,281 @@ class Config {
     "name": {
       "fields": [
         {
+          "active": true,
           "name": "alt_spelling",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 0
         },
         {
+          "active": true,
           "name": "area",
           "req": false,
           "type": "`$NUMBER`",
-          "active": true,
           "index$": 1
         },
         {
+          "active": true,
           "name": "border",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 2
         },
         {
+          "active": true,
           "name": "capital",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 3
         },
         {
+          "active": true,
           "name": "capital_info",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 4
         },
         {
+          "active": true,
           "name": "car",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 5
         },
         {
+          "active": true,
           "name": "cca2",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 6
         },
         {
+          "active": true,
           "name": "cca3",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 7
         },
         {
+          "active": true,
           "name": "ccn3",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 8
         },
         {
+          "active": true,
           "name": "cioc",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 9
         },
         {
+          "active": true,
           "name": "coat_of_arm",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 10
         },
         {
+          "active": true,
           "name": "continent",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 11
         },
         {
+          "active": true,
           "name": "currency",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 12
         },
         {
+          "active": true,
           "name": "demonym",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 13
         },
         {
+          "active": true,
           "name": "fifa",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 14
         },
         {
+          "active": true,
           "name": "flag",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 15
         },
         {
+          "active": true,
           "name": "gini",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 16
         },
         {
+          "active": true,
           "name": "idd",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 17
         },
         {
+          "active": true,
           "name": "independent",
           "req": false,
           "type": "`$BOOLEAN`",
-          "active": true,
           "index$": 18
         },
         {
+          "active": true,
           "name": "landlocked",
           "req": false,
           "type": "`$BOOLEAN`",
-          "active": true,
           "index$": 19
         },
         {
+          "active": true,
           "name": "language",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 20
         },
         {
+          "active": true,
           "name": "latlng",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 21
         },
         {
+          "active": true,
           "name": "map",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 22
         },
         {
+          "active": true,
           "name": "name",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 23
         },
         {
+          "active": true,
           "name": "population",
           "req": false,
           "type": "`$INTEGER`",
-          "active": true,
           "index$": 24
         },
         {
+          "active": true,
           "name": "postal_code",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 25
         },
         {
+          "active": true,
           "name": "region",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 26
         },
         {
+          "active": true,
           "name": "start_of_week",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 27
         },
         {
+          "active": true,
           "name": "status",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 28
         },
         {
+          "active": true,
           "name": "subregion",
           "req": false,
           "type": "`$STRING`",
-          "active": true,
           "index$": 29
         },
         {
+          "active": true,
           "name": "timezone",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 30
         },
         {
+          "active": true,
           "name": "tld",
           "req": false,
           "type": "`$ARRAY`",
-          "active": true,
           "index$": 31
         },
         {
+          "active": true,
           "name": "translation",
           "req": false,
           "type": "`$OBJECT`",
-          "active": true,
           "index$": 32
         },
         {
+          "active": true,
           "name": "un_member",
           "req": false,
           "type": "`$BOOLEAN`",
-          "active": true,
           "index$": 33
         }
       ],
       "name": "name",
       "op": {
         "load": {
+          "input": "data",
           "name": "load",
           "points": [
             {
+              "active": true,
               "args": {
                 "params": [
                   {
+                    "active": true,
                     "example": "germany",
                     "kind": "param",
                     "name": "id",
                     "orig": "name",
                     "reqd": true,
-                    "type": "`$STRING`",
-                    "active": true
+                    "type": "`$STRING`"
                   }
                 ],
                 "query": [
                   {
+                    "active": true,
                     "kind": "query",
                     "name": "field",
                     "orig": "field",
                     "reqd": false,
-                    "type": "`$STRING`",
-                    "active": true
+                    "type": "`$STRING`"
                   },
                   {
+                    "active": true,
                     "example": false,
                     "kind": "query",
                     "name": "full_text",
                     "orig": "full_text",
                     "reqd": false,
-                    "type": "`$BOOLEAN`",
-                    "active": true
+                    "type": "`$BOOLEAN`"
                   }
                 ]
               },
@@ -1254,11 +1260,9 @@ class Config {
                 "req": "`reqdata`",
                 "res": "`body`"
               },
-              "active": true,
               "index$": 0
             }
           ],
-          "input": "data",
           "key$": "load"
         }
       },

@@ -68,12 +68,14 @@ function all_direct_setup($mockres)
     $env = Runner::env_override([
         "RESTCOUNTRIES_TEST_ALL_ENTID" => [],
         "RESTCOUNTRIES_TEST_LIVE" => "FALSE",
+        "RESTCOUNTRIES_APIKEY" => "NONE",
     ]);
 
     $live = $env["RESTCOUNTRIES_TEST_LIVE"] === "TRUE";
 
     if ($live) {
         $merged_opts = [
+            "apikey" => $env["RESTCOUNTRIES_APIKEY"],
         ];
         $client = new RestCountriesSDK($merged_opts);
         return [

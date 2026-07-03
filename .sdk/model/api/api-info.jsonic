@@ -20,31 +20,7 @@ main: {
       ]
       title: "REST Countries API"
       version: "3.1.0"
-      tagline: "Look up countries by name, code, capital, currency, language, or region with a simple REST API"
-      homepage: "https://restcountries.com/"
-      docs_url: "https://restcountries.com/"
-      license_short: "Mozilla Public License 2.0; free to use, donations welcomed"
-      license_md: `- Licensed under the Mozilla Public License 2.0 (MPL-2.0).
-- Free to use without authentication or API keys.
-- The project is community-maintained and runs on donations; consider supporting it if you depend on the service.`
-      about_md: `REST Countries is an open-source public API that returns information about the world's countries. It is maintained by the [REST Countries](https://restcountries.com/) project, which was inspired by the original restcountries.eu service, and serves several million requests per day.
-
-What you get from the API:
-
-- Lookup by name, full or partial: \`/v3.1/name/{name}\`
-- Lookup by ISO code (cca2, cca3, ccn3, cioc) singly or in batches: \`/v3.1/alpha/{code}\` and \`/v3.1/alpha?codes={code},{code}\`
-- Lookup by capital city: \`/v3.1/capital/{capital}\`
-- Filter by currency, language, region, subregion, demonym, or translation: \`/v3.1/currency/{currency}\`, \`/v3.1/lang/{language}\`, \`/v3.1/region/{region}\`, \`/v3.1/subregion/{subregion}\`, \`/v3.1/demonym/{demonym}\`, \`/v3.1/translation/{translation}\`
-- Bulk listing: \`/v3.1/all\` (a \`fields\` parameter is required)
-
-Operational notes: no authentication is required. The \`/all\` endpoint requires a \`fields\` query parameter, and individual requests may return up to 10 fields. CORS is reported as disabled, so browser callers may need a proxy. The current production version is v3.1; a v4 preview exists but is not yet production-ready.`
-      entity_desc: {
-        all: "Bulk listing of every country; served by `/v3.1/all` and requires a `fields` query parameter selecting which fields to return."
-        alpha: "Lookup by ISO country code (cca2, cca3, ccn3, or cioc) via `/v3.1/alpha/{code}`, with batch lookups via `/v3.1/alpha?codes={code},{code}`."
-        capital: "Lookup of countries by capital city via `/v3.1/capital/{capital}`."
-        name: "Lookup of countries by full or partial name via `/v3.1/name/{name}`."
-      }
-      auth: false
     }
   }
 }
+

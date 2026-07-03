@@ -93,12 +93,14 @@ func allDirectSetup(mockres any) *allDirectSetupResult {
 	env := envOverride(map[string]any{
 		"RESTCOUNTRIES_TEST_ALL_ENTID": map[string]any{},
 		"RESTCOUNTRIES_TEST_LIVE":    "FALSE",
+		"RESTCOUNTRIES_APIKEY":       "NONE",
 	})
 
 	live := env["RESTCOUNTRIES_TEST_LIVE"] == "TRUE"
 
 	if live {
 		mergedOpts := map[string]any{
+			"apikey": env["RESTCOUNTRIES_APIKEY"],
 		}
 		client := sdk.NewRestCountriesSDK(mergedOpts)
 

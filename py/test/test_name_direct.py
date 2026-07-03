@@ -66,12 +66,14 @@ def _name_direct_setup(mockres):
     env = runner.env_override({
         "RESTCOUNTRIES_TEST_NAME_ENTID": {},
         "RESTCOUNTRIES_TEST_LIVE": "FALSE",
+        "RESTCOUNTRIES_APIKEY": "NONE",
     })
 
     live = env.get("RESTCOUNTRIES_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {
+            "apikey": env.get("RESTCOUNTRIES_APIKEY"),
         }
         client = RestCountriesSDK(merged_opts)
         return {

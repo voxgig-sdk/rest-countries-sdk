@@ -79,12 +79,14 @@ function directSetup(mockres?: any) {
   const env = envOverride({
     'RESTCOUNTRIES_TEST_ALL_ENTID': {},
     'RESTCOUNTRIES_TEST_LIVE': 'FALSE',
+    'RESTCOUNTRIES_APIKEY': 'NONE',
   })
 
   const live = 'TRUE' === env.RESTCOUNTRIES_TEST_LIVE
 
   if (live) {
     const client = new RestCountriesSDK({
+      apikey: env.RESTCOUNTRIES_APIKEY,
     })
 
     let idmap: any = env['RESTCOUNTRIES_TEST_ALL_ENTID']

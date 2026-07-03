@@ -1,46 +1,13 @@
 {
-  "name": "rest-countries",
-  "origin": "voxgig-sdk",
   "def": "rest-countries_0.1.0.json",
   "main": {
+    "def": {
+      "desc": ""
+    },
     "kit": {
-      "info": {
-        "contact": {
-          "url": "https://restcountries.com/"
-        },
-        "description": "The REST Countries API provides detailed information about countries around the world in a simple RESTful interface. Users can retrieve data such as country names, codes, capital cities, languages, and more.",
-        "license": {
-          "name": "Mozilla Public License MPL 2.0",
-          "url": "https://www.mozilla.org/en-US/MPL/2.0/"
-        },
-        "servers": [
-          {
-            "description": "Production server",
-            "url": "https://restcountries.com/v3.1"
-          }
-        ],
-        "title": "REST Countries API",
-        "version": "3.1.0",
-        "tagline": "Look up countries by name, code, capital, currency, language, or region with a simple REST API",
-        "homepage": "https://restcountries.com/",
-        "docs_url": "https://restcountries.com/",
-        "license_short": "Mozilla Public License 2.0; free to use, donations welcomed",
-        "license_md": "- Licensed under the Mozilla Public License 2.0 (MPL-2.0).\n- Free to use without authentication or API keys.\n- The project is community-maintained and runs on donations; consider supporting it if you depend on the service.",
-        "about_md": "REST Countries is an open-source public API that returns information about the world's countries. It is maintained by the [REST Countries](https://restcountries.com/) project, which was inspired by the original restcountries.eu service, and serves several million requests per day.\n\nWhat you get from the API:\n\n- Lookup by name, full or partial: `/v3.1/name/{name}`\n- Lookup by ISO code (cca2, cca3, ccn3, cioc) singly or in batches: `/v3.1/alpha/{code}` and `/v3.1/alpha?codes={code},{code}`\n- Lookup by capital city: `/v3.1/capital/{capital}`\n- Filter by currency, language, region, subregion, demonym, or translation: `/v3.1/currency/{currency}`, `/v3.1/lang/{language}`, `/v3.1/region/{region}`, `/v3.1/subregion/{subregion}`, `/v3.1/demonym/{demonym}`, `/v3.1/translation/{translation}`\n- Bulk listing: `/v3.1/all` (a `fields` parameter is required)\n\nOperational notes: no authentication is required. The `/all` endpoint requires a `fields` query parameter, and individual requests may return up to 10 fields. CORS is reported as disabled, so browser callers may need a proxy. The current production version is v3.1; a v4 preview exists but is not yet production-ready.",
-        "entity_desc": {
-          "all": "Bulk listing of every country; served by `/v3.1/all` and requires a `fields` query parameter selecting which fields to return.",
-          "alpha": "Lookup by ISO country code (cca2, cca3, ccn3, or cioc) via `/v3.1/alpha/{code}`, with batch lookups via `/v3.1/alpha?codes={code},{code}`.",
-          "capital": "Lookup of countries by capital city via `/v3.1/capital/{capital}`.",
-          "name": "Lookup of countries by full or partial name via `/v3.1/name/{name}`."
-        },
-        "auth": false
-      },
       "config": {
         "auth": {
           "prefix": "Bearer"
-        },
-        "headers": {
-          "content-type": "application/json"
         },
         "docs_order": [
           "ts",
@@ -49,235 +16,241 @@
           "go",
           "rb",
           "lua"
-        ]
+        ],
+        "headers": {
+          "content-type": "application/json"
+        }
       },
       "entity": {
         "all": {
+          "active": true,
           "alias": {
             "field": {}
           },
           "fields": [
             {
+              "active": true,
               "name": "alt_spelling",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "area",
               "req": false,
-              "type": "`$NUMBER`",
-              "active": true
+              "type": "`$NUMBER`"
             },
             {
+              "active": true,
               "name": "border",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "capital",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "capital_info",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "car",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "cca2",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "cca3",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "ccn3",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "cioc",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "coat_of_arm",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "continent",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "currency",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "demonym",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "fifa",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "flag",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "gini",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "idd",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "independent",
               "req": false,
-              "type": "`$BOOLEAN`",
-              "active": true
+              "type": "`$BOOLEAN`"
             },
             {
+              "active": true,
               "name": "landlocked",
               "req": false,
-              "type": "`$BOOLEAN`",
-              "active": true
+              "type": "`$BOOLEAN`"
             },
             {
+              "active": true,
               "name": "language",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "latlng",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "map",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "name",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "population",
               "req": false,
-              "type": "`$INTEGER`",
-              "active": true
+              "type": "`$INTEGER`"
             },
             {
+              "active": true,
               "name": "postal_code",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "region",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "start_of_week",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "status",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "subregion",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "timezone",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "tld",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "translation",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "un_member",
               "req": false,
-              "type": "`$BOOLEAN`",
-              "active": true
+              "type": "`$BOOLEAN`"
             }
           ],
           "name": "all",
           "op": {
             "list": {
+              "input": "data",
               "name": "list",
               "points": [
                 {
+                  "active": true,
                   "args": {
                     "query": [
                       {
+                        "active": true,
                         "example": "name,capital,population",
                         "kind": "query",
                         "name": "field",
                         "orig": "field",
                         "reqd": false,
-                        "type": "`$STRING`",
-                        "active": true
+                        "type": "`$STRING`"
                       }
                     ]
                   },
@@ -294,254 +267,254 @@
                   "transform": {
                     "req": "`reqdata`",
                     "res": "`body`"
-                  },
-                  "active": true
+                  }
                 }
-              ],
-              "input": "data"
+              ]
             }
           },
-          "active": true,
           "relations": {
             "ancestors": []
           }
         },
         "alpha": {
+          "active": true,
           "alias": {
             "field": {}
           },
           "fields": [
             {
+              "active": true,
               "name": "alt_spelling",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "area",
               "req": false,
-              "type": "`$NUMBER`",
-              "active": true
+              "type": "`$NUMBER`"
             },
             {
+              "active": true,
               "name": "border",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "capital",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "capital_info",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "car",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "cca2",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "cca3",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "ccn3",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "cioc",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "coat_of_arm",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "continent",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "currency",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "demonym",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "fifa",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "flag",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "gini",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "idd",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "independent",
               "req": false,
-              "type": "`$BOOLEAN`",
-              "active": true
+              "type": "`$BOOLEAN`"
             },
             {
+              "active": true,
               "name": "landlocked",
               "req": false,
-              "type": "`$BOOLEAN`",
-              "active": true
+              "type": "`$BOOLEAN`"
             },
             {
+              "active": true,
               "name": "language",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "latlng",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "map",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "name",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "population",
               "req": false,
-              "type": "`$INTEGER`",
-              "active": true
+              "type": "`$INTEGER`"
             },
             {
+              "active": true,
               "name": "postal_code",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "region",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "start_of_week",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "status",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "subregion",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "timezone",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "tld",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "translation",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "un_member",
               "req": false,
-              "type": "`$BOOLEAN`",
-              "active": true
+              "type": "`$BOOLEAN`"
             }
           ],
           "name": "alpha",
           "op": {
             "load": {
+              "input": "data",
               "name": "load",
               "points": [
                 {
+                  "active": true,
                   "args": {
                     "params": [
                       {
+                        "active": true,
                         "example": "de",
                         "kind": "param",
                         "name": "id",
                         "orig": "code",
                         "reqd": true,
-                        "type": "`$STRING`",
-                        "active": true
+                        "type": "`$STRING`"
                       }
                     ],
                     "query": [
                       {
+                        "active": true,
                         "kind": "query",
                         "name": "field",
                         "orig": "field",
                         "reqd": false,
-                        "type": "`$STRING`",
-                        "active": true
+                        "type": "`$STRING`"
                       }
                     ]
                   },
@@ -565,254 +538,254 @@
                   "transform": {
                     "req": "`reqdata`",
                     "res": "`body`"
-                  },
-                  "active": true
+                  }
                 }
-              ],
-              "input": "data"
+              ]
             }
           },
-          "active": true,
           "relations": {
             "ancestors": []
           }
         },
         "capital": {
+          "active": true,
           "alias": {
             "field": {}
           },
           "fields": [
             {
+              "active": true,
               "name": "alt_spelling",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "area",
               "req": false,
-              "type": "`$NUMBER`",
-              "active": true
+              "type": "`$NUMBER`"
             },
             {
+              "active": true,
               "name": "border",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "capital",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "capital_info",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "car",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "cca2",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "cca3",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "ccn3",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "cioc",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "coat_of_arm",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "continent",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "currency",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "demonym",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "fifa",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "flag",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "gini",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "idd",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "independent",
               "req": false,
-              "type": "`$BOOLEAN`",
-              "active": true
+              "type": "`$BOOLEAN`"
             },
             {
+              "active": true,
               "name": "landlocked",
               "req": false,
-              "type": "`$BOOLEAN`",
-              "active": true
+              "type": "`$BOOLEAN`"
             },
             {
+              "active": true,
               "name": "language",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "latlng",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "map",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "name",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "population",
               "req": false,
-              "type": "`$INTEGER`",
-              "active": true
+              "type": "`$INTEGER`"
             },
             {
+              "active": true,
               "name": "postal_code",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "region",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "start_of_week",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "status",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "subregion",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "timezone",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "tld",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "translation",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "un_member",
               "req": false,
-              "type": "`$BOOLEAN`",
-              "active": true
+              "type": "`$BOOLEAN`"
             }
           ],
           "name": "capital",
           "op": {
             "load": {
+              "input": "data",
               "name": "load",
               "points": [
                 {
+                  "active": true,
                   "args": {
                     "params": [
                       {
+                        "active": true,
                         "example": "berlin",
                         "kind": "param",
                         "name": "id",
                         "orig": "capital",
                         "reqd": true,
-                        "type": "`$STRING`",
-                        "active": true
+                        "type": "`$STRING`"
                       }
                     ],
                     "query": [
                       {
+                        "active": true,
                         "kind": "query",
                         "name": "field",
                         "orig": "field",
                         "reqd": false,
-                        "type": "`$STRING`",
-                        "active": true
+                        "type": "`$STRING`"
                       }
                     ]
                   },
@@ -836,263 +809,263 @@
                   "transform": {
                     "req": "`reqdata`",
                     "res": "`body`"
-                  },
-                  "active": true
+                  }
                 }
-              ],
-              "input": "data"
+              ]
             }
           },
-          "active": true,
           "relations": {
             "ancestors": []
           }
         },
         "name": {
+          "active": true,
           "alias": {
             "field": {}
           },
           "fields": [
             {
+              "active": true,
               "name": "alt_spelling",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "area",
               "req": false,
-              "type": "`$NUMBER`",
-              "active": true
+              "type": "`$NUMBER`"
             },
             {
+              "active": true,
               "name": "border",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "capital",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "capital_info",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "car",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "cca2",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "cca3",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "ccn3",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "cioc",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "coat_of_arm",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "continent",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "currency",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "demonym",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "fifa",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "flag",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "gini",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "idd",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "independent",
               "req": false,
-              "type": "`$BOOLEAN`",
-              "active": true
+              "type": "`$BOOLEAN`"
             },
             {
+              "active": true,
               "name": "landlocked",
               "req": false,
-              "type": "`$BOOLEAN`",
-              "active": true
+              "type": "`$BOOLEAN`"
             },
             {
+              "active": true,
               "name": "language",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "latlng",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "map",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "name",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "population",
               "req": false,
-              "type": "`$INTEGER`",
-              "active": true
+              "type": "`$INTEGER`"
             },
             {
+              "active": true,
               "name": "postal_code",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "region",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "start_of_week",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "status",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "subregion",
               "req": false,
-              "type": "`$STRING`",
-              "active": true
+              "type": "`$STRING`"
             },
             {
+              "active": true,
               "name": "timezone",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "tld",
               "req": false,
-              "type": "`$ARRAY`",
-              "active": true
+              "type": "`$ARRAY`"
             },
             {
+              "active": true,
               "name": "translation",
               "req": false,
-              "type": "`$OBJECT`",
-              "active": true
+              "type": "`$OBJECT`"
             },
             {
+              "active": true,
               "name": "un_member",
               "req": false,
-              "type": "`$BOOLEAN`",
-              "active": true
+              "type": "`$BOOLEAN`"
             }
           ],
           "name": "name",
           "op": {
             "load": {
+              "input": "data",
               "name": "load",
               "points": [
                 {
+                  "active": true,
                   "args": {
                     "params": [
                       {
+                        "active": true,
                         "example": "germany",
                         "kind": "param",
                         "name": "id",
                         "orig": "name",
                         "reqd": true,
-                        "type": "`$STRING`",
-                        "active": true
+                        "type": "`$STRING`"
                       }
                     ],
                     "query": [
                       {
+                        "active": true,
                         "kind": "query",
                         "name": "field",
                         "orig": "field",
                         "reqd": false,
-                        "type": "`$STRING`",
-                        "active": true
+                        "type": "`$STRING`"
                       },
                       {
+                        "active": true,
                         "example": false,
                         "kind": "query",
                         "name": "full_text",
                         "orig": "full_text",
                         "reqd": false,
-                        "type": "`$BOOLEAN`",
-                        "active": true
+                        "type": "`$BOOLEAN`"
                       }
                     ]
                   },
@@ -1117,14 +1090,11 @@
                   "transform": {
                     "req": "`reqdata`",
                     "res": "`body`"
-                  },
-                  "active": true
+                  }
                 }
-              ],
-              "input": "data"
+              ]
             }
           },
-          "active": true,
           "relations": {
             "ancestors": []
           }
@@ -1132,9 +1102,6 @@
       },
       "feature": {
         "test": {
-          "name": "test",
-          "title": "In-memory mock transport for testing without a live server",
-          "version": "0.0.1",
           "active": true,
           "config": {
             "options": {
@@ -1142,6 +1109,14 @@
             }
           },
           "hook": {
+            "GetData": {
+              "active": true,
+              "await": false
+            },
+            "GetMatch": {
+              "active": true,
+              "await": false
+            },
             "PostConstruct": {
               "active": true,
               "await": false
@@ -1150,25 +1125,11 @@
               "active": true,
               "await": false
             },
-            "SetData": {
-              "active": true,
-              "await": false
-            },
-            "GetData": {
-              "active": true,
-              "await": false
-            },
-            "SetMatch": {
-              "active": true
-            },
-            "GetMatch": {
-              "active": true,
+            "PostOperation": {
+              "active": false,
               "await": false
             },
             "PrePoint": {
-              "active": true
-            },
-            "PreSpec": {
               "active": true,
               "await": false
             },
@@ -1184,20 +1145,32 @@
               "active": true,
               "await": false
             },
+            "PreSpec": {
+              "active": true,
+              "await": false
+            },
             "PreTarget": {
               "active": false,
               "await": false
             },
-            "PostOperation": {
-              "active": false,
+            "SetData": {
+              "active": true,
+              "await": false
+            },
+            "SetMatch": {
+              "active": true,
               "await": false
             }
           },
+          "name": "test",
           "target": {
-            "ts": {
+            "go": {
               "deps": {}
             },
-            "go": {
+            "go-cli": {
+              "deps": {}
+            },
+            "go-mcp": {
               "deps": {}
             },
             "lua": {
@@ -1212,23 +1185,30 @@
             "rb": {
               "deps": {}
             },
-            "go-cli": {
-              "deps": {}
-            },
-            "go-mcp": {
+            "ts": {
               "deps": {}
             }
-          }
+          },
+          "title": "In-memory mock transport for testing without a live server",
+          "version": "0.0.1"
         }
       },
       "flow": {
         "BasicAllFlow": {
+          "active": true,
           "entity": "all",
+          "key$": "BasicAllFlow",
           "kind": "basic",
           "name": "BasicAllFlow",
+          "param": {},
           "step": [
             {
+              "active": true,
+              "data": {},
+              "input": {},
+              "match": {},
               "op": "list",
+              "spec": [],
               "valid": [
                 {
                   "apply": "ItemExists",
@@ -1236,24 +1216,21 @@
                     "ref": "all_ref01"
                   }
                 }
-              ],
-              "active": true,
-              "match": {},
-              "data": {},
-              "input": {},
-              "spec": []
+              ]
             }
-          ],
-          "key$": "BasicAllFlow",
-          "active": true,
-          "param": {}
+          ]
         },
         "BasicAlphaFlow": {
+          "active": true,
           "entity": "alpha",
+          "key$": "BasicAlphaFlow",
           "kind": "basic",
           "name": "BasicAlphaFlow",
+          "param": {},
           "step": [
             {
+              "active": true,
+              "data": {},
               "input": {
                 "ref": "alpha_ref01",
                 "srcdatavar": "alpha_ref01_data",
@@ -1263,6 +1240,7 @@
                 "id": "alpha01"
               },
               "op": "load",
+              "spec": [],
               "valid": [
                 {
                   "apply": "TextFieldMark",
@@ -1270,22 +1248,21 @@
                     "mark": "Mark01-alpha_ref01"
                   }
                 }
-              ],
-              "active": true,
-              "data": {},
-              "spec": []
+              ]
             }
-          ],
-          "key$": "BasicAlphaFlow",
-          "active": true,
-          "param": {}
+          ]
         },
         "BasicCapitalFlow": {
+          "active": true,
           "entity": "capital",
+          "key$": "BasicCapitalFlow",
           "kind": "basic",
           "name": "BasicCapitalFlow",
+          "param": {},
           "step": [
             {
+              "active": true,
+              "data": {},
               "input": {
                 "ref": "capital_ref01",
                 "srcdatavar": "capital_ref01_data",
@@ -1295,6 +1272,7 @@
                 "id": "capital01"
               },
               "op": "load",
+              "spec": [],
               "valid": [
                 {
                   "apply": "TextFieldMark",
@@ -1302,22 +1280,21 @@
                     "mark": "Mark01-capital_ref01"
                   }
                 }
-              ],
-              "active": true,
-              "data": {},
-              "spec": []
+              ]
             }
-          ],
-          "key$": "BasicCapitalFlow",
-          "active": true,
-          "param": {}
+          ]
         },
         "BasicNameFlow": {
+          "active": true,
           "entity": "name",
+          "key$": "BasicNameFlow",
           "kind": "basic",
           "name": "BasicNameFlow",
+          "param": {},
           "step": [
             {
+              "active": true,
+              "data": {},
               "input": {
                 "ref": "name_ref01",
                 "srcdatavar": "name_ref01_data",
@@ -1327,6 +1304,7 @@
                 "id": "name01"
               },
               "op": "load",
+              "spec": [],
               "valid": [
                 {
                   "apply": "TextFieldMark",
@@ -1334,27 +1312,56 @@
                     "mark": "Mark01-name_ref01"
                   }
                 }
-              ],
-              "active": true,
-              "data": {},
-              "spec": []
+              ]
             }
-          ],
-          "key$": "BasicNameFlow",
-          "active": true,
-          "param": {}
+          ]
         }
       },
+      "info": {
+        "contact": {
+          "url": "https://restcountries.com/"
+        },
+        "description": "The REST Countries API provides detailed information about countries around the world in a simple RESTful interface. Users can retrieve data such as country names, codes, capital cities, languages, and more.",
+        "license": {
+          "name": "Mozilla Public License MPL 2.0",
+          "url": "https://www.mozilla.org/en-US/MPL/2.0/"
+        },
+        "servers": [
+          {
+            "description": "Production server",
+            "url": "https://restcountries.com/v3.1"
+          }
+        ],
+        "title": "REST Countries API",
+        "version": "3.1.0"
+      },
+      "option": {},
       "target": {
-        "go-cli": {
-          "title": "Go CLI",
-          "ext": "go",
+        "go": {
+          "active": true,
           "comment": {
             "line": "//"
           },
+          "deps": {},
+          "ext": "go",
           "module": {
             "name": "rest-countries"
           },
+          "name": "go",
+          "srcfeature": false,
+          "title": "Golang"
+        },
+        "go-cli": {
+          "active": true,
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "go",
+          "module": {
+            "name": "rest-countries"
+          },
+          "name": "go-cli",
           "phase": {
             "entity": {
               "active": false
@@ -1369,19 +1376,19 @@
               "active": false
             }
           },
-          "deps": {},
-          "name": "go-cli",
-          "active": true
+          "title": "Go CLI"
         },
         "go-mcp": {
-          "title": "Go MCP server",
-          "ext": "go",
+          "active": true,
           "comment": {
             "line": "//"
           },
+          "deps": {},
+          "ext": "go",
           "module": {
             "name": "rest-countries"
           },
+          "name": "go-mcp",
           "phase": {
             "entity": {
               "active": false
@@ -1396,138 +1403,120 @@
               "active": false
             }
           },
-          "deps": {},
-          "name": "go-mcp",
-          "active": true
-        },
-        "ts": {
-          "title": "TypeScript",
-          "ext": "ts",
-          "comment": {
-            "line": "//"
-          },
-          "module": {
-            "name": "rest-countries"
-          },
-          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
-          "deps": {
-            "dotenv": {
-              "active": true,
-              "version": "^17.4.2",
-              "kind": "dev"
-            },
-            "typescript": {
-              "active": true,
-              "version": "^5.9.3",
-              "kind": "dev"
-            },
-            "@types/node": {
-              "active": true,
-              "version": "^25.6.0",
-              "kind": "dev"
-            }
-          },
-          "name": "ts",
-          "active": true
-        },
-        "go": {
-          "title": "Golang",
-          "ext": "go",
-          "comment": {
-            "line": "//"
-          },
-          "module": {
-            "name": "rest-countries"
-          },
-          "srcfeature": false,
-          "deps": {},
-          "name": "go",
-          "active": true
+          "title": "Go MCP server"
         },
         "lua": {
-          "title": "Lua",
-          "ext": "lua",
+          "active": true,
           "comment": {
             "line": "--"
           },
-          "module": {
-            "name": "rest-countries"
-          },
-          "srcfeature": false,
           "deps": {
             "dkjson": {
               "active": true,
-              "version": "2.5",
-              "kind": "prod"
+              "kind": "prod",
+              "version": "2.5"
             }
           },
+          "ext": "lua",
+          "module": {
+            "name": "rest-countries"
+          },
           "name": "lua",
-          "active": true
+          "srcfeature": false,
+          "title": "Lua"
         },
         "php": {
-          "title": "PHP",
-          "ext": "php",
+          "active": true,
           "comment": {
             "line": "//"
           },
+          "deps": {},
+          "ext": "php",
           "module": {
             "name": "rest-countries"
           },
-          "srcfeature": false,
-          "deps": {},
           "name": "php",
-          "active": true
+          "srcfeature": false,
+          "title": "PHP"
         },
         "py": {
-          "title": "Python",
-          "ext": "py",
+          "active": true,
           "comment": {
             "line": "#"
           },
-          "module": {
-            "name": "rest-countries"
-          },
-          "srcfeature": false,
           "deps": {
             "requests": {
               "active": true,
-              "version": "2.33",
-              "kind": "prod"
+              "kind": "prod",
+              "version": "2.33"
             }
           },
-          "name": "py",
-          "active": true
-        },
-        "rb": {
-          "title": "Ruby",
-          "ext": "rb",
-          "comment": {
-            "line": "#"
-          },
+          "ext": "py",
           "module": {
             "name": "rest-countries"
           },
+          "name": "py",
           "srcfeature": false,
+          "title": "Python"
+        },
+        "rb": {
+          "active": true,
+          "comment": {
+            "line": "#"
+          },
           "deps": {
-            "voxgig-struct": {
-              "active": true,
-              "version": "0.0.10",
-              "kind": "prod"
-            },
             "json": {
               "active": true,
-              "version": "0",
-              "kind": "prod"
+              "kind": "prod",
+              "version": "0"
+            },
+            "voxgig-struct": {
+              "active": true,
+              "kind": "prod",
+              "version": "0.0.10"
             }
           },
+          "ext": "rb",
+          "module": {
+            "name": "rest-countries"
+          },
           "name": "rb",
-          "active": true
+          "srcfeature": false,
+          "title": "Ruby"
+        },
+        "ts": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {
+            "@types/node": {
+              "active": true,
+              "kind": "dev",
+              "version": "^25.6.0"
+            },
+            "dotenv": {
+              "active": true,
+              "kind": "dev",
+              "version": "^17.4.2"
+            },
+            "typescript": {
+              "active": true,
+              "kind": "dev",
+              "version": "^5.9.3"
+            }
+          },
+          "ext": "ts",
+          "module": {
+            "name": "rest-countries"
+          },
+          "name": "ts",
+          "title": "TypeScript"
         }
-      },
-      "option": {}
-    },
-    "def": {
-      "desc": ""
+      }
     }
-  }
+  },
+  "name": "rest-countries",
+  "origin": "voxgig-sdk"
 }
