@@ -144,16 +144,23 @@ class RestCountriesSDK:
 
         _, err = utility.prepare_auth(ctx)
         if err is not None:
-            return None, err
+            raise err
 
-        return utility.make_fetch_def(ctx)
+        fetchdef, err = utility.make_fetch_def(ctx)
+        if err is not None:
+            raise err
+
+        return fetchdef
 
     def direct(self, fetchargs=None):
         utility = self._utility
 
-        fetchdef, err = self.prepare(fetchargs)
-        if err is not None:
-            return {"ok": False, "err": err}, None
+        try:
+            fetchdef = self.prepare(fetchargs)
+        except Exception as err:
+            # direct() is the raw-HTTP escape hatch: it never raises, it
+            # returns a result object callers branch on via result["ok"].
+            return {"ok": False, "err": err}
 
         if fetchargs is None:
             fetchargs = {}
@@ -170,13 +177,13 @@ class RestCountriesSDK:
         fetched, fetch_err = utility.fetcher(ctx, url, fetchdef)
 
         if fetch_err is not None:
-            return {"ok": False, "err": fetch_err}, None
+            return {"ok": False, "err": fetch_err}
 
         if fetched is None:
             return {
                 "ok": False,
                 "err": ctx.make_error("direct_no_response", "response: undefined"),
-            }, None
+            }
 
         if isinstance(fetched, dict):
             status = helpers.to_int(vs.getprop(fetched, "status"))
@@ -205,30 +212,74 @@ class RestCountriesSDK:
                 "status": status,
                 "headers": headers,
                 "data": json_data,
-            }, None
+            }
 
         return {
             "ok": False,
             "err": ctx.make_error("direct_invalid", "invalid response type"),
-        }, None
+        }
 
+
+    @property
+    def all(self):
+        """Idiomatic facade: client.all.list() / client.all.load({"id": ...})."""
+        from entity.all_entity import AllEntity
+        cached = getattr(self, "_all", None)
+        if cached is None:
+            cached = AllEntity(self, None)
+            self._all = cached
+        return cached
 
     def All(self, data=None):
+        # Deprecated: use client.all instead.
         from entity.all_entity import AllEntity
         return AllEntity(self, data)
 
 
+    @property
+    def alpha(self):
+        """Idiomatic facade: client.alpha.list() / client.alpha.load({"id": ...})."""
+        from entity.alpha_entity import AlphaEntity
+        cached = getattr(self, "_alpha", None)
+        if cached is None:
+            cached = AlphaEntity(self, None)
+            self._alpha = cached
+        return cached
+
     def Alpha(self, data=None):
+        # Deprecated: use client.alpha instead.
         from entity.alpha_entity import AlphaEntity
         return AlphaEntity(self, data)
 
 
+    @property
+    def capital(self):
+        """Idiomatic facade: client.capital.list() / client.capital.load({"id": ...})."""
+        from entity.capital_entity import CapitalEntity
+        cached = getattr(self, "_capital", None)
+        if cached is None:
+            cached = CapitalEntity(self, None)
+            self._capital = cached
+        return cached
+
     def Capital(self, data=None):
+        # Deprecated: use client.capital instead.
         from entity.capital_entity import CapitalEntity
         return CapitalEntity(self, data)
 
 
+    @property
+    def name(self):
+        """Idiomatic facade: client.name.list() / client.name.load({"id": ...})."""
+        from entity.name_entity import NameEntity
+        cached = getattr(self, "_name", None)
+        if cached is None:
+            cached = NameEntity(self, None)
+            self._name = cached
+        return cached
+
     def Name(self, data=None):
+        # Deprecated: use client.name instead.
         from entity.name_entity import NameEntity
         return NameEntity(self, data)
 

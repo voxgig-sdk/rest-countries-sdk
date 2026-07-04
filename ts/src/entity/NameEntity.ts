@@ -14,9 +14,13 @@ import type {
   Control,
 } from '../types'
 
+import type {
+  Name,
+  NameLoadMatch,
+} from '../RestCountriesTypes'
 
 // TODO: needs Entity superclass
-class NameEntity extends RestCountriesEntityBase {
+class NameEntity extends RestCountriesEntityBase<Name> {
 
   constructor(client: RestCountriesSDK, entopts: any) {
     super(client, entopts)
@@ -32,7 +36,7 @@ class NameEntity extends RestCountriesEntityBase {
 
 
 
-  async load(this: any, reqmatch?: any, ctrl?: Control) {
+  async load(this: any, reqmatch?: NameLoadMatch, ctrl?: Control): Promise<Name> {
 
     const utility = this._utility
 
@@ -136,7 +140,9 @@ class NameEntity extends RestCountriesEntityBase {
         throw err
       }
       else {
-        return undefined
+        // Off-happy-path (throw disabled): typed as any so the method's
+        // Promise<Name> return stays clean under strict null checks.
+        return undefined as any
       }
     }
   }

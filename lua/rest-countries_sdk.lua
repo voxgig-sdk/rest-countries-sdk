@@ -244,24 +244,76 @@ end
 
 
 
+-- Idiomatic facade: client:all():list() / client:all():load({ id = ... })
+function RestCountriesSDK:all(data)
+  local EntityMod = require("entity.all_entity")
+  if data == nil then
+    if self._all == nil then
+      self._all = EntityMod.new(self, nil)
+    end
+    return self._all
+  end
+  return EntityMod.new(self, data)
+end
+
+-- Deprecated: use client:all() instead.
 function RestCountriesSDK:All(data)
   local EntityMod = require("entity.all_entity")
   return EntityMod.new(self, data)
 end
 
 
+-- Idiomatic facade: client:alpha():list() / client:alpha():load({ id = ... })
+function RestCountriesSDK:alpha(data)
+  local EntityMod = require("entity.alpha_entity")
+  if data == nil then
+    if self._alpha == nil then
+      self._alpha = EntityMod.new(self, nil)
+    end
+    return self._alpha
+  end
+  return EntityMod.new(self, data)
+end
+
+-- Deprecated: use client:alpha() instead.
 function RestCountriesSDK:Alpha(data)
   local EntityMod = require("entity.alpha_entity")
   return EntityMod.new(self, data)
 end
 
 
+-- Idiomatic facade: client:capital():list() / client:capital():load({ id = ... })
+function RestCountriesSDK:capital(data)
+  local EntityMod = require("entity.capital_entity")
+  if data == nil then
+    if self._capital == nil then
+      self._capital = EntityMod.new(self, nil)
+    end
+    return self._capital
+  end
+  return EntityMod.new(self, data)
+end
+
+-- Deprecated: use client:capital() instead.
 function RestCountriesSDK:Capital(data)
   local EntityMod = require("entity.capital_entity")
   return EntityMod.new(self, data)
 end
 
 
+-- Idiomatic facade: client:name():list() / client:name():load({ id = ... })
+function RestCountriesSDK:name(data)
+  local EntityMod = require("entity.name_entity")
+  if data == nil then
+    if self._name == nil then
+      self._name = EntityMod.new(self, nil)
+    end
+    return self._name
+  end
+  return EntityMod.new(self, data)
+end
+
+-- Deprecated: use client:name() instead.
 function RestCountriesSDK:Name(data)
   local EntityMod = require("entity.name_entity")
   return EntityMod.new(self, data)

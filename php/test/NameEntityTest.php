@@ -49,8 +49,7 @@ class NameEntityTest extends TestCase
         // LOAD
         $name_ref01_ent = $client->Name(null);
         $name_ref01_match_dt0 = [];
-        [$name_ref01_data_dt0_loaded, $err] = $name_ref01_ent->load($name_ref01_match_dt0, null);
-        $this->assertNull($err);
+        $name_ref01_data_dt0_loaded = $name_ref01_ent->load($name_ref01_match_dt0, null);
         $this->assertNotNull($name_ref01_data_dt0_loaded);
 
     }
@@ -85,7 +84,6 @@ function name_basic_setup($extra)
         "RESTCOUNTRIES_TEST_NAME_ENTID" => $idmap,
         "RESTCOUNTRIES_TEST_LIVE" => "FALSE",
         "RESTCOUNTRIES_TEST_EXPLAIN" => "FALSE",
-        "RESTCOUNTRIES_APIKEY" => "NONE",
     ]);
 
     $idmap_resolved = Helpers::to_map(
@@ -97,7 +95,6 @@ function name_basic_setup($extra)
     if ($env["RESTCOUNTRIES_TEST_LIVE"] === "TRUE") {
         $merged_opts = Vs::merge([
             [
-                "apikey" => $env["RESTCOUNTRIES_APIKEY"],
             ],
             $extra ?? [],
         ]);

@@ -15,9 +15,6 @@ def make_config():
         },
         "options": {
             "base": "https://restcountries.com/v3.1",
-            "auth": {
-                "prefix": "Bearer",
-            },
             "headers": {
         "content-type": "application/json",
       },
@@ -574,6 +571,7 @@ def make_config():
                       "orig": "code",
                       "reqd": True,
                       "type": "`$STRING`",
+                      "index$": 0,
                     },
                   ],
                   "query": [
@@ -877,6 +875,7 @@ def make_config():
                       "orig": "capital",
                       "reqd": True,
                       "type": "`$STRING`",
+                      "index$": 0,
                     },
                   ],
                   "query": [
@@ -1180,6 +1179,7 @@ def make_config():
                       "orig": "name",
                       "reqd": True,
                       "type": "`$STRING`",
+                      "index$": 0,
                     },
                   ],
                   "query": [

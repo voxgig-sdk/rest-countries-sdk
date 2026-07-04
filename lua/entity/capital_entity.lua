@@ -79,6 +79,10 @@ end
 
 
 
+---@param reqmatch CapitalLoadMatch
+---@param ctrl? table
+---@return Capital
+---@return string? err
 function CapitalEntity:load(reqmatch, ctrl)
   local utility = self._utility
   local ctx = utility.make_context({

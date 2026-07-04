@@ -15,9 +15,6 @@ module RestCountriesConfig
       },
       "options" => {
         "base" => "https://restcountries.com/v3.1",
-        "auth" => {
-          "prefix" => "Bearer",
-        },
         "headers" => {
           "content-type" => "application/json",
         },
@@ -574,6 +571,7 @@ module RestCountriesConfig
                         "orig" => "code",
                         "reqd" => true,
                         "type" => "`$STRING`",
+                        "index$" => 0,
                       },
                     ],
                     "query" => [
@@ -877,6 +875,7 @@ module RestCountriesConfig
                         "orig" => "capital",
                         "reqd" => true,
                         "type" => "`$STRING`",
+                        "index$" => 0,
                       },
                     ],
                     "query" => [
@@ -1180,6 +1179,7 @@ module RestCountriesConfig
                         "orig" => "name",
                         "reqd" => true,
                         "type" => "`$STRING`",
+                        "index$" => 0,
                       },
                     ],
                     "query" => [

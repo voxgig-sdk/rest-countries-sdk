@@ -18,7 +18,6 @@ Create a new SDK client instance.
 | Name | Type | Description |
 | --- | --- | --- |
 | `options` | `object` | SDK configuration options. |
-| `options.apikey` | `string` | API key for authentication. |
 | `options.base` | `string` | Base URL for API requests. |
 | `options.prefix` | `string` | URL prefix appended after base. |
 | `options.suffix` | `string` | URL suffix appended after path. |
@@ -146,7 +145,7 @@ Alias for `RestCountriesSDK.test()`.
 ## AllEntity
 
 ```ts
-const all = client.All()
+const all = client.all
 ```
 
 ### Fields
@@ -195,7 +194,7 @@ const all = client.All()
 List entities matching the given criteria. Returns an array.
 
 ```ts
-const results = await client.All().list()
+const results = await client.all.list()
 ```
 
 ### Common Methods
@@ -229,7 +228,7 @@ Return a copy of the entity options.
 ## AlphaEntity
 
 ```ts
-const alpha = client.Alpha()
+const alpha = client.alpha
 ```
 
 ### Fields
@@ -278,7 +277,7 @@ const alpha = client.Alpha()
 Load a single entity matching the given criteria.
 
 ```ts
-const result = await client.Alpha().load({ id: 'alpha_id' })
+const result = await client.alpha.load({ id: 'alpha_id' })
 ```
 
 ### Common Methods
@@ -312,7 +311,7 @@ Return a copy of the entity options.
 ## CapitalEntity
 
 ```ts
-const capital = client.Capital()
+const capital = client.capital
 ```
 
 ### Fields
@@ -361,7 +360,7 @@ const capital = client.Capital()
 Load a single entity matching the given criteria.
 
 ```ts
-const result = await client.Capital().load({ id: 'capital_id' })
+const result = await client.capital.load({ id: 'capital_id' })
 ```
 
 ### Common Methods
@@ -395,7 +394,7 @@ Return a copy of the entity options.
 ## NameEntity
 
 ```ts
-const name = client.Name()
+const name = client.name
 ```
 
 ### Fields
@@ -444,7 +443,7 @@ const name = client.Name()
 Load a single entity matching the given criteria.
 
 ```ts
-const result = await client.Name().load({ id: 'name_id' })
+const result = await client.name.load({ id: 'name_id' })
 ```
 
 ### Common Methods

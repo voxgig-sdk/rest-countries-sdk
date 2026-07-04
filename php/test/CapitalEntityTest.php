@@ -49,8 +49,7 @@ class CapitalEntityTest extends TestCase
         // LOAD
         $capital_ref01_ent = $client->Capital(null);
         $capital_ref01_match_dt0 = [];
-        [$capital_ref01_data_dt0_loaded, $err] = $capital_ref01_ent->load($capital_ref01_match_dt0, null);
-        $this->assertNull($err);
+        $capital_ref01_data_dt0_loaded = $capital_ref01_ent->load($capital_ref01_match_dt0, null);
         $this->assertNotNull($capital_ref01_data_dt0_loaded);
 
     }
@@ -85,7 +84,6 @@ function capital_basic_setup($extra)
         "RESTCOUNTRIES_TEST_CAPITAL_ENTID" => $idmap,
         "RESTCOUNTRIES_TEST_LIVE" => "FALSE",
         "RESTCOUNTRIES_TEST_EXPLAIN" => "FALSE",
-        "RESTCOUNTRIES_APIKEY" => "NONE",
     ]);
 
     $idmap_resolved = Helpers::to_map(
@@ -97,7 +95,6 @@ function capital_basic_setup($extra)
     if ($env["RESTCOUNTRIES_TEST_LIVE"] === "TRUE") {
         $merged_opts = Vs::merge([
             [
-                "apikey" => $env["RESTCOUNTRIES_APIKEY"],
             ],
             $extra ?? [],
         ]);

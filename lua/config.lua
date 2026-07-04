@@ -14,9 +14,6 @@ local function make_config()
     },
     options = {
       base = "https://restcountries.com/v3.1",
-      auth = {
-        prefix = "Bearer",
-      },
       headers = {
         ["content-type"] = "application/json",
       },
@@ -573,6 +570,7 @@ local function make_config()
                       ["orig"] = "code",
                       ["reqd"] = true,
                       ["type"] = "`$STRING`",
+                      ["index$"] = 0,
                     },
                   },
                   ["query"] = {
@@ -876,6 +874,7 @@ local function make_config()
                       ["orig"] = "capital",
                       ["reqd"] = true,
                       ["type"] = "`$STRING`",
+                      ["index$"] = 0,
                     },
                   },
                   ["query"] = {
@@ -1179,6 +1178,7 @@ local function make_config()
                       ["orig"] = "name",
                       ["reqd"] = true,
                       ["type"] = "`$STRING`",
+                      ["index$"] = 0,
                     },
                   },
                   ["query"] = {

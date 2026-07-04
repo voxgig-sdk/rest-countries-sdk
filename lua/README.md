@@ -9,12 +9,9 @@ The Lua SDK for the RestCountries API — an entity-oriented client using Lua co
 
 
 ## Install
-```bash
-luarocks install voxgig-sdk-rest-countries
-```
-
-If the module is not yet published, add the source directory to
-your `LUA_PATH`:
+This package is not yet published to LuaRocks. Install it from the
+GitHub release tag (`lua/vX.Y.Z`, see [Releases](https://github.com/voxgig-sdk/rest-countries-sdk/releases)),
+or add the source directory to your `LUA_PATH`:
 
 ```bash
 export LUA_PATH="path/to/lua/?.lua;path/to/lua/?/init.lua;;"
@@ -31,15 +28,13 @@ loading a specific record.
 ```lua
 local sdk = require("rest-countries_sdk")
 
-local client = sdk.new({
-  apikey = os.getenv("REST-COUNTRIES_APIKEY"),
-})
+local client = sdk.new()
 ```
 
 ### 2. List alls
 
 ```lua
-local result, err = client:All():list()
+local result, err = client:all():list()
 if err then error(err) end
 
 if type(result) == "table" then
@@ -93,7 +88,7 @@ Create a mock client for unit testing — no server required:
 ```lua
 local client = sdk.test()
 
-local result, err = client:RestCountries():load({ id = "test01" })
+local result, err = client:all():load({ id = "test01" })
 -- result contains mock response data
 ```
 
@@ -126,8 +121,7 @@ local client = sdk.new({
 Create a `.env.local` file at the project root:
 
 ```
-REST-COUNTRIES_TEST_LIVE=TRUE
-REST-COUNTRIES_APIKEY=<your-key>
+REST_COUNTRIES_TEST_LIVE=TRUE
 ```
 
 Then run:
@@ -150,7 +144,6 @@ Creates a new SDK client.
 
 | Option | Type | Description |
 | --- | --- | --- |
-| `apikey` | `string` | API key for authentication. |
 | `base` | `string` | Base URL of the API server. |
 | `prefix` | `string` | URL path prefix prepended to all requests. |
 | `suffix` | `string` | URL path suffix appended to all requests. |
@@ -392,7 +385,7 @@ API path: `/name/{name}`
 
 ### All
 
-Create an instance: `const all = client.All()`
+Create an instance: `const all = client.all`
 
 #### Operations
 
@@ -442,13 +435,13 @@ Create an instance: `const all = client.All()`
 #### Example: List
 
 ```ts
-const alls = await client.All().list()
+const alls = await client.all.list()
 ```
 
 
 ### Alpha
 
-Create an instance: `const alpha = client.Alpha()`
+Create an instance: `const alpha = client.alpha`
 
 #### Operations
 
@@ -498,13 +491,13 @@ Create an instance: `const alpha = client.Alpha()`
 #### Example: Load
 
 ```ts
-const alpha = await client.Alpha().load({ id: 'alpha_id' })
+const alpha = await client.alpha.load({ id: 'alpha_id' })
 ```
 
 
 ### Capital
 
-Create an instance: `const capital = client.Capital()`
+Create an instance: `const capital = client.capital`
 
 #### Operations
 
@@ -554,13 +547,13 @@ Create an instance: `const capital = client.Capital()`
 #### Example: Load
 
 ```ts
-const capital = await client.Capital().load({ id: 'capital_id' })
+const capital = await client.capital.load({ id: 'capital_id' })
 ```
 
 
 ### Name
 
-Create an instance: `const name = client.Name()`
+Create an instance: `const name = client.name`
 
 #### Operations
 
@@ -610,7 +603,7 @@ Create an instance: `const name = client.Name()`
 #### Example: Load
 
 ```ts
-const name = await client.Name().load({ id: 'name_id' })
+const name = await client.name.load({ id: 'name_id' })
 ```
 
 
@@ -685,11 +678,11 @@ Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```lua
-local moon = client:Moon(nil)
-moon:load({ planet_id = "earth", id = "luna" }, nil)
+local all = client:all()
+all:load({ id = "example_id" })
 
--- moon:data_get() now returns the loaded moon data
--- moon:match_get() returns the last match criteria
+-- all:data_get() now returns the loaded all data
+-- all:match_get() returns the last match criteria
 ```
 
 Call `make()` to create a fresh instance with the same configuration

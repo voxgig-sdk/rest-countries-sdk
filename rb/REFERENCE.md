@@ -20,7 +20,6 @@ Create a new SDK client instance.
 | Name | Type | Description |
 | --- | --- | --- |
 | `options` | `Hash` | SDK configuration options. |
-| `options["apikey"]` | `String` | API key for authentication. |
 | `options["base"]` | `String` | Base URL for API requests. |
 | `options["prefix"]` | `String` | URL prefix appended after base. |
 | `options["suffix"]` | `String` | URL suffix appended after path. |
@@ -66,9 +65,11 @@ Return a deep copy of the current SDK options.
 
 Return a copy of the SDK utility object.
 
-#### `direct(fetchargs = {}) -> Hash, err`
+#### `direct(fetchargs = {}) -> Hash`
 
-Make a direct HTTP request to any API endpoint.
+Make a direct HTTP request to any API endpoint. Returns a result hash
+(`{ "ok" => ..., "status" => ..., "data" => ..., "err" => ... }`); it
+does not raise — inspect `result["ok"]`.
 
 **Parameters:**
 
@@ -82,14 +83,14 @@ Make a direct HTTP request to any API endpoint.
 | `fetchargs["body"]` | `any` | Request body (hashes are JSON-serialized). |
 | `fetchargs["ctrl"]` | `Hash` | Control options (e.g. `{ "explain" => true }`). |
 
-**Returns:** `Hash, err`
+**Returns:** `Hash`
 
-#### `prepare(fetchargs = {}) -> Hash, err`
+#### `prepare(fetchargs = {}) -> Hash`
 
 Prepare a fetch definition without sending the request. Accepts the
-same parameters as `direct()`.
+same parameters as `direct()`. Raises on error.
 
-**Returns:** `Hash, err`
+**Returns:** `Hash` (the fetch definition; raises on error)
 
 
 ---
@@ -97,7 +98,7 @@ same parameters as `direct()`.
 ## AllEntity
 
 ```ruby
-all = client.All
+all = client.all
 ```
 
 ### Fields
@@ -141,12 +142,12 @@ all = client.All
 
 ### Operations
 
-#### `list(reqmatch, ctrl = nil) -> result, err`
+#### `list(reqmatch, ctrl = nil) -> Array`
 
-List entities matching the given criteria. Returns an array.
+List entities matching the given criteria. Returns an array. Raises on error.
 
 ```ruby
-results, err = client.All.list(nil)
+results = client.all.list(nil)
 ```
 
 ### Common Methods
@@ -182,7 +183,7 @@ Return the entity name.
 ## AlphaEntity
 
 ```ruby
-alpha = client.Alpha
+alpha = client.alpha
 ```
 
 ### Fields
@@ -226,12 +227,12 @@ alpha = client.Alpha
 
 ### Operations
 
-#### `load(reqmatch, ctrl = nil) -> result, err`
+#### `load(reqmatch, ctrl = nil) -> result`
 
-Load a single entity matching the given criteria.
+Load a single entity matching the given criteria. Raises on error.
 
 ```ruby
-result, err = client.Alpha.load({ "id" => "alpha_id" })
+result = client.alpha.load({ "id" => "alpha_id" })
 ```
 
 ### Common Methods
@@ -267,7 +268,7 @@ Return the entity name.
 ## CapitalEntity
 
 ```ruby
-capital = client.Capital
+capital = client.capital
 ```
 
 ### Fields
@@ -311,12 +312,12 @@ capital = client.Capital
 
 ### Operations
 
-#### `load(reqmatch, ctrl = nil) -> result, err`
+#### `load(reqmatch, ctrl = nil) -> result`
 
-Load a single entity matching the given criteria.
+Load a single entity matching the given criteria. Raises on error.
 
 ```ruby
-result, err = client.Capital.load({ "id" => "capital_id" })
+result = client.capital.load({ "id" => "capital_id" })
 ```
 
 ### Common Methods
@@ -352,7 +353,7 @@ Return the entity name.
 ## NameEntity
 
 ```ruby
-name = client.Name
+name = client.name
 ```
 
 ### Fields
@@ -396,12 +397,12 @@ name = client.Name
 
 ### Operations
 
-#### `load(reqmatch, ctrl = nil) -> result, err`
+#### `load(reqmatch, ctrl = nil) -> result`
 
-Load a single entity matching the given criteria.
+Load a single entity matching the given criteria. Raises on error.
 
 ```ruby
-result, err = client.Name.load({ "id" => "name_id" })
+result = client.name.load({ "id" => "name_id" })
 ```
 
 ### Common Methods

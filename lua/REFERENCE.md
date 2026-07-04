@@ -19,7 +19,6 @@ Create a new SDK client instance.
 | Name | Type | Description |
 | --- | --- | --- |
 | `options` | `table` | SDK configuration options. |
-| `options.apikey` | `string` | API key for authentication. |
 | `options.base` | `string` | Base URL for API requests. |
 | `options.prefix` | `string` | URL prefix appended after base. |
 | `options.suffix` | `string` | URL suffix appended after path. |
@@ -96,7 +95,7 @@ same parameters as `direct()`.
 ## AllEntity
 
 ```lua
-local all = client:All(nil)
+local all = client:all(nil)
 ```
 
 ### Fields
@@ -145,7 +144,7 @@ local all = client:All(nil)
 List entities matching the given criteria. Returns an array.
 
 ```lua
-local results, err = client:All():list()
+local results, err = client:all():list()
 ```
 
 ### Common Methods
@@ -181,7 +180,7 @@ Return the entity name.
 ## AlphaEntity
 
 ```lua
-local alpha = client:Alpha(nil)
+local alpha = client:alpha(nil)
 ```
 
 ### Fields
@@ -230,7 +229,7 @@ local alpha = client:Alpha(nil)
 Load a single entity matching the given criteria.
 
 ```lua
-local result, err = client:Alpha():load({ id = "alpha_id" })
+local result, err = client:alpha():load({ id = "alpha_id" })
 ```
 
 ### Common Methods
@@ -266,7 +265,7 @@ Return the entity name.
 ## CapitalEntity
 
 ```lua
-local capital = client:Capital(nil)
+local capital = client:capital(nil)
 ```
 
 ### Fields
@@ -315,7 +314,7 @@ local capital = client:Capital(nil)
 Load a single entity matching the given criteria.
 
 ```lua
-local result, err = client:Capital():load({ id = "capital_id" })
+local result, err = client:capital():load({ id = "capital_id" })
 ```
 
 ### Common Methods
@@ -351,7 +350,7 @@ Return the entity name.
 ## NameEntity
 
 ```lua
-local name = client:Name(nil)
+local name = client:name(nil)
 ```
 
 ### Fields
@@ -400,7 +399,7 @@ local name = client:Name(nil)
 Load a single entity matching the given criteria.
 
 ```lua
-local result, err = client:Name():load({ id = "name_id" })
+local result, err = client:name():load({ id = "name_id" })
 ```
 
 ### Common Methods

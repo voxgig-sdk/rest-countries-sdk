@@ -49,8 +49,7 @@ class TestNameEntity:
         # LOAD
         name_ref01_ent = client.Name(None)
         name_ref01_match_dt0 = {}
-        name_ref01_data_dt0_loaded, err = name_ref01_ent.load(name_ref01_match_dt0, None)
-        assert err is None
+        name_ref01_data_dt0_loaded = name_ref01_ent.load(name_ref01_match_dt0, None)
         assert name_ref01_data_dt0_loaded is not None
 
 
@@ -91,7 +90,6 @@ def _name_basic_setup(extra):
         "RESTCOUNTRIES_TEST_NAME_ENTID": idmap,
         "RESTCOUNTRIES_TEST_LIVE": "FALSE",
         "RESTCOUNTRIES_TEST_EXPLAIN": "FALSE",
-        "RESTCOUNTRIES_APIKEY": "NONE",
     })
 
     idmap_resolved = helpers.to_map(
@@ -102,7 +100,6 @@ def _name_basic_setup(extra):
     if env.get("RESTCOUNTRIES_TEST_LIVE") == "TRUE":
         merged_opts = vs.merge([
             {
-                "apikey": env.get("RESTCOUNTRIES_APIKEY"),
             },
             extra or {},
         ])

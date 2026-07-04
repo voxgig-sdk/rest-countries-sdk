@@ -1,0 +1,166 @@
+-- Typed models for the RestCountries SDK (LuaLS annotations).
+--
+-- GENERATED from the API model: main.kit.entity.<e>.fields[] and per-op
+-- params (op.<name>.points[].args.params[]). Field/param types come from the
+-- canonical type sentinels via @voxgig/sdkgen canonToType (source of truth:
+-- @voxgig/apidef VALID_CANON). Annotations only — no runtime effect. Do not
+-- edit by hand.
+
+---@class All
+---@field alt_spelling? table
+---@field area? number
+---@field border? table
+---@field capital? table
+---@field capital_info? table
+---@field car? table
+---@field cca2? string
+---@field cca3? string
+---@field ccn3? string
+---@field cioc? string
+---@field coat_of_arm? table
+---@field continent? table
+---@field currency? table
+---@field demonym? table
+---@field fifa? string
+---@field flag? string
+---@field gini? table
+---@field idd? table
+---@field independent? boolean
+---@field landlocked? boolean
+---@field language? table
+---@field latlng? table
+---@field map? table
+---@field name? table
+---@field population? number
+---@field postal_code? table
+---@field region? string
+---@field start_of_week? string
+---@field status? string
+---@field subregion? string
+---@field timezone? table
+---@field tld? table
+---@field translation? table
+---@field un_member? boolean
+
+---@class AllListMatch
+
+---@class Alpha
+---@field alt_spelling? table
+---@field area? number
+---@field border? table
+---@field capital? table
+---@field capital_info? table
+---@field car? table
+---@field cca2? string
+---@field cca3? string
+---@field ccn3? string
+---@field cioc? string
+---@field coat_of_arm? table
+---@field continent? table
+---@field currency? table
+---@field demonym? table
+---@field fifa? string
+---@field flag? string
+---@field gini? table
+---@field idd? table
+---@field independent? boolean
+---@field landlocked? boolean
+---@field language? table
+---@field latlng? table
+---@field map? table
+---@field name? table
+---@field population? number
+---@field postal_code? table
+---@field region? string
+---@field start_of_week? string
+---@field status? string
+---@field subregion? string
+---@field timezone? table
+---@field tld? table
+---@field translation? table
+---@field un_member? boolean
+
+---@class AlphaLoadMatch
+---@field id string
+
+---@class Capital
+---@field alt_spelling? table
+---@field area? number
+---@field border? table
+---@field capital? table
+---@field capital_info? table
+---@field car? table
+---@field cca2? string
+---@field cca3? string
+---@field ccn3? string
+---@field cioc? string
+---@field coat_of_arm? table
+---@field continent? table
+---@field currency? table
+---@field demonym? table
+---@field fifa? string
+---@field flag? string
+---@field gini? table
+---@field idd? table
+---@field independent? boolean
+---@field landlocked? boolean
+---@field language? table
+---@field latlng? table
+---@field map? table
+---@field name? table
+---@field population? number
+---@field postal_code? table
+---@field region? string
+---@field start_of_week? string
+---@field status? string
+---@field subregion? string
+---@field timezone? table
+---@field tld? table
+---@field translation? table
+---@field un_member? boolean
+
+---@class CapitalLoadMatch
+---@field id string
+
+---@class Name
+---@field alt_spelling? table
+---@field area? number
+---@field border? table
+---@field capital? table
+---@field capital_info? table
+---@field car? table
+---@field cca2? string
+---@field cca3? string
+---@field ccn3? string
+---@field cioc? string
+---@field coat_of_arm? table
+---@field continent? table
+---@field currency? table
+---@field demonym? table
+---@field fifa? string
+---@field flag? string
+---@field gini? table
+---@field idd? table
+---@field independent? boolean
+---@field landlocked? boolean
+---@field language? table
+---@field latlng? table
+---@field map? table
+---@field name? table
+---@field population? number
+---@field postal_code? table
+---@field region? string
+---@field start_of_week? string
+---@field status? string
+---@field subregion? string
+---@field timezone? table
+---@field tld? table
+---@field translation? table
+---@field un_member? boolean
+
+---@class NameLoadMatch
+---@field id string
+
+local M = {}
+
+return M

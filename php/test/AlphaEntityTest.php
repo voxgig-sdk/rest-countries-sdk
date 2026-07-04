@@ -49,8 +49,7 @@ class AlphaEntityTest extends TestCase
         // LOAD
         $alpha_ref01_ent = $client->Alpha(null);
         $alpha_ref01_match_dt0 = [];
-        [$alpha_ref01_data_dt0_loaded, $err] = $alpha_ref01_ent->load($alpha_ref01_match_dt0, null);
-        $this->assertNull($err);
+        $alpha_ref01_data_dt0_loaded = $alpha_ref01_ent->load($alpha_ref01_match_dt0, null);
         $this->assertNotNull($alpha_ref01_data_dt0_loaded);
 
     }
@@ -85,7 +84,6 @@ function alpha_basic_setup($extra)
         "RESTCOUNTRIES_TEST_ALPHA_ENTID" => $idmap,
         "RESTCOUNTRIES_TEST_LIVE" => "FALSE",
         "RESTCOUNTRIES_TEST_EXPLAIN" => "FALSE",
-        "RESTCOUNTRIES_APIKEY" => "NONE",
     ]);
 
     $idmap_resolved = Helpers::to_map(
@@ -97,7 +95,6 @@ function alpha_basic_setup($extra)
     if ($env["RESTCOUNTRIES_TEST_LIVE"] === "TRUE") {
         $merged_opts = Vs::merge([
             [
-                "apikey" => $env["RESTCOUNTRIES_APIKEY"],
             ],
             $extra ?? [],
         ]);

@@ -42,8 +42,7 @@ class AlphaEntityTest < Minitest::Test
     # LOAD
     alpha_ref01_ent = client.Alpha(nil)
     alpha_ref01_match_dt0 = {}
-    alpha_ref01_data_dt0_loaded, err = alpha_ref01_ent.load(alpha_ref01_match_dt0, nil)
-    assert_nil err
+    alpha_ref01_data_dt0_loaded = alpha_ref01_ent.load(alpha_ref01_match_dt0, nil)
     assert !alpha_ref01_data_dt0_loaded.nil?
 
   end
@@ -82,7 +81,6 @@ def alpha_basic_setup(extra)
     "RESTCOUNTRIES_TEST_ALPHA_ENTID" => idmap,
     "RESTCOUNTRIES_TEST_LIVE" => "FALSE",
     "RESTCOUNTRIES_TEST_EXPLAIN" => "FALSE",
-    "RESTCOUNTRIES_APIKEY" => "NONE",
   })
 
   idmap_resolved = Helpers.to_map(
@@ -94,7 +92,6 @@ def alpha_basic_setup(extra)
   if env["RESTCOUNTRIES_TEST_LIVE"] == "TRUE"
     merged_opts = Vs.merge([
       {
-        "apikey" => env["RESTCOUNTRIES_APIKEY"],
       },
       extra || {},
     ])

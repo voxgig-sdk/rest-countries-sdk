@@ -9,9 +9,12 @@ The TypeScript SDK for the RestCountries API — a type-safe, entity-oriented cl
 
 
 ## Install
-```bash
-npm install @voxgig-sdk/rest-countries
-```
+This package is not yet published to npm. Install it from the GitHub
+release tag (`ts/vX.Y.Z`):
+
+- Releases: [https://github.com/voxgig-sdk/rest-countries-sdk/releases](https://github.com/voxgig-sdk/rest-countries-sdk/releases)
+
+
 ## Tutorial: your first API call
 
 This tutorial walks through creating a client, listing entities, and
@@ -20,17 +23,15 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { RestCountriesSDK } from 'rest-countries'
+import { RestCountriesSDK } from '@voxgig-sdk/rest-countries'
 
-const client = new RestCountriesSDK({
-  apikey: process.env.REST-COUNTRIES_APIKEY,
-})
+const client = new RestCountriesSDK()
 ```
 
 ### 2. List alls
 
 ```ts
-const result = await client.All().list()
+const result = await client.all.list()
 
 if (result.ok) {
   for (const item of result.data) {
@@ -81,7 +82,7 @@ Create a mock client for unit testing — no server required:
 ```ts
 const client = RestCountriesSDK.test()
 
-const result = await client.Planet().load({ id: 'test01' })
+const result = await client.all.load({ id: 'test01' })
 // result.ok === true
 // result.data contains mock response data
 ```
@@ -89,7 +90,7 @@ const result = await client.Planet().load({ id: 'test01' })
 You can also use the instance method:
 
 ```ts
-const client = new RestCountriesSDK({ apikey: '...' })
+const client = new RestCountriesSDK()
 const testClient = client.tester()
 ```
 
@@ -98,7 +99,7 @@ const testClient = client.tester()
 Entity instances remember their last match and data:
 
 ```ts
-const entity = client.Planet()
+const entity = client.all
 
 // First call sets internal match
 await entity.load({ id: 'example' })
@@ -125,7 +126,6 @@ const logger = {
 }
 
 const client = new RestCountriesSDK({
-  apikey: '...',
   extend: [logger],
 })
 ```
@@ -135,8 +135,7 @@ const client = new RestCountriesSDK({
 Create a `.env.local` file at the project root:
 
 ```
-REST-COUNTRIES_TEST_LIVE=TRUE
-REST-COUNTRIES_APIKEY=<your-key>
+REST_COUNTRIES_TEST_LIVE=TRUE
 ```
 
 Then run:
@@ -154,7 +153,6 @@ cd ts && npm test
 
 ```ts
 new RestCountriesSDK(options?: {
-  apikey?: string
   base?: string
   prefix?: string
   suffix?: string
@@ -165,7 +163,6 @@ new RestCountriesSDK(options?: {
 
 | Option | Type | Description |
 | --- | --- | --- |
-| `apikey` | `string` | API key for authentication. |
 | `base` | `string` | Base URL of the API server. |
 | `prefix` | `string` | URL path prefix prepended to all requests. |
 | `suffix` | `string` | URL path suffix appended to all requests. |
@@ -433,7 +430,7 @@ API path: `/name/{name}`
 
 ### All
 
-Create an instance: `const all = client.All()`
+Create an instance: `const all = client.all`
 
 #### Operations
 
@@ -483,13 +480,13 @@ Create an instance: `const all = client.All()`
 #### Example: List
 
 ```ts
-const alls = await client.All().list()
+const alls = await client.all.list()
 ```
 
 
 ### Alpha
 
-Create an instance: `const alpha = client.Alpha()`
+Create an instance: `const alpha = client.alpha`
 
 #### Operations
 
@@ -539,13 +536,13 @@ Create an instance: `const alpha = client.Alpha()`
 #### Example: Load
 
 ```ts
-const alpha = await client.Alpha().load({ id: 'alpha_id' })
+const alpha = await client.alpha.load({ id: 'alpha_id' })
 ```
 
 
 ### Capital
 
-Create an instance: `const capital = client.Capital()`
+Create an instance: `const capital = client.capital`
 
 #### Operations
 
@@ -595,13 +592,13 @@ Create an instance: `const capital = client.Capital()`
 #### Example: Load
 
 ```ts
-const capital = await client.Capital().load({ id: 'capital_id' })
+const capital = await client.capital.load({ id: 'capital_id' })
 ```
 
 
 ### Name
 
-Create an instance: `const name = client.Name()`
+Create an instance: `const name = client.name`
 
 #### Operations
 
@@ -651,7 +648,7 @@ Create an instance: `const name = client.Name()`
 #### Example: Load
 
 ```ts
-const name = await client.Name().load({ id: 'name_id' })
+const name = await client.name.load({ id: 'name_id' })
 ```
 
 
@@ -712,7 +709,7 @@ rest-countries/
 Import the SDK from the package root:
 
 ```ts
-import { RestCountriesSDK } from 'rest-countries'
+import { RestCountriesSDK } from '@voxgig-sdk/rest-countries'
 ```
 
 ### Entity state
@@ -722,11 +719,11 @@ stores the returned data and match criteria internally. Subsequent
 calls on the same instance can rely on this state.
 
 ```ts
-const moon = client.Moon()
-await moon.load({ planet_id: 'earth', id: 'luna' })
+const all = client.all
+await all.load({ id: "example_id" })
 
-// moon.data() now returns the loaded moon data
-// moon.match() returns { planet_id: 'earth', id: 'luna' }
+// all.data() now returns the loaded all data
+// all.match() returns { id: "example_id" }
 ```
 
 Call `make()` to create a fresh instance with the same configuration

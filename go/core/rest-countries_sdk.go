@@ -245,21 +245,33 @@ func (sdk *RestCountriesSDK) Direct(fetchargs map[string]any) (map[string]any, e
 }
 
 
+// All returns a All entity bound to this client.
+// Idiomatic usage: client.All(nil).List(nil, nil) or
+// client.All(nil).Load(map[string]any{"id": ...}, nil).
 func (sdk *RestCountriesSDK) All(data map[string]any) RestCountriesEntity {
 	return NewAllEntityFunc(sdk, data)
 }
 
 
+// Alpha returns a Alpha entity bound to this client.
+// Idiomatic usage: client.Alpha(nil).List(nil, nil) or
+// client.Alpha(nil).Load(map[string]any{"id": ...}, nil).
 func (sdk *RestCountriesSDK) Alpha(data map[string]any) RestCountriesEntity {
 	return NewAlphaEntityFunc(sdk, data)
 }
 
 
+// Capital returns a Capital entity bound to this client.
+// Idiomatic usage: client.Capital(nil).List(nil, nil) or
+// client.Capital(nil).Load(map[string]any{"id": ...}, nil).
 func (sdk *RestCountriesSDK) Capital(data map[string]any) RestCountriesEntity {
 	return NewCapitalEntityFunc(sdk, data)
 }
 
 
+// Name returns a Name entity bound to this client.
+// Idiomatic usage: client.Name(nil).List(nil, nil) or
+// client.Name(nil).Load(map[string]any{"id": ...}, nil).
 func (sdk *RestCountriesSDK) Name(data map[string]any) RestCountriesEntity {
 	return NewNameEntityFunc(sdk, data)
 }

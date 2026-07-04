@@ -43,8 +43,7 @@ class AllEntityTest < Minitest::Test
     all_ref01_ent = client.All(nil)
     all_ref01_match = {}
 
-    all_ref01_list_result, err = all_ref01_ent.list(all_ref01_match, nil)
-    assert_nil err
+    all_ref01_list_result = all_ref01_ent.list(all_ref01_match, nil)
     assert all_ref01_list_result.is_a?(Array)
 
   end
@@ -83,7 +82,6 @@ def all_basic_setup(extra)
     "RESTCOUNTRIES_TEST_ALL_ENTID" => idmap,
     "RESTCOUNTRIES_TEST_LIVE" => "FALSE",
     "RESTCOUNTRIES_TEST_EXPLAIN" => "FALSE",
-    "RESTCOUNTRIES_APIKEY" => "NONE",
   })
 
   idmap_resolved = Helpers.to_map(
@@ -95,7 +93,6 @@ def all_basic_setup(extra)
   if env["RESTCOUNTRIES_TEST_LIVE"] == "TRUE"
     merged_opts = Vs.merge([
       {
-        "apikey" => env["RESTCOUNTRIES_APIKEY"],
       },
       extra || {},
     ])

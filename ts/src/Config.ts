@@ -38,10 +38,6 @@ class Config {
   options = {
     base: 'https://restcountries.com/v3.1',
 
-    auth: {
-      prefix: 'Bearer',
-    },
-
     headers: {
       "content-type": "application/json"
     },
@@ -609,7 +605,8 @@ class Config {
                     "name": "id",
                     "orig": "code",
                     "reqd": true,
-                    "type": "`$STRING`"
+                    "type": "`$STRING`",
+                    "index$": 0
                   }
                 ],
                 "query": [
@@ -912,7 +909,8 @@ class Config {
                     "name": "id",
                     "orig": "capital",
                     "reqd": true,
-                    "type": "`$STRING`"
+                    "type": "`$STRING`",
+                    "index$": 0
                   }
                 ],
                 "query": [
@@ -1215,7 +1213,8 @@ class Config {
                     "name": "id",
                     "orig": "name",
                     "reqd": true,
-                    "type": "`$STRING`"
+                    "type": "`$STRING`",
+                    "index$": 0
                   }
                 ],
                 "query": [

@@ -9,9 +9,10 @@ The PHP SDK for the RestCountries API — an entity-oriented client using PHP co
 
 
 ## Install
-```bash
-composer require voxgig-sdk/rest-countries
-```
+This package is not yet published to Packagist. Install it from the
+GitHub release tag (`php/vX.Y.Z`):
+
+- Releases: [https://github.com/voxgig-sdk/rest-countries-sdk/releases](https://github.com/voxgig-sdk/rest-countries-sdk/releases)
 
 
 ## Tutorial: your first API call
@@ -25,22 +26,22 @@ loading a specific record.
 <?php
 require_once 'restcountries_sdk.php';
 
-$client = new RestCountriesSDK([
-    "apikey" => getenv("REST-COUNTRIES_APIKEY"),
-]);
+$client = new RestCountriesSDK();
 ```
 
 ### 2. List alls
 
 ```php
-[$result, $err] = $client->All()->list();
-if ($err) { throw new \Exception($err); }
-
-if (is_array($result)) {
-    foreach ($result as $item) {
-        $d = $item->data_get();
-        echo $d["id"] . " " . $d["name"] . "\n";
+try {
+    $result = $client->all()->list();
+    if (is_array($result)) {
+        foreach ($result as $item) {
+            $d = $item->data_get();
+            echo $d["id"] . " " . $d["name"] . "\n";
+        }
     }
+} catch (\Exception $err) {
+    echo "Error: " . $err->getMessage();
 }
 ```
 
@@ -52,28 +53,31 @@ if (is_array($result)) {
 For endpoints not covered by entity methods:
 
 ```php
-[$result, $err] = $client->direct([
+// direct() is the raw-HTTP escape hatch: it returns a result array
+// (it does not throw). Branch on $result["ok"].
+$result = $client->direct([
     "path" => "/api/resource/{id}",
     "method" => "GET",
     "params" => ["id" => "example"],
 ]);
-if ($err) { throw new \Exception($err); }
 
 if ($result["ok"]) {
     echo $result["status"];  // 200
     print_r($result["data"]);  // response body
+} else {
+    echo "Error: " . $result["err"]->getMessage();
 }
 ```
 
 ### Prepare a request without sending it
 
 ```php
-[$fetchdef, $err] = $client->prepare([
+// prepare() throws on error and returns the fetch definition.
+$fetchdef = $client->prepare([
     "path" => "/api/resource/{id}",
     "method" => "DELETE",
     "params" => ["id" => "example"],
 ]);
-if ($err) { throw new \Exception($err); }
 
 echo $fetchdef["url"];
 echo $fetchdef["method"];
@@ -87,7 +91,7 @@ Create a mock client for unit testing — no server required:
 ```php
 $client = RestCountriesSDK::test();
 
-[$result, $err] = $client->RestCountries()->load(["id" => "test01"]);
+$result = $client->all()->load(["id" => "test01"]);
 // $result contains mock response data
 ```
 
@@ -121,8 +125,7 @@ $client = new RestCountriesSDK([
 Create a `.env.local` file at the project root:
 
 ```
-REST-COUNTRIES_TEST_LIVE=TRUE
-REST-COUNTRIES_APIKEY=<your-key>
+REST_COUNTRIES_TEST_LIVE=TRUE
 ```
 
 Then run:
@@ -145,7 +148,6 @@ Creates a new SDK client.
 
 | Option | Type | Description |
 | --- | --- | --- |
-| `apikey` | `string` | API key for authentication. |
 | `base` | `string` | Base URL of the API server. |
 | `prefix` | `string` | URL path prefix prepended to all requests. |
 | `suffix` | `string` | URL path suffix appended to all requests. |
@@ -194,8 +196,12 @@ All entities share the same interface.
 
 ### Result shape
 
-Entity operations return `[$result, $err]`. The first value is an
-`array` with these keys:
+Entity operations return the bare result data (an `array` for single-entity
+ops, a `list` for `list`) and throw on error. Wrap calls in
+`try`/`catch` to handle failures.
+
+The `direct()` escape hatch never throws — it returns a result `array`
+you branch on via `$result["ok"]`:
 
 | Key | Type | Description |
 | --- | --- | --- |
@@ -387,7 +393,7 @@ API path: `/name/{name}`
 
 ### All
 
-Create an instance: `const all = client.All()`
+Create an instance: `const all = client.all`
 
 #### Operations
 
@@ -437,13 +443,13 @@ Create an instance: `const all = client.All()`
 #### Example: List
 
 ```ts
-const alls = await client.All().list()
+const alls = await client.all.list()
 ```
 
 
 ### Alpha
 
-Create an instance: `const alpha = client.Alpha()`
+Create an instance: `const alpha = client.alpha`
 
 #### Operations
 
@@ -493,13 +499,13 @@ Create an instance: `const alpha = client.Alpha()`
 #### Example: Load
 
 ```ts
-const alpha = await client.Alpha().load({ id: 'alpha_id' })
+const alpha = await client.alpha.load({ id: 'alpha_id' })
 ```
 
 
 ### Capital
 
-Create an instance: `const capital = client.Capital()`
+Create an instance: `const capital = client.capital`
 
 #### Operations
 
@@ -549,13 +555,13 @@ Create an instance: `const capital = client.Capital()`
 #### Example: Load
 
 ```ts
-const capital = await client.Capital().load({ id: 'capital_id' })
+const capital = await client.capital.load({ id: 'capital_id' })
 ```
 
 
 ### Name
 
-Create an instance: `const name = client.Name()`
+Create an instance: `const name = client.name`
 
 #### Operations
 
@@ -605,7 +611,7 @@ Create an instance: `const name = client.Name()`
 #### Example: Load
 
 ```ts
-const name = await client.Name().load({ id: 'name_id' })
+const name = await client.name.load({ id: 'name_id' })
 ```
 
 
@@ -680,11 +686,11 @@ Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```php
-$moon = $client->Moon();
-[$result, $err] = $moon->load(["planet_id" => "earth", "id" => "luna"]);
+$all = $client->all();
+$all->load(["id" => "example_id"]);
 
-// $moon->dataGet() now returns the loaded moon data
-// $moon->matchGet() returns the last match criteria
+// $all->dataGet() now returns the loaded all data
+// $all->matchGet() returns the last match criteria
 ```
 
 Call `make()` to create a fresh instance with the same configuration

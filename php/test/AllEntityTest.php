@@ -50,8 +50,7 @@ class AllEntityTest extends TestCase
         $all_ref01_ent = $client->All(null);
         $all_ref01_match = [];
 
-        [$all_ref01_list_result, $err] = $all_ref01_ent->list($all_ref01_match, null);
-        $this->assertNull($err);
+        $all_ref01_list_result = $all_ref01_ent->list($all_ref01_match, null);
         $this->assertIsArray($all_ref01_list_result);
 
     }
@@ -86,7 +85,6 @@ function all_basic_setup($extra)
         "RESTCOUNTRIES_TEST_ALL_ENTID" => $idmap,
         "RESTCOUNTRIES_TEST_LIVE" => "FALSE",
         "RESTCOUNTRIES_TEST_EXPLAIN" => "FALSE",
-        "RESTCOUNTRIES_APIKEY" => "NONE",
     ]);
 
     $idmap_resolved = Helpers::to_map(
@@ -98,7 +96,6 @@ function all_basic_setup($extra)
     if ($env["RESTCOUNTRIES_TEST_LIVE"] === "TRUE") {
         $merged_opts = Vs::merge([
             [
-                "apikey" => $env["RESTCOUNTRIES_APIKEY"],
             ],
             $extra ?? [],
         ]);

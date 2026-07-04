@@ -55,6 +55,9 @@ class CapitalEntity
         return new CapitalEntity($this->_client, $opts);
     }
 
+    /**
+     * @param Capital|array $args Capital data (assoc-array) to store.
+     */
     public function data_set($args): void
     {
         if ($args) {
@@ -63,12 +66,18 @@ class CapitalEntity
         }
     }
 
+    /**
+     * @return Capital|array The current Capital data as an assoc-array.
+     */
     public function data_get()
     {
         ($this->_utility->feature_hook)($this->_entctx, "GetData");
         return Struct::clone($this->_data);
     }
 
+    /**
+     * @param array $args Match filter (any subset of Capital fields).
+     */
     public function match_set($args): void
     {
         if ($args) {
@@ -77,6 +86,9 @@ class CapitalEntity
         }
     }
 
+    /**
+     * @return array The current match filter (any subset of Capital fields).
+     */
     public function match_get()
     {
         ($this->_utility->feature_hook)($this->_entctx, "GetMatch");
@@ -84,7 +96,16 @@ class CapitalEntity
     }
 
     
-    public function load($reqmatch, $ctrl = null): array
+    /**
+     * Load a single Capital.
+     *
+     * @param CapitalLoadMatch|array|null $reqmatch Match criteria (id/query
+     *   fields) as an assoc-array; a typed CapitalLoadMatch names the shape.
+     * @param mixed $ctrl Optional per-call control overrides.
+     * @return Capital|array The loaded Capital as an assoc-array at the
+     *   SDK boundary; throws RestCountriesError on failure (item-5 convention).
+     */
+    public function load(?array $reqmatch = null, $ctrl = null): mixed
     {
         $utility = $this->_utility;
         $ctx = ($utility->make_context)([
@@ -117,7 +138,7 @@ class CapitalEntity
 
     
 
-    private function _run_op($ctx, callable $post_done): array
+    private function _run_op($ctx, callable $post_done): mixed
     {
         $utility = $this->_utility;
 

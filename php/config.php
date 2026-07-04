@@ -20,9 +20,6 @@ class RestCountriesConfig
             ],
             "options" => [
                 "base" => "https://restcountries.com/v3.1",
-                "auth" => [
-                    "prefix" => "Bearer",
-                ],
                 "headers" => [
           'content-type' => 'application/json',
         ],
@@ -579,6 +576,7 @@ class RestCountriesConfig
                         'orig' => 'code',
                         'reqd' => true,
                         'type' => '`$STRING`',
+                        'index$' => 0,
                       ],
                     ],
                     'query' => [
@@ -882,6 +880,7 @@ class RestCountriesConfig
                         'orig' => 'capital',
                         'reqd' => true,
                         'type' => '`$STRING`',
+                        'index$' => 0,
                       ],
                     ],
                     'query' => [
@@ -1185,6 +1184,7 @@ class RestCountriesConfig
                         'orig' => 'name',
                         'reqd' => true,
                         'type' => '`$STRING`',
+                        'index$' => 0,
                       ],
                     ],
                     'query' => [

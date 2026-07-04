@@ -45,6 +45,7 @@ class AlphaEntity
     end
   end
 
+  # @return [Alpha, Hash] the current Alpha data
   def data_get
     @_utility.feature_hook.call(@_entctx, "GetData")
     VoxgigStruct.clone(@_data)
@@ -57,12 +58,18 @@ class AlphaEntity
     end
   end
 
+  # @return [Hash] the current match filter (any subset of Alpha fields)
   def match_get
     @_utility.feature_hook.call(@_entctx, "GetMatch")
     VoxgigStruct.clone(@_match)
   end
 
   
+  # Load a single Alpha.
+  #
+  # @param reqmatch [AlphaLoadMatch, Hash, nil] match criteria (id/query fields)
+  # @param ctrl [Object, nil] optional per-call control
+  # @return [Alpha, Hash] the loaded Alpha; raises RestCountriesError on failure
   def load(reqmatch, ctrl = nil)
     utility = @_utility
     ctx = utility.make_context.call({
