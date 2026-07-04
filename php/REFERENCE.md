@@ -97,7 +97,7 @@ Prepare a fetch definition without sending the request. Returns the
 ## AllEntity
 
 ```php
-$all = $client->all();
+$all = $client->All();
 ```
 
 ### Fields
@@ -146,7 +146,7 @@ $all = $client->all();
 List entities matching the given criteria. Returns an array. Throws on error.
 
 ```php
-$results = $client->all()->list([]);
+$results = $client->All()->list([]);
 ```
 
 ### Common Methods
@@ -182,7 +182,7 @@ Return the entity name.
 ## AlphaEntity
 
 ```php
-$alpha = $client->alpha();
+$alpha = $client->Alpha();
 ```
 
 ### Fields
@@ -231,7 +231,7 @@ $alpha = $client->alpha();
 Load a single entity matching the given criteria. Throws on error.
 
 ```php
-$result = $client->alpha()->load(["id" => "alpha_id"]);
+$result = $client->Alpha()->load(["id" => "alpha_id"]);
 ```
 
 ### Common Methods
@@ -267,7 +267,7 @@ Return the entity name.
 ## CapitalEntity
 
 ```php
-$capital = $client->capital();
+$capital = $client->Capital();
 ```
 
 ### Fields
@@ -316,7 +316,7 @@ $capital = $client->capital();
 Load a single entity matching the given criteria. Throws on error.
 
 ```php
-$result = $client->capital()->load(["id" => "capital_id"]);
+$result = $client->Capital()->load(["id" => "capital_id"]);
 ```
 
 ### Common Methods
@@ -352,7 +352,7 @@ Return the entity name.
 ## NameEntity
 
 ```php
-$name = $client->name();
+$name = $client->Name();
 ```
 
 ### Fields
@@ -401,7 +401,7 @@ $name = $client->name();
 Load a single entity matching the given criteria. Throws on error.
 
 ```php
-$result = $client->name()->load(["id" => "name_id"]);
+$result = $client->Name()->load(["id" => "name_id"]);
 ```
 
 ### Common Methods

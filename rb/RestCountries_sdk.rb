@@ -208,52 +208,28 @@ class RestCountriesSDK
   end
 
 
-  # Idiomatic facade: client.all.list / client.all.load({ "id" => ... })
-  def all
-    require_relative 'entity/all_entity'
-    @all ||= AllEntity.new(self, nil)
-  end
-
-  # Deprecated: use client.all instead.
+  # Canonical facade: client.All.list / client.All.load({ "id" => ... })
   def All(data = nil)
     require_relative 'entity/all_entity'
     AllEntity.new(self, data)
   end
 
 
-  # Idiomatic facade: client.alpha.list / client.alpha.load({ "id" => ... })
-  def alpha
-    require_relative 'entity/alpha_entity'
-    @alpha ||= AlphaEntity.new(self, nil)
-  end
-
-  # Deprecated: use client.alpha instead.
+  # Canonical facade: client.Alpha.list / client.Alpha.load({ "id" => ... })
   def Alpha(data = nil)
     require_relative 'entity/alpha_entity'
     AlphaEntity.new(self, data)
   end
 
 
-  # Idiomatic facade: client.capital.list / client.capital.load({ "id" => ... })
-  def capital
-    require_relative 'entity/capital_entity'
-    @capital ||= CapitalEntity.new(self, nil)
-  end
-
-  # Deprecated: use client.capital instead.
+  # Canonical facade: client.Capital.list / client.Capital.load({ "id" => ... })
   def Capital(data = nil)
     require_relative 'entity/capital_entity'
     CapitalEntity.new(self, data)
   end
 
 
-  # Idiomatic facade: client.name.list / client.name.load({ "id" => ... })
-  def name
-    require_relative 'entity/name_entity'
-    @name ||= NameEntity.new(self, nil)
-  end
-
-  # Deprecated: use client.name instead.
+  # Canonical facade: client.Name.list / client.Name.load({ "id" => ... })
   def Name(data = nil)
     require_relative 'entity/name_entity'
     NameEntity.new(self, data)

@@ -29,18 +29,16 @@ require_once 'restcountries_sdk.php';
 $client = new RestCountriesSDK();
 ```
 
-### 2. List alls
+### 2. List all records
 
 ```php
 try {
-    $result = $client->all()->list();
-    if (is_array($result)) {
-        foreach ($result as $item) {
-            $d = $item->data_get();
-            echo $d["id"] . " " . $d["name"] . "\n";
-        }
+    // list() returns an array of All records — iterate directly.
+    $alls = $client->All()->list();
+    foreach ($alls as $item) {
+        echo $item["id"] . " " . $item["name"] . "\n";
     }
-} catch (\Exception $err) {
+} catch (\Throwable $err) {
     echo "Error: " . $err->getMessage();
 }
 ```
@@ -86,13 +84,17 @@ print_r($fetchdef["headers"]);
 
 ### Use test mode
 
-Create a mock client for unit testing — no server required:
+Create a mock client for unit testing — no server required. Seed fixture
+data via the `entity` option so offline calls resolve without a live server:
 
 ```php
-$client = RestCountriesSDK::test();
+$client = RestCountriesSDK::test([
+    "entity" => ["all" => ["test01" => ["id" => "test01"]]],
+]);
 
-$result = $client->all()->load(["id" => "test01"]);
-// $result contains mock response data
+// load() returns the bare mock record (throws on error).
+$all = $client->All()->load(["id" => "test01"]);
+print_r($all);
 ```
 
 ### Use a custom fetch function
@@ -171,8 +173,8 @@ Creates a test-mode client with mock transport. Both arguments may be `null`.
 | `get_utility` | `(): Utility` | Copy of the SDK utility object. |
 | `prepare` | `(array $fetchargs): array` | Build an HTTP request definition without sending. |
 | `direct` | `(array $fetchargs): array` | Build and send an HTTP request. |
-| `All` | `($data): AllEntity` | Create a All entity instance. |
-| `Alpha` | `($data): AlphaEntity` | Create a Alpha entity instance. |
+| `All` | `($data): AllEntity` | Create an All entity instance. |
+| `Alpha` | `($data): AlphaEntity` | Create an Alpha entity instance. |
 | `Capital` | `($data): CapitalEntity` | Create a Capital entity instance. |
 | `Name` | `($data): NameEntity` | Create a Name entity instance. |
 
@@ -393,7 +395,7 @@ API path: `/name/{name}`
 
 ### All
 
-Create an instance: `const all = client.all`
+Create an instance: `$all = $client->All();`
 
 #### Operations
 
@@ -442,14 +444,15 @@ Create an instance: `const all = client.all`
 
 #### Example: List
 
-```ts
-const alls = await client.all.list()
+```php
+// list() returns an array of All records (throws on error).
+$alls = $client->All()->list();
 ```
 
 
 ### Alpha
 
-Create an instance: `const alpha = client.alpha`
+Create an instance: `$alpha = $client->Alpha();`
 
 #### Operations
 
@@ -498,14 +501,15 @@ Create an instance: `const alpha = client.alpha`
 
 #### Example: Load
 
-```ts
-const alpha = await client.alpha.load({ id: 'alpha_id' })
+```php
+// load() returns the bare Alpha record (throws on error).
+$alpha = $client->Alpha()->load(["id" => "alpha_id"]);
 ```
 
 
 ### Capital
 
-Create an instance: `const capital = client.capital`
+Create an instance: `$capital = $client->Capital();`
 
 #### Operations
 
@@ -554,14 +558,15 @@ Create an instance: `const capital = client.capital`
 
 #### Example: Load
 
-```ts
-const capital = await client.capital.load({ id: 'capital_id' })
+```php
+// load() returns the bare Capital record (throws on error).
+$capital = $client->Capital()->load(["id" => "capital_id"]);
 ```
 
 
 ### Name
 
-Create an instance: `const name = client.name`
+Create an instance: `$name = $client->Name();`
 
 #### Operations
 
@@ -610,8 +615,9 @@ Create an instance: `const name = client.name`
 
 #### Example: Load
 
-```ts
-const name = await client.name.load({ id: 'name_id' })
+```php
+// load() returns the bare Name record (throws on error).
+$name = $client->Name()->load(["id" => "name_id"]);
 ```
 
 
@@ -686,7 +692,7 @@ Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```php
-$all = $client->all();
+$all = $client->All();
 $all->load(["id" => "example_id"]);
 
 // $all->dataGet() now returns the loaded all data

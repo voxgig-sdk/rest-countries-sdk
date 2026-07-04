@@ -233,10 +233,10 @@ class RestCountriesSDK
 
     private $_all = null;
 
-    // Idiomatic facade: $client->all()->list() / ->load(["id" => ...]).
-    // Also serves the deprecated PascalCase alias All() (PHP method
-    // names are case-insensitive).
-    public function all($data = null)
+    // Canonical facade: $client->All()->list() / ->load(["id" => ...]).
+    // PHP method names are case-insensitive, so lowercase $client->all()
+    // resolves here too.
+    public function All($data = null)
     {
         require_once __DIR__ . '/entity/all_entity.php';
         if ($data === null) {
@@ -251,10 +251,10 @@ class RestCountriesSDK
 
     private $_alpha = null;
 
-    // Idiomatic facade: $client->alpha()->list() / ->load(["id" => ...]).
-    // Also serves the deprecated PascalCase alias Alpha() (PHP method
-    // names are case-insensitive).
-    public function alpha($data = null)
+    // Canonical facade: $client->Alpha()->list() / ->load(["id" => ...]).
+    // PHP method names are case-insensitive, so lowercase $client->alpha()
+    // resolves here too.
+    public function Alpha($data = null)
     {
         require_once __DIR__ . '/entity/alpha_entity.php';
         if ($data === null) {
@@ -269,10 +269,10 @@ class RestCountriesSDK
 
     private $_capital = null;
 
-    // Idiomatic facade: $client->capital()->list() / ->load(["id" => ...]).
-    // Also serves the deprecated PascalCase alias Capital() (PHP method
-    // names are case-insensitive).
-    public function capital($data = null)
+    // Canonical facade: $client->Capital()->list() / ->load(["id" => ...]).
+    // PHP method names are case-insensitive, so lowercase $client->capital()
+    // resolves here too.
+    public function Capital($data = null)
     {
         require_once __DIR__ . '/entity/capital_entity.php';
         if ($data === null) {
@@ -287,10 +287,10 @@ class RestCountriesSDK
 
     private $_name = null;
 
-    // Idiomatic facade: $client->name()->list() / ->load(["id" => ...]).
-    // Also serves the deprecated PascalCase alias Name() (PHP method
-    // names are case-insensitive).
-    public function name($data = null)
+    // Canonical facade: $client->Name()->list() / ->load(["id" => ...]).
+    // PHP method names are case-insensitive, so lowercase $client->name()
+    // resolves here too.
+    public function Name($data = null)
     {
         require_once __DIR__ . '/entity/name_entity.php';
         if ($data === null) {

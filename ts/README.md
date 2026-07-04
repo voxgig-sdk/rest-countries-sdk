@@ -28,15 +28,15 @@ import { RestCountriesSDK } from '@voxgig-sdk/rest-countries'
 const client = new RestCountriesSDK()
 ```
 
-### 2. List alls
+### 2. List all records
+
+`list()` resolves to an array of All objects — iterate it directly:
 
 ```ts
-const result = await client.all.list()
+const alls = await client.All().list()
 
-if (result.ok) {
-  for (const item of result.data) {
-    console.log(item.id, item.name)
-  }
+for (const all of alls) {
+  console.log(all)
 }
 ```
 
@@ -54,6 +54,9 @@ const result = await client.direct({
   params: { id: 'example' },
 })
 
+if (result instanceof Error) {
+  throw result
+}
 if (result.ok) {
   console.log(result.status)  // 200
   console.log(result.data)    // response body
@@ -82,9 +85,9 @@ Create a mock client for unit testing — no server required:
 ```ts
 const client = RestCountriesSDK.test()
 
-const result = await client.all.load({ id: 'test01' })
-// result.ok === true
-// result.data contains mock response data
+const all = await client.All().load({ id: 'test01' })
+// all is a bare entity populated with mock response data
+console.log(all)
 ```
 
 You can also use the instance method:
@@ -99,7 +102,7 @@ const testClient = client.tester()
 Entity instances remember their last match and data:
 
 ```ts
-const entity = client.all
+const entity = client.All()
 
 // First call sets internal match
 await entity.load({ id: 'example' })
@@ -177,8 +180,8 @@ new RestCountriesSDK(options?: {
 | `utility()` | `Utility` | Deep copy of the SDK utility object. |
 | `prepare(fetchargs?)` | `Promise<FetchDef>` | Build an HTTP request definition without sending it. |
 | `direct(fetchargs?)` | `Promise<DirectResult>` | Build and send an HTTP request. |
-| `All(data?)` | `AllEntity` | Create a All entity instance. |
-| `Alpha(data?)` | `AlphaEntity` | Create a Alpha entity instance. |
+| `All(data?)` | `AllEntity` | Create an All entity instance. |
+| `Alpha(data?)` | `AlphaEntity` | Create an Alpha entity instance. |
 | `Capital(data?)` | `CapitalEntity` | Create a Capital entity instance. |
 | `Name(data?)` | `NameEntity` | Create a Name entity instance. |
 | `tester(testopts?, sdkopts?)` | `RestCountriesSDK` | Create a test-mode client instance. |
@@ -197,29 +200,30 @@ All entities share the same interface.
 
 | Method | Signature | Description |
 | --- | --- | --- |
-| `load` | `load(reqmatch?, ctrl?): Promise<Result>` | Load a single entity by match criteria. |
-| `list` | `list(reqmatch?, ctrl?): Promise<Result>` | List entities matching the criteria. |
-| `create` | `create(reqdata?, ctrl?): Promise<Result>` | Create a new entity. |
-| `update` | `update(reqdata?, ctrl?): Promise<Result>` | Update an existing entity. |
-| `remove` | `remove(reqmatch?, ctrl?): Promise<Result>` | Remove an entity. |
+| `load` | `load(reqmatch?, ctrl?): Promise<Entity>` | Load a single entity by match criteria. |
+| `list` | `list(reqmatch?, ctrl?): Promise<Entity[]>` | List entities matching the criteria. |
+| `create` | `create(reqdata?, ctrl?): Promise<Entity>` | Create a new entity. |
+| `update` | `update(reqdata?, ctrl?): Promise<Entity>` | Update an existing entity. |
+| `remove` | `remove(reqmatch?, ctrl?): Promise<void>` | Remove an entity. |
 | `data` | `data(data?): any` | Get or set entity data. |
 | `match` | `match(match?): any` | Get or set entity match criteria. |
 | `make` | `make(): Entity` | Create a new instance with the same options. |
 | `client` | `client(): RestCountriesSDK` | Return the parent SDK client. |
 | `entopts` | `entopts(): object` | Return a copy of the entity options. |
 
-#### Result shape
+#### Return values
 
-All entity operations return a Result object:
+Entity operations resolve to the entity data directly — there is no
+result envelope:
 
-```ts
-{
-  ok: boolean      // true if the HTTP status is 2xx
-  status: number   // HTTP status code
-  headers: object  // response headers
-  data: any        // parsed JSON response body
-}
-```
+- `load`, `create` and `update` resolve to a single entity object.
+- `list` resolves to an **array** of entity objects (iterate it directly;
+  there is no `.data` and no `.ok`).
+- `remove` resolves to `void`.
+
+On a failed request these methods **throw**, so wrap calls in
+`try`/`catch` to handle errors. Only `direct()` returns the result
+envelope described below.
 
 ### DirectResult shape
 
@@ -430,7 +434,7 @@ API path: `/name/{name}`
 
 ### All
 
-Create an instance: `const all = client.all`
+Create an instance: `const all = client.All()`
 
 #### Operations
 
@@ -480,13 +484,13 @@ Create an instance: `const all = client.all`
 #### Example: List
 
 ```ts
-const alls = await client.all.list()
+const alls = await client.All().list()
 ```
 
 
 ### Alpha
 
-Create an instance: `const alpha = client.alpha`
+Create an instance: `const alpha = client.Alpha()`
 
 #### Operations
 
@@ -536,13 +540,13 @@ Create an instance: `const alpha = client.alpha`
 #### Example: Load
 
 ```ts
-const alpha = await client.alpha.load({ id: 'alpha_id' })
+const alpha = await client.Alpha().load({ id: 'alpha_id' })
 ```
 
 
 ### Capital
 
-Create an instance: `const capital = client.capital`
+Create an instance: `const capital = client.Capital()`
 
 #### Operations
 
@@ -592,13 +596,13 @@ Create an instance: `const capital = client.capital`
 #### Example: Load
 
 ```ts
-const capital = await client.capital.load({ id: 'capital_id' })
+const capital = await client.Capital().load({ id: 'capital_id' })
 ```
 
 
 ### Name
 
-Create an instance: `const name = client.name`
+Create an instance: `const name = client.Name()`
 
 #### Operations
 
@@ -648,7 +652,7 @@ Create an instance: `const name = client.name`
 #### Example: Load
 
 ```ts
-const name = await client.name.load({ id: 'name_id' })
+const name = await client.Name().load({ id: 'name_id' })
 ```
 
 
@@ -719,7 +723,7 @@ stores the returned data and match criteria internally. Subsequent
 calls on the same instance can rely on this state.
 
 ```ts
-const all = client.all
+const all = client.All()
 await all.load({ id: "example_id" })
 
 // all.data() now returns the loaded all data

@@ -31,14 +31,16 @@ from restcountries_sdk import RestCountriesSDK
 client = RestCountriesSDK()
 ```
 
-### 2. List alls
+### 2. List all records
+
+`list()` returns a `list` of records (each a `dict`) and raises on
+error — iterate it directly.
 
 ```python
 try:
-    result = client.all.list()
-    for item in result:
-        d = item.data_get()
-        print(d["id"], d["name"])
+    alls = client.All().list({})
+    for all in alls:
+        print(all)
 except Exception as err:
     print(f"list failed: {err}")
 ```
@@ -86,8 +88,9 @@ Create a mock client for unit testing — no server required:
 ```python
 client = RestCountriesSDK.test()
 
-result = client.all.load({"id": "test01"})
-# result contains mock response data
+# Entity ops return the bare record and raise on error.
+all = client.All().load({"id": "test01"})
+# all contains the mock response record
 ```
 
 ### Use a custom fetch function
@@ -163,8 +166,8 @@ Creates a test-mode client with mock transport. Both arguments may be `None`.
 | `get_utility` | `() -> Utility` | Copy of the SDK utility object. |
 | `prepare` | `(fetchargs) -> dict` | Build an HTTP request definition without sending. Raises on error. |
 | `direct` | `(fetchargs) -> dict` | Build and send an HTTP request. Returns a result dict (branch on `ok`). |
-| `All` | `(data) -> AllEntity` | Create a All entity instance. |
-| `Alpha` | `(data) -> AlphaEntity` | Create a Alpha entity instance. |
+| `All` | `(data) -> AllEntity` | Create an All entity instance. |
+| `Alpha` | `(data) -> AlphaEntity` | Create an Alpha entity instance. |
 | `Capital` | `(data) -> CapitalEntity` | Create a Capital entity instance. |
 | `Name` | `(data) -> NameEntity` | Create a Name entity instance. |
 
@@ -385,7 +388,7 @@ API path: `/name/{name}`
 
 ### All
 
-Create an instance: `const all = client.all`
+Create an instance: `all = client.All()`
 
 #### Operations
 
@@ -434,14 +437,14 @@ Create an instance: `const all = client.all`
 
 #### Example: List
 
-```ts
-const alls = await client.all.list()
+```python
+alls = client.All().list({})
 ```
 
 
 ### Alpha
 
-Create an instance: `const alpha = client.alpha`
+Create an instance: `alpha = client.Alpha()`
 
 #### Operations
 
@@ -490,14 +493,14 @@ Create an instance: `const alpha = client.alpha`
 
 #### Example: Load
 
-```ts
-const alpha = await client.alpha.load({ id: 'alpha_id' })
+```python
+alpha = client.Alpha().load({"id": "alpha_id"})
 ```
 
 
 ### Capital
 
-Create an instance: `const capital = client.capital`
+Create an instance: `capital = client.Capital()`
 
 #### Operations
 
@@ -546,14 +549,14 @@ Create an instance: `const capital = client.capital`
 
 #### Example: Load
 
-```ts
-const capital = await client.capital.load({ id: 'capital_id' })
+```python
+capital = client.Capital().load({"id": "capital_id"})
 ```
 
 
 ### Name
 
-Create an instance: `const name = client.name`
+Create an instance: `name = client.Name()`
 
 #### Operations
 
@@ -602,8 +605,8 @@ Create an instance: `const name = client.name`
 
 #### Example: Load
 
-```ts
-const name = await client.name.load({ id: 'name_id' })
+```python
+name = client.Name().load({"id": "name_id"})
 ```
 
 
@@ -677,7 +680,7 @@ Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```python
-all = client.all
+all = client.All()
 all.load({"id": "example_id"})
 
 # all.data_get() now returns the loaded all data

@@ -244,8 +244,9 @@ end
 
 
 
--- Idiomatic facade: client:all():list() / client:all():load({ id = ... })
-function RestCountriesSDK:all(data)
+-- Idiomatic facade: client:All():list() / client:All():load({ id = ... })
+-- Entity access is capitalised (PascalCase) for parity with the other SDKs.
+function RestCountriesSDK:All(data)
   local EntityMod = require("entity.all_entity")
   if data == nil then
     if self._all == nil then
@@ -256,15 +257,10 @@ function RestCountriesSDK:all(data)
   return EntityMod.new(self, data)
 end
 
--- Deprecated: use client:all() instead.
-function RestCountriesSDK:All(data)
-  local EntityMod = require("entity.all_entity")
-  return EntityMod.new(self, data)
-end
 
-
--- Idiomatic facade: client:alpha():list() / client:alpha():load({ id = ... })
-function RestCountriesSDK:alpha(data)
+-- Idiomatic facade: client:Alpha():list() / client:Alpha():load({ id = ... })
+-- Entity access is capitalised (PascalCase) for parity with the other SDKs.
+function RestCountriesSDK:Alpha(data)
   local EntityMod = require("entity.alpha_entity")
   if data == nil then
     if self._alpha == nil then
@@ -275,15 +271,10 @@ function RestCountriesSDK:alpha(data)
   return EntityMod.new(self, data)
 end
 
--- Deprecated: use client:alpha() instead.
-function RestCountriesSDK:Alpha(data)
-  local EntityMod = require("entity.alpha_entity")
-  return EntityMod.new(self, data)
-end
 
-
--- Idiomatic facade: client:capital():list() / client:capital():load({ id = ... })
-function RestCountriesSDK:capital(data)
+-- Idiomatic facade: client:Capital():list() / client:Capital():load({ id = ... })
+-- Entity access is capitalised (PascalCase) for parity with the other SDKs.
+function RestCountriesSDK:Capital(data)
   local EntityMod = require("entity.capital_entity")
   if data == nil then
     if self._capital == nil then
@@ -294,15 +285,10 @@ function RestCountriesSDK:capital(data)
   return EntityMod.new(self, data)
 end
 
--- Deprecated: use client:capital() instead.
-function RestCountriesSDK:Capital(data)
-  local EntityMod = require("entity.capital_entity")
-  return EntityMod.new(self, data)
-end
 
-
--- Idiomatic facade: client:name():list() / client:name():load({ id = ... })
-function RestCountriesSDK:name(data)
+-- Idiomatic facade: client:Name():list() / client:Name():load({ id = ... })
+-- Entity access is capitalised (PascalCase) for parity with the other SDKs.
+function RestCountriesSDK:Name(data)
   local EntityMod = require("entity.name_entity")
   if data == nil then
     if self._name == nil then
@@ -310,12 +296,6 @@ function RestCountriesSDK:name(data)
     end
     return self._name
   end
-  return EntityMod.new(self, data)
-end
-
--- Deprecated: use client:name() instead.
-function RestCountriesSDK:Name(data)
-  local EntityMod = require("entity.name_entity")
   return EntityMod.new(self, data)
 end
 

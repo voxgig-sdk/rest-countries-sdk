@@ -31,17 +31,17 @@ local sdk = require("rest-countries_sdk")
 local client = sdk.new()
 ```
 
-### 2. List alls
+### 2. List all records
+
+Entity operations return `(value, err)`. For `list`, `value` is the
+array of records itself — iterate it directly (there is no wrapper).
 
 ```lua
-local result, err = client:all():list()
+local alls, err = client:All():list()
 if err then error(err) end
 
-if type(result) == "table" then
-  for _, item in ipairs(result) do
-    local d = item:data_get()
-    print(d["id"], d["name"])
-  end
+for _, item in ipairs(alls) do
+  print(item["id"], item["name"])
 end
 ```
 
@@ -88,8 +88,8 @@ Create a mock client for unit testing — no server required:
 ```lua
 local client = sdk.test()
 
-local result, err = client:all():load({ id = "test01" })
--- result contains mock response data
+local result, err = client:All():load({ id = "test01" })
+-- result is the loaded data; err is set on failure
 ```
 
 ### Use a custom fetch function
@@ -167,8 +167,8 @@ Creates a test-mode client with mock transport. Both arguments may be `nil`.
 | `get_utility` | `() -> Utility` | Copy of the SDK utility object. |
 | `prepare` | `(fetchargs) -> table, err` | Build an HTTP request definition without sending. |
 | `direct` | `(fetchargs) -> table, err` | Build and send an HTTP request. |
-| `All` | `(data) -> AllEntity` | Create a All entity instance. |
-| `Alpha` | `(data) -> AlphaEntity` | Create a Alpha entity instance. |
+| `All` | `(data) -> AllEntity` | Create an All entity instance. |
+| `Alpha` | `(data) -> AlphaEntity` | Create an Alpha entity instance. |
 | `Capital` | `(data) -> CapitalEntity` | Create a Capital entity instance. |
 | `Name` | `(data) -> NameEntity` | Create a Name entity instance. |
 
@@ -192,17 +192,22 @@ All entities share the same interface.
 
 ### Result shape
 
-Entity operations return `(any, err)`. The first value is a
-`table` with these keys:
+Entity operations return `(value, err)`. The `value` is the operation's
+data **directly** — there is no wrapper:
 
-| Key | Type | Description |
-| --- | --- | --- |
-| `ok` | `boolean` | `true` if the HTTP status is 2xx. |
-| `status` | `number` | HTTP status code. |
-| `headers` | `table` | Response headers. |
-| `data` | `any` | Parsed JSON response body. |
+| Operation | `value` |
+| --- | --- |
+| `load` / `create` / `update` / `remove` | the entity record (a `table`) |
+| `list` | an array (`table`) of entity records |
 
-On error, `ok` is `false` and `err` contains the error value.
+Check `err` first (it is non-`nil` on failure), then use `value`:
+
+    local all, err = client:All():load({ id = "example_id" })
+    if err then error(err) end
+    -- all is the loaded record
+
+Only `direct()` returns a response envelope — a `table` with `ok`,
+`status`, `headers`, and `data` keys.
 
 ### Entities
 
@@ -385,7 +390,7 @@ API path: `/name/{name}`
 
 ### All
 
-Create an instance: `const all = client.all`
+Create an instance: `local all = client:All(nil)`
 
 #### Operations
 
@@ -434,14 +439,14 @@ Create an instance: `const all = client.all`
 
 #### Example: List
 
-```ts
-const alls = await client.all.list()
+```lua
+local alls, err = client:All():list()
 ```
 
 
 ### Alpha
 
-Create an instance: `const alpha = client.alpha`
+Create an instance: `local alpha = client:Alpha(nil)`
 
 #### Operations
 
@@ -490,14 +495,14 @@ Create an instance: `const alpha = client.alpha`
 
 #### Example: Load
 
-```ts
-const alpha = await client.alpha.load({ id: 'alpha_id' })
+```lua
+local alpha, err = client:Alpha():load({ id = "alpha_id" })
 ```
 
 
 ### Capital
 
-Create an instance: `const capital = client.capital`
+Create an instance: `local capital = client:Capital(nil)`
 
 #### Operations
 
@@ -546,14 +551,14 @@ Create an instance: `const capital = client.capital`
 
 #### Example: Load
 
-```ts
-const capital = await client.capital.load({ id: 'capital_id' })
+```lua
+local capital, err = client:Capital():load({ id = "capital_id" })
 ```
 
 
 ### Name
 
-Create an instance: `const name = client.name`
+Create an instance: `local name = client:Name(nil)`
 
 #### Operations
 
@@ -602,8 +607,8 @@ Create an instance: `const name = client.name`
 
 #### Example: Load
 
-```ts
-const name = await client.name.load({ id: 'name_id' })
+```lua
+local name, err = client:Name():load({ id = "name_id" })
 ```
 
 
@@ -678,7 +683,7 @@ Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```lua
-local all = client:all()
+local all = client:All()
 all:load({ id = "example_id" })
 
 -- all:data_get() now returns the loaded all data

@@ -220,73 +220,33 @@ class RestCountriesSDK:
         }
 
 
-    @property
-    def all(self):
-        """Idiomatic facade: client.all.list() / client.all.load({"id": ...})."""
-        from entity.all_entity import AllEntity
-        cached = getattr(self, "_all", None)
-        if cached is None:
-            cached = AllEntity(self, None)
-            self._all = cached
-        return cached
-
-    def All(self, data=None):
-        # Deprecated: use client.all instead.
+    def All(self, data=None) -> "AllEntity":
+        """Entity factory: client.All().list({}) / client.All().load({"id": ...})."""
         from entity.all_entity import AllEntity
         return AllEntity(self, data)
 
 
-    @property
-    def alpha(self):
-        """Idiomatic facade: client.alpha.list() / client.alpha.load({"id": ...})."""
-        from entity.alpha_entity import AlphaEntity
-        cached = getattr(self, "_alpha", None)
-        if cached is None:
-            cached = AlphaEntity(self, None)
-            self._alpha = cached
-        return cached
-
-    def Alpha(self, data=None):
-        # Deprecated: use client.alpha instead.
+    def Alpha(self, data=None) -> "AlphaEntity":
+        """Entity factory: client.Alpha().list({}) / client.Alpha().load({"id": ...})."""
         from entity.alpha_entity import AlphaEntity
         return AlphaEntity(self, data)
 
 
-    @property
-    def capital(self):
-        """Idiomatic facade: client.capital.list() / client.capital.load({"id": ...})."""
-        from entity.capital_entity import CapitalEntity
-        cached = getattr(self, "_capital", None)
-        if cached is None:
-            cached = CapitalEntity(self, None)
-            self._capital = cached
-        return cached
-
-    def Capital(self, data=None):
-        # Deprecated: use client.capital instead.
+    def Capital(self, data=None) -> "CapitalEntity":
+        """Entity factory: client.Capital().list({}) / client.Capital().load({"id": ...})."""
         from entity.capital_entity import CapitalEntity
         return CapitalEntity(self, data)
 
 
-    @property
-    def name(self):
-        """Idiomatic facade: client.name.list() / client.name.load({"id": ...})."""
-        from entity.name_entity import NameEntity
-        cached = getattr(self, "_name", None)
-        if cached is None:
-            cached = NameEntity(self, None)
-            self._name = cached
-        return cached
-
-    def Name(self, data=None):
-        # Deprecated: use client.name instead.
+    def Name(self, data=None) -> "NameEntity":
+        """Entity factory: client.Name().list({}) / client.Name().load({"id": ...})."""
         from entity.name_entity import NameEntity
         return NameEntity(self, data)
 
 
 
     @classmethod
-    def test(cls, testopts=None, sdkopts=None):
+    def test(cls, testopts=None, sdkopts=None) -> "RestCountriesSDK":
         if sdkopts is None:
             sdkopts = {}
         sdkopts = vs.clone(sdkopts)
@@ -306,3 +266,12 @@ class RestCountriesSDK:
         sdk.mode = "test"
 
         return sdk
+
+
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from entity.all_entity import AllEntity
+    from entity.alpha_entity import AlphaEntity
+    from entity.capital_entity import CapitalEntity
+    from entity.name_entity import NameEntity

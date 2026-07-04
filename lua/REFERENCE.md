@@ -95,7 +95,7 @@ same parameters as `direct()`.
 ## AllEntity
 
 ```lua
-local all = client:all(nil)
+local all = client:All(nil)
 ```
 
 ### Fields
@@ -144,7 +144,7 @@ local all = client:all(nil)
 List entities matching the given criteria. Returns an array.
 
 ```lua
-local results, err = client:all():list()
+local results, err = client:All():list()
 ```
 
 ### Common Methods
@@ -180,7 +180,7 @@ Return the entity name.
 ## AlphaEntity
 
 ```lua
-local alpha = client:alpha(nil)
+local alpha = client:Alpha(nil)
 ```
 
 ### Fields
@@ -229,7 +229,7 @@ local alpha = client:alpha(nil)
 Load a single entity matching the given criteria.
 
 ```lua
-local result, err = client:alpha():load({ id = "alpha_id" })
+local result, err = client:Alpha():load({ id = "alpha_id" })
 ```
 
 ### Common Methods
@@ -265,7 +265,7 @@ Return the entity name.
 ## CapitalEntity
 
 ```lua
-local capital = client:capital(nil)
+local capital = client:Capital(nil)
 ```
 
 ### Fields
@@ -314,7 +314,7 @@ local capital = client:capital(nil)
 Load a single entity matching the given criteria.
 
 ```lua
-local result, err = client:capital():load({ id = "capital_id" })
+local result, err = client:Capital():load({ id = "capital_id" })
 ```
 
 ### Common Methods
@@ -350,7 +350,7 @@ Return the entity name.
 ## NameEntity
 
 ```lua
-local name = client:name(nil)
+local name = client:Name(nil)
 ```
 
 ### Fields
@@ -399,7 +399,7 @@ local name = client:name(nil)
 Load a single entity matching the given criteria.
 
 ```lua
-local result, err = client:name():load({ id = "name_id" })
+local result, err = client:Name():load({ id = "name_id" })
 ```
 
 ### Common Methods

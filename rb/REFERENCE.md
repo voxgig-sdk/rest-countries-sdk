@@ -98,7 +98,7 @@ same parameters as `direct()`. Raises on error.
 ## AllEntity
 
 ```ruby
-all = client.all
+all = client.All
 ```
 
 ### Fields
@@ -147,7 +147,7 @@ all = client.all
 List entities matching the given criteria. Returns an array. Raises on error.
 
 ```ruby
-results = client.all.list(nil)
+results = client.All.list(nil)
 ```
 
 ### Common Methods
@@ -183,7 +183,7 @@ Return the entity name.
 ## AlphaEntity
 
 ```ruby
-alpha = client.alpha
+alpha = client.Alpha
 ```
 
 ### Fields
@@ -232,7 +232,7 @@ alpha = client.alpha
 Load a single entity matching the given criteria. Raises on error.
 
 ```ruby
-result = client.alpha.load({ "id" => "alpha_id" })
+result = client.Alpha.load({ "id" => "alpha_id" })
 ```
 
 ### Common Methods
@@ -268,7 +268,7 @@ Return the entity name.
 ## CapitalEntity
 
 ```ruby
-capital = client.capital
+capital = client.Capital
 ```
 
 ### Fields
@@ -317,7 +317,7 @@ capital = client.capital
 Load a single entity matching the given criteria. Raises on error.
 
 ```ruby
-result = client.capital.load({ "id" => "capital_id" })
+result = client.Capital.load({ "id" => "capital_id" })
 ```
 
 ### Common Methods
@@ -353,7 +353,7 @@ Return the entity name.
 ## NameEntity
 
 ```ruby
-name = client.name
+name = client.Name
 ```
 
 ### Fields
@@ -402,7 +402,7 @@ name = client.name
 Load a single entity matching the given criteria. Raises on error.
 
 ```ruby
-result = client.name.load({ "id" => "name_id" })
+result = client.Name.load({ "id" => "name_id" })
 ```
 
 ### Common Methods

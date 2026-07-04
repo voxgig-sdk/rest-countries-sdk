@@ -92,7 +92,7 @@ Prepare a fetch definition without sending. Returns the `fetchdef` and raises on
 ## AllEntity
 
 ```python
-all = client.all
+all = client.All()
 ```
 
 ### Fields
@@ -141,7 +141,9 @@ all = client.all
 List entities matching the given criteria. Returns a list and raises on error.
 
 ```python
-results = client.all.list({})
+results = client.All().list({})
+for all in results:
+    print(all)
 ```
 
 ### Common Methods
@@ -176,7 +178,7 @@ Return the entity name.
 ## AlphaEntity
 
 ```python
-alpha = client.alpha
+alpha = client.Alpha()
 ```
 
 ### Fields
@@ -225,7 +227,7 @@ alpha = client.alpha
 Load a single entity matching the given criteria. Returns the entity data and raises on error.
 
 ```python
-result = client.alpha.load({"id": "alpha_id"})
+result = client.Alpha().load({"id": "alpha_id"})
 ```
 
 ### Common Methods
@@ -260,7 +262,7 @@ Return the entity name.
 ## CapitalEntity
 
 ```python
-capital = client.capital
+capital = client.Capital()
 ```
 
 ### Fields
@@ -309,7 +311,7 @@ capital = client.capital
 Load a single entity matching the given criteria. Returns the entity data and raises on error.
 
 ```python
-result = client.capital.load({"id": "capital_id"})
+result = client.Capital().load({"id": "capital_id"})
 ```
 
 ### Common Methods
@@ -344,7 +346,7 @@ Return the entity name.
 ## NameEntity
 
 ```python
-name = client.name
+name = client.Name()
 ```
 
 ### Fields
@@ -393,7 +395,7 @@ name = client.name
 Load a single entity matching the given criteria. Returns the entity data and raises on error.
 
 ```python
-result = client.name.load({"id": "name_id"})
+result = client.Name().load({"id": "name_id"})
 ```
 
 ### Common Methods

@@ -145,7 +145,7 @@ Alias for `RestCountriesSDK.test()`.
 ## AllEntity
 
 ```ts
-const all = client.all
+const all = client.All()
 ```
 
 ### Fields
@@ -194,7 +194,7 @@ const all = client.all
 List entities matching the given criteria. Returns an array.
 
 ```ts
-const results = await client.all.list()
+const results = await client.All().list()
 ```
 
 ### Common Methods
@@ -228,7 +228,7 @@ Return a copy of the entity options.
 ## AlphaEntity
 
 ```ts
-const alpha = client.alpha
+const alpha = client.Alpha()
 ```
 
 ### Fields
@@ -277,7 +277,7 @@ const alpha = client.alpha
 Load a single entity matching the given criteria.
 
 ```ts
-const result = await client.alpha.load({ id: 'alpha_id' })
+const result = await client.Alpha().load({ id: 'alpha_id' })
 ```
 
 ### Common Methods
@@ -311,7 +311,7 @@ Return a copy of the entity options.
 ## CapitalEntity
 
 ```ts
-const capital = client.capital
+const capital = client.Capital()
 ```
 
 ### Fields
@@ -360,7 +360,7 @@ const capital = client.capital
 Load a single entity matching the given criteria.
 
 ```ts
-const result = await client.capital.load({ id: 'capital_id' })
+const result = await client.Capital().load({ id: 'capital_id' })
 ```
 
 ### Common Methods
@@ -394,7 +394,7 @@ Return a copy of the entity options.
 ## NameEntity
 
 ```ts
-const name = client.name
+const name = client.Name()
 ```
 
 ### Fields
@@ -443,7 +443,7 @@ const name = client.name
 Load a single entity matching the given criteria.
 
 ```ts
-const result = await client.name.load({ id: 'name_id' })
+const result = await client.Name().load({ id: 'name_id' })
 ```
 
 ### Common Methods

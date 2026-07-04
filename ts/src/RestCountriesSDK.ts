@@ -207,56 +207,28 @@ class RestCountriesSDK {
 
 
 
-  _all?: AllEntity
-
-  // Idiomatic facade: `client.all.list()` / `client.all.load({ id })`.
-  get all(): AllEntity {
-    return (this._all ??= new AllEntity(this, undefined))
-  }
-
-  /** @deprecated Use `client.all` instead. */
+  // Entity access: `client.All().list()` / `client.All().load({ id })`.
   All(data?: any) {
     const self = this
     return new AllEntity(self,data)
   }
 
 
-  _alpha?: AlphaEntity
-
-  // Idiomatic facade: `client.alpha.list()` / `client.alpha.load({ id })`.
-  get alpha(): AlphaEntity {
-    return (this._alpha ??= new AlphaEntity(this, undefined))
-  }
-
-  /** @deprecated Use `client.alpha` instead. */
+  // Entity access: `client.Alpha().list()` / `client.Alpha().load({ id })`.
   Alpha(data?: any) {
     const self = this
     return new AlphaEntity(self,data)
   }
 
 
-  _capital?: CapitalEntity
-
-  // Idiomatic facade: `client.capital.list()` / `client.capital.load({ id })`.
-  get capital(): CapitalEntity {
-    return (this._capital ??= new CapitalEntity(this, undefined))
-  }
-
-  /** @deprecated Use `client.capital` instead. */
+  // Entity access: `client.Capital().list()` / `client.Capital().load({ id })`.
   Capital(data?: any) {
     const self = this
     return new CapitalEntity(self,data)
   }
 
 
-  _name?: NameEntity
-
-  // Idiomatic facade: `client.name.list()` / `client.name.load({ id })`.
-  get name(): NameEntity {
-    return (this._name ??= new NameEntity(this, undefined))
-  }
-
-  /** @deprecated Use `client.name` instead. */
+  // Entity access: `client.Name().list()` / `client.Name().load({ id })`.
   Name(data?: any) {
     const self = this
     return new NameEntity(self,data)
