@@ -149,7 +149,7 @@ All = Struct.new(
   keyword_init: true
 )
 
-# Match filter for All#list (any subset of All fields).
+# Request payload for All#list.
 #
 # @!attribute [rw] alt_spelling
 #   @return [Array, nil]

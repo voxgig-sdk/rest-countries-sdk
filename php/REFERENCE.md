@@ -8,7 +8,7 @@ Complete API reference for the RestCountries PHP SDK.
 ### Constructor
 
 ```php
-require_once __DIR__ . '/rest-countries_sdk.php';
+require_once __DIR__ . '/restcountries_sdk.php';
 
 $client = new RestCountriesSDK($options);
 ```
@@ -57,11 +57,11 @@ Create a new `CapitalEntity` instance. Pass `null` for no initial data.
 
 Create a new `NameEntity` instance. Pass `null` for no initial data.
 
-#### `optionsMap(): array`
+#### `options_map(): array`
 
 Return a deep copy of the current SDK options.
 
-#### `getUtility(): ProjectNameUtility`
+#### `get_utility(): RestCountriesUtility`
 
 Return a copy of the SDK utility object.
 
@@ -104,66 +104,66 @@ $all = $client->All();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` | No |  |
-| `area` | ``$NUMBER`` | No |  |
-| `border` | ``$ARRAY`` | No |  |
-| `capital` | ``$ARRAY`` | No |  |
-| `capital_info` | ``$OBJECT`` | No |  |
-| `car` | ``$OBJECT`` | No |  |
-| `cca2` | ``$STRING`` | No |  |
-| `cca3` | ``$STRING`` | No |  |
-| `ccn3` | ``$STRING`` | No |  |
-| `cioc` | ``$STRING`` | No |  |
-| `coat_of_arm` | ``$OBJECT`` | No |  |
-| `continent` | ``$ARRAY`` | No |  |
-| `currency` | ``$OBJECT`` | No |  |
-| `demonym` | ``$OBJECT`` | No |  |
-| `fifa` | ``$STRING`` | No |  |
-| `flag` | ``$STRING`` | No |  |
-| `gini` | ``$OBJECT`` | No |  |
-| `idd` | ``$OBJECT`` | No |  |
-| `independent` | ``$BOOLEAN`` | No |  |
-| `landlocked` | ``$BOOLEAN`` | No |  |
-| `language` | ``$OBJECT`` | No |  |
-| `latlng` | ``$ARRAY`` | No |  |
-| `map` | ``$OBJECT`` | No |  |
-| `name` | ``$OBJECT`` | No |  |
-| `population` | ``$INTEGER`` | No |  |
-| `postal_code` | ``$OBJECT`` | No |  |
-| `region` | ``$STRING`` | No |  |
-| `start_of_week` | ``$STRING`` | No |  |
-| `status` | ``$STRING`` | No |  |
-| `subregion` | ``$STRING`` | No |  |
-| `timezone` | ``$ARRAY`` | No |  |
-| `tld` | ``$ARRAY`` | No |  |
-| `translation` | ``$OBJECT`` | No |  |
-| `un_member` | ``$BOOLEAN`` | No |  |
+| `alt_spelling` | `array` | No |  |
+| `area` | `float` | No |  |
+| `border` | `array` | No |  |
+| `capital` | `array` | No |  |
+| `capital_info` | `array` | No |  |
+| `car` | `array` | No |  |
+| `cca2` | `string` | No |  |
+| `cca3` | `string` | No |  |
+| `ccn3` | `string` | No |  |
+| `cioc` | `string` | No |  |
+| `coat_of_arm` | `array` | No |  |
+| `continent` | `array` | No |  |
+| `currency` | `array` | No |  |
+| `demonym` | `array` | No |  |
+| `fifa` | `string` | No |  |
+| `flag` | `string` | No |  |
+| `gini` | `array` | No |  |
+| `idd` | `array` | No |  |
+| `independent` | `bool` | No |  |
+| `landlocked` | `bool` | No |  |
+| `language` | `array` | No |  |
+| `latlng` | `array` | No |  |
+| `map` | `array` | No |  |
+| `name` | `array` | No |  |
+| `population` | `int` | No |  |
+| `postal_code` | `array` | No |  |
+| `region` | `string` | No |  |
+| `start_of_week` | `string` | No |  |
+| `status` | `string` | No |  |
+| `subregion` | `string` | No |  |
+| `timezone` | `array` | No |  |
+| `tld` | `array` | No |  |
+| `translation` | `array` | No |  |
+| `un_member` | `bool` | No |  |
 
 ### Operations
 
-#### `list(array $reqmatch, ?array $ctrl = null): mixed`
+#### `list(?array $reqmatch = null, ?array $ctrl = null): mixed`
 
-List entities matching the given criteria. Returns an array. Throws on error.
+List entities matching the given criteria (call with no argument to list all). Returns an array. Throws on error.
 
 ```php
-$results = $client->All()->list([]);
+$results = $client->All()->list();
 ```
 
 ### Common Methods
 
-#### `dataGet(): array`
+#### `data_get(): array`
 
 Get the entity data. Returns a copy of the current data.
 
-#### `dataSet($data): void`
+#### `data_set($data): void`
 
 Set the entity data.
 
-#### `matchGet(): array`
+#### `match_get(): array`
 
 Get the entity match criteria.
 
-#### `matchSet($match): void`
+#### `match_set($match): void`
 
 Set the entity match criteria.
 
@@ -172,7 +172,7 @@ Set the entity match criteria.
 Create a new `AllEntity` instance with the same client and
 options.
 
-#### `getName(): string`
+#### `get_name(): string`
 
 Return the entity name.
 
@@ -189,40 +189,40 @@ $alpha = $client->Alpha();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` | No |  |
-| `area` | ``$NUMBER`` | No |  |
-| `border` | ``$ARRAY`` | No |  |
-| `capital` | ``$ARRAY`` | No |  |
-| `capital_info` | ``$OBJECT`` | No |  |
-| `car` | ``$OBJECT`` | No |  |
-| `cca2` | ``$STRING`` | No |  |
-| `cca3` | ``$STRING`` | No |  |
-| `ccn3` | ``$STRING`` | No |  |
-| `cioc` | ``$STRING`` | No |  |
-| `coat_of_arm` | ``$OBJECT`` | No |  |
-| `continent` | ``$ARRAY`` | No |  |
-| `currency` | ``$OBJECT`` | No |  |
-| `demonym` | ``$OBJECT`` | No |  |
-| `fifa` | ``$STRING`` | No |  |
-| `flag` | ``$STRING`` | No |  |
-| `gini` | ``$OBJECT`` | No |  |
-| `idd` | ``$OBJECT`` | No |  |
-| `independent` | ``$BOOLEAN`` | No |  |
-| `landlocked` | ``$BOOLEAN`` | No |  |
-| `language` | ``$OBJECT`` | No |  |
-| `latlng` | ``$ARRAY`` | No |  |
-| `map` | ``$OBJECT`` | No |  |
-| `name` | ``$OBJECT`` | No |  |
-| `population` | ``$INTEGER`` | No |  |
-| `postal_code` | ``$OBJECT`` | No |  |
-| `region` | ``$STRING`` | No |  |
-| `start_of_week` | ``$STRING`` | No |  |
-| `status` | ``$STRING`` | No |  |
-| `subregion` | ``$STRING`` | No |  |
-| `timezone` | ``$ARRAY`` | No |  |
-| `tld` | ``$ARRAY`` | No |  |
-| `translation` | ``$OBJECT`` | No |  |
-| `un_member` | ``$BOOLEAN`` | No |  |
+| `alt_spelling` | `array` | No |  |
+| `area` | `float` | No |  |
+| `border` | `array` | No |  |
+| `capital` | `array` | No |  |
+| `capital_info` | `array` | No |  |
+| `car` | `array` | No |  |
+| `cca2` | `string` | No |  |
+| `cca3` | `string` | No |  |
+| `ccn3` | `string` | No |  |
+| `cioc` | `string` | No |  |
+| `coat_of_arm` | `array` | No |  |
+| `continent` | `array` | No |  |
+| `currency` | `array` | No |  |
+| `demonym` | `array` | No |  |
+| `fifa` | `string` | No |  |
+| `flag` | `string` | No |  |
+| `gini` | `array` | No |  |
+| `idd` | `array` | No |  |
+| `independent` | `bool` | No |  |
+| `landlocked` | `bool` | No |  |
+| `language` | `array` | No |  |
+| `latlng` | `array` | No |  |
+| `map` | `array` | No |  |
+| `name` | `array` | No |  |
+| `population` | `int` | No |  |
+| `postal_code` | `array` | No |  |
+| `region` | `string` | No |  |
+| `start_of_week` | `string` | No |  |
+| `status` | `string` | No |  |
+| `subregion` | `string` | No |  |
+| `timezone` | `array` | No |  |
+| `tld` | `array` | No |  |
+| `translation` | `array` | No |  |
+| `un_member` | `bool` | No |  |
 
 ### Operations
 
@@ -236,19 +236,19 @@ $result = $client->Alpha()->load(["id" => "alpha_id"]);
 
 ### Common Methods
 
-#### `dataGet(): array`
+#### `data_get(): array`
 
 Get the entity data. Returns a copy of the current data.
 
-#### `dataSet($data): void`
+#### `data_set($data): void`
 
 Set the entity data.
 
-#### `matchGet(): array`
+#### `match_get(): array`
 
 Get the entity match criteria.
 
-#### `matchSet($match): void`
+#### `match_set($match): void`
 
 Set the entity match criteria.
 
@@ -257,7 +257,7 @@ Set the entity match criteria.
 Create a new `AlphaEntity` instance with the same client and
 options.
 
-#### `getName(): string`
+#### `get_name(): string`
 
 Return the entity name.
 
@@ -274,40 +274,40 @@ $capital = $client->Capital();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` | No |  |
-| `area` | ``$NUMBER`` | No |  |
-| `border` | ``$ARRAY`` | No |  |
-| `capital` | ``$ARRAY`` | No |  |
-| `capital_info` | ``$OBJECT`` | No |  |
-| `car` | ``$OBJECT`` | No |  |
-| `cca2` | ``$STRING`` | No |  |
-| `cca3` | ``$STRING`` | No |  |
-| `ccn3` | ``$STRING`` | No |  |
-| `cioc` | ``$STRING`` | No |  |
-| `coat_of_arm` | ``$OBJECT`` | No |  |
-| `continent` | ``$ARRAY`` | No |  |
-| `currency` | ``$OBJECT`` | No |  |
-| `demonym` | ``$OBJECT`` | No |  |
-| `fifa` | ``$STRING`` | No |  |
-| `flag` | ``$STRING`` | No |  |
-| `gini` | ``$OBJECT`` | No |  |
-| `idd` | ``$OBJECT`` | No |  |
-| `independent` | ``$BOOLEAN`` | No |  |
-| `landlocked` | ``$BOOLEAN`` | No |  |
-| `language` | ``$OBJECT`` | No |  |
-| `latlng` | ``$ARRAY`` | No |  |
-| `map` | ``$OBJECT`` | No |  |
-| `name` | ``$OBJECT`` | No |  |
-| `population` | ``$INTEGER`` | No |  |
-| `postal_code` | ``$OBJECT`` | No |  |
-| `region` | ``$STRING`` | No |  |
-| `start_of_week` | ``$STRING`` | No |  |
-| `status` | ``$STRING`` | No |  |
-| `subregion` | ``$STRING`` | No |  |
-| `timezone` | ``$ARRAY`` | No |  |
-| `tld` | ``$ARRAY`` | No |  |
-| `translation` | ``$OBJECT`` | No |  |
-| `un_member` | ``$BOOLEAN`` | No |  |
+| `alt_spelling` | `array` | No |  |
+| `area` | `float` | No |  |
+| `border` | `array` | No |  |
+| `capital` | `array` | No |  |
+| `capital_info` | `array` | No |  |
+| `car` | `array` | No |  |
+| `cca2` | `string` | No |  |
+| `cca3` | `string` | No |  |
+| `ccn3` | `string` | No |  |
+| `cioc` | `string` | No |  |
+| `coat_of_arm` | `array` | No |  |
+| `continent` | `array` | No |  |
+| `currency` | `array` | No |  |
+| `demonym` | `array` | No |  |
+| `fifa` | `string` | No |  |
+| `flag` | `string` | No |  |
+| `gini` | `array` | No |  |
+| `idd` | `array` | No |  |
+| `independent` | `bool` | No |  |
+| `landlocked` | `bool` | No |  |
+| `language` | `array` | No |  |
+| `latlng` | `array` | No |  |
+| `map` | `array` | No |  |
+| `name` | `array` | No |  |
+| `population` | `int` | No |  |
+| `postal_code` | `array` | No |  |
+| `region` | `string` | No |  |
+| `start_of_week` | `string` | No |  |
+| `status` | `string` | No |  |
+| `subregion` | `string` | No |  |
+| `timezone` | `array` | No |  |
+| `tld` | `array` | No |  |
+| `translation` | `array` | No |  |
+| `un_member` | `bool` | No |  |
 
 ### Operations
 
@@ -321,19 +321,19 @@ $result = $client->Capital()->load(["id" => "capital_id"]);
 
 ### Common Methods
 
-#### `dataGet(): array`
+#### `data_get(): array`
 
 Get the entity data. Returns a copy of the current data.
 
-#### `dataSet($data): void`
+#### `data_set($data): void`
 
 Set the entity data.
 
-#### `matchGet(): array`
+#### `match_get(): array`
 
 Get the entity match criteria.
 
-#### `matchSet($match): void`
+#### `match_set($match): void`
 
 Set the entity match criteria.
 
@@ -342,7 +342,7 @@ Set the entity match criteria.
 Create a new `CapitalEntity` instance with the same client and
 options.
 
-#### `getName(): string`
+#### `get_name(): string`
 
 Return the entity name.
 
@@ -359,40 +359,40 @@ $name = $client->Name();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` | No |  |
-| `area` | ``$NUMBER`` | No |  |
-| `border` | ``$ARRAY`` | No |  |
-| `capital` | ``$ARRAY`` | No |  |
-| `capital_info` | ``$OBJECT`` | No |  |
-| `car` | ``$OBJECT`` | No |  |
-| `cca2` | ``$STRING`` | No |  |
-| `cca3` | ``$STRING`` | No |  |
-| `ccn3` | ``$STRING`` | No |  |
-| `cioc` | ``$STRING`` | No |  |
-| `coat_of_arm` | ``$OBJECT`` | No |  |
-| `continent` | ``$ARRAY`` | No |  |
-| `currency` | ``$OBJECT`` | No |  |
-| `demonym` | ``$OBJECT`` | No |  |
-| `fifa` | ``$STRING`` | No |  |
-| `flag` | ``$STRING`` | No |  |
-| `gini` | ``$OBJECT`` | No |  |
-| `idd` | ``$OBJECT`` | No |  |
-| `independent` | ``$BOOLEAN`` | No |  |
-| `landlocked` | ``$BOOLEAN`` | No |  |
-| `language` | ``$OBJECT`` | No |  |
-| `latlng` | ``$ARRAY`` | No |  |
-| `map` | ``$OBJECT`` | No |  |
-| `name` | ``$OBJECT`` | No |  |
-| `population` | ``$INTEGER`` | No |  |
-| `postal_code` | ``$OBJECT`` | No |  |
-| `region` | ``$STRING`` | No |  |
-| `start_of_week` | ``$STRING`` | No |  |
-| `status` | ``$STRING`` | No |  |
-| `subregion` | ``$STRING`` | No |  |
-| `timezone` | ``$ARRAY`` | No |  |
-| `tld` | ``$ARRAY`` | No |  |
-| `translation` | ``$OBJECT`` | No |  |
-| `un_member` | ``$BOOLEAN`` | No |  |
+| `alt_spelling` | `array` | No |  |
+| `area` | `float` | No |  |
+| `border` | `array` | No |  |
+| `capital` | `array` | No |  |
+| `capital_info` | `array` | No |  |
+| `car` | `array` | No |  |
+| `cca2` | `string` | No |  |
+| `cca3` | `string` | No |  |
+| `ccn3` | `string` | No |  |
+| `cioc` | `string` | No |  |
+| `coat_of_arm` | `array` | No |  |
+| `continent` | `array` | No |  |
+| `currency` | `array` | No |  |
+| `demonym` | `array` | No |  |
+| `fifa` | `string` | No |  |
+| `flag` | `string` | No |  |
+| `gini` | `array` | No |  |
+| `idd` | `array` | No |  |
+| `independent` | `bool` | No |  |
+| `landlocked` | `bool` | No |  |
+| `language` | `array` | No |  |
+| `latlng` | `array` | No |  |
+| `map` | `array` | No |  |
+| `name` | `array` | No |  |
+| `population` | `int` | No |  |
+| `postal_code` | `array` | No |  |
+| `region` | `string` | No |  |
+| `start_of_week` | `string` | No |  |
+| `status` | `string` | No |  |
+| `subregion` | `string` | No |  |
+| `timezone` | `array` | No |  |
+| `tld` | `array` | No |  |
+| `translation` | `array` | No |  |
+| `un_member` | `bool` | No |  |
 
 ### Operations
 
@@ -406,19 +406,19 @@ $result = $client->Name()->load(["id" => "name_id"]);
 
 ### Common Methods
 
-#### `dataGet(): array`
+#### `data_get(): array`
 
 Get the entity data. Returns a copy of the current data.
 
-#### `dataSet($data): void`
+#### `data_set($data): void`
 
 Set the entity data.
 
-#### `matchGet(): array`
+#### `match_get(): array`
 
 Get the entity match criteria.
 
-#### `matchSet($match): void`
+#### `match_set($match): void`
 
 Set the entity match criteria.
 
@@ -427,7 +427,7 @@ Set the entity match criteria.
 Create a new `NameEntity` instance with the same client and
 options.
 
-#### `getName(): string`
+#### `get_name(): string`
 
 Return the entity name.
 

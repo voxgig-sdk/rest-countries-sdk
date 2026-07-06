@@ -8,7 +8,7 @@ Complete API reference for the RestCountries Python SDK.
 ### Constructor
 
 ```python
-from rest-countries_sdk import RestCountriesSDK
+from restcountries_sdk import RestCountriesSDK
 
 client = RestCountriesSDK(options)
 ```
@@ -99,49 +99,49 @@ all = client.All()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` | No |  |
-| `area` | ``$NUMBER`` | No |  |
-| `border` | ``$ARRAY`` | No |  |
-| `capital` | ``$ARRAY`` | No |  |
-| `capital_info` | ``$OBJECT`` | No |  |
-| `car` | ``$OBJECT`` | No |  |
-| `cca2` | ``$STRING`` | No |  |
-| `cca3` | ``$STRING`` | No |  |
-| `ccn3` | ``$STRING`` | No |  |
-| `cioc` | ``$STRING`` | No |  |
-| `coat_of_arm` | ``$OBJECT`` | No |  |
-| `continent` | ``$ARRAY`` | No |  |
-| `currency` | ``$OBJECT`` | No |  |
-| `demonym` | ``$OBJECT`` | No |  |
-| `fifa` | ``$STRING`` | No |  |
-| `flag` | ``$STRING`` | No |  |
-| `gini` | ``$OBJECT`` | No |  |
-| `idd` | ``$OBJECT`` | No |  |
-| `independent` | ``$BOOLEAN`` | No |  |
-| `landlocked` | ``$BOOLEAN`` | No |  |
-| `language` | ``$OBJECT`` | No |  |
-| `latlng` | ``$ARRAY`` | No |  |
-| `map` | ``$OBJECT`` | No |  |
-| `name` | ``$OBJECT`` | No |  |
-| `population` | ``$INTEGER`` | No |  |
-| `postal_code` | ``$OBJECT`` | No |  |
-| `region` | ``$STRING`` | No |  |
-| `start_of_week` | ``$STRING`` | No |  |
-| `status` | ``$STRING`` | No |  |
-| `subregion` | ``$STRING`` | No |  |
-| `timezone` | ``$ARRAY`` | No |  |
-| `tld` | ``$ARRAY`` | No |  |
-| `translation` | ``$OBJECT`` | No |  |
-| `un_member` | ``$BOOLEAN`` | No |  |
+| `alt_spelling` | `list` | No |  |
+| `area` | `float` | No |  |
+| `border` | `list` | No |  |
+| `capital` | `list` | No |  |
+| `capital_info` | `dict` | No |  |
+| `car` | `dict` | No |  |
+| `cca2` | `str` | No |  |
+| `cca3` | `str` | No |  |
+| `ccn3` | `str` | No |  |
+| `cioc` | `str` | No |  |
+| `coat_of_arm` | `dict` | No |  |
+| `continent` | `list` | No |  |
+| `currency` | `dict` | No |  |
+| `demonym` | `dict` | No |  |
+| `fifa` | `str` | No |  |
+| `flag` | `str` | No |  |
+| `gini` | `dict` | No |  |
+| `idd` | `dict` | No |  |
+| `independent` | `bool` | No |  |
+| `landlocked` | `bool` | No |  |
+| `language` | `dict` | No |  |
+| `latlng` | `list` | No |  |
+| `map` | `dict` | No |  |
+| `name` | `dict` | No |  |
+| `population` | `int` | No |  |
+| `postal_code` | `dict` | No |  |
+| `region` | `str` | No |  |
+| `start_of_week` | `str` | No |  |
+| `status` | `str` | No |  |
+| `subregion` | `str` | No |  |
+| `timezone` | `list` | No |  |
+| `tld` | `list` | No |  |
+| `translation` | `dict` | No |  |
+| `un_member` | `bool` | No |  |
 
 ### Operations
 
-#### `list(reqmatch, ctrl=None) -> list`
+#### `list(reqmatch=None, ctrl=None) -> list`
 
-List entities matching the given criteria. Returns a list and raises on error.
+List entities matching the given criteria. The match is optional — call `list()` with no argument to list all records. Returns a list and raises on error.
 
 ```python
-results = client.All().list({})
+results = client.All().list()
 for all in results:
     print(all)
 ```
@@ -185,40 +185,40 @@ alpha = client.Alpha()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` | No |  |
-| `area` | ``$NUMBER`` | No |  |
-| `border` | ``$ARRAY`` | No |  |
-| `capital` | ``$ARRAY`` | No |  |
-| `capital_info` | ``$OBJECT`` | No |  |
-| `car` | ``$OBJECT`` | No |  |
-| `cca2` | ``$STRING`` | No |  |
-| `cca3` | ``$STRING`` | No |  |
-| `ccn3` | ``$STRING`` | No |  |
-| `cioc` | ``$STRING`` | No |  |
-| `coat_of_arm` | ``$OBJECT`` | No |  |
-| `continent` | ``$ARRAY`` | No |  |
-| `currency` | ``$OBJECT`` | No |  |
-| `demonym` | ``$OBJECT`` | No |  |
-| `fifa` | ``$STRING`` | No |  |
-| `flag` | ``$STRING`` | No |  |
-| `gini` | ``$OBJECT`` | No |  |
-| `idd` | ``$OBJECT`` | No |  |
-| `independent` | ``$BOOLEAN`` | No |  |
-| `landlocked` | ``$BOOLEAN`` | No |  |
-| `language` | ``$OBJECT`` | No |  |
-| `latlng` | ``$ARRAY`` | No |  |
-| `map` | ``$OBJECT`` | No |  |
-| `name` | ``$OBJECT`` | No |  |
-| `population` | ``$INTEGER`` | No |  |
-| `postal_code` | ``$OBJECT`` | No |  |
-| `region` | ``$STRING`` | No |  |
-| `start_of_week` | ``$STRING`` | No |  |
-| `status` | ``$STRING`` | No |  |
-| `subregion` | ``$STRING`` | No |  |
-| `timezone` | ``$ARRAY`` | No |  |
-| `tld` | ``$ARRAY`` | No |  |
-| `translation` | ``$OBJECT`` | No |  |
-| `un_member` | ``$BOOLEAN`` | No |  |
+| `alt_spelling` | `list` | No |  |
+| `area` | `float` | No |  |
+| `border` | `list` | No |  |
+| `capital` | `list` | No |  |
+| `capital_info` | `dict` | No |  |
+| `car` | `dict` | No |  |
+| `cca2` | `str` | No |  |
+| `cca3` | `str` | No |  |
+| `ccn3` | `str` | No |  |
+| `cioc` | `str` | No |  |
+| `coat_of_arm` | `dict` | No |  |
+| `continent` | `list` | No |  |
+| `currency` | `dict` | No |  |
+| `demonym` | `dict` | No |  |
+| `fifa` | `str` | No |  |
+| `flag` | `str` | No |  |
+| `gini` | `dict` | No |  |
+| `idd` | `dict` | No |  |
+| `independent` | `bool` | No |  |
+| `landlocked` | `bool` | No |  |
+| `language` | `dict` | No |  |
+| `latlng` | `list` | No |  |
+| `map` | `dict` | No |  |
+| `name` | `dict` | No |  |
+| `population` | `int` | No |  |
+| `postal_code` | `dict` | No |  |
+| `region` | `str` | No |  |
+| `start_of_week` | `str` | No |  |
+| `status` | `str` | No |  |
+| `subregion` | `str` | No |  |
+| `timezone` | `list` | No |  |
+| `tld` | `list` | No |  |
+| `translation` | `dict` | No |  |
+| `un_member` | `bool` | No |  |
 
 ### Operations
 
@@ -269,40 +269,40 @@ capital = client.Capital()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` | No |  |
-| `area` | ``$NUMBER`` | No |  |
-| `border` | ``$ARRAY`` | No |  |
-| `capital` | ``$ARRAY`` | No |  |
-| `capital_info` | ``$OBJECT`` | No |  |
-| `car` | ``$OBJECT`` | No |  |
-| `cca2` | ``$STRING`` | No |  |
-| `cca3` | ``$STRING`` | No |  |
-| `ccn3` | ``$STRING`` | No |  |
-| `cioc` | ``$STRING`` | No |  |
-| `coat_of_arm` | ``$OBJECT`` | No |  |
-| `continent` | ``$ARRAY`` | No |  |
-| `currency` | ``$OBJECT`` | No |  |
-| `demonym` | ``$OBJECT`` | No |  |
-| `fifa` | ``$STRING`` | No |  |
-| `flag` | ``$STRING`` | No |  |
-| `gini` | ``$OBJECT`` | No |  |
-| `idd` | ``$OBJECT`` | No |  |
-| `independent` | ``$BOOLEAN`` | No |  |
-| `landlocked` | ``$BOOLEAN`` | No |  |
-| `language` | ``$OBJECT`` | No |  |
-| `latlng` | ``$ARRAY`` | No |  |
-| `map` | ``$OBJECT`` | No |  |
-| `name` | ``$OBJECT`` | No |  |
-| `population` | ``$INTEGER`` | No |  |
-| `postal_code` | ``$OBJECT`` | No |  |
-| `region` | ``$STRING`` | No |  |
-| `start_of_week` | ``$STRING`` | No |  |
-| `status` | ``$STRING`` | No |  |
-| `subregion` | ``$STRING`` | No |  |
-| `timezone` | ``$ARRAY`` | No |  |
-| `tld` | ``$ARRAY`` | No |  |
-| `translation` | ``$OBJECT`` | No |  |
-| `un_member` | ``$BOOLEAN`` | No |  |
+| `alt_spelling` | `list` | No |  |
+| `area` | `float` | No |  |
+| `border` | `list` | No |  |
+| `capital` | `list` | No |  |
+| `capital_info` | `dict` | No |  |
+| `car` | `dict` | No |  |
+| `cca2` | `str` | No |  |
+| `cca3` | `str` | No |  |
+| `ccn3` | `str` | No |  |
+| `cioc` | `str` | No |  |
+| `coat_of_arm` | `dict` | No |  |
+| `continent` | `list` | No |  |
+| `currency` | `dict` | No |  |
+| `demonym` | `dict` | No |  |
+| `fifa` | `str` | No |  |
+| `flag` | `str` | No |  |
+| `gini` | `dict` | No |  |
+| `idd` | `dict` | No |  |
+| `independent` | `bool` | No |  |
+| `landlocked` | `bool` | No |  |
+| `language` | `dict` | No |  |
+| `latlng` | `list` | No |  |
+| `map` | `dict` | No |  |
+| `name` | `dict` | No |  |
+| `population` | `int` | No |  |
+| `postal_code` | `dict` | No |  |
+| `region` | `str` | No |  |
+| `start_of_week` | `str` | No |  |
+| `status` | `str` | No |  |
+| `subregion` | `str` | No |  |
+| `timezone` | `list` | No |  |
+| `tld` | `list` | No |  |
+| `translation` | `dict` | No |  |
+| `un_member` | `bool` | No |  |
 
 ### Operations
 
@@ -353,40 +353,40 @@ name = client.Name()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` | No |  |
-| `area` | ``$NUMBER`` | No |  |
-| `border` | ``$ARRAY`` | No |  |
-| `capital` | ``$ARRAY`` | No |  |
-| `capital_info` | ``$OBJECT`` | No |  |
-| `car` | ``$OBJECT`` | No |  |
-| `cca2` | ``$STRING`` | No |  |
-| `cca3` | ``$STRING`` | No |  |
-| `ccn3` | ``$STRING`` | No |  |
-| `cioc` | ``$STRING`` | No |  |
-| `coat_of_arm` | ``$OBJECT`` | No |  |
-| `continent` | ``$ARRAY`` | No |  |
-| `currency` | ``$OBJECT`` | No |  |
-| `demonym` | ``$OBJECT`` | No |  |
-| `fifa` | ``$STRING`` | No |  |
-| `flag` | ``$STRING`` | No |  |
-| `gini` | ``$OBJECT`` | No |  |
-| `idd` | ``$OBJECT`` | No |  |
-| `independent` | ``$BOOLEAN`` | No |  |
-| `landlocked` | ``$BOOLEAN`` | No |  |
-| `language` | ``$OBJECT`` | No |  |
-| `latlng` | ``$ARRAY`` | No |  |
-| `map` | ``$OBJECT`` | No |  |
-| `name` | ``$OBJECT`` | No |  |
-| `population` | ``$INTEGER`` | No |  |
-| `postal_code` | ``$OBJECT`` | No |  |
-| `region` | ``$STRING`` | No |  |
-| `start_of_week` | ``$STRING`` | No |  |
-| `status` | ``$STRING`` | No |  |
-| `subregion` | ``$STRING`` | No |  |
-| `timezone` | ``$ARRAY`` | No |  |
-| `tld` | ``$ARRAY`` | No |  |
-| `translation` | ``$OBJECT`` | No |  |
-| `un_member` | ``$BOOLEAN`` | No |  |
+| `alt_spelling` | `list` | No |  |
+| `area` | `float` | No |  |
+| `border` | `list` | No |  |
+| `capital` | `list` | No |  |
+| `capital_info` | `dict` | No |  |
+| `car` | `dict` | No |  |
+| `cca2` | `str` | No |  |
+| `cca3` | `str` | No |  |
+| `ccn3` | `str` | No |  |
+| `cioc` | `str` | No |  |
+| `coat_of_arm` | `dict` | No |  |
+| `continent` | `list` | No |  |
+| `currency` | `dict` | No |  |
+| `demonym` | `dict` | No |  |
+| `fifa` | `str` | No |  |
+| `flag` | `str` | No |  |
+| `gini` | `dict` | No |  |
+| `idd` | `dict` | No |  |
+| `independent` | `bool` | No |  |
+| `landlocked` | `bool` | No |  |
+| `language` | `dict` | No |  |
+| `latlng` | `list` | No |  |
+| `map` | `dict` | No |  |
+| `name` | `dict` | No |  |
+| `population` | `int` | No |  |
+| `postal_code` | `dict` | No |  |
+| `region` | `str` | No |  |
+| `start_of_week` | `str` | No |  |
+| `status` | `str` | No |  |
+| `subregion` | `str` | No |  |
+| `timezone` | `list` | No |  |
+| `tld` | `list` | No |  |
+| `translation` | `dict` | No |  |
+| `un_member` | `bool` | No |  |
 
 ### Operations
 

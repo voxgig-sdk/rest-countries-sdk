@@ -4,6 +4,8 @@
 
 The PHP SDK for the RestCountries API — an entity-oriented client using PHP conventions.
 
+The SDK exposes the API as capitalised, semantic **Entities** — for example `$client->All()` — with named operations (`list`/`load`) instead of raw URL paths and query strings. Working with resources and verbs keeps call sites self-describing and reduces cognitive load.
+
 > Other languages, the CLI, and MCP server live alongside this one — see
 > the [top-level README](../README.md).
 
@@ -36,10 +38,41 @@ try {
     // list() returns an array of All records — iterate directly.
     $alls = $client->All()->list();
     foreach ($alls as $item) {
-        echo $item["id"] . " " . $item["name"] . "\n";
+        echo $item["alt_spelling"] . "\n";
     }
 } catch (\Throwable $err) {
     echo "Error: " . $err->getMessage();
+}
+```
+
+
+## Error handling
+
+Entity operations throw a `\Throwable` on failure, so wrap them in
+`try` / `catch`:
+
+```php
+try {
+    $alls = $client->All()->list();
+} catch (\Throwable $err) {
+    echo "Error: " . $err->getMessage();
+}
+```
+
+`direct()` does **not** throw — it returns the result array. Branch on
+`ok`; on failure `status` holds the HTTP status (for error responses) and
+`err` holds a transport error, so read both defensively:
+
+```php
+$result = $client->direct([
+    "path" => "/api/resource/{id}",
+    "method" => "GET",
+    "params" => ["id" => "example_id"],
+]);
+
+if (! $result["ok"]) {
+    $err = $result["err"] ?? null;
+    echo "request failed: " . ($err ? $err->getMessage() : "HTTP " . $result["status"]);
 }
 ```
 
@@ -63,7 +96,10 @@ if ($result["ok"]) {
     echo $result["status"];  // 200
     print_r($result["data"]);  // response body
 } else {
-    echo "Error: " . $result["err"]->getMessage();
+    // On an HTTP error status there is no err (only a transport failure sets
+    // it), so fall back to the status code.
+    $err = $result["err"] ?? null;
+    echo "Error: " . ($err ? $err->getMessage() : "HTTP " . $result["status"]);
 }
 ```
 
@@ -84,16 +120,13 @@ print_r($fetchdef["headers"]);
 
 ### Use test mode
 
-Create a mock client for unit testing — no server required. Seed fixture
-data via the `entity` option so offline calls resolve without a live server:
+Create a mock client for unit testing — no server required:
 
 ```php
-$client = RestCountriesSDK::test([
-    "entity" => ["all" => ["test01" => ["id" => "test01"]]],
-]);
+$client = RestCountriesSDK::test();
 
-// load() returns the bare mock record (throws on error).
-$all = $client->All()->load(["id" => "test01"]);
+// Entity ops return the bare mock record (throws on error).
+$all = $client->All()->list();
 print_r($all);
 ```
 
@@ -185,10 +218,7 @@ All entities share the same interface.
 | Method | Signature | Description |
 | --- | --- | --- |
 | `load` | `($reqmatch, $ctrl): array` | Load a single entity by match criteria. |
-| `list` | `($reqmatch, $ctrl): array` | List entities matching the criteria. |
-| `create` | `($reqdata, $ctrl): array` | Create a new entity. |
-| `update` | `($reqdata, $ctrl): array` | Update an existing entity. |
-| `remove` | `($reqmatch, $ctrl): array` | Remove an entity. |
+| `list` | `(?array $reqmatch = null, $ctrl): array` | List entities matching the criteria (call with no argument to list all). |
 | `data_get` | `(): array` | Get entity data. |
 | `data_set` | `($data): void` | Set entity data. |
 | `match_get` | `(): array` | Get entity match criteria. |
@@ -407,40 +437,40 @@ Create an instance: `$all = $client->All();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` |  |
-| `area` | ``$NUMBER`` |  |
-| `border` | ``$ARRAY`` |  |
-| `capital` | ``$ARRAY`` |  |
-| `capital_info` | ``$OBJECT`` |  |
-| `car` | ``$OBJECT`` |  |
-| `cca2` | ``$STRING`` |  |
-| `cca3` | ``$STRING`` |  |
-| `ccn3` | ``$STRING`` |  |
-| `cioc` | ``$STRING`` |  |
-| `coat_of_arm` | ``$OBJECT`` |  |
-| `continent` | ``$ARRAY`` |  |
-| `currency` | ``$OBJECT`` |  |
-| `demonym` | ``$OBJECT`` |  |
-| `fifa` | ``$STRING`` |  |
-| `flag` | ``$STRING`` |  |
-| `gini` | ``$OBJECT`` |  |
-| `idd` | ``$OBJECT`` |  |
-| `independent` | ``$BOOLEAN`` |  |
-| `landlocked` | ``$BOOLEAN`` |  |
-| `language` | ``$OBJECT`` |  |
-| `latlng` | ``$ARRAY`` |  |
-| `map` | ``$OBJECT`` |  |
-| `name` | ``$OBJECT`` |  |
-| `population` | ``$INTEGER`` |  |
-| `postal_code` | ``$OBJECT`` |  |
-| `region` | ``$STRING`` |  |
-| `start_of_week` | ``$STRING`` |  |
-| `status` | ``$STRING`` |  |
-| `subregion` | ``$STRING`` |  |
-| `timezone` | ``$ARRAY`` |  |
-| `tld` | ``$ARRAY`` |  |
-| `translation` | ``$OBJECT`` |  |
-| `un_member` | ``$BOOLEAN`` |  |
+| `alt_spelling` | `array` |  |
+| `area` | `float` |  |
+| `border` | `array` |  |
+| `capital` | `array` |  |
+| `capital_info` | `array` |  |
+| `car` | `array` |  |
+| `cca2` | `string` |  |
+| `cca3` | `string` |  |
+| `ccn3` | `string` |  |
+| `cioc` | `string` |  |
+| `coat_of_arm` | `array` |  |
+| `continent` | `array` |  |
+| `currency` | `array` |  |
+| `demonym` | `array` |  |
+| `fifa` | `string` |  |
+| `flag` | `string` |  |
+| `gini` | `array` |  |
+| `idd` | `array` |  |
+| `independent` | `bool` |  |
+| `landlocked` | `bool` |  |
+| `language` | `array` |  |
+| `latlng` | `array` |  |
+| `map` | `array` |  |
+| `name` | `array` |  |
+| `population` | `int` |  |
+| `postal_code` | `array` |  |
+| `region` | `string` |  |
+| `start_of_week` | `string` |  |
+| `status` | `string` |  |
+| `subregion` | `string` |  |
+| `timezone` | `array` |  |
+| `tld` | `array` |  |
+| `translation` | `array` |  |
+| `un_member` | `bool` |  |
 
 #### Example: List
 
@@ -464,40 +494,40 @@ Create an instance: `$alpha = $client->Alpha();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` |  |
-| `area` | ``$NUMBER`` |  |
-| `border` | ``$ARRAY`` |  |
-| `capital` | ``$ARRAY`` |  |
-| `capital_info` | ``$OBJECT`` |  |
-| `car` | ``$OBJECT`` |  |
-| `cca2` | ``$STRING`` |  |
-| `cca3` | ``$STRING`` |  |
-| `ccn3` | ``$STRING`` |  |
-| `cioc` | ``$STRING`` |  |
-| `coat_of_arm` | ``$OBJECT`` |  |
-| `continent` | ``$ARRAY`` |  |
-| `currency` | ``$OBJECT`` |  |
-| `demonym` | ``$OBJECT`` |  |
-| `fifa` | ``$STRING`` |  |
-| `flag` | ``$STRING`` |  |
-| `gini` | ``$OBJECT`` |  |
-| `idd` | ``$OBJECT`` |  |
-| `independent` | ``$BOOLEAN`` |  |
-| `landlocked` | ``$BOOLEAN`` |  |
-| `language` | ``$OBJECT`` |  |
-| `latlng` | ``$ARRAY`` |  |
-| `map` | ``$OBJECT`` |  |
-| `name` | ``$OBJECT`` |  |
-| `population` | ``$INTEGER`` |  |
-| `postal_code` | ``$OBJECT`` |  |
-| `region` | ``$STRING`` |  |
-| `start_of_week` | ``$STRING`` |  |
-| `status` | ``$STRING`` |  |
-| `subregion` | ``$STRING`` |  |
-| `timezone` | ``$ARRAY`` |  |
-| `tld` | ``$ARRAY`` |  |
-| `translation` | ``$OBJECT`` |  |
-| `un_member` | ``$BOOLEAN`` |  |
+| `alt_spelling` | `array` |  |
+| `area` | `float` |  |
+| `border` | `array` |  |
+| `capital` | `array` |  |
+| `capital_info` | `array` |  |
+| `car` | `array` |  |
+| `cca2` | `string` |  |
+| `cca3` | `string` |  |
+| `ccn3` | `string` |  |
+| `cioc` | `string` |  |
+| `coat_of_arm` | `array` |  |
+| `continent` | `array` |  |
+| `currency` | `array` |  |
+| `demonym` | `array` |  |
+| `fifa` | `string` |  |
+| `flag` | `string` |  |
+| `gini` | `array` |  |
+| `idd` | `array` |  |
+| `independent` | `bool` |  |
+| `landlocked` | `bool` |  |
+| `language` | `array` |  |
+| `latlng` | `array` |  |
+| `map` | `array` |  |
+| `name` | `array` |  |
+| `population` | `int` |  |
+| `postal_code` | `array` |  |
+| `region` | `string` |  |
+| `start_of_week` | `string` |  |
+| `status` | `string` |  |
+| `subregion` | `string` |  |
+| `timezone` | `array` |  |
+| `tld` | `array` |  |
+| `translation` | `array` |  |
+| `un_member` | `bool` |  |
 
 #### Example: Load
 
@@ -521,40 +551,40 @@ Create an instance: `$capital = $client->Capital();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` |  |
-| `area` | ``$NUMBER`` |  |
-| `border` | ``$ARRAY`` |  |
-| `capital` | ``$ARRAY`` |  |
-| `capital_info` | ``$OBJECT`` |  |
-| `car` | ``$OBJECT`` |  |
-| `cca2` | ``$STRING`` |  |
-| `cca3` | ``$STRING`` |  |
-| `ccn3` | ``$STRING`` |  |
-| `cioc` | ``$STRING`` |  |
-| `coat_of_arm` | ``$OBJECT`` |  |
-| `continent` | ``$ARRAY`` |  |
-| `currency` | ``$OBJECT`` |  |
-| `demonym` | ``$OBJECT`` |  |
-| `fifa` | ``$STRING`` |  |
-| `flag` | ``$STRING`` |  |
-| `gini` | ``$OBJECT`` |  |
-| `idd` | ``$OBJECT`` |  |
-| `independent` | ``$BOOLEAN`` |  |
-| `landlocked` | ``$BOOLEAN`` |  |
-| `language` | ``$OBJECT`` |  |
-| `latlng` | ``$ARRAY`` |  |
-| `map` | ``$OBJECT`` |  |
-| `name` | ``$OBJECT`` |  |
-| `population` | ``$INTEGER`` |  |
-| `postal_code` | ``$OBJECT`` |  |
-| `region` | ``$STRING`` |  |
-| `start_of_week` | ``$STRING`` |  |
-| `status` | ``$STRING`` |  |
-| `subregion` | ``$STRING`` |  |
-| `timezone` | ``$ARRAY`` |  |
-| `tld` | ``$ARRAY`` |  |
-| `translation` | ``$OBJECT`` |  |
-| `un_member` | ``$BOOLEAN`` |  |
+| `alt_spelling` | `array` |  |
+| `area` | `float` |  |
+| `border` | `array` |  |
+| `capital` | `array` |  |
+| `capital_info` | `array` |  |
+| `car` | `array` |  |
+| `cca2` | `string` |  |
+| `cca3` | `string` |  |
+| `ccn3` | `string` |  |
+| `cioc` | `string` |  |
+| `coat_of_arm` | `array` |  |
+| `continent` | `array` |  |
+| `currency` | `array` |  |
+| `demonym` | `array` |  |
+| `fifa` | `string` |  |
+| `flag` | `string` |  |
+| `gini` | `array` |  |
+| `idd` | `array` |  |
+| `independent` | `bool` |  |
+| `landlocked` | `bool` |  |
+| `language` | `array` |  |
+| `latlng` | `array` |  |
+| `map` | `array` |  |
+| `name` | `array` |  |
+| `population` | `int` |  |
+| `postal_code` | `array` |  |
+| `region` | `string` |  |
+| `start_of_week` | `string` |  |
+| `status` | `string` |  |
+| `subregion` | `string` |  |
+| `timezone` | `array` |  |
+| `tld` | `array` |  |
+| `translation` | `array` |  |
+| `un_member` | `bool` |  |
 
 #### Example: Load
 
@@ -578,40 +608,40 @@ Create an instance: `$name = $client->Name();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` |  |
-| `area` | ``$NUMBER`` |  |
-| `border` | ``$ARRAY`` |  |
-| `capital` | ``$ARRAY`` |  |
-| `capital_info` | ``$OBJECT`` |  |
-| `car` | ``$OBJECT`` |  |
-| `cca2` | ``$STRING`` |  |
-| `cca3` | ``$STRING`` |  |
-| `ccn3` | ``$STRING`` |  |
-| `cioc` | ``$STRING`` |  |
-| `coat_of_arm` | ``$OBJECT`` |  |
-| `continent` | ``$ARRAY`` |  |
-| `currency` | ``$OBJECT`` |  |
-| `demonym` | ``$OBJECT`` |  |
-| `fifa` | ``$STRING`` |  |
-| `flag` | ``$STRING`` |  |
-| `gini` | ``$OBJECT`` |  |
-| `idd` | ``$OBJECT`` |  |
-| `independent` | ``$BOOLEAN`` |  |
-| `landlocked` | ``$BOOLEAN`` |  |
-| `language` | ``$OBJECT`` |  |
-| `latlng` | ``$ARRAY`` |  |
-| `map` | ``$OBJECT`` |  |
-| `name` | ``$OBJECT`` |  |
-| `population` | ``$INTEGER`` |  |
-| `postal_code` | ``$OBJECT`` |  |
-| `region` | ``$STRING`` |  |
-| `start_of_week` | ``$STRING`` |  |
-| `status` | ``$STRING`` |  |
-| `subregion` | ``$STRING`` |  |
-| `timezone` | ``$ARRAY`` |  |
-| `tld` | ``$ARRAY`` |  |
-| `translation` | ``$OBJECT`` |  |
-| `un_member` | ``$BOOLEAN`` |  |
+| `alt_spelling` | `array` |  |
+| `area` | `float` |  |
+| `border` | `array` |  |
+| `capital` | `array` |  |
+| `capital_info` | `array` |  |
+| `car` | `array` |  |
+| `cca2` | `string` |  |
+| `cca3` | `string` |  |
+| `ccn3` | `string` |  |
+| `cioc` | `string` |  |
+| `coat_of_arm` | `array` |  |
+| `continent` | `array` |  |
+| `currency` | `array` |  |
+| `demonym` | `array` |  |
+| `fifa` | `string` |  |
+| `flag` | `string` |  |
+| `gini` | `array` |  |
+| `idd` | `array` |  |
+| `independent` | `bool` |  |
+| `landlocked` | `bool` |  |
+| `language` | `array` |  |
+| `latlng` | `array` |  |
+| `map` | `array` |  |
+| `name` | `array` |  |
+| `population` | `int` |  |
+| `postal_code` | `array` |  |
+| `region` | `string` |  |
+| `start_of_week` | `string` |  |
+| `status` | `string` |  |
+| `subregion` | `string` |  |
+| `timezone` | `array` |  |
+| `tld` | `array` |  |
+| `translation` | `array` |  |
+| `un_member` | `bool` |  |
 
 #### Example: Load
 
@@ -621,12 +651,16 @@ $name = $client->Name()->load(["id" => "name_id"]);
 ```
 
 
-## Explanation
+## Advanced
+
+> The sections above cover everyday use. The material below explains the
+> SDK's internals — useful when extending it with custom features, but not
+> needed for normal use.
 
 ### The operation pipeline
 
-Every entity operation (load, list, create, update, remove) follows a
-six-stage pipeline. Each stage fires a feature hook before executing:
+Every entity operation follows a six-stage pipeline. Each stage fires a
+feature hook before executing:
 
 ```
 PrePoint → PreSpec → PreRequest → PreResponse → PreResult → PreDone
@@ -643,8 +677,9 @@ PrePoint → PreSpec → PreRequest → PreResponse → PreResult → PreDone
 - **PreDone**: Final stage before returning to the caller. Entity
   state (match, data) is updated here.
 
-If any stage returns an error, the pipeline short-circuits and the
-error is returned to the caller as the second element in the return array.
+If any stage errors, the pipeline short-circuits and the error surfaces
+to the caller — see [Error handling](#error-handling) for how that looks
+in this language.
 
 ### Features and hooks
 
@@ -688,15 +723,15 @@ when needed.
 
 ### Entity state
 
-Entity instances are stateful. After a successful `load`, the entity
+Entity instances are stateful. After a successful `list`, the entity
 stores the returned data and match criteria internally.
 
 ```php
 $all = $client->All();
-$all->load(["id" => "example_id"]);
+$all->list();
 
-// $all->dataGet() now returns the loaded all data
-// $all->matchGet() returns the last match criteria
+// $all->data_get() now returns the all data from the last list
+// $all->match_get() returns the last match criteria
 ```
 
 Call `make()` to create a fresh instance with the same configuration

@@ -4,6 +4,11 @@
 
 The TypeScript SDK for the RestCountries API — a type-safe, entity-oriented client with full async/await support.
 
+The API is exposed as capitalised, semantic **Entities** — e.g.
+`client.All()` — each with a small set of operations (`list`, `load`)
+instead of raw URL paths and query parameters. This keeps the surface
+predictable and low-friction for both humans and AI agents.
+
 > Other languages, the CLI, and MCP server live alongside this one — see
 > the [top-level README](../README.md).
 
@@ -37,6 +42,35 @@ const alls = await client.All().list()
 
 for (const all of alls) {
   console.log(all)
+}
+```
+
+
+## Error handling
+
+Entity operations reject on failure, so wrap them in `try` / `catch`:
+
+```ts
+try {
+  const alls = await client.All().list()
+  console.log(alls)
+} catch (err) {
+  console.error('list failed:', err)
+}
+```
+
+The low-level `direct()` method does **not** throw — it returns the
+value or an `Error`, so check the result before using it:
+
+```ts
+const result = await client.direct({
+  path: '/api/resource/{id}',
+  method: 'GET',
+  params: { id: 'example_id' },
+})
+
+if (result instanceof Error) {
+  throw result
 }
 ```
 
@@ -85,7 +119,7 @@ Create a mock client for unit testing — no server required:
 ```ts
 const client = RestCountriesSDK.test()
 
-const all = await client.All().load({ id: 'test01' })
+const all = await client.All().list()
 // all is a bare entity populated with mock response data
 console.log(all)
 ```
@@ -104,12 +138,12 @@ Entity instances remember their last match and data:
 ```ts
 const entity = client.All()
 
-// First call sets internal match
-await entity.load({ id: 'example' })
+// First call runs the operation and stores its result
+await entity.list()
 
-// Subsequent calls reuse the stored match
+// Subsequent calls reuse the stored state
 const data = entity.data()
-console.log(data.id) // 'example'
+console.log(data)
 ```
 
 ### Add custom middleware
@@ -202,11 +236,8 @@ All entities share the same interface.
 | --- | --- | --- |
 | `load` | `load(reqmatch?, ctrl?): Promise<Entity>` | Load a single entity by match criteria. |
 | `list` | `list(reqmatch?, ctrl?): Promise<Entity[]>` | List entities matching the criteria. |
-| `create` | `create(reqdata?, ctrl?): Promise<Entity>` | Create a new entity. |
-| `update` | `update(reqdata?, ctrl?): Promise<Entity>` | Update an existing entity. |
-| `remove` | `remove(reqmatch?, ctrl?): Promise<void>` | Remove an entity. |
-| `data` | `data(data?): any` | Get or set entity data. |
-| `match` | `match(match?): any` | Get or set entity match criteria. |
+| `data` | `data(data?: Partial<Entity>): Entity` | Get or set entity data. |
+| `match` | `match(match?: Partial<Entity>): Partial<Entity>` | Get or set entity match criteria. |
 | `make` | `make(): Entity` | Create a new instance with the same options. |
 | `client` | `client(): RestCountriesSDK` | Return the parent SDK client. |
 | `entopts` | `entopts(): object` | Return a copy of the entity options. |
@@ -216,10 +247,9 @@ All entities share the same interface.
 Entity operations resolve to the entity data directly — there is no
 result envelope:
 
-- `load`, `create` and `update` resolve to a single entity object.
+- `load` resolves to a single entity object.
 - `list` resolves to an **array** of entity objects (iterate it directly;
   there is no `.data` and no `.ok`).
-- `remove` resolves to `void`.
 
 On a failed request these methods **throw**, so wrap calls in
 `try`/`catch` to handle errors. Only `direct()` returns the result
@@ -446,40 +476,40 @@ Create an instance: `const all = client.All()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` |  |
-| `area` | ``$NUMBER`` |  |
-| `border` | ``$ARRAY`` |  |
-| `capital` | ``$ARRAY`` |  |
-| `capital_info` | ``$OBJECT`` |  |
-| `car` | ``$OBJECT`` |  |
-| `cca2` | ``$STRING`` |  |
-| `cca3` | ``$STRING`` |  |
-| `ccn3` | ``$STRING`` |  |
-| `cioc` | ``$STRING`` |  |
-| `coat_of_arm` | ``$OBJECT`` |  |
-| `continent` | ``$ARRAY`` |  |
-| `currency` | ``$OBJECT`` |  |
-| `demonym` | ``$OBJECT`` |  |
-| `fifa` | ``$STRING`` |  |
-| `flag` | ``$STRING`` |  |
-| `gini` | ``$OBJECT`` |  |
-| `idd` | ``$OBJECT`` |  |
-| `independent` | ``$BOOLEAN`` |  |
-| `landlocked` | ``$BOOLEAN`` |  |
-| `language` | ``$OBJECT`` |  |
-| `latlng` | ``$ARRAY`` |  |
-| `map` | ``$OBJECT`` |  |
-| `name` | ``$OBJECT`` |  |
-| `population` | ``$INTEGER`` |  |
-| `postal_code` | ``$OBJECT`` |  |
-| `region` | ``$STRING`` |  |
-| `start_of_week` | ``$STRING`` |  |
-| `status` | ``$STRING`` |  |
-| `subregion` | ``$STRING`` |  |
-| `timezone` | ``$ARRAY`` |  |
-| `tld` | ``$ARRAY`` |  |
-| `translation` | ``$OBJECT`` |  |
-| `un_member` | ``$BOOLEAN`` |  |
+| `alt_spelling` | `any[]` |  |
+| `area` | `number` |  |
+| `border` | `any[]` |  |
+| `capital` | `any[]` |  |
+| `capital_info` | `Record<string, any>` |  |
+| `car` | `Record<string, any>` |  |
+| `cca2` | `string` |  |
+| `cca3` | `string` |  |
+| `ccn3` | `string` |  |
+| `cioc` | `string` |  |
+| `coat_of_arm` | `Record<string, any>` |  |
+| `continent` | `any[]` |  |
+| `currency` | `Record<string, any>` |  |
+| `demonym` | `Record<string, any>` |  |
+| `fifa` | `string` |  |
+| `flag` | `string` |  |
+| `gini` | `Record<string, any>` |  |
+| `idd` | `Record<string, any>` |  |
+| `independent` | `boolean` |  |
+| `landlocked` | `boolean` |  |
+| `language` | `Record<string, any>` |  |
+| `latlng` | `any[]` |  |
+| `map` | `Record<string, any>` |  |
+| `name` | `Record<string, any>` |  |
+| `population` | `number` |  |
+| `postal_code` | `Record<string, any>` |  |
+| `region` | `string` |  |
+| `start_of_week` | `string` |  |
+| `status` | `string` |  |
+| `subregion` | `string` |  |
+| `timezone` | `any[]` |  |
+| `tld` | `any[]` |  |
+| `translation` | `Record<string, any>` |  |
+| `un_member` | `boolean` |  |
 
 #### Example: List
 
@@ -502,40 +532,40 @@ Create an instance: `const alpha = client.Alpha()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` |  |
-| `area` | ``$NUMBER`` |  |
-| `border` | ``$ARRAY`` |  |
-| `capital` | ``$ARRAY`` |  |
-| `capital_info` | ``$OBJECT`` |  |
-| `car` | ``$OBJECT`` |  |
-| `cca2` | ``$STRING`` |  |
-| `cca3` | ``$STRING`` |  |
-| `ccn3` | ``$STRING`` |  |
-| `cioc` | ``$STRING`` |  |
-| `coat_of_arm` | ``$OBJECT`` |  |
-| `continent` | ``$ARRAY`` |  |
-| `currency` | ``$OBJECT`` |  |
-| `demonym` | ``$OBJECT`` |  |
-| `fifa` | ``$STRING`` |  |
-| `flag` | ``$STRING`` |  |
-| `gini` | ``$OBJECT`` |  |
-| `idd` | ``$OBJECT`` |  |
-| `independent` | ``$BOOLEAN`` |  |
-| `landlocked` | ``$BOOLEAN`` |  |
-| `language` | ``$OBJECT`` |  |
-| `latlng` | ``$ARRAY`` |  |
-| `map` | ``$OBJECT`` |  |
-| `name` | ``$OBJECT`` |  |
-| `population` | ``$INTEGER`` |  |
-| `postal_code` | ``$OBJECT`` |  |
-| `region` | ``$STRING`` |  |
-| `start_of_week` | ``$STRING`` |  |
-| `status` | ``$STRING`` |  |
-| `subregion` | ``$STRING`` |  |
-| `timezone` | ``$ARRAY`` |  |
-| `tld` | ``$ARRAY`` |  |
-| `translation` | ``$OBJECT`` |  |
-| `un_member` | ``$BOOLEAN`` |  |
+| `alt_spelling` | `any[]` |  |
+| `area` | `number` |  |
+| `border` | `any[]` |  |
+| `capital` | `any[]` |  |
+| `capital_info` | `Record<string, any>` |  |
+| `car` | `Record<string, any>` |  |
+| `cca2` | `string` |  |
+| `cca3` | `string` |  |
+| `ccn3` | `string` |  |
+| `cioc` | `string` |  |
+| `coat_of_arm` | `Record<string, any>` |  |
+| `continent` | `any[]` |  |
+| `currency` | `Record<string, any>` |  |
+| `demonym` | `Record<string, any>` |  |
+| `fifa` | `string` |  |
+| `flag` | `string` |  |
+| `gini` | `Record<string, any>` |  |
+| `idd` | `Record<string, any>` |  |
+| `independent` | `boolean` |  |
+| `landlocked` | `boolean` |  |
+| `language` | `Record<string, any>` |  |
+| `latlng` | `any[]` |  |
+| `map` | `Record<string, any>` |  |
+| `name` | `Record<string, any>` |  |
+| `population` | `number` |  |
+| `postal_code` | `Record<string, any>` |  |
+| `region` | `string` |  |
+| `start_of_week` | `string` |  |
+| `status` | `string` |  |
+| `subregion` | `string` |  |
+| `timezone` | `any[]` |  |
+| `tld` | `any[]` |  |
+| `translation` | `Record<string, any>` |  |
+| `un_member` | `boolean` |  |
 
 #### Example: Load
 
@@ -558,40 +588,40 @@ Create an instance: `const capital = client.Capital()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` |  |
-| `area` | ``$NUMBER`` |  |
-| `border` | ``$ARRAY`` |  |
-| `capital` | ``$ARRAY`` |  |
-| `capital_info` | ``$OBJECT`` |  |
-| `car` | ``$OBJECT`` |  |
-| `cca2` | ``$STRING`` |  |
-| `cca3` | ``$STRING`` |  |
-| `ccn3` | ``$STRING`` |  |
-| `cioc` | ``$STRING`` |  |
-| `coat_of_arm` | ``$OBJECT`` |  |
-| `continent` | ``$ARRAY`` |  |
-| `currency` | ``$OBJECT`` |  |
-| `demonym` | ``$OBJECT`` |  |
-| `fifa` | ``$STRING`` |  |
-| `flag` | ``$STRING`` |  |
-| `gini` | ``$OBJECT`` |  |
-| `idd` | ``$OBJECT`` |  |
-| `independent` | ``$BOOLEAN`` |  |
-| `landlocked` | ``$BOOLEAN`` |  |
-| `language` | ``$OBJECT`` |  |
-| `latlng` | ``$ARRAY`` |  |
-| `map` | ``$OBJECT`` |  |
-| `name` | ``$OBJECT`` |  |
-| `population` | ``$INTEGER`` |  |
-| `postal_code` | ``$OBJECT`` |  |
-| `region` | ``$STRING`` |  |
-| `start_of_week` | ``$STRING`` |  |
-| `status` | ``$STRING`` |  |
-| `subregion` | ``$STRING`` |  |
-| `timezone` | ``$ARRAY`` |  |
-| `tld` | ``$ARRAY`` |  |
-| `translation` | ``$OBJECT`` |  |
-| `un_member` | ``$BOOLEAN`` |  |
+| `alt_spelling` | `any[]` |  |
+| `area` | `number` |  |
+| `border` | `any[]` |  |
+| `capital` | `any[]` |  |
+| `capital_info` | `Record<string, any>` |  |
+| `car` | `Record<string, any>` |  |
+| `cca2` | `string` |  |
+| `cca3` | `string` |  |
+| `ccn3` | `string` |  |
+| `cioc` | `string` |  |
+| `coat_of_arm` | `Record<string, any>` |  |
+| `continent` | `any[]` |  |
+| `currency` | `Record<string, any>` |  |
+| `demonym` | `Record<string, any>` |  |
+| `fifa` | `string` |  |
+| `flag` | `string` |  |
+| `gini` | `Record<string, any>` |  |
+| `idd` | `Record<string, any>` |  |
+| `independent` | `boolean` |  |
+| `landlocked` | `boolean` |  |
+| `language` | `Record<string, any>` |  |
+| `latlng` | `any[]` |  |
+| `map` | `Record<string, any>` |  |
+| `name` | `Record<string, any>` |  |
+| `population` | `number` |  |
+| `postal_code` | `Record<string, any>` |  |
+| `region` | `string` |  |
+| `start_of_week` | `string` |  |
+| `status` | `string` |  |
+| `subregion` | `string` |  |
+| `timezone` | `any[]` |  |
+| `tld` | `any[]` |  |
+| `translation` | `Record<string, any>` |  |
+| `un_member` | `boolean` |  |
 
 #### Example: Load
 
@@ -614,40 +644,40 @@ Create an instance: `const name = client.Name()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` |  |
-| `area` | ``$NUMBER`` |  |
-| `border` | ``$ARRAY`` |  |
-| `capital` | ``$ARRAY`` |  |
-| `capital_info` | ``$OBJECT`` |  |
-| `car` | ``$OBJECT`` |  |
-| `cca2` | ``$STRING`` |  |
-| `cca3` | ``$STRING`` |  |
-| `ccn3` | ``$STRING`` |  |
-| `cioc` | ``$STRING`` |  |
-| `coat_of_arm` | ``$OBJECT`` |  |
-| `continent` | ``$ARRAY`` |  |
-| `currency` | ``$OBJECT`` |  |
-| `demonym` | ``$OBJECT`` |  |
-| `fifa` | ``$STRING`` |  |
-| `flag` | ``$STRING`` |  |
-| `gini` | ``$OBJECT`` |  |
-| `idd` | ``$OBJECT`` |  |
-| `independent` | ``$BOOLEAN`` |  |
-| `landlocked` | ``$BOOLEAN`` |  |
-| `language` | ``$OBJECT`` |  |
-| `latlng` | ``$ARRAY`` |  |
-| `map` | ``$OBJECT`` |  |
-| `name` | ``$OBJECT`` |  |
-| `population` | ``$INTEGER`` |  |
-| `postal_code` | ``$OBJECT`` |  |
-| `region` | ``$STRING`` |  |
-| `start_of_week` | ``$STRING`` |  |
-| `status` | ``$STRING`` |  |
-| `subregion` | ``$STRING`` |  |
-| `timezone` | ``$ARRAY`` |  |
-| `tld` | ``$ARRAY`` |  |
-| `translation` | ``$OBJECT`` |  |
-| `un_member` | ``$BOOLEAN`` |  |
+| `alt_spelling` | `any[]` |  |
+| `area` | `number` |  |
+| `border` | `any[]` |  |
+| `capital` | `any[]` |  |
+| `capital_info` | `Record<string, any>` |  |
+| `car` | `Record<string, any>` |  |
+| `cca2` | `string` |  |
+| `cca3` | `string` |  |
+| `ccn3` | `string` |  |
+| `cioc` | `string` |  |
+| `coat_of_arm` | `Record<string, any>` |  |
+| `continent` | `any[]` |  |
+| `currency` | `Record<string, any>` |  |
+| `demonym` | `Record<string, any>` |  |
+| `fifa` | `string` |  |
+| `flag` | `string` |  |
+| `gini` | `Record<string, any>` |  |
+| `idd` | `Record<string, any>` |  |
+| `independent` | `boolean` |  |
+| `landlocked` | `boolean` |  |
+| `language` | `Record<string, any>` |  |
+| `latlng` | `any[]` |  |
+| `map` | `Record<string, any>` |  |
+| `name` | `Record<string, any>` |  |
+| `population` | `number` |  |
+| `postal_code` | `Record<string, any>` |  |
+| `region` | `string` |  |
+| `start_of_week` | `string` |  |
+| `status` | `string` |  |
+| `subregion` | `string` |  |
+| `timezone` | `any[]` |  |
+| `tld` | `any[]` |  |
+| `translation` | `Record<string, any>` |  |
+| `un_member` | `boolean` |  |
 
 #### Example: Load
 
@@ -656,12 +686,16 @@ const name = await client.Name().load({ id: 'name_id' })
 ```
 
 
-## Explanation
+## Advanced
+
+> The sections above cover everyday use. The material below explains the
+> SDK's internals — useful when extending it with custom features, but not
+> needed for normal use.
 
 ### The operation pipeline
 
-Every entity operation (load, list, create, update, remove) follows a
-six-stage pipeline. Each stage fires a feature hook before executing:
+Every entity operation follows a six-stage pipeline. Each stage fires a
+feature hook before executing:
 
 ```
 PrePoint → PreSpec → PreRequest → PreResponse → PreResult → PreDone
@@ -678,11 +712,9 @@ PrePoint → PreSpec → PreRequest → PreResponse → PreResult → PreDone
 - **PreDone**: Final stage before returning to the caller. Entity
   state (match, data) is updated here.
 
-If any stage returns an error, the pipeline short-circuits and the
-error is returned to the caller.
-
-An unexpected exception triggers the `PreUnexpected` hook before
-propagating.
+If any stage errors, the pipeline short-circuits and the error surfaces
+to the caller — see [Error handling](#error-handling) for how that looks
+in this language.
 
 ### Features and hooks
 
@@ -718,16 +750,16 @@ import { RestCountriesSDK } from '@voxgig-sdk/rest-countries'
 
 ### Entity state
 
-Entity instances are stateful. After a successful `load`, the entity
+Entity instances are stateful. After a successful `list`, the entity
 stores the returned data and match criteria internally. Subsequent
 calls on the same instance can rely on this state.
 
 ```ts
 const all = client.All()
-await all.load({ id: "example_id" })
+await all.list()
 
-// all.data() now returns the loaded all data
-// all.match() returns { id: "example_id" }
+// all.data() now returns the all data from the last `list`
+// all.match() returns the last match criteria
 ```
 
 Call `make()` to create a fresh instance with the same configuration

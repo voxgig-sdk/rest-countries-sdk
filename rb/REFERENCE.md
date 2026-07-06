@@ -8,7 +8,7 @@ Complete API reference for the RestCountries Ruby SDK.
 ### Constructor
 
 ```ruby
-require_relative 'rest-countries_sdk'
+require_relative 'RestCountries_sdk'
 
 client = RestCountriesSDK.new(options)
 ```
@@ -105,49 +105,49 @@ all = client.All
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` | No |  |
-| `area` | ``$NUMBER`` | No |  |
-| `border` | ``$ARRAY`` | No |  |
-| `capital` | ``$ARRAY`` | No |  |
-| `capital_info` | ``$OBJECT`` | No |  |
-| `car` | ``$OBJECT`` | No |  |
-| `cca2` | ``$STRING`` | No |  |
-| `cca3` | ``$STRING`` | No |  |
-| `ccn3` | ``$STRING`` | No |  |
-| `cioc` | ``$STRING`` | No |  |
-| `coat_of_arm` | ``$OBJECT`` | No |  |
-| `continent` | ``$ARRAY`` | No |  |
-| `currency` | ``$OBJECT`` | No |  |
-| `demonym` | ``$OBJECT`` | No |  |
-| `fifa` | ``$STRING`` | No |  |
-| `flag` | ``$STRING`` | No |  |
-| `gini` | ``$OBJECT`` | No |  |
-| `idd` | ``$OBJECT`` | No |  |
-| `independent` | ``$BOOLEAN`` | No |  |
-| `landlocked` | ``$BOOLEAN`` | No |  |
-| `language` | ``$OBJECT`` | No |  |
-| `latlng` | ``$ARRAY`` | No |  |
-| `map` | ``$OBJECT`` | No |  |
-| `name` | ``$OBJECT`` | No |  |
-| `population` | ``$INTEGER`` | No |  |
-| `postal_code` | ``$OBJECT`` | No |  |
-| `region` | ``$STRING`` | No |  |
-| `start_of_week` | ``$STRING`` | No |  |
-| `status` | ``$STRING`` | No |  |
-| `subregion` | ``$STRING`` | No |  |
-| `timezone` | ``$ARRAY`` | No |  |
-| `tld` | ``$ARRAY`` | No |  |
-| `translation` | ``$OBJECT`` | No |  |
-| `un_member` | ``$BOOLEAN`` | No |  |
+| `alt_spelling` | `Array` | No |  |
+| `area` | `Float` | No |  |
+| `border` | `Array` | No |  |
+| `capital` | `Array` | No |  |
+| `capital_info` | `Hash` | No |  |
+| `car` | `Hash` | No |  |
+| `cca2` | `String` | No |  |
+| `cca3` | `String` | No |  |
+| `ccn3` | `String` | No |  |
+| `cioc` | `String` | No |  |
+| `coat_of_arm` | `Hash` | No |  |
+| `continent` | `Array` | No |  |
+| `currency` | `Hash` | No |  |
+| `demonym` | `Hash` | No |  |
+| `fifa` | `String` | No |  |
+| `flag` | `String` | No |  |
+| `gini` | `Hash` | No |  |
+| `idd` | `Hash` | No |  |
+| `independent` | `Boolean` | No |  |
+| `landlocked` | `Boolean` | No |  |
+| `language` | `Hash` | No |  |
+| `latlng` | `Array` | No |  |
+| `map` | `Hash` | No |  |
+| `name` | `Hash` | No |  |
+| `population` | `Integer` | No |  |
+| `postal_code` | `Hash` | No |  |
+| `region` | `String` | No |  |
+| `start_of_week` | `String` | No |  |
+| `status` | `String` | No |  |
+| `subregion` | `String` | No |  |
+| `timezone` | `Array` | No |  |
+| `tld` | `Array` | No |  |
+| `translation` | `Hash` | No |  |
+| `un_member` | `Boolean` | No |  |
 
 ### Operations
 
-#### `list(reqmatch, ctrl = nil) -> Array`
+#### `list(reqmatch = nil, ctrl = nil) -> Array`
 
-List entities matching the given criteria. Returns an array. Raises on error.
+List entities matching the given criteria (call with no argument to list all). Returns an array. Raises on error.
 
 ```ruby
-results = client.All.list(nil)
+results = client.All.list
 ```
 
 ### Common Methods
@@ -190,40 +190,40 @@ alpha = client.Alpha
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` | No |  |
-| `area` | ``$NUMBER`` | No |  |
-| `border` | ``$ARRAY`` | No |  |
-| `capital` | ``$ARRAY`` | No |  |
-| `capital_info` | ``$OBJECT`` | No |  |
-| `car` | ``$OBJECT`` | No |  |
-| `cca2` | ``$STRING`` | No |  |
-| `cca3` | ``$STRING`` | No |  |
-| `ccn3` | ``$STRING`` | No |  |
-| `cioc` | ``$STRING`` | No |  |
-| `coat_of_arm` | ``$OBJECT`` | No |  |
-| `continent` | ``$ARRAY`` | No |  |
-| `currency` | ``$OBJECT`` | No |  |
-| `demonym` | ``$OBJECT`` | No |  |
-| `fifa` | ``$STRING`` | No |  |
-| `flag` | ``$STRING`` | No |  |
-| `gini` | ``$OBJECT`` | No |  |
-| `idd` | ``$OBJECT`` | No |  |
-| `independent` | ``$BOOLEAN`` | No |  |
-| `landlocked` | ``$BOOLEAN`` | No |  |
-| `language` | ``$OBJECT`` | No |  |
-| `latlng` | ``$ARRAY`` | No |  |
-| `map` | ``$OBJECT`` | No |  |
-| `name` | ``$OBJECT`` | No |  |
-| `population` | ``$INTEGER`` | No |  |
-| `postal_code` | ``$OBJECT`` | No |  |
-| `region` | ``$STRING`` | No |  |
-| `start_of_week` | ``$STRING`` | No |  |
-| `status` | ``$STRING`` | No |  |
-| `subregion` | ``$STRING`` | No |  |
-| `timezone` | ``$ARRAY`` | No |  |
-| `tld` | ``$ARRAY`` | No |  |
-| `translation` | ``$OBJECT`` | No |  |
-| `un_member` | ``$BOOLEAN`` | No |  |
+| `alt_spelling` | `Array` | No |  |
+| `area` | `Float` | No |  |
+| `border` | `Array` | No |  |
+| `capital` | `Array` | No |  |
+| `capital_info` | `Hash` | No |  |
+| `car` | `Hash` | No |  |
+| `cca2` | `String` | No |  |
+| `cca3` | `String` | No |  |
+| `ccn3` | `String` | No |  |
+| `cioc` | `String` | No |  |
+| `coat_of_arm` | `Hash` | No |  |
+| `continent` | `Array` | No |  |
+| `currency` | `Hash` | No |  |
+| `demonym` | `Hash` | No |  |
+| `fifa` | `String` | No |  |
+| `flag` | `String` | No |  |
+| `gini` | `Hash` | No |  |
+| `idd` | `Hash` | No |  |
+| `independent` | `Boolean` | No |  |
+| `landlocked` | `Boolean` | No |  |
+| `language` | `Hash` | No |  |
+| `latlng` | `Array` | No |  |
+| `map` | `Hash` | No |  |
+| `name` | `Hash` | No |  |
+| `population` | `Integer` | No |  |
+| `postal_code` | `Hash` | No |  |
+| `region` | `String` | No |  |
+| `start_of_week` | `String` | No |  |
+| `status` | `String` | No |  |
+| `subregion` | `String` | No |  |
+| `timezone` | `Array` | No |  |
+| `tld` | `Array` | No |  |
+| `translation` | `Hash` | No |  |
+| `un_member` | `Boolean` | No |  |
 
 ### Operations
 
@@ -275,40 +275,40 @@ capital = client.Capital
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` | No |  |
-| `area` | ``$NUMBER`` | No |  |
-| `border` | ``$ARRAY`` | No |  |
-| `capital` | ``$ARRAY`` | No |  |
-| `capital_info` | ``$OBJECT`` | No |  |
-| `car` | ``$OBJECT`` | No |  |
-| `cca2` | ``$STRING`` | No |  |
-| `cca3` | ``$STRING`` | No |  |
-| `ccn3` | ``$STRING`` | No |  |
-| `cioc` | ``$STRING`` | No |  |
-| `coat_of_arm` | ``$OBJECT`` | No |  |
-| `continent` | ``$ARRAY`` | No |  |
-| `currency` | ``$OBJECT`` | No |  |
-| `demonym` | ``$OBJECT`` | No |  |
-| `fifa` | ``$STRING`` | No |  |
-| `flag` | ``$STRING`` | No |  |
-| `gini` | ``$OBJECT`` | No |  |
-| `idd` | ``$OBJECT`` | No |  |
-| `independent` | ``$BOOLEAN`` | No |  |
-| `landlocked` | ``$BOOLEAN`` | No |  |
-| `language` | ``$OBJECT`` | No |  |
-| `latlng` | ``$ARRAY`` | No |  |
-| `map` | ``$OBJECT`` | No |  |
-| `name` | ``$OBJECT`` | No |  |
-| `population` | ``$INTEGER`` | No |  |
-| `postal_code` | ``$OBJECT`` | No |  |
-| `region` | ``$STRING`` | No |  |
-| `start_of_week` | ``$STRING`` | No |  |
-| `status` | ``$STRING`` | No |  |
-| `subregion` | ``$STRING`` | No |  |
-| `timezone` | ``$ARRAY`` | No |  |
-| `tld` | ``$ARRAY`` | No |  |
-| `translation` | ``$OBJECT`` | No |  |
-| `un_member` | ``$BOOLEAN`` | No |  |
+| `alt_spelling` | `Array` | No |  |
+| `area` | `Float` | No |  |
+| `border` | `Array` | No |  |
+| `capital` | `Array` | No |  |
+| `capital_info` | `Hash` | No |  |
+| `car` | `Hash` | No |  |
+| `cca2` | `String` | No |  |
+| `cca3` | `String` | No |  |
+| `ccn3` | `String` | No |  |
+| `cioc` | `String` | No |  |
+| `coat_of_arm` | `Hash` | No |  |
+| `continent` | `Array` | No |  |
+| `currency` | `Hash` | No |  |
+| `demonym` | `Hash` | No |  |
+| `fifa` | `String` | No |  |
+| `flag` | `String` | No |  |
+| `gini` | `Hash` | No |  |
+| `idd` | `Hash` | No |  |
+| `independent` | `Boolean` | No |  |
+| `landlocked` | `Boolean` | No |  |
+| `language` | `Hash` | No |  |
+| `latlng` | `Array` | No |  |
+| `map` | `Hash` | No |  |
+| `name` | `Hash` | No |  |
+| `population` | `Integer` | No |  |
+| `postal_code` | `Hash` | No |  |
+| `region` | `String` | No |  |
+| `start_of_week` | `String` | No |  |
+| `status` | `String` | No |  |
+| `subregion` | `String` | No |  |
+| `timezone` | `Array` | No |  |
+| `tld` | `Array` | No |  |
+| `translation` | `Hash` | No |  |
+| `un_member` | `Boolean` | No |  |
 
 ### Operations
 
@@ -360,40 +360,40 @@ name = client.Name
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` | No |  |
-| `area` | ``$NUMBER`` | No |  |
-| `border` | ``$ARRAY`` | No |  |
-| `capital` | ``$ARRAY`` | No |  |
-| `capital_info` | ``$OBJECT`` | No |  |
-| `car` | ``$OBJECT`` | No |  |
-| `cca2` | ``$STRING`` | No |  |
-| `cca3` | ``$STRING`` | No |  |
-| `ccn3` | ``$STRING`` | No |  |
-| `cioc` | ``$STRING`` | No |  |
-| `coat_of_arm` | ``$OBJECT`` | No |  |
-| `continent` | ``$ARRAY`` | No |  |
-| `currency` | ``$OBJECT`` | No |  |
-| `demonym` | ``$OBJECT`` | No |  |
-| `fifa` | ``$STRING`` | No |  |
-| `flag` | ``$STRING`` | No |  |
-| `gini` | ``$OBJECT`` | No |  |
-| `idd` | ``$OBJECT`` | No |  |
-| `independent` | ``$BOOLEAN`` | No |  |
-| `landlocked` | ``$BOOLEAN`` | No |  |
-| `language` | ``$OBJECT`` | No |  |
-| `latlng` | ``$ARRAY`` | No |  |
-| `map` | ``$OBJECT`` | No |  |
-| `name` | ``$OBJECT`` | No |  |
-| `population` | ``$INTEGER`` | No |  |
-| `postal_code` | ``$OBJECT`` | No |  |
-| `region` | ``$STRING`` | No |  |
-| `start_of_week` | ``$STRING`` | No |  |
-| `status` | ``$STRING`` | No |  |
-| `subregion` | ``$STRING`` | No |  |
-| `timezone` | ``$ARRAY`` | No |  |
-| `tld` | ``$ARRAY`` | No |  |
-| `translation` | ``$OBJECT`` | No |  |
-| `un_member` | ``$BOOLEAN`` | No |  |
+| `alt_spelling` | `Array` | No |  |
+| `area` | `Float` | No |  |
+| `border` | `Array` | No |  |
+| `capital` | `Array` | No |  |
+| `capital_info` | `Hash` | No |  |
+| `car` | `Hash` | No |  |
+| `cca2` | `String` | No |  |
+| `cca3` | `String` | No |  |
+| `ccn3` | `String` | No |  |
+| `cioc` | `String` | No |  |
+| `coat_of_arm` | `Hash` | No |  |
+| `continent` | `Array` | No |  |
+| `currency` | `Hash` | No |  |
+| `demonym` | `Hash` | No |  |
+| `fifa` | `String` | No |  |
+| `flag` | `String` | No |  |
+| `gini` | `Hash` | No |  |
+| `idd` | `Hash` | No |  |
+| `independent` | `Boolean` | No |  |
+| `landlocked` | `Boolean` | No |  |
+| `language` | `Hash` | No |  |
+| `latlng` | `Array` | No |  |
+| `map` | `Hash` | No |  |
+| `name` | `Hash` | No |  |
+| `population` | `Integer` | No |  |
+| `postal_code` | `Hash` | No |  |
+| `region` | `String` | No |  |
+| `start_of_week` | `String` | No |  |
+| `status` | `String` | No |  |
+| `subregion` | `String` | No |  |
+| `timezone` | `Array` | No |  |
+| `tld` | `Array` | No |  |
+| `translation` | `Hash` | No |  |
+| `un_member` | `Boolean` | No |  |
 
 ### Operations
 

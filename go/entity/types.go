@@ -46,8 +46,7 @@ type All struct {
 	UnMember *bool `json:"un_member,omitempty"`
 }
 
-// AllListMatch mirrors the all fields as an all-optional match
-// filter (Go analog of Partial<All>).
+// AllListMatch is the typed request payload for All.ListTyped.
 type AllListMatch struct {
 	AltSpelling *[]any `json:"alt_spelling,omitempty"`
 	Area *float64 `json:"area,omitempty"`

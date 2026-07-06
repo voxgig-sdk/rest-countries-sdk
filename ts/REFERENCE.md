@@ -152,40 +152,40 @@ const all = client.All()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` | No |  |
-| `area` | ``$NUMBER`` | No |  |
-| `border` | ``$ARRAY`` | No |  |
-| `capital` | ``$ARRAY`` | No |  |
-| `capital_info` | ``$OBJECT`` | No |  |
-| `car` | ``$OBJECT`` | No |  |
-| `cca2` | ``$STRING`` | No |  |
-| `cca3` | ``$STRING`` | No |  |
-| `ccn3` | ``$STRING`` | No |  |
-| `cioc` | ``$STRING`` | No |  |
-| `coat_of_arm` | ``$OBJECT`` | No |  |
-| `continent` | ``$ARRAY`` | No |  |
-| `currency` | ``$OBJECT`` | No |  |
-| `demonym` | ``$OBJECT`` | No |  |
-| `fifa` | ``$STRING`` | No |  |
-| `flag` | ``$STRING`` | No |  |
-| `gini` | ``$OBJECT`` | No |  |
-| `idd` | ``$OBJECT`` | No |  |
-| `independent` | ``$BOOLEAN`` | No |  |
-| `landlocked` | ``$BOOLEAN`` | No |  |
-| `language` | ``$OBJECT`` | No |  |
-| `latlng` | ``$ARRAY`` | No |  |
-| `map` | ``$OBJECT`` | No |  |
-| `name` | ``$OBJECT`` | No |  |
-| `population` | ``$INTEGER`` | No |  |
-| `postal_code` | ``$OBJECT`` | No |  |
-| `region` | ``$STRING`` | No |  |
-| `start_of_week` | ``$STRING`` | No |  |
-| `status` | ``$STRING`` | No |  |
-| `subregion` | ``$STRING`` | No |  |
-| `timezone` | ``$ARRAY`` | No |  |
-| `tld` | ``$ARRAY`` | No |  |
-| `translation` | ``$OBJECT`` | No |  |
-| `un_member` | ``$BOOLEAN`` | No |  |
+| `alt_spelling` | `any[]` | No |  |
+| `area` | `number` | No |  |
+| `border` | `any[]` | No |  |
+| `capital` | `any[]` | No |  |
+| `capital_info` | `Record<string, any>` | No |  |
+| `car` | `Record<string, any>` | No |  |
+| `cca2` | `string` | No |  |
+| `cca3` | `string` | No |  |
+| `ccn3` | `string` | No |  |
+| `cioc` | `string` | No |  |
+| `coat_of_arm` | `Record<string, any>` | No |  |
+| `continent` | `any[]` | No |  |
+| `currency` | `Record<string, any>` | No |  |
+| `demonym` | `Record<string, any>` | No |  |
+| `fifa` | `string` | No |  |
+| `flag` | `string` | No |  |
+| `gini` | `Record<string, any>` | No |  |
+| `idd` | `Record<string, any>` | No |  |
+| `independent` | `boolean` | No |  |
+| `landlocked` | `boolean` | No |  |
+| `language` | `Record<string, any>` | No |  |
+| `latlng` | `any[]` | No |  |
+| `map` | `Record<string, any>` | No |  |
+| `name` | `Record<string, any>` | No |  |
+| `population` | `number` | No |  |
+| `postal_code` | `Record<string, any>` | No |  |
+| `region` | `string` | No |  |
+| `start_of_week` | `string` | No |  |
+| `status` | `string` | No |  |
+| `subregion` | `string` | No |  |
+| `timezone` | `any[]` | No |  |
+| `tld` | `any[]` | No |  |
+| `translation` | `Record<string, any>` | No |  |
+| `un_member` | `boolean` | No |  |
 
 ### Operations
 
@@ -235,40 +235,40 @@ const alpha = client.Alpha()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` | No |  |
-| `area` | ``$NUMBER`` | No |  |
-| `border` | ``$ARRAY`` | No |  |
-| `capital` | ``$ARRAY`` | No |  |
-| `capital_info` | ``$OBJECT`` | No |  |
-| `car` | ``$OBJECT`` | No |  |
-| `cca2` | ``$STRING`` | No |  |
-| `cca3` | ``$STRING`` | No |  |
-| `ccn3` | ``$STRING`` | No |  |
-| `cioc` | ``$STRING`` | No |  |
-| `coat_of_arm` | ``$OBJECT`` | No |  |
-| `continent` | ``$ARRAY`` | No |  |
-| `currency` | ``$OBJECT`` | No |  |
-| `demonym` | ``$OBJECT`` | No |  |
-| `fifa` | ``$STRING`` | No |  |
-| `flag` | ``$STRING`` | No |  |
-| `gini` | ``$OBJECT`` | No |  |
-| `idd` | ``$OBJECT`` | No |  |
-| `independent` | ``$BOOLEAN`` | No |  |
-| `landlocked` | ``$BOOLEAN`` | No |  |
-| `language` | ``$OBJECT`` | No |  |
-| `latlng` | ``$ARRAY`` | No |  |
-| `map` | ``$OBJECT`` | No |  |
-| `name` | ``$OBJECT`` | No |  |
-| `population` | ``$INTEGER`` | No |  |
-| `postal_code` | ``$OBJECT`` | No |  |
-| `region` | ``$STRING`` | No |  |
-| `start_of_week` | ``$STRING`` | No |  |
-| `status` | ``$STRING`` | No |  |
-| `subregion` | ``$STRING`` | No |  |
-| `timezone` | ``$ARRAY`` | No |  |
-| `tld` | ``$ARRAY`` | No |  |
-| `translation` | ``$OBJECT`` | No |  |
-| `un_member` | ``$BOOLEAN`` | No |  |
+| `alt_spelling` | `any[]` | No |  |
+| `area` | `number` | No |  |
+| `border` | `any[]` | No |  |
+| `capital` | `any[]` | No |  |
+| `capital_info` | `Record<string, any>` | No |  |
+| `car` | `Record<string, any>` | No |  |
+| `cca2` | `string` | No |  |
+| `cca3` | `string` | No |  |
+| `ccn3` | `string` | No |  |
+| `cioc` | `string` | No |  |
+| `coat_of_arm` | `Record<string, any>` | No |  |
+| `continent` | `any[]` | No |  |
+| `currency` | `Record<string, any>` | No |  |
+| `demonym` | `Record<string, any>` | No |  |
+| `fifa` | `string` | No |  |
+| `flag` | `string` | No |  |
+| `gini` | `Record<string, any>` | No |  |
+| `idd` | `Record<string, any>` | No |  |
+| `independent` | `boolean` | No |  |
+| `landlocked` | `boolean` | No |  |
+| `language` | `Record<string, any>` | No |  |
+| `latlng` | `any[]` | No |  |
+| `map` | `Record<string, any>` | No |  |
+| `name` | `Record<string, any>` | No |  |
+| `population` | `number` | No |  |
+| `postal_code` | `Record<string, any>` | No |  |
+| `region` | `string` | No |  |
+| `start_of_week` | `string` | No |  |
+| `status` | `string` | No |  |
+| `subregion` | `string` | No |  |
+| `timezone` | `any[]` | No |  |
+| `tld` | `any[]` | No |  |
+| `translation` | `Record<string, any>` | No |  |
+| `un_member` | `boolean` | No |  |
 
 ### Operations
 
@@ -318,40 +318,40 @@ const capital = client.Capital()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` | No |  |
-| `area` | ``$NUMBER`` | No |  |
-| `border` | ``$ARRAY`` | No |  |
-| `capital` | ``$ARRAY`` | No |  |
-| `capital_info` | ``$OBJECT`` | No |  |
-| `car` | ``$OBJECT`` | No |  |
-| `cca2` | ``$STRING`` | No |  |
-| `cca3` | ``$STRING`` | No |  |
-| `ccn3` | ``$STRING`` | No |  |
-| `cioc` | ``$STRING`` | No |  |
-| `coat_of_arm` | ``$OBJECT`` | No |  |
-| `continent` | ``$ARRAY`` | No |  |
-| `currency` | ``$OBJECT`` | No |  |
-| `demonym` | ``$OBJECT`` | No |  |
-| `fifa` | ``$STRING`` | No |  |
-| `flag` | ``$STRING`` | No |  |
-| `gini` | ``$OBJECT`` | No |  |
-| `idd` | ``$OBJECT`` | No |  |
-| `independent` | ``$BOOLEAN`` | No |  |
-| `landlocked` | ``$BOOLEAN`` | No |  |
-| `language` | ``$OBJECT`` | No |  |
-| `latlng` | ``$ARRAY`` | No |  |
-| `map` | ``$OBJECT`` | No |  |
-| `name` | ``$OBJECT`` | No |  |
-| `population` | ``$INTEGER`` | No |  |
-| `postal_code` | ``$OBJECT`` | No |  |
-| `region` | ``$STRING`` | No |  |
-| `start_of_week` | ``$STRING`` | No |  |
-| `status` | ``$STRING`` | No |  |
-| `subregion` | ``$STRING`` | No |  |
-| `timezone` | ``$ARRAY`` | No |  |
-| `tld` | ``$ARRAY`` | No |  |
-| `translation` | ``$OBJECT`` | No |  |
-| `un_member` | ``$BOOLEAN`` | No |  |
+| `alt_spelling` | `any[]` | No |  |
+| `area` | `number` | No |  |
+| `border` | `any[]` | No |  |
+| `capital` | `any[]` | No |  |
+| `capital_info` | `Record<string, any>` | No |  |
+| `car` | `Record<string, any>` | No |  |
+| `cca2` | `string` | No |  |
+| `cca3` | `string` | No |  |
+| `ccn3` | `string` | No |  |
+| `cioc` | `string` | No |  |
+| `coat_of_arm` | `Record<string, any>` | No |  |
+| `continent` | `any[]` | No |  |
+| `currency` | `Record<string, any>` | No |  |
+| `demonym` | `Record<string, any>` | No |  |
+| `fifa` | `string` | No |  |
+| `flag` | `string` | No |  |
+| `gini` | `Record<string, any>` | No |  |
+| `idd` | `Record<string, any>` | No |  |
+| `independent` | `boolean` | No |  |
+| `landlocked` | `boolean` | No |  |
+| `language` | `Record<string, any>` | No |  |
+| `latlng` | `any[]` | No |  |
+| `map` | `Record<string, any>` | No |  |
+| `name` | `Record<string, any>` | No |  |
+| `population` | `number` | No |  |
+| `postal_code` | `Record<string, any>` | No |  |
+| `region` | `string` | No |  |
+| `start_of_week` | `string` | No |  |
+| `status` | `string` | No |  |
+| `subregion` | `string` | No |  |
+| `timezone` | `any[]` | No |  |
+| `tld` | `any[]` | No |  |
+| `translation` | `Record<string, any>` | No |  |
+| `un_member` | `boolean` | No |  |
 
 ### Operations
 
@@ -401,40 +401,40 @@ const name = client.Name()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` | No |  |
-| `area` | ``$NUMBER`` | No |  |
-| `border` | ``$ARRAY`` | No |  |
-| `capital` | ``$ARRAY`` | No |  |
-| `capital_info` | ``$OBJECT`` | No |  |
-| `car` | ``$OBJECT`` | No |  |
-| `cca2` | ``$STRING`` | No |  |
-| `cca3` | ``$STRING`` | No |  |
-| `ccn3` | ``$STRING`` | No |  |
-| `cioc` | ``$STRING`` | No |  |
-| `coat_of_arm` | ``$OBJECT`` | No |  |
-| `continent` | ``$ARRAY`` | No |  |
-| `currency` | ``$OBJECT`` | No |  |
-| `demonym` | ``$OBJECT`` | No |  |
-| `fifa` | ``$STRING`` | No |  |
-| `flag` | ``$STRING`` | No |  |
-| `gini` | ``$OBJECT`` | No |  |
-| `idd` | ``$OBJECT`` | No |  |
-| `independent` | ``$BOOLEAN`` | No |  |
-| `landlocked` | ``$BOOLEAN`` | No |  |
-| `language` | ``$OBJECT`` | No |  |
-| `latlng` | ``$ARRAY`` | No |  |
-| `map` | ``$OBJECT`` | No |  |
-| `name` | ``$OBJECT`` | No |  |
-| `population` | ``$INTEGER`` | No |  |
-| `postal_code` | ``$OBJECT`` | No |  |
-| `region` | ``$STRING`` | No |  |
-| `start_of_week` | ``$STRING`` | No |  |
-| `status` | ``$STRING`` | No |  |
-| `subregion` | ``$STRING`` | No |  |
-| `timezone` | ``$ARRAY`` | No |  |
-| `tld` | ``$ARRAY`` | No |  |
-| `translation` | ``$OBJECT`` | No |  |
-| `un_member` | ``$BOOLEAN`` | No |  |
+| `alt_spelling` | `any[]` | No |  |
+| `area` | `number` | No |  |
+| `border` | `any[]` | No |  |
+| `capital` | `any[]` | No |  |
+| `capital_info` | `Record<string, any>` | No |  |
+| `car` | `Record<string, any>` | No |  |
+| `cca2` | `string` | No |  |
+| `cca3` | `string` | No |  |
+| `ccn3` | `string` | No |  |
+| `cioc` | `string` | No |  |
+| `coat_of_arm` | `Record<string, any>` | No |  |
+| `continent` | `any[]` | No |  |
+| `currency` | `Record<string, any>` | No |  |
+| `demonym` | `Record<string, any>` | No |  |
+| `fifa` | `string` | No |  |
+| `flag` | `string` | No |  |
+| `gini` | `Record<string, any>` | No |  |
+| `idd` | `Record<string, any>` | No |  |
+| `independent` | `boolean` | No |  |
+| `landlocked` | `boolean` | No |  |
+| `language` | `Record<string, any>` | No |  |
+| `latlng` | `any[]` | No |  |
+| `map` | `Record<string, any>` | No |  |
+| `name` | `Record<string, any>` | No |  |
+| `population` | `number` | No |  |
+| `postal_code` | `Record<string, any>` | No |  |
+| `region` | `string` | No |  |
+| `start_of_week` | `string` | No |  |
+| `status` | `string` | No |  |
+| `subregion` | `string` | No |  |
+| `timezone` | `any[]` | No |  |
+| `tld` | `any[]` | No |  |
+| `translation` | `Record<string, any>` | No |  |
+| `un_member` | `boolean` | No |  |
 
 ### Operations
 

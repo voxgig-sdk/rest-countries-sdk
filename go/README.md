@@ -4,6 +4,8 @@
 
 The Golang SDK for the RestCountries API — an entity-oriented client using standard Go conventions. No generics required; data flows as `map[string]any`.
 
+It exposes the API as capitalised, semantic **Entities** — e.g. `client.All(nil)` — each with the same small set of operations (`List`, `Load`) instead of raw URL paths and query strings. You call meaning, not endpoints, which keeps the cognitive load low.
+
 > Other languages, the CLI, and MCP server live alongside this one — see
 > the [top-level README](../README.md).
 
@@ -60,6 +62,35 @@ func main() {
 ```
 
 
+## Error handling
+
+Every entity operation returns `(value, error)`. Check `err` before
+using the value — there is no exception to catch:
+
+```go
+alls, err := client.All(nil).List(nil, nil)
+if err != nil {
+    // handle err
+    return
+}
+_ = alls
+```
+
+`Direct` follows the same `(value, error)` convention:
+
+```go
+result, err := client.Direct(map[string]any{
+    "path":   "/api/resource/{id}",
+    "method": "GET",
+    "params": map[string]any{"id": "example_id"},
+})
+if err != nil {
+    // handle err
+}
+_ = result
+```
+
+
 ## How-to guides
 
 ### Make a direct HTTP request
@@ -106,13 +137,13 @@ Create a mock client for unit testing — no server required:
 ```go
 client := sdk.Test()
 
-all, err := client.All(nil).Load(
-    map[string]any{"id": "test01"}, nil,
+all, err := client.All(nil).List(
+    nil, nil,
 )
 if err != nil {
     panic(err)
 }
-fmt.Println(all) // the loaded mock data
+fmt.Println(all) // the returned mock data
 ```
 
 ### Use a custom fetch function
@@ -202,9 +233,6 @@ All entities implement the `RestCountriesEntity` interface.
 | --- | --- | --- |
 | `Load` | `(reqmatch, ctrl map[string]any) (any, error)` | Load a single entity by match criteria. |
 | `List` | `(reqmatch, ctrl map[string]any) (any, error)` | List entities matching the criteria. |
-| `Create` | `(reqdata, ctrl map[string]any) (any, error)` | Create a new entity. |
-| `Update` | `(reqdata, ctrl map[string]any) (any, error)` | Update an existing entity. |
-| `Remove` | `(reqmatch, ctrl map[string]any) (any, error)` | Remove an entity. |
 | `Data` | `(args ...any) any` | Get or set entity data. |
 | `Match` | `(args ...any) any` | Get or set entity match criteria. |
 | `Make` | `() Entity` | Create a new instance with the same options. |
@@ -217,16 +245,16 @@ operation's data **directly** — there is no wrapper:
 
 | Operation | `value` |
 | --- | --- |
-| `Load` / `Create` / `Update` / `Remove` | the entity record (`map[string]any`) |
+| `Load` | the entity record (`map[string]any`) |
 | `List` | a `[]any` of entity records |
 
 Check `err` first, then use the value directly (or the typed
 `...Typed` variants, which return the entity's model struct and a typed
 slice):
 
-    all, err := client.All(nil).Load(map[string]any{"id": "example_id"}, nil)
+    all, err := client.All(nil).List(map[string]any{/* fields */}, nil)
     if err != nil { /* handle */ }
-    // all is the loaded record
+    // all is the returned record
 
 Only `Direct()` returns a response envelope — a `map[string]any` with
 `"ok"`, `"status"`, `"headers"`, and `"data"` keys.
@@ -424,40 +452,40 @@ Create an instance: `all := client.All(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` |  |
-| `area` | ``$NUMBER`` |  |
-| `border` | ``$ARRAY`` |  |
-| `capital` | ``$ARRAY`` |  |
-| `capital_info` | ``$OBJECT`` |  |
-| `car` | ``$OBJECT`` |  |
-| `cca2` | ``$STRING`` |  |
-| `cca3` | ``$STRING`` |  |
-| `ccn3` | ``$STRING`` |  |
-| `cioc` | ``$STRING`` |  |
-| `coat_of_arm` | ``$OBJECT`` |  |
-| `continent` | ``$ARRAY`` |  |
-| `currency` | ``$OBJECT`` |  |
-| `demonym` | ``$OBJECT`` |  |
-| `fifa` | ``$STRING`` |  |
-| `flag` | ``$STRING`` |  |
-| `gini` | ``$OBJECT`` |  |
-| `idd` | ``$OBJECT`` |  |
-| `independent` | ``$BOOLEAN`` |  |
-| `landlocked` | ``$BOOLEAN`` |  |
-| `language` | ``$OBJECT`` |  |
-| `latlng` | ``$ARRAY`` |  |
-| `map` | ``$OBJECT`` |  |
-| `name` | ``$OBJECT`` |  |
-| `population` | ``$INTEGER`` |  |
-| `postal_code` | ``$OBJECT`` |  |
-| `region` | ``$STRING`` |  |
-| `start_of_week` | ``$STRING`` |  |
-| `status` | ``$STRING`` |  |
-| `subregion` | ``$STRING`` |  |
-| `timezone` | ``$ARRAY`` |  |
-| `tld` | ``$ARRAY`` |  |
-| `translation` | ``$OBJECT`` |  |
-| `un_member` | ``$BOOLEAN`` |  |
+| `alt_spelling` | `[]any` |  |
+| `area` | `float64` |  |
+| `border` | `[]any` |  |
+| `capital` | `[]any` |  |
+| `capital_info` | `map[string]any` |  |
+| `car` | `map[string]any` |  |
+| `cca2` | `string` |  |
+| `cca3` | `string` |  |
+| `ccn3` | `string` |  |
+| `cioc` | `string` |  |
+| `coat_of_arm` | `map[string]any` |  |
+| `continent` | `[]any` |  |
+| `currency` | `map[string]any` |  |
+| `demonym` | `map[string]any` |  |
+| `fifa` | `string` |  |
+| `flag` | `string` |  |
+| `gini` | `map[string]any` |  |
+| `idd` | `map[string]any` |  |
+| `independent` | `bool` |  |
+| `landlocked` | `bool` |  |
+| `language` | `map[string]any` |  |
+| `latlng` | `[]any` |  |
+| `map` | `map[string]any` |  |
+| `name` | `map[string]any` |  |
+| `population` | `int` |  |
+| `postal_code` | `map[string]any` |  |
+| `region` | `string` |  |
+| `start_of_week` | `string` |  |
+| `status` | `string` |  |
+| `subregion` | `string` |  |
+| `timezone` | `[]any` |  |
+| `tld` | `[]any` |  |
+| `translation` | `map[string]any` |  |
+| `un_member` | `bool` |  |
 
 #### Example: List
 
@@ -484,40 +512,40 @@ Create an instance: `alpha := client.Alpha(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` |  |
-| `area` | ``$NUMBER`` |  |
-| `border` | ``$ARRAY`` |  |
-| `capital` | ``$ARRAY`` |  |
-| `capital_info` | ``$OBJECT`` |  |
-| `car` | ``$OBJECT`` |  |
-| `cca2` | ``$STRING`` |  |
-| `cca3` | ``$STRING`` |  |
-| `ccn3` | ``$STRING`` |  |
-| `cioc` | ``$STRING`` |  |
-| `coat_of_arm` | ``$OBJECT`` |  |
-| `continent` | ``$ARRAY`` |  |
-| `currency` | ``$OBJECT`` |  |
-| `demonym` | ``$OBJECT`` |  |
-| `fifa` | ``$STRING`` |  |
-| `flag` | ``$STRING`` |  |
-| `gini` | ``$OBJECT`` |  |
-| `idd` | ``$OBJECT`` |  |
-| `independent` | ``$BOOLEAN`` |  |
-| `landlocked` | ``$BOOLEAN`` |  |
-| `language` | ``$OBJECT`` |  |
-| `latlng` | ``$ARRAY`` |  |
-| `map` | ``$OBJECT`` |  |
-| `name` | ``$OBJECT`` |  |
-| `population` | ``$INTEGER`` |  |
-| `postal_code` | ``$OBJECT`` |  |
-| `region` | ``$STRING`` |  |
-| `start_of_week` | ``$STRING`` |  |
-| `status` | ``$STRING`` |  |
-| `subregion` | ``$STRING`` |  |
-| `timezone` | ``$ARRAY`` |  |
-| `tld` | ``$ARRAY`` |  |
-| `translation` | ``$OBJECT`` |  |
-| `un_member` | ``$BOOLEAN`` |  |
+| `alt_spelling` | `[]any` |  |
+| `area` | `float64` |  |
+| `border` | `[]any` |  |
+| `capital` | `[]any` |  |
+| `capital_info` | `map[string]any` |  |
+| `car` | `map[string]any` |  |
+| `cca2` | `string` |  |
+| `cca3` | `string` |  |
+| `ccn3` | `string` |  |
+| `cioc` | `string` |  |
+| `coat_of_arm` | `map[string]any` |  |
+| `continent` | `[]any` |  |
+| `currency` | `map[string]any` |  |
+| `demonym` | `map[string]any` |  |
+| `fifa` | `string` |  |
+| `flag` | `string` |  |
+| `gini` | `map[string]any` |  |
+| `idd` | `map[string]any` |  |
+| `independent` | `bool` |  |
+| `landlocked` | `bool` |  |
+| `language` | `map[string]any` |  |
+| `latlng` | `[]any` |  |
+| `map` | `map[string]any` |  |
+| `name` | `map[string]any` |  |
+| `population` | `int` |  |
+| `postal_code` | `map[string]any` |  |
+| `region` | `string` |  |
+| `start_of_week` | `string` |  |
+| `status` | `string` |  |
+| `subregion` | `string` |  |
+| `timezone` | `[]any` |  |
+| `tld` | `[]any` |  |
+| `translation` | `map[string]any` |  |
+| `un_member` | `bool` |  |
 
 #### Example: Load
 
@@ -544,40 +572,40 @@ Create an instance: `capital := client.Capital(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` |  |
-| `area` | ``$NUMBER`` |  |
-| `border` | ``$ARRAY`` |  |
-| `capital` | ``$ARRAY`` |  |
-| `capital_info` | ``$OBJECT`` |  |
-| `car` | ``$OBJECT`` |  |
-| `cca2` | ``$STRING`` |  |
-| `cca3` | ``$STRING`` |  |
-| `ccn3` | ``$STRING`` |  |
-| `cioc` | ``$STRING`` |  |
-| `coat_of_arm` | ``$OBJECT`` |  |
-| `continent` | ``$ARRAY`` |  |
-| `currency` | ``$OBJECT`` |  |
-| `demonym` | ``$OBJECT`` |  |
-| `fifa` | ``$STRING`` |  |
-| `flag` | ``$STRING`` |  |
-| `gini` | ``$OBJECT`` |  |
-| `idd` | ``$OBJECT`` |  |
-| `independent` | ``$BOOLEAN`` |  |
-| `landlocked` | ``$BOOLEAN`` |  |
-| `language` | ``$OBJECT`` |  |
-| `latlng` | ``$ARRAY`` |  |
-| `map` | ``$OBJECT`` |  |
-| `name` | ``$OBJECT`` |  |
-| `population` | ``$INTEGER`` |  |
-| `postal_code` | ``$OBJECT`` |  |
-| `region` | ``$STRING`` |  |
-| `start_of_week` | ``$STRING`` |  |
-| `status` | ``$STRING`` |  |
-| `subregion` | ``$STRING`` |  |
-| `timezone` | ``$ARRAY`` |  |
-| `tld` | ``$ARRAY`` |  |
-| `translation` | ``$OBJECT`` |  |
-| `un_member` | ``$BOOLEAN`` |  |
+| `alt_spelling` | `[]any` |  |
+| `area` | `float64` |  |
+| `border` | `[]any` |  |
+| `capital` | `[]any` |  |
+| `capital_info` | `map[string]any` |  |
+| `car` | `map[string]any` |  |
+| `cca2` | `string` |  |
+| `cca3` | `string` |  |
+| `ccn3` | `string` |  |
+| `cioc` | `string` |  |
+| `coat_of_arm` | `map[string]any` |  |
+| `continent` | `[]any` |  |
+| `currency` | `map[string]any` |  |
+| `demonym` | `map[string]any` |  |
+| `fifa` | `string` |  |
+| `flag` | `string` |  |
+| `gini` | `map[string]any` |  |
+| `idd` | `map[string]any` |  |
+| `independent` | `bool` |  |
+| `landlocked` | `bool` |  |
+| `language` | `map[string]any` |  |
+| `latlng` | `[]any` |  |
+| `map` | `map[string]any` |  |
+| `name` | `map[string]any` |  |
+| `population` | `int` |  |
+| `postal_code` | `map[string]any` |  |
+| `region` | `string` |  |
+| `start_of_week` | `string` |  |
+| `status` | `string` |  |
+| `subregion` | `string` |  |
+| `timezone` | `[]any` |  |
+| `tld` | `[]any` |  |
+| `translation` | `map[string]any` |  |
+| `un_member` | `bool` |  |
 
 #### Example: Load
 
@@ -604,40 +632,40 @@ Create an instance: `name := client.Name(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | ``$ARRAY`` |  |
-| `area` | ``$NUMBER`` |  |
-| `border` | ``$ARRAY`` |  |
-| `capital` | ``$ARRAY`` |  |
-| `capital_info` | ``$OBJECT`` |  |
-| `car` | ``$OBJECT`` |  |
-| `cca2` | ``$STRING`` |  |
-| `cca3` | ``$STRING`` |  |
-| `ccn3` | ``$STRING`` |  |
-| `cioc` | ``$STRING`` |  |
-| `coat_of_arm` | ``$OBJECT`` |  |
-| `continent` | ``$ARRAY`` |  |
-| `currency` | ``$OBJECT`` |  |
-| `demonym` | ``$OBJECT`` |  |
-| `fifa` | ``$STRING`` |  |
-| `flag` | ``$STRING`` |  |
-| `gini` | ``$OBJECT`` |  |
-| `idd` | ``$OBJECT`` |  |
-| `independent` | ``$BOOLEAN`` |  |
-| `landlocked` | ``$BOOLEAN`` |  |
-| `language` | ``$OBJECT`` |  |
-| `latlng` | ``$ARRAY`` |  |
-| `map` | ``$OBJECT`` |  |
-| `name` | ``$OBJECT`` |  |
-| `population` | ``$INTEGER`` |  |
-| `postal_code` | ``$OBJECT`` |  |
-| `region` | ``$STRING`` |  |
-| `start_of_week` | ``$STRING`` |  |
-| `status` | ``$STRING`` |  |
-| `subregion` | ``$STRING`` |  |
-| `timezone` | ``$ARRAY`` |  |
-| `tld` | ``$ARRAY`` |  |
-| `translation` | ``$OBJECT`` |  |
-| `un_member` | ``$BOOLEAN`` |  |
+| `alt_spelling` | `[]any` |  |
+| `area` | `float64` |  |
+| `border` | `[]any` |  |
+| `capital` | `[]any` |  |
+| `capital_info` | `map[string]any` |  |
+| `car` | `map[string]any` |  |
+| `cca2` | `string` |  |
+| `cca3` | `string` |  |
+| `ccn3` | `string` |  |
+| `cioc` | `string` |  |
+| `coat_of_arm` | `map[string]any` |  |
+| `continent` | `[]any` |  |
+| `currency` | `map[string]any` |  |
+| `demonym` | `map[string]any` |  |
+| `fifa` | `string` |  |
+| `flag` | `string` |  |
+| `gini` | `map[string]any` |  |
+| `idd` | `map[string]any` |  |
+| `independent` | `bool` |  |
+| `landlocked` | `bool` |  |
+| `language` | `map[string]any` |  |
+| `latlng` | `[]any` |  |
+| `map` | `map[string]any` |  |
+| `name` | `map[string]any` |  |
+| `population` | `int` |  |
+| `postal_code` | `map[string]any` |  |
+| `region` | `string` |  |
+| `start_of_week` | `string` |  |
+| `status` | `string` |  |
+| `subregion` | `string` |  |
+| `timezone` | `[]any` |  |
+| `tld` | `[]any` |  |
+| `translation` | `map[string]any` |  |
+| `un_member` | `bool` |  |
 
 #### Example: Load
 
@@ -650,12 +678,16 @@ fmt.Println(name) // the loaded record
 ```
 
 
-## Explanation
+## Advanced
+
+> The sections above cover everyday use. The material below explains the
+> SDK's internals — useful when extending it with custom features, but not
+> needed for normal use.
 
 ### The operation pipeline
 
-Every entity operation (load, list, create, update, remove) follows a
-six-stage pipeline. Each stage fires a feature hook before executing:
+Every entity operation follows a six-stage pipeline. Each stage fires a
+feature hook before executing:
 
 ```
 PrePoint → PreSpec → PreRequest → PreResponse → PreResult → PreDone
@@ -672,9 +704,9 @@ PrePoint → PreSpec → PreRequest → PreResponse → PreResult → PreDone
 - **PreDone**: Final stage before returning to the caller. Entity
   state (match, data) is updated here.
 
-If any stage returns an error, the pipeline short-circuits and the
-error is returned to the caller. An unexpected panic triggers the
-`PreUnexpected` hook.
+If any stage errors, the pipeline short-circuits and the error surfaces
+to the caller — see [Error handling](#error-handling) for how that looks
+in this language.
 
 ### Features and hooks
 
@@ -715,14 +747,14 @@ like `core.ToMapAny`.
 
 ### Entity state
 
-Entity instances are stateful. After a successful `Load`, the entity
+Entity instances are stateful. After a successful `List`, the entity
 stores the returned data and match criteria internally.
 
 ```go
 all := client.All(nil)
-all.Load(map[string]any{"id": "example_id"}, nil)
+all.List(nil, nil)
 
-// all.Data() now returns the loaded all data
+// all.Data() now returns the all data from the last list
 // all.Match() returns the last match criteria
 ```
 

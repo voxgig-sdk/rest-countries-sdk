@@ -51,7 +51,7 @@ class All
     public ?bool $un_member = null;
 }
 
-/** Match filter for All#list (any subset of All fields). */
+/** Request payload for All#list. */
 class AllListMatch
 {
     public ?array $alt_spelling = null;

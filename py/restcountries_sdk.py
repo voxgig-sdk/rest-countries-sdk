@@ -221,25 +221,25 @@ class RestCountriesSDK:
 
 
     def All(self, data=None) -> "AllEntity":
-        """Entity factory: client.All().list({}) / client.All().load({"id": ...})."""
+        """Entity factory: client.All().list() / client.All().load({"id": ...})."""
         from entity.all_entity import AllEntity
         return AllEntity(self, data)
 
 
     def Alpha(self, data=None) -> "AlphaEntity":
-        """Entity factory: client.Alpha().list({}) / client.Alpha().load({"id": ...})."""
+        """Entity factory: client.Alpha().list() / client.Alpha().load({"id": ...})."""
         from entity.alpha_entity import AlphaEntity
         return AlphaEntity(self, data)
 
 
     def Capital(self, data=None) -> "CapitalEntity":
-        """Entity factory: client.Capital().list({}) / client.Capital().load({"id": ...})."""
+        """Entity factory: client.Capital().list() / client.Capital().load({"id": ...})."""
         from entity.capital_entity import CapitalEntity
         return CapitalEntity(self, data)
 
 
     def Name(self, data=None) -> "NameEntity":
-        """Entity factory: client.Name().list({}) / client.Name().load({"id": ...})."""
+        """Entity factory: client.Name().list() / client.Name().load({"id": ...})."""
         from entity.name_entity import NameEntity
         return NameEntity(self, data)
 
