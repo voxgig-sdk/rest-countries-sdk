@@ -19,9 +19,9 @@ main: {
           url: "https://restcountries.com/v3.1"
         }
       ]
+      summary: "The REST Countries API provides detailed information about countries around the world in a simple RESTful interface."
       title: "REST Countries API"
       version: "3.1.0"
+      website: "https://restcountries.com"
     }
   }
-}
-

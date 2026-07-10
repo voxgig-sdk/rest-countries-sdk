@@ -6,9 +6,6 @@
     },
     "kit": {
       "config": {
-        "auth": {
-          "prefix": "Bearer"
-        },
         "docs_order": [
           "ts",
           "py",
@@ -1327,14 +1324,17 @@
           "name": "Mozilla Public License MPL 2.0",
           "url": "https://www.mozilla.org/en-US/MPL/2.0/"
         },
+        "meta_source": "https://www.freepublicapis.com",
         "servers": [
           {
             "description": "Production server",
             "url": "https://restcountries.com/v3.1"
           }
         ],
+        "summary": "The REST Countries API provides detailed information about countries around the world in a simple RESTful interface.",
         "title": "REST Countries API",
-        "version": "3.1.0"
+        "version": "3.1.0",
+        "website": "https://restcountries.com"
       },
       "option": {},
       "target": {
@@ -1387,6 +1387,9 @@
           },
           "name": "go-cli",
           "phase": {
+            "agentguide": {
+              "active": false
+            },
             "entity": {
               "active": false
             },
@@ -1437,6 +1440,9 @@
           },
           "name": "go-mcp",
           "phase": {
+            "agentguide": {
+              "active": false
+            },
             "entity": {
               "active": false
             },
