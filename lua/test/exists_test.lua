@@ -1,4 +1,4 @@
--- ProjectName SDK exists test
+-- RestCountries SDK exists test
 
 local sdk = require("rest-countries_sdk")
 
