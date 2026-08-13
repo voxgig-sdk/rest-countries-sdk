@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from restcountries_sdk.utility.voxgig_struct import voxgig_struct as vs
 from restcountries_sdk import RestCountriesSDK
-from core import helpers
+from restcountries_sdk.core import helpers
 from test import runner
 
 
@@ -63,11 +63,11 @@ def _alpha_direct_setup(mockres):
     calls = []
 
     env = runner.env_override({
-        "RESTCOUNTRIES_TEST_ALPHA_ENTID": {},
-        "RESTCOUNTRIES_TEST_LIVE": "FALSE",
+        "REST_COUNTRIES_TEST_ALPHA_ENTID": {},
+        "REST_COUNTRIES_TEST_LIVE": "FALSE",
     })
 
-    live = env.get("RESTCOUNTRIES_TEST_LIVE") == "TRUE"
+    live = env.get("REST_COUNTRIES_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {

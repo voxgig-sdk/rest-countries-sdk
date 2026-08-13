@@ -10,19 +10,19 @@
 
 # All entity data model.
 #
-# @!attribute [rw] alt_spelling
+# @!attribute [rw] altSpellings
 #   @return [Array, nil]
 #
 # @!attribute [rw] area
 #   @return [Float, nil]
 #
-# @!attribute [rw] border
+# @!attribute [rw] borders
 #   @return [Array, nil]
 #
 # @!attribute [rw] capital
 #   @return [Array, nil]
 #
-# @!attribute [rw] capital_info
+# @!attribute [rw] capitalInfo
 #   @return [Hash, nil]
 #
 # @!attribute [rw] car
@@ -40,16 +40,16 @@
 # @!attribute [rw] cioc
 #   @return [String, nil]
 #
-# @!attribute [rw] coat_of_arm
+# @!attribute [rw] coatOfArms
 #   @return [Hash, nil]
 #
-# @!attribute [rw] continent
+# @!attribute [rw] continents
 #   @return [Array, nil]
 #
-# @!attribute [rw] currency
+# @!attribute [rw] currencies
 #   @return [Hash, nil]
 #
-# @!attribute [rw] demonym
+# @!attribute [rw] demonyms
 #   @return [Hash, nil]
 #
 # @!attribute [rw] fifa
@@ -57,6 +57,9 @@
 #
 # @!attribute [rw] flag
 #   @return [String, nil]
+#
+# @!attribute [rw] flags
+#   @return [Hash, nil]
 #
 # @!attribute [rw] gini
 #   @return [Hash, nil]
@@ -70,13 +73,13 @@
 # @!attribute [rw] landlocked
 #   @return [Boolean, nil]
 #
-# @!attribute [rw] language
+# @!attribute [rw] languages
 #   @return [Hash, nil]
 #
 # @!attribute [rw] latlng
 #   @return [Array, nil]
 #
-# @!attribute [rw] map
+# @!attribute [rw] maps
 #   @return [Hash, nil]
 #
 # @!attribute [rw] name
@@ -85,13 +88,13 @@
 # @!attribute [rw] population
 #   @return [Integer, nil]
 #
-# @!attribute [rw] postal_code
+# @!attribute [rw] postalCode
 #   @return [Hash, nil]
 #
 # @!attribute [rw] region
 #   @return [String, nil]
 #
-# @!attribute [rw] start_of_week
+# @!attribute [rw] startOfWeek
 #   @return [String, nil]
 #
 # @!attribute [rw] status
@@ -100,70 +103,71 @@
 # @!attribute [rw] subregion
 #   @return [String, nil]
 #
-# @!attribute [rw] timezone
+# @!attribute [rw] timezones
 #   @return [Array, nil]
 #
 # @!attribute [rw] tld
 #   @return [Array, nil]
 #
-# @!attribute [rw] translation
+# @!attribute [rw] translations
 #   @return [Hash, nil]
 #
-# @!attribute [rw] un_member
+# @!attribute [rw] unMember
 #   @return [Boolean, nil]
 All = Struct.new(
-  :alt_spelling,
+  :altSpellings,
   :area,
-  :border,
+  :borders,
   :capital,
-  :capital_info,
+  :capitalInfo,
   :car,
   :cca2,
   :cca3,
   :ccn3,
   :cioc,
-  :coat_of_arm,
-  :continent,
-  :currency,
-  :demonym,
+  :coatOfArms,
+  :continents,
+  :currencies,
+  :demonyms,
   :fifa,
   :flag,
+  :flags,
   :gini,
   :idd,
   :independent,
   :landlocked,
-  :language,
+  :languages,
   :latlng,
-  :map,
+  :maps,
   :name,
   :population,
-  :postal_code,
+  :postalCode,
   :region,
-  :start_of_week,
+  :startOfWeek,
   :status,
   :subregion,
-  :timezone,
+  :timezones,
   :tld,
-  :translation,
-  :un_member,
+  :translations,
+  :unMember,
   keyword_init: true
 )
 
 # Request payload for All#list.
 #
-# @!attribute [rw] alt_spelling
+# @!attribute [rw] altSpellings
 #   @return [Array, nil]
 #
 # @!attribute [rw] area
 #   @return [Float, nil]
 #
-# @!attribute [rw] border
+# @!attribute [rw] borders
 #   @return [Array, nil]
 #
 # @!attribute [rw] capital
 #   @return [Array, nil]
 #
-# @!attribute [rw] capital_info
+# @!attribute [rw] capitalInfo
 #   @return [Hash, nil]
 #
 # @!attribute [rw] car
@@ -181,16 +185,16 @@ All = Struct.new(
 # @!attribute [rw] cioc
 #   @return [String, nil]
 #
-# @!attribute [rw] coat_of_arm
+# @!attribute [rw] coatOfArms
 #   @return [Hash, nil]
 #
-# @!attribute [rw] continent
+# @!attribute [rw] continents
 #   @return [Array, nil]
 #
-# @!attribute [rw] currency
+# @!attribute [rw] currencies
 #   @return [Hash, nil]
 #
-# @!attribute [rw] demonym
+# @!attribute [rw] demonyms
 #   @return [Hash, nil]
 #
 # @!attribute [rw] fifa
@@ -198,6 +202,9 @@ All = Struct.new(
 #
 # @!attribute [rw] flag
 #   @return [String, nil]
+#
+# @!attribute [rw] flags
+#   @return [Hash, nil]
 #
 # @!attribute [rw] gini
 #   @return [Hash, nil]
@@ -211,13 +218,13 @@ All = Struct.new(
 # @!attribute [rw] landlocked
 #   @return [Boolean, nil]
 #
-# @!attribute [rw] language
+# @!attribute [rw] languages
 #   @return [Hash, nil]
 #
 # @!attribute [rw] latlng
 #   @return [Array, nil]
 #
-# @!attribute [rw] map
+# @!attribute [rw] maps
 #   @return [Hash, nil]
 #
 # @!attribute [rw] name
@@ -226,13 +233,13 @@ All = Struct.new(
 # @!attribute [rw] population
 #   @return [Integer, nil]
 #
-# @!attribute [rw] postal_code
+# @!attribute [rw] postalCode
 #   @return [Hash, nil]
 #
 # @!attribute [rw] region
 #   @return [String, nil]
 #
-# @!attribute [rw] start_of_week
+# @!attribute [rw] startOfWeek
 #   @return [String, nil]
 #
 # @!attribute [rw] status
@@ -241,70 +248,71 @@ All = Struct.new(
 # @!attribute [rw] subregion
 #   @return [String, nil]
 #
-# @!attribute [rw] timezone
+# @!attribute [rw] timezones
 #   @return [Array, nil]
 #
 # @!attribute [rw] tld
 #   @return [Array, nil]
 #
-# @!attribute [rw] translation
+# @!attribute [rw] translations
 #   @return [Hash, nil]
 #
-# @!attribute [rw] un_member
+# @!attribute [rw] unMember
 #   @return [Boolean, nil]
 AllListMatch = Struct.new(
-  :alt_spelling,
+  :altSpellings,
   :area,
-  :border,
+  :borders,
   :capital,
-  :capital_info,
+  :capitalInfo,
   :car,
   :cca2,
   :cca3,
   :ccn3,
   :cioc,
-  :coat_of_arm,
-  :continent,
-  :currency,
-  :demonym,
+  :coatOfArms,
+  :continents,
+  :currencies,
+  :demonyms,
   :fifa,
   :flag,
+  :flags,
   :gini,
   :idd,
   :independent,
   :landlocked,
-  :language,
+  :languages,
   :latlng,
-  :map,
+  :maps,
   :name,
   :population,
-  :postal_code,
+  :postalCode,
   :region,
-  :start_of_week,
+  :startOfWeek,
   :status,
   :subregion,
-  :timezone,
+  :timezones,
   :tld,
-  :translation,
-  :un_member,
+  :translations,
+  :unMember,
   keyword_init: true
 )
 
 # Alpha entity data model.
 #
-# @!attribute [rw] alt_spelling
+# @!attribute [rw] altSpellings
 #   @return [Array, nil]
 #
 # @!attribute [rw] area
 #   @return [Float, nil]
 #
-# @!attribute [rw] border
+# @!attribute [rw] borders
 #   @return [Array, nil]
 #
 # @!attribute [rw] capital
 #   @return [Array, nil]
 #
-# @!attribute [rw] capital_info
+# @!attribute [rw] capitalInfo
 #   @return [Hash, nil]
 #
 # @!attribute [rw] car
@@ -322,16 +330,16 @@ AllListMatch = Struct.new(
 # @!attribute [rw] cioc
 #   @return [String, nil]
 #
-# @!attribute [rw] coat_of_arm
+# @!attribute [rw] coatOfArms
 #   @return [Hash, nil]
 #
-# @!attribute [rw] continent
+# @!attribute [rw] continents
 #   @return [Array, nil]
 #
-# @!attribute [rw] currency
+# @!attribute [rw] currencies
 #   @return [Hash, nil]
 #
-# @!attribute [rw] demonym
+# @!attribute [rw] demonyms
 #   @return [Hash, nil]
 #
 # @!attribute [rw] fifa
@@ -339,6 +347,9 @@ AllListMatch = Struct.new(
 #
 # @!attribute [rw] flag
 #   @return [String, nil]
+#
+# @!attribute [rw] flags
+#   @return [Hash, nil]
 #
 # @!attribute [rw] gini
 #   @return [Hash, nil]
@@ -352,13 +363,13 @@ AllListMatch = Struct.new(
 # @!attribute [rw] landlocked
 #   @return [Boolean, nil]
 #
-# @!attribute [rw] language
+# @!attribute [rw] languages
 #   @return [Hash, nil]
 #
 # @!attribute [rw] latlng
 #   @return [Array, nil]
 #
-# @!attribute [rw] map
+# @!attribute [rw] maps
 #   @return [Hash, nil]
 #
 # @!attribute [rw] name
@@ -367,13 +378,13 @@ AllListMatch = Struct.new(
 # @!attribute [rw] population
 #   @return [Integer, nil]
 #
-# @!attribute [rw] postal_code
+# @!attribute [rw] postalCode
 #   @return [Hash, nil]
 #
 # @!attribute [rw] region
 #   @return [String, nil]
 #
-# @!attribute [rw] start_of_week
+# @!attribute [rw] startOfWeek
 #   @return [String, nil]
 #
 # @!attribute [rw] status
@@ -382,52 +393,53 @@ AllListMatch = Struct.new(
 # @!attribute [rw] subregion
 #   @return [String, nil]
 #
-# @!attribute [rw] timezone
+# @!attribute [rw] timezones
 #   @return [Array, nil]
 #
 # @!attribute [rw] tld
 #   @return [Array, nil]
 #
-# @!attribute [rw] translation
+# @!attribute [rw] translations
 #   @return [Hash, nil]
 #
-# @!attribute [rw] un_member
+# @!attribute [rw] unMember
 #   @return [Boolean, nil]
 Alpha = Struct.new(
-  :alt_spelling,
+  :altSpellings,
   :area,
-  :border,
+  :borders,
   :capital,
-  :capital_info,
+  :capitalInfo,
   :car,
   :cca2,
   :cca3,
   :ccn3,
   :cioc,
-  :coat_of_arm,
-  :continent,
-  :currency,
-  :demonym,
+  :coatOfArms,
+  :continents,
+  :currencies,
+  :demonyms,
   :fifa,
   :flag,
+  :flags,
   :gini,
   :idd,
   :independent,
   :landlocked,
-  :language,
+  :languages,
   :latlng,
-  :map,
+  :maps,
   :name,
   :population,
-  :postal_code,
+  :postalCode,
   :region,
-  :start_of_week,
+  :startOfWeek,
   :status,
   :subregion,
-  :timezone,
+  :timezones,
   :tld,
-  :translation,
-  :un_member,
+  :translations,
+  :unMember,
   keyword_init: true
 )
 
@@ -442,19 +454,19 @@ AlphaLoadMatch = Struct.new(
 
 # Capital entity data model.
 #
-# @!attribute [rw] alt_spelling
+# @!attribute [rw] altSpellings
 #   @return [Array, nil]
 #
 # @!attribute [rw] area
 #   @return [Float, nil]
 #
-# @!attribute [rw] border
+# @!attribute [rw] borders
 #   @return [Array, nil]
 #
 # @!attribute [rw] capital
 #   @return [Array, nil]
 #
-# @!attribute [rw] capital_info
+# @!attribute [rw] capitalInfo
 #   @return [Hash, nil]
 #
 # @!attribute [rw] car
@@ -472,16 +484,16 @@ AlphaLoadMatch = Struct.new(
 # @!attribute [rw] cioc
 #   @return [String, nil]
 #
-# @!attribute [rw] coat_of_arm
+# @!attribute [rw] coatOfArms
 #   @return [Hash, nil]
 #
-# @!attribute [rw] continent
+# @!attribute [rw] continents
 #   @return [Array, nil]
 #
-# @!attribute [rw] currency
+# @!attribute [rw] currencies
 #   @return [Hash, nil]
 #
-# @!attribute [rw] demonym
+# @!attribute [rw] demonyms
 #   @return [Hash, nil]
 #
 # @!attribute [rw] fifa
@@ -489,6 +501,9 @@ AlphaLoadMatch = Struct.new(
 #
 # @!attribute [rw] flag
 #   @return [String, nil]
+#
+# @!attribute [rw] flags
+#   @return [Hash, nil]
 #
 # @!attribute [rw] gini
 #   @return [Hash, nil]
@@ -502,13 +517,13 @@ AlphaLoadMatch = Struct.new(
 # @!attribute [rw] landlocked
 #   @return [Boolean, nil]
 #
-# @!attribute [rw] language
+# @!attribute [rw] languages
 #   @return [Hash, nil]
 #
 # @!attribute [rw] latlng
 #   @return [Array, nil]
 #
-# @!attribute [rw] map
+# @!attribute [rw] maps
 #   @return [Hash, nil]
 #
 # @!attribute [rw] name
@@ -517,13 +532,13 @@ AlphaLoadMatch = Struct.new(
 # @!attribute [rw] population
 #   @return [Integer, nil]
 #
-# @!attribute [rw] postal_code
+# @!attribute [rw] postalCode
 #   @return [Hash, nil]
 #
 # @!attribute [rw] region
 #   @return [String, nil]
 #
-# @!attribute [rw] start_of_week
+# @!attribute [rw] startOfWeek
 #   @return [String, nil]
 #
 # @!attribute [rw] status
@@ -532,52 +547,53 @@ AlphaLoadMatch = Struct.new(
 # @!attribute [rw] subregion
 #   @return [String, nil]
 #
-# @!attribute [rw] timezone
+# @!attribute [rw] timezones
 #   @return [Array, nil]
 #
 # @!attribute [rw] tld
 #   @return [Array, nil]
 #
-# @!attribute [rw] translation
+# @!attribute [rw] translations
 #   @return [Hash, nil]
 #
-# @!attribute [rw] un_member
+# @!attribute [rw] unMember
 #   @return [Boolean, nil]
 Capital = Struct.new(
-  :alt_spelling,
+  :altSpellings,
   :area,
-  :border,
+  :borders,
   :capital,
-  :capital_info,
+  :capitalInfo,
   :car,
   :cca2,
   :cca3,
   :ccn3,
   :cioc,
-  :coat_of_arm,
-  :continent,
-  :currency,
-  :demonym,
+  :coatOfArms,
+  :continents,
+  :currencies,
+  :demonyms,
   :fifa,
   :flag,
+  :flags,
   :gini,
   :idd,
   :independent,
   :landlocked,
-  :language,
+  :languages,
   :latlng,
-  :map,
+  :maps,
   :name,
   :population,
-  :postal_code,
+  :postalCode,
   :region,
-  :start_of_week,
+  :startOfWeek,
   :status,
   :subregion,
-  :timezone,
+  :timezones,
   :tld,
-  :translation,
-  :un_member,
+  :translations,
+  :unMember,
   keyword_init: true
 )
 
@@ -592,19 +608,19 @@ CapitalLoadMatch = Struct.new(
 
 # Name entity data model.
 #
-# @!attribute [rw] alt_spelling
+# @!attribute [rw] altSpellings
 #   @return [Array, nil]
 #
 # @!attribute [rw] area
 #   @return [Float, nil]
 #
-# @!attribute [rw] border
+# @!attribute [rw] borders
 #   @return [Array, nil]
 #
 # @!attribute [rw] capital
 #   @return [Array, nil]
 #
-# @!attribute [rw] capital_info
+# @!attribute [rw] capitalInfo
 #   @return [Hash, nil]
 #
 # @!attribute [rw] car
@@ -622,16 +638,16 @@ CapitalLoadMatch = Struct.new(
 # @!attribute [rw] cioc
 #   @return [String, nil]
 #
-# @!attribute [rw] coat_of_arm
+# @!attribute [rw] coatOfArms
 #   @return [Hash, nil]
 #
-# @!attribute [rw] continent
+# @!attribute [rw] continents
 #   @return [Array, nil]
 #
-# @!attribute [rw] currency
+# @!attribute [rw] currencies
 #   @return [Hash, nil]
 #
-# @!attribute [rw] demonym
+# @!attribute [rw] demonyms
 #   @return [Hash, nil]
 #
 # @!attribute [rw] fifa
@@ -639,6 +655,9 @@ CapitalLoadMatch = Struct.new(
 #
 # @!attribute [rw] flag
 #   @return [String, nil]
+#
+# @!attribute [rw] flags
+#   @return [Hash, nil]
 #
 # @!attribute [rw] gini
 #   @return [Hash, nil]
@@ -652,13 +671,13 @@ CapitalLoadMatch = Struct.new(
 # @!attribute [rw] landlocked
 #   @return [Boolean, nil]
 #
-# @!attribute [rw] language
+# @!attribute [rw] languages
 #   @return [Hash, nil]
 #
 # @!attribute [rw] latlng
 #   @return [Array, nil]
 #
-# @!attribute [rw] map
+# @!attribute [rw] maps
 #   @return [Hash, nil]
 #
 # @!attribute [rw] name
@@ -667,13 +686,13 @@ CapitalLoadMatch = Struct.new(
 # @!attribute [rw] population
 #   @return [Integer, nil]
 #
-# @!attribute [rw] postal_code
+# @!attribute [rw] postalCode
 #   @return [Hash, nil]
 #
 # @!attribute [rw] region
 #   @return [String, nil]
 #
-# @!attribute [rw] start_of_week
+# @!attribute [rw] startOfWeek
 #   @return [String, nil]
 #
 # @!attribute [rw] status
@@ -682,52 +701,53 @@ CapitalLoadMatch = Struct.new(
 # @!attribute [rw] subregion
 #   @return [String, nil]
 #
-# @!attribute [rw] timezone
+# @!attribute [rw] timezones
 #   @return [Array, nil]
 #
 # @!attribute [rw] tld
 #   @return [Array, nil]
 #
-# @!attribute [rw] translation
+# @!attribute [rw] translations
 #   @return [Hash, nil]
 #
-# @!attribute [rw] un_member
+# @!attribute [rw] unMember
 #   @return [Boolean, nil]
 Name = Struct.new(
-  :alt_spelling,
+  :altSpellings,
   :area,
-  :border,
+  :borders,
   :capital,
-  :capital_info,
+  :capitalInfo,
   :car,
   :cca2,
   :cca3,
   :ccn3,
   :cioc,
-  :coat_of_arm,
-  :continent,
-  :currency,
-  :demonym,
+  :coatOfArms,
+  :continents,
+  :currencies,
+  :demonyms,
   :fifa,
   :flag,
+  :flags,
   :gini,
   :idd,
   :independent,
   :landlocked,
-  :language,
+  :languages,
   :latlng,
-  :map,
+  :maps,
   :name,
   :population,
-  :postal_code,
+  :postalCode,
   :region,
-  :start_of_week,
+  :startOfWeek,
   :status,
   :subregion,
-  :timezone,
+  :timezones,
   :tld,
-  :translation,
-  :un_member,
+  :translations,
+  :unMember,
   keyword_init: true
 )
 

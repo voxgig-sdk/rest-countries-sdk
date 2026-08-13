@@ -104,40 +104,41 @@ $all = $client->All();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `array` | No |  |
+| `altSpellings` | `array` | No |  |
 | `area` | `float` | No |  |
-| `border` | `array` | No |  |
+| `borders` | `array` | No |  |
 | `capital` | `array` | No |  |
-| `capital_info` | `array` | No |  |
+| `capitalInfo` | `array` | No |  |
 | `car` | `array` | No |  |
 | `cca2` | `string` | No |  |
 | `cca3` | `string` | No |  |
 | `ccn3` | `string` | No |  |
 | `cioc` | `string` | No |  |
-| `coat_of_arm` | `array` | No |  |
-| `continent` | `array` | No |  |
-| `currency` | `array` | No |  |
-| `demonym` | `array` | No |  |
+| `coatOfArms` | `array` | No |  |
+| `continents` | `array` | No |  |
+| `currencies` | `array` | No |  |
+| `demonyms` | `array` | No |  |
 | `fifa` | `string` | No |  |
 | `flag` | `string` | No |  |
+| `flags` | `array` | No |  |
 | `gini` | `array` | No |  |
 | `idd` | `array` | No |  |
 | `independent` | `bool` | No |  |
 | `landlocked` | `bool` | No |  |
-| `language` | `array` | No |  |
+| `languages` | `array` | No |  |
 | `latlng` | `array` | No |  |
-| `map` | `array` | No |  |
+| `maps` | `array` | No |  |
 | `name` | `array` | No |  |
 | `population` | `int` | No |  |
-| `postal_code` | `array` | No |  |
+| `postalCode` | `array` | No |  |
 | `region` | `string` | No |  |
-| `start_of_week` | `string` | No |  |
+| `startOfWeek` | `string` | No |  |
 | `status` | `string` | No |  |
 | `subregion` | `string` | No |  |
-| `timezone` | `array` | No |  |
+| `timezones` | `array` | No |  |
 | `tld` | `array` | No |  |
-| `translation` | `array` | No |  |
-| `un_member` | `bool` | No |  |
+| `translations` | `array` | No |  |
+| `unMember` | `bool` | No |  |
 
 ### Operations
 
@@ -189,40 +190,41 @@ $alpha = $client->Alpha();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `array` | No |  |
+| `altSpellings` | `array` | No |  |
 | `area` | `float` | No |  |
-| `border` | `array` | No |  |
+| `borders` | `array` | No |  |
 | `capital` | `array` | No |  |
-| `capital_info` | `array` | No |  |
+| `capitalInfo` | `array` | No |  |
 | `car` | `array` | No |  |
 | `cca2` | `string` | No |  |
 | `cca3` | `string` | No |  |
 | `ccn3` | `string` | No |  |
 | `cioc` | `string` | No |  |
-| `coat_of_arm` | `array` | No |  |
-| `continent` | `array` | No |  |
-| `currency` | `array` | No |  |
-| `demonym` | `array` | No |  |
+| `coatOfArms` | `array` | No |  |
+| `continents` | `array` | No |  |
+| `currencies` | `array` | No |  |
+| `demonyms` | `array` | No |  |
 | `fifa` | `string` | No |  |
 | `flag` | `string` | No |  |
+| `flags` | `array` | No |  |
 | `gini` | `array` | No |  |
 | `idd` | `array` | No |  |
 | `independent` | `bool` | No |  |
 | `landlocked` | `bool` | No |  |
-| `language` | `array` | No |  |
+| `languages` | `array` | No |  |
 | `latlng` | `array` | No |  |
-| `map` | `array` | No |  |
+| `maps` | `array` | No |  |
 | `name` | `array` | No |  |
 | `population` | `int` | No |  |
-| `postal_code` | `array` | No |  |
+| `postalCode` | `array` | No |  |
 | `region` | `string` | No |  |
-| `start_of_week` | `string` | No |  |
+| `startOfWeek` | `string` | No |  |
 | `status` | `string` | No |  |
 | `subregion` | `string` | No |  |
-| `timezone` | `array` | No |  |
+| `timezones` | `array` | No |  |
 | `tld` | `array` | No |  |
-| `translation` | `array` | No |  |
-| `un_member` | `bool` | No |  |
+| `translations` | `array` | No |  |
+| `unMember` | `bool` | No |  |
 
 ### Operations
 
@@ -274,40 +276,41 @@ $capital = $client->Capital();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `array` | No |  |
+| `altSpellings` | `array` | No |  |
 | `area` | `float` | No |  |
-| `border` | `array` | No |  |
+| `borders` | `array` | No |  |
 | `capital` | `array` | No |  |
-| `capital_info` | `array` | No |  |
+| `capitalInfo` | `array` | No |  |
 | `car` | `array` | No |  |
 | `cca2` | `string` | No |  |
 | `cca3` | `string` | No |  |
 | `ccn3` | `string` | No |  |
 | `cioc` | `string` | No |  |
-| `coat_of_arm` | `array` | No |  |
-| `continent` | `array` | No |  |
-| `currency` | `array` | No |  |
-| `demonym` | `array` | No |  |
+| `coatOfArms` | `array` | No |  |
+| `continents` | `array` | No |  |
+| `currencies` | `array` | No |  |
+| `demonyms` | `array` | No |  |
 | `fifa` | `string` | No |  |
 | `flag` | `string` | No |  |
+| `flags` | `array` | No |  |
 | `gini` | `array` | No |  |
 | `idd` | `array` | No |  |
 | `independent` | `bool` | No |  |
 | `landlocked` | `bool` | No |  |
-| `language` | `array` | No |  |
+| `languages` | `array` | No |  |
 | `latlng` | `array` | No |  |
-| `map` | `array` | No |  |
+| `maps` | `array` | No |  |
 | `name` | `array` | No |  |
 | `population` | `int` | No |  |
-| `postal_code` | `array` | No |  |
+| `postalCode` | `array` | No |  |
 | `region` | `string` | No |  |
-| `start_of_week` | `string` | No |  |
+| `startOfWeek` | `string` | No |  |
 | `status` | `string` | No |  |
 | `subregion` | `string` | No |  |
-| `timezone` | `array` | No |  |
+| `timezones` | `array` | No |  |
 | `tld` | `array` | No |  |
-| `translation` | `array` | No |  |
-| `un_member` | `bool` | No |  |
+| `translations` | `array` | No |  |
+| `unMember` | `bool` | No |  |
 
 ### Operations
 
@@ -359,40 +362,41 @@ $name = $client->Name();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `array` | No |  |
+| `altSpellings` | `array` | No |  |
 | `area` | `float` | No |  |
-| `border` | `array` | No |  |
+| `borders` | `array` | No |  |
 | `capital` | `array` | No |  |
-| `capital_info` | `array` | No |  |
+| `capitalInfo` | `array` | No |  |
 | `car` | `array` | No |  |
 | `cca2` | `string` | No |  |
 | `cca3` | `string` | No |  |
 | `ccn3` | `string` | No |  |
 | `cioc` | `string` | No |  |
-| `coat_of_arm` | `array` | No |  |
-| `continent` | `array` | No |  |
-| `currency` | `array` | No |  |
-| `demonym` | `array` | No |  |
+| `coatOfArms` | `array` | No |  |
+| `continents` | `array` | No |  |
+| `currencies` | `array` | No |  |
+| `demonyms` | `array` | No |  |
 | `fifa` | `string` | No |  |
 | `flag` | `string` | No |  |
+| `flags` | `array` | No |  |
 | `gini` | `array` | No |  |
 | `idd` | `array` | No |  |
 | `independent` | `bool` | No |  |
 | `landlocked` | `bool` | No |  |
-| `language` | `array` | No |  |
+| `languages` | `array` | No |  |
 | `latlng` | `array` | No |  |
-| `map` | `array` | No |  |
+| `maps` | `array` | No |  |
 | `name` | `array` | No |  |
 | `population` | `int` | No |  |
-| `postal_code` | `array` | No |  |
+| `postalCode` | `array` | No |  |
 | `region` | `string` | No |  |
-| `start_of_week` | `string` | No |  |
+| `startOfWeek` | `string` | No |  |
 | `status` | `string` | No |  |
 | `subregion` | `string` | No |  |
-| `timezone` | `array` | No |  |
+| `timezones` | `array` | No |  |
 | `tld` | `array` | No |  |
-| `translation` | `array` | No |  |
-| `un_member` | `bool` | No |  |
+| `translations` | `array` | No |  |
+| `unMember` | `bool` | No |  |
 
 ### Operations
 

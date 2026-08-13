@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# RestCountries SDK exists test
 
 import pytest
 from restcountries_sdk import RestCountriesSDK

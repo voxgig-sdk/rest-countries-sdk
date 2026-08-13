@@ -6,114 +6,117 @@
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 
 export interface All {
-  alt_spelling?: any[]
+  altSpellings?: any[]
   area?: number
-  border?: any[]
+  borders?: any[]
   capital?: any[]
-  capital_info?: Record<string, any>
+  capitalInfo?: Record<string, any>
   car?: Record<string, any>
   cca2?: string
   cca3?: string
   ccn3?: string
   cioc?: string
-  coat_of_arm?: Record<string, any>
-  continent?: any[]
-  currency?: Record<string, any>
-  demonym?: Record<string, any>
+  coatOfArms?: Record<string, any>
+  continents?: any[]
+  currencies?: Record<string, any>
+  demonyms?: Record<string, any>
   fifa?: string
   flag?: string
+  flags?: Record<string, any>
   gini?: Record<string, any>
   idd?: Record<string, any>
   independent?: boolean
   landlocked?: boolean
-  language?: Record<string, any>
+  languages?: Record<string, any>
   latlng?: any[]
-  map?: Record<string, any>
+  maps?: Record<string, any>
   name?: Record<string, any>
   population?: number
-  postal_code?: Record<string, any>
+  postalCode?: Record<string, any>
   region?: string
-  start_of_week?: string
+  startOfWeek?: string
   status?: string
   subregion?: string
-  timezone?: any[]
+  timezones?: any[]
   tld?: any[]
-  translation?: Record<string, any>
-  un_member?: boolean
+  translations?: Record<string, any>
+  unMember?: boolean
 }
 
 export interface AllListMatch {
-  alt_spelling?: any[]
+  altSpellings?: any[]
   area?: number
-  border?: any[]
+  borders?: any[]
   capital?: any[]
-  capital_info?: Record<string, any>
+  capitalInfo?: Record<string, any>
   car?: Record<string, any>
   cca2?: string
   cca3?: string
   ccn3?: string
   cioc?: string
-  coat_of_arm?: Record<string, any>
-  continent?: any[]
-  currency?: Record<string, any>
-  demonym?: Record<string, any>
+  coatOfArms?: Record<string, any>
+  continents?: any[]
+  currencies?: Record<string, any>
+  demonyms?: Record<string, any>
   fifa?: string
   flag?: string
+  flags?: Record<string, any>
   gini?: Record<string, any>
   idd?: Record<string, any>
   independent?: boolean
   landlocked?: boolean
-  language?: Record<string, any>
+  languages?: Record<string, any>
   latlng?: any[]
-  map?: Record<string, any>
+  maps?: Record<string, any>
   name?: Record<string, any>
   population?: number
-  postal_code?: Record<string, any>
+  postalCode?: Record<string, any>
   region?: string
-  start_of_week?: string
+  startOfWeek?: string
   status?: string
   subregion?: string
-  timezone?: any[]
+  timezones?: any[]
   tld?: any[]
-  translation?: Record<string, any>
-  un_member?: boolean
+  translations?: Record<string, any>
+  unMember?: boolean
 }
 
 export interface Alpha {
-  alt_spelling?: any[]
+  altSpellings?: any[]
   area?: number
-  border?: any[]
+  borders?: any[]
   capital?: any[]
-  capital_info?: Record<string, any>
+  capitalInfo?: Record<string, any>
   car?: Record<string, any>
   cca2?: string
   cca3?: string
   ccn3?: string
   cioc?: string
-  coat_of_arm?: Record<string, any>
-  continent?: any[]
-  currency?: Record<string, any>
-  demonym?: Record<string, any>
+  coatOfArms?: Record<string, any>
+  continents?: any[]
+  currencies?: Record<string, any>
+  demonyms?: Record<string, any>
   fifa?: string
   flag?: string
+  flags?: Record<string, any>
   gini?: Record<string, any>
   idd?: Record<string, any>
   independent?: boolean
   landlocked?: boolean
-  language?: Record<string, any>
+  languages?: Record<string, any>
   latlng?: any[]
-  map?: Record<string, any>
+  maps?: Record<string, any>
   name?: Record<string, any>
   population?: number
-  postal_code?: Record<string, any>
+  postalCode?: Record<string, any>
   region?: string
-  start_of_week?: string
+  startOfWeek?: string
   status?: string
   subregion?: string
-  timezone?: any[]
+  timezones?: any[]
   tld?: any[]
-  translation?: Record<string, any>
-  un_member?: boolean
+  translations?: Record<string, any>
+  unMember?: boolean
 }
 
 export interface AlphaLoadMatch {
@@ -121,40 +124,41 @@ export interface AlphaLoadMatch {
 }
 
 export interface Capital {
-  alt_spelling?: any[]
+  altSpellings?: any[]
   area?: number
-  border?: any[]
+  borders?: any[]
   capital?: any[]
-  capital_info?: Record<string, any>
+  capitalInfo?: Record<string, any>
   car?: Record<string, any>
   cca2?: string
   cca3?: string
   ccn3?: string
   cioc?: string
-  coat_of_arm?: Record<string, any>
-  continent?: any[]
-  currency?: Record<string, any>
-  demonym?: Record<string, any>
+  coatOfArms?: Record<string, any>
+  continents?: any[]
+  currencies?: Record<string, any>
+  demonyms?: Record<string, any>
   fifa?: string
   flag?: string
+  flags?: Record<string, any>
   gini?: Record<string, any>
   idd?: Record<string, any>
   independent?: boolean
   landlocked?: boolean
-  language?: Record<string, any>
+  languages?: Record<string, any>
   latlng?: any[]
-  map?: Record<string, any>
+  maps?: Record<string, any>
   name?: Record<string, any>
   population?: number
-  postal_code?: Record<string, any>
+  postalCode?: Record<string, any>
   region?: string
-  start_of_week?: string
+  startOfWeek?: string
   status?: string
   subregion?: string
-  timezone?: any[]
+  timezones?: any[]
   tld?: any[]
-  translation?: Record<string, any>
-  un_member?: boolean
+  translations?: Record<string, any>
+  unMember?: boolean
 }
 
 export interface CapitalLoadMatch {
@@ -162,40 +166,41 @@ export interface CapitalLoadMatch {
 }
 
 export interface Name {
-  alt_spelling?: any[]
+  altSpellings?: any[]
   area?: number
-  border?: any[]
+  borders?: any[]
   capital?: any[]
-  capital_info?: Record<string, any>
+  capitalInfo?: Record<string, any>
   car?: Record<string, any>
   cca2?: string
   cca3?: string
   ccn3?: string
   cioc?: string
-  coat_of_arm?: Record<string, any>
-  continent?: any[]
-  currency?: Record<string, any>
-  demonym?: Record<string, any>
+  coatOfArms?: Record<string, any>
+  continents?: any[]
+  currencies?: Record<string, any>
+  demonyms?: Record<string, any>
   fifa?: string
   flag?: string
+  flags?: Record<string, any>
   gini?: Record<string, any>
   idd?: Record<string, any>
   independent?: boolean
   landlocked?: boolean
-  language?: Record<string, any>
+  languages?: Record<string, any>
   latlng?: any[]
-  map?: Record<string, any>
+  maps?: Record<string, any>
   name?: Record<string, any>
   population?: number
-  postal_code?: Record<string, any>
+  postalCode?: Record<string, any>
   region?: string
-  start_of_week?: string
+  startOfWeek?: string
   status?: string
   subregion?: string
-  timezone?: any[]
+  timezones?: any[]
   tld?: any[]
-  translation?: Record<string, any>
-  un_member?: boolean
+  translations?: Record<string, any>
+  unMember?: boolean
 }
 
 export interface NameLoadMatch {

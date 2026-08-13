@@ -68,12 +68,12 @@ Every entity operation returns `(value, error)`. Check `err` before
 using the value — there is no exception to catch:
 
 ```go
-alls, err := client.All(nil).List(nil, nil)
+alpha, err := client.Alpha(nil).Load(map[string]any{"id": "example_id"}, nil)
 if err != nil {
     // handle err
     return
 }
-_ = alls
+_ = alpha
 ```
 
 `Direct` follows the same `(value, error)` convention:
@@ -137,13 +137,13 @@ Create a mock client for unit testing — no server required:
 ```go
 client := sdk.Test()
 
-all, err := client.All(nil).List(
-    nil, nil,
+alpha, err := client.Alpha(nil).Load(
+    map[string]any{"id": "test01"}, nil,
 )
 if err != nil {
     panic(err)
 }
-fmt.Println(all) // the returned mock data
+fmt.Println(alpha) // the returned mock data
 ```
 
 ### Use a custom fetch function
@@ -265,40 +265,41 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"alt_spelling"` |  |
+| `"altSpellings"` |  |
 | `"area"` |  |
-| `"border"` |  |
+| `"borders"` |  |
 | `"capital"` |  |
-| `"capital_info"` |  |
+| `"capitalInfo"` |  |
 | `"car"` |  |
 | `"cca2"` |  |
 | `"cca3"` |  |
 | `"ccn3"` |  |
 | `"cioc"` |  |
-| `"coat_of_arm"` |  |
-| `"continent"` |  |
-| `"currency"` |  |
-| `"demonym"` |  |
+| `"coatOfArms"` |  |
+| `"continents"` |  |
+| `"currencies"` |  |
+| `"demonyms"` |  |
 | `"fifa"` |  |
 | `"flag"` |  |
+| `"flags"` |  |
 | `"gini"` |  |
 | `"idd"` |  |
 | `"independent"` |  |
 | `"landlocked"` |  |
-| `"language"` |  |
+| `"languages"` |  |
 | `"latlng"` |  |
-| `"map"` |  |
+| `"maps"` |  |
 | `"name"` |  |
 | `"population"` |  |
-| `"postal_code"` |  |
+| `"postalCode"` |  |
 | `"region"` |  |
-| `"start_of_week"` |  |
+| `"startOfWeek"` |  |
 | `"status"` |  |
 | `"subregion"` |  |
-| `"timezone"` |  |
+| `"timezones"` |  |
 | `"tld"` |  |
-| `"translation"` |  |
-| `"un_member"` |  |
+| `"translations"` |  |
+| `"unMember"` |  |
 
 Operations: List.
 
@@ -308,40 +309,41 @@ API path: `/all`
 
 | Field | Description |
 | --- | --- |
-| `"alt_spelling"` |  |
+| `"altSpellings"` |  |
 | `"area"` |  |
-| `"border"` |  |
+| `"borders"` |  |
 | `"capital"` |  |
-| `"capital_info"` |  |
+| `"capitalInfo"` |  |
 | `"car"` |  |
 | `"cca2"` |  |
 | `"cca3"` |  |
 | `"ccn3"` |  |
 | `"cioc"` |  |
-| `"coat_of_arm"` |  |
-| `"continent"` |  |
-| `"currency"` |  |
-| `"demonym"` |  |
+| `"coatOfArms"` |  |
+| `"continents"` |  |
+| `"currencies"` |  |
+| `"demonyms"` |  |
 | `"fifa"` |  |
 | `"flag"` |  |
+| `"flags"` |  |
 | `"gini"` |  |
 | `"idd"` |  |
 | `"independent"` |  |
 | `"landlocked"` |  |
-| `"language"` |  |
+| `"languages"` |  |
 | `"latlng"` |  |
-| `"map"` |  |
+| `"maps"` |  |
 | `"name"` |  |
 | `"population"` |  |
-| `"postal_code"` |  |
+| `"postalCode"` |  |
 | `"region"` |  |
-| `"start_of_week"` |  |
+| `"startOfWeek"` |  |
 | `"status"` |  |
 | `"subregion"` |  |
-| `"timezone"` |  |
+| `"timezones"` |  |
 | `"tld"` |  |
-| `"translation"` |  |
-| `"un_member"` |  |
+| `"translations"` |  |
+| `"unMember"` |  |
 
 Operations: Load.
 
@@ -351,40 +353,41 @@ API path: `/alpha/{code}`
 
 | Field | Description |
 | --- | --- |
-| `"alt_spelling"` |  |
+| `"altSpellings"` |  |
 | `"area"` |  |
-| `"border"` |  |
+| `"borders"` |  |
 | `"capital"` |  |
-| `"capital_info"` |  |
+| `"capitalInfo"` |  |
 | `"car"` |  |
 | `"cca2"` |  |
 | `"cca3"` |  |
 | `"ccn3"` |  |
 | `"cioc"` |  |
-| `"coat_of_arm"` |  |
-| `"continent"` |  |
-| `"currency"` |  |
-| `"demonym"` |  |
+| `"coatOfArms"` |  |
+| `"continents"` |  |
+| `"currencies"` |  |
+| `"demonyms"` |  |
 | `"fifa"` |  |
 | `"flag"` |  |
+| `"flags"` |  |
 | `"gini"` |  |
 | `"idd"` |  |
 | `"independent"` |  |
 | `"landlocked"` |  |
-| `"language"` |  |
+| `"languages"` |  |
 | `"latlng"` |  |
-| `"map"` |  |
+| `"maps"` |  |
 | `"name"` |  |
 | `"population"` |  |
-| `"postal_code"` |  |
+| `"postalCode"` |  |
 | `"region"` |  |
-| `"start_of_week"` |  |
+| `"startOfWeek"` |  |
 | `"status"` |  |
 | `"subregion"` |  |
-| `"timezone"` |  |
+| `"timezones"` |  |
 | `"tld"` |  |
-| `"translation"` |  |
-| `"un_member"` |  |
+| `"translations"` |  |
+| `"unMember"` |  |
 
 Operations: Load.
 
@@ -394,40 +397,41 @@ API path: `/capital/{capital}`
 
 | Field | Description |
 | --- | --- |
-| `"alt_spelling"` |  |
+| `"altSpellings"` |  |
 | `"area"` |  |
-| `"border"` |  |
+| `"borders"` |  |
 | `"capital"` |  |
-| `"capital_info"` |  |
+| `"capitalInfo"` |  |
 | `"car"` |  |
 | `"cca2"` |  |
 | `"cca3"` |  |
 | `"ccn3"` |  |
 | `"cioc"` |  |
-| `"coat_of_arm"` |  |
-| `"continent"` |  |
-| `"currency"` |  |
-| `"demonym"` |  |
+| `"coatOfArms"` |  |
+| `"continents"` |  |
+| `"currencies"` |  |
+| `"demonyms"` |  |
 | `"fifa"` |  |
 | `"flag"` |  |
+| `"flags"` |  |
 | `"gini"` |  |
 | `"idd"` |  |
 | `"independent"` |  |
 | `"landlocked"` |  |
-| `"language"` |  |
+| `"languages"` |  |
 | `"latlng"` |  |
-| `"map"` |  |
+| `"maps"` |  |
 | `"name"` |  |
 | `"population"` |  |
-| `"postal_code"` |  |
+| `"postalCode"` |  |
 | `"region"` |  |
-| `"start_of_week"` |  |
+| `"startOfWeek"` |  |
 | `"status"` |  |
 | `"subregion"` |  |
-| `"timezone"` |  |
+| `"timezones"` |  |
 | `"tld"` |  |
-| `"translation"` |  |
-| `"un_member"` |  |
+| `"translations"` |  |
+| `"unMember"` |  |
 
 Operations: Load.
 
@@ -452,40 +456,41 @@ Create an instance: `all := client.All(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `[]any` |  |
+| `altSpellings` | `[]any` |  |
 | `area` | `float64` |  |
-| `border` | `[]any` |  |
+| `borders` | `[]any` |  |
 | `capital` | `[]any` |  |
-| `capital_info` | `map[string]any` |  |
+| `capitalInfo` | `map[string]any` |  |
 | `car` | `map[string]any` |  |
 | `cca2` | `string` |  |
 | `cca3` | `string` |  |
 | `ccn3` | `string` |  |
 | `cioc` | `string` |  |
-| `coat_of_arm` | `map[string]any` |  |
-| `continent` | `[]any` |  |
-| `currency` | `map[string]any` |  |
-| `demonym` | `map[string]any` |  |
+| `coatOfArms` | `map[string]any` |  |
+| `continents` | `[]any` |  |
+| `currencies` | `map[string]any` |  |
+| `demonyms` | `map[string]any` |  |
 | `fifa` | `string` |  |
 | `flag` | `string` |  |
+| `flags` | `map[string]any` |  |
 | `gini` | `map[string]any` |  |
 | `idd` | `map[string]any` |  |
 | `independent` | `bool` |  |
 | `landlocked` | `bool` |  |
-| `language` | `map[string]any` |  |
+| `languages` | `map[string]any` |  |
 | `latlng` | `[]any` |  |
-| `map` | `map[string]any` |  |
+| `maps` | `map[string]any` |  |
 | `name` | `map[string]any` |  |
 | `population` | `int` |  |
-| `postal_code` | `map[string]any` |  |
+| `postalCode` | `map[string]any` |  |
 | `region` | `string` |  |
-| `start_of_week` | `string` |  |
+| `startOfWeek` | `string` |  |
 | `status` | `string` |  |
 | `subregion` | `string` |  |
-| `timezone` | `[]any` |  |
+| `timezones` | `[]any` |  |
 | `tld` | `[]any` |  |
-| `translation` | `map[string]any` |  |
-| `un_member` | `bool` |  |
+| `translations` | `map[string]any` |  |
+| `unMember` | `bool` |  |
 
 #### Example: List
 
@@ -512,40 +517,41 @@ Create an instance: `alpha := client.Alpha(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `[]any` |  |
+| `altSpellings` | `[]any` |  |
 | `area` | `float64` |  |
-| `border` | `[]any` |  |
+| `borders` | `[]any` |  |
 | `capital` | `[]any` |  |
-| `capital_info` | `map[string]any` |  |
+| `capitalInfo` | `map[string]any` |  |
 | `car` | `map[string]any` |  |
 | `cca2` | `string` |  |
 | `cca3` | `string` |  |
 | `ccn3` | `string` |  |
 | `cioc` | `string` |  |
-| `coat_of_arm` | `map[string]any` |  |
-| `continent` | `[]any` |  |
-| `currency` | `map[string]any` |  |
-| `demonym` | `map[string]any` |  |
+| `coatOfArms` | `map[string]any` |  |
+| `continents` | `[]any` |  |
+| `currencies` | `map[string]any` |  |
+| `demonyms` | `map[string]any` |  |
 | `fifa` | `string` |  |
 | `flag` | `string` |  |
+| `flags` | `map[string]any` |  |
 | `gini` | `map[string]any` |  |
 | `idd` | `map[string]any` |  |
 | `independent` | `bool` |  |
 | `landlocked` | `bool` |  |
-| `language` | `map[string]any` |  |
+| `languages` | `map[string]any` |  |
 | `latlng` | `[]any` |  |
-| `map` | `map[string]any` |  |
+| `maps` | `map[string]any` |  |
 | `name` | `map[string]any` |  |
 | `population` | `int` |  |
-| `postal_code` | `map[string]any` |  |
+| `postalCode` | `map[string]any` |  |
 | `region` | `string` |  |
-| `start_of_week` | `string` |  |
+| `startOfWeek` | `string` |  |
 | `status` | `string` |  |
 | `subregion` | `string` |  |
-| `timezone` | `[]any` |  |
+| `timezones` | `[]any` |  |
 | `tld` | `[]any` |  |
-| `translation` | `map[string]any` |  |
-| `un_member` | `bool` |  |
+| `translations` | `map[string]any` |  |
+| `unMember` | `bool` |  |
 
 #### Example: Load
 
@@ -572,40 +578,41 @@ Create an instance: `capital := client.Capital(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `[]any` |  |
+| `altSpellings` | `[]any` |  |
 | `area` | `float64` |  |
-| `border` | `[]any` |  |
+| `borders` | `[]any` |  |
 | `capital` | `[]any` |  |
-| `capital_info` | `map[string]any` |  |
+| `capitalInfo` | `map[string]any` |  |
 | `car` | `map[string]any` |  |
 | `cca2` | `string` |  |
 | `cca3` | `string` |  |
 | `ccn3` | `string` |  |
 | `cioc` | `string` |  |
-| `coat_of_arm` | `map[string]any` |  |
-| `continent` | `[]any` |  |
-| `currency` | `map[string]any` |  |
-| `demonym` | `map[string]any` |  |
+| `coatOfArms` | `map[string]any` |  |
+| `continents` | `[]any` |  |
+| `currencies` | `map[string]any` |  |
+| `demonyms` | `map[string]any` |  |
 | `fifa` | `string` |  |
 | `flag` | `string` |  |
+| `flags` | `map[string]any` |  |
 | `gini` | `map[string]any` |  |
 | `idd` | `map[string]any` |  |
 | `independent` | `bool` |  |
 | `landlocked` | `bool` |  |
-| `language` | `map[string]any` |  |
+| `languages` | `map[string]any` |  |
 | `latlng` | `[]any` |  |
-| `map` | `map[string]any` |  |
+| `maps` | `map[string]any` |  |
 | `name` | `map[string]any` |  |
 | `population` | `int` |  |
-| `postal_code` | `map[string]any` |  |
+| `postalCode` | `map[string]any` |  |
 | `region` | `string` |  |
-| `start_of_week` | `string` |  |
+| `startOfWeek` | `string` |  |
 | `status` | `string` |  |
 | `subregion` | `string` |  |
-| `timezone` | `[]any` |  |
+| `timezones` | `[]any` |  |
 | `tld` | `[]any` |  |
-| `translation` | `map[string]any` |  |
-| `un_member` | `bool` |  |
+| `translations` | `map[string]any` |  |
+| `unMember` | `bool` |  |
 
 #### Example: Load
 
@@ -632,40 +639,41 @@ Create an instance: `name := client.Name(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `[]any` |  |
+| `altSpellings` | `[]any` |  |
 | `area` | `float64` |  |
-| `border` | `[]any` |  |
+| `borders` | `[]any` |  |
 | `capital` | `[]any` |  |
-| `capital_info` | `map[string]any` |  |
+| `capitalInfo` | `map[string]any` |  |
 | `car` | `map[string]any` |  |
 | `cca2` | `string` |  |
 | `cca3` | `string` |  |
 | `ccn3` | `string` |  |
 | `cioc` | `string` |  |
-| `coat_of_arm` | `map[string]any` |  |
-| `continent` | `[]any` |  |
-| `currency` | `map[string]any` |  |
-| `demonym` | `map[string]any` |  |
+| `coatOfArms` | `map[string]any` |  |
+| `continents` | `[]any` |  |
+| `currencies` | `map[string]any` |  |
+| `demonyms` | `map[string]any` |  |
 | `fifa` | `string` |  |
 | `flag` | `string` |  |
+| `flags` | `map[string]any` |  |
 | `gini` | `map[string]any` |  |
 | `idd` | `map[string]any` |  |
 | `independent` | `bool` |  |
 | `landlocked` | `bool` |  |
-| `language` | `map[string]any` |  |
+| `languages` | `map[string]any` |  |
 | `latlng` | `[]any` |  |
-| `map` | `map[string]any` |  |
+| `maps` | `map[string]any` |  |
 | `name` | `map[string]any` |  |
 | `population` | `int` |  |
-| `postal_code` | `map[string]any` |  |
+| `postalCode` | `map[string]any` |  |
 | `region` | `string` |  |
-| `start_of_week` | `string` |  |
+| `startOfWeek` | `string` |  |
 | `status` | `string` |  |
 | `subregion` | `string` |  |
-| `timezone` | `[]any` |  |
+| `timezones` | `[]any` |  |
 | `tld` | `[]any` |  |
-| `translation` | `map[string]any` |  |
-| `un_member` | `bool` |  |
+| `translations` | `map[string]any` |  |
+| `unMember` | `bool` |  |
 
 #### Example: Load
 
@@ -747,15 +755,15 @@ like `core.ToMapAny`.
 
 ### Entity state
 
-Entity instances are stateful. After a successful `List`, the entity
+Entity instances are stateful. After a successful `Load`, the entity
 stores the returned data and match criteria internally.
 
 ```go
-all := client.All(nil)
-all.List(nil, nil)
+alpha := client.Alpha(nil)
+alpha.Load(map[string]any{"id": "example_id"}, nil)
 
-// all.Data() now returns the all data from the last list
-// all.Match() returns the last match criteria
+// alpha.Data() now returns the alpha data from the last load
+// alpha.Match() returns the last match criteria
 ```
 
 Call `Make()` to create a fresh instance with the same configuration

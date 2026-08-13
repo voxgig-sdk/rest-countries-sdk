@@ -43,8 +43,8 @@ class RestCountriesTestRunner
 
     public static function env_override(array $m): array
     {
-        $live = self::getenv('RESTCOUNTRIES_TEST_LIVE');
-        $override = self::getenv('RESTCOUNTRIES_TEST_OVERRIDE');
+        $live = self::getenv('REST_COUNTRIES_TEST_LIVE');
+        $override = self::getenv('REST_COUNTRIES_TEST_OVERRIDE');
 
         if ($live === 'TRUE' || $override === 'TRUE') {
             foreach (array_keys($m) as $key) {
@@ -63,9 +63,9 @@ class RestCountriesTestRunner
             }
         }
 
-        $explain = self::getenv('RESTCOUNTRIES_TEST_EXPLAIN');
+        $explain = self::getenv('REST_COUNTRIES_TEST_EXPLAIN');
         if ($explain !== null && $explain !== '') {
-            $m['RESTCOUNTRIES_TEST_EXPLAIN'] = $explain;
+            $m['REST_COUNTRIES_TEST_EXPLAIN'] = $explain;
         }
 
         return $m;

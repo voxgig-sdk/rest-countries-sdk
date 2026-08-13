@@ -105,40 +105,41 @@ all = client.All
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `Array` | No |  |
+| `altSpellings` | `Array` | No |  |
 | `area` | `Float` | No |  |
-| `border` | `Array` | No |  |
+| `borders` | `Array` | No |  |
 | `capital` | `Array` | No |  |
-| `capital_info` | `Hash` | No |  |
+| `capitalInfo` | `Hash` | No |  |
 | `car` | `Hash` | No |  |
 | `cca2` | `String` | No |  |
 | `cca3` | `String` | No |  |
 | `ccn3` | `String` | No |  |
 | `cioc` | `String` | No |  |
-| `coat_of_arm` | `Hash` | No |  |
-| `continent` | `Array` | No |  |
-| `currency` | `Hash` | No |  |
-| `demonym` | `Hash` | No |  |
+| `coatOfArms` | `Hash` | No |  |
+| `continents` | `Array` | No |  |
+| `currencies` | `Hash` | No |  |
+| `demonyms` | `Hash` | No |  |
 | `fifa` | `String` | No |  |
 | `flag` | `String` | No |  |
+| `flags` | `Hash` | No |  |
 | `gini` | `Hash` | No |  |
 | `idd` | `Hash` | No |  |
 | `independent` | `Boolean` | No |  |
 | `landlocked` | `Boolean` | No |  |
-| `language` | `Hash` | No |  |
+| `languages` | `Hash` | No |  |
 | `latlng` | `Array` | No |  |
-| `map` | `Hash` | No |  |
+| `maps` | `Hash` | No |  |
 | `name` | `Hash` | No |  |
 | `population` | `Integer` | No |  |
-| `postal_code` | `Hash` | No |  |
+| `postalCode` | `Hash` | No |  |
 | `region` | `String` | No |  |
-| `start_of_week` | `String` | No |  |
+| `startOfWeek` | `String` | No |  |
 | `status` | `String` | No |  |
 | `subregion` | `String` | No |  |
-| `timezone` | `Array` | No |  |
+| `timezones` | `Array` | No |  |
 | `tld` | `Array` | No |  |
-| `translation` | `Hash` | No |  |
-| `un_member` | `Boolean` | No |  |
+| `translations` | `Hash` | No |  |
+| `unMember` | `Boolean` | No |  |
 
 ### Operations
 
@@ -190,40 +191,41 @@ alpha = client.Alpha
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `Array` | No |  |
+| `altSpellings` | `Array` | No |  |
 | `area` | `Float` | No |  |
-| `border` | `Array` | No |  |
+| `borders` | `Array` | No |  |
 | `capital` | `Array` | No |  |
-| `capital_info` | `Hash` | No |  |
+| `capitalInfo` | `Hash` | No |  |
 | `car` | `Hash` | No |  |
 | `cca2` | `String` | No |  |
 | `cca3` | `String` | No |  |
 | `ccn3` | `String` | No |  |
 | `cioc` | `String` | No |  |
-| `coat_of_arm` | `Hash` | No |  |
-| `continent` | `Array` | No |  |
-| `currency` | `Hash` | No |  |
-| `demonym` | `Hash` | No |  |
+| `coatOfArms` | `Hash` | No |  |
+| `continents` | `Array` | No |  |
+| `currencies` | `Hash` | No |  |
+| `demonyms` | `Hash` | No |  |
 | `fifa` | `String` | No |  |
 | `flag` | `String` | No |  |
+| `flags` | `Hash` | No |  |
 | `gini` | `Hash` | No |  |
 | `idd` | `Hash` | No |  |
 | `independent` | `Boolean` | No |  |
 | `landlocked` | `Boolean` | No |  |
-| `language` | `Hash` | No |  |
+| `languages` | `Hash` | No |  |
 | `latlng` | `Array` | No |  |
-| `map` | `Hash` | No |  |
+| `maps` | `Hash` | No |  |
 | `name` | `Hash` | No |  |
 | `population` | `Integer` | No |  |
-| `postal_code` | `Hash` | No |  |
+| `postalCode` | `Hash` | No |  |
 | `region` | `String` | No |  |
-| `start_of_week` | `String` | No |  |
+| `startOfWeek` | `String` | No |  |
 | `status` | `String` | No |  |
 | `subregion` | `String` | No |  |
-| `timezone` | `Array` | No |  |
+| `timezones` | `Array` | No |  |
 | `tld` | `Array` | No |  |
-| `translation` | `Hash` | No |  |
-| `un_member` | `Boolean` | No |  |
+| `translations` | `Hash` | No |  |
+| `unMember` | `Boolean` | No |  |
 
 ### Operations
 
@@ -275,40 +277,41 @@ capital = client.Capital
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `Array` | No |  |
+| `altSpellings` | `Array` | No |  |
 | `area` | `Float` | No |  |
-| `border` | `Array` | No |  |
+| `borders` | `Array` | No |  |
 | `capital` | `Array` | No |  |
-| `capital_info` | `Hash` | No |  |
+| `capitalInfo` | `Hash` | No |  |
 | `car` | `Hash` | No |  |
 | `cca2` | `String` | No |  |
 | `cca3` | `String` | No |  |
 | `ccn3` | `String` | No |  |
 | `cioc` | `String` | No |  |
-| `coat_of_arm` | `Hash` | No |  |
-| `continent` | `Array` | No |  |
-| `currency` | `Hash` | No |  |
-| `demonym` | `Hash` | No |  |
+| `coatOfArms` | `Hash` | No |  |
+| `continents` | `Array` | No |  |
+| `currencies` | `Hash` | No |  |
+| `demonyms` | `Hash` | No |  |
 | `fifa` | `String` | No |  |
 | `flag` | `String` | No |  |
+| `flags` | `Hash` | No |  |
 | `gini` | `Hash` | No |  |
 | `idd` | `Hash` | No |  |
 | `independent` | `Boolean` | No |  |
 | `landlocked` | `Boolean` | No |  |
-| `language` | `Hash` | No |  |
+| `languages` | `Hash` | No |  |
 | `latlng` | `Array` | No |  |
-| `map` | `Hash` | No |  |
+| `maps` | `Hash` | No |  |
 | `name` | `Hash` | No |  |
 | `population` | `Integer` | No |  |
-| `postal_code` | `Hash` | No |  |
+| `postalCode` | `Hash` | No |  |
 | `region` | `String` | No |  |
-| `start_of_week` | `String` | No |  |
+| `startOfWeek` | `String` | No |  |
 | `status` | `String` | No |  |
 | `subregion` | `String` | No |  |
-| `timezone` | `Array` | No |  |
+| `timezones` | `Array` | No |  |
 | `tld` | `Array` | No |  |
-| `translation` | `Hash` | No |  |
-| `un_member` | `Boolean` | No |  |
+| `translations` | `Hash` | No |  |
+| `unMember` | `Boolean` | No |  |
 
 ### Operations
 
@@ -360,40 +363,41 @@ name = client.Name
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `Array` | No |  |
+| `altSpellings` | `Array` | No |  |
 | `area` | `Float` | No |  |
-| `border` | `Array` | No |  |
+| `borders` | `Array` | No |  |
 | `capital` | `Array` | No |  |
-| `capital_info` | `Hash` | No |  |
+| `capitalInfo` | `Hash` | No |  |
 | `car` | `Hash` | No |  |
 | `cca2` | `String` | No |  |
 | `cca3` | `String` | No |  |
 | `ccn3` | `String` | No |  |
 | `cioc` | `String` | No |  |
-| `coat_of_arm` | `Hash` | No |  |
-| `continent` | `Array` | No |  |
-| `currency` | `Hash` | No |  |
-| `demonym` | `Hash` | No |  |
+| `coatOfArms` | `Hash` | No |  |
+| `continents` | `Array` | No |  |
+| `currencies` | `Hash` | No |  |
+| `demonyms` | `Hash` | No |  |
 | `fifa` | `String` | No |  |
 | `flag` | `String` | No |  |
+| `flags` | `Hash` | No |  |
 | `gini` | `Hash` | No |  |
 | `idd` | `Hash` | No |  |
 | `independent` | `Boolean` | No |  |
 | `landlocked` | `Boolean` | No |  |
-| `language` | `Hash` | No |  |
+| `languages` | `Hash` | No |  |
 | `latlng` | `Array` | No |  |
-| `map` | `Hash` | No |  |
+| `maps` | `Hash` | No |  |
 | `name` | `Hash` | No |  |
 | `population` | `Integer` | No |  |
-| `postal_code` | `Hash` | No |  |
+| `postalCode` | `Hash` | No |  |
 | `region` | `String` | No |  |
-| `start_of_week` | `String` | No |  |
+| `startOfWeek` | `String` | No |  |
 | `status` | `String` | No |  |
 | `subregion` | `String` | No |  |
-| `timezone` | `Array` | No |  |
+| `timezones` | `Array` | No |  |
 | `tld` | `Array` | No |  |
-| `translation` | `Hash` | No |  |
-| `un_member` | `Boolean` | No |  |
+| `translations` | `Hash` | No |  |
+| `unMember` | `Boolean` | No |  |
 
 ### Operations
 

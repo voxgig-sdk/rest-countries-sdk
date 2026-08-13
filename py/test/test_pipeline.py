@@ -16,11 +16,11 @@
 import pytest
 
 from restcountries_sdk import RestCountriesSDK
-from core.error import RestCountriesError
-from core.result import RestCountriesResult
-from core.response import RestCountriesResponse
-from core.spec import RestCountriesSpec
-from feature.base_feature import RestCountriesBaseFeature
+from restcountries_sdk.core.error import RestCountriesError
+from restcountries_sdk.core.result import RestCountriesResult
+from restcountries_sdk.core.response import RestCountriesResponse
+from restcountries_sdk.core.spec import RestCountriesSpec
+from restcountries_sdk.feature.base_feature import RestCountriesBaseFeature
 
 
 def _client():

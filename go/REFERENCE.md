@@ -110,40 +110,41 @@ fmt.Println(all.GetName()) // "all"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `[]any` | No |  |
+| `altSpellings` | `[]any` | No |  |
 | `area` | `float64` | No |  |
-| `border` | `[]any` | No |  |
+| `borders` | `[]any` | No |  |
 | `capital` | `[]any` | No |  |
-| `capital_info` | `map[string]any` | No |  |
+| `capitalInfo` | `map[string]any` | No |  |
 | `car` | `map[string]any` | No |  |
 | `cca2` | `string` | No |  |
 | `cca3` | `string` | No |  |
 | `ccn3` | `string` | No |  |
 | `cioc` | `string` | No |  |
-| `coat_of_arm` | `map[string]any` | No |  |
-| `continent` | `[]any` | No |  |
-| `currency` | `map[string]any` | No |  |
-| `demonym` | `map[string]any` | No |  |
+| `coatOfArms` | `map[string]any` | No |  |
+| `continents` | `[]any` | No |  |
+| `currencies` | `map[string]any` | No |  |
+| `demonyms` | `map[string]any` | No |  |
 | `fifa` | `string` | No |  |
 | `flag` | `string` | No |  |
+| `flags` | `map[string]any` | No |  |
 | `gini` | `map[string]any` | No |  |
 | `idd` | `map[string]any` | No |  |
 | `independent` | `bool` | No |  |
 | `landlocked` | `bool` | No |  |
-| `language` | `map[string]any` | No |  |
+| `languages` | `map[string]any` | No |  |
 | `latlng` | `[]any` | No |  |
-| `map` | `map[string]any` | No |  |
+| `maps` | `map[string]any` | No |  |
 | `name` | `map[string]any` | No |  |
 | `population` | `int` | No |  |
-| `postal_code` | `map[string]any` | No |  |
+| `postalCode` | `map[string]any` | No |  |
 | `region` | `string` | No |  |
-| `start_of_week` | `string` | No |  |
+| `startOfWeek` | `string` | No |  |
 | `status` | `string` | No |  |
 | `subregion` | `string` | No |  |
-| `timezone` | `[]any` | No |  |
+| `timezones` | `[]any` | No |  |
 | `tld` | `[]any` | No |  |
-| `translation` | `map[string]any` | No |  |
-| `un_member` | `bool` | No |  |
+| `translations` | `map[string]any` | No |  |
+| `unMember` | `bool` | No |  |
 
 ### Operations
 
@@ -194,40 +195,41 @@ fmt.Println(alpha.GetName()) // "alpha"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `[]any` | No |  |
+| `altSpellings` | `[]any` | No |  |
 | `area` | `float64` | No |  |
-| `border` | `[]any` | No |  |
+| `borders` | `[]any` | No |  |
 | `capital` | `[]any` | No |  |
-| `capital_info` | `map[string]any` | No |  |
+| `capitalInfo` | `map[string]any` | No |  |
 | `car` | `map[string]any` | No |  |
 | `cca2` | `string` | No |  |
 | `cca3` | `string` | No |  |
 | `ccn3` | `string` | No |  |
 | `cioc` | `string` | No |  |
-| `coat_of_arm` | `map[string]any` | No |  |
-| `continent` | `[]any` | No |  |
-| `currency` | `map[string]any` | No |  |
-| `demonym` | `map[string]any` | No |  |
+| `coatOfArms` | `map[string]any` | No |  |
+| `continents` | `[]any` | No |  |
+| `currencies` | `map[string]any` | No |  |
+| `demonyms` | `map[string]any` | No |  |
 | `fifa` | `string` | No |  |
 | `flag` | `string` | No |  |
+| `flags` | `map[string]any` | No |  |
 | `gini` | `map[string]any` | No |  |
 | `idd` | `map[string]any` | No |  |
 | `independent` | `bool` | No |  |
 | `landlocked` | `bool` | No |  |
-| `language` | `map[string]any` | No |  |
+| `languages` | `map[string]any` | No |  |
 | `latlng` | `[]any` | No |  |
-| `map` | `map[string]any` | No |  |
+| `maps` | `map[string]any` | No |  |
 | `name` | `map[string]any` | No |  |
 | `population` | `int` | No |  |
-| `postal_code` | `map[string]any` | No |  |
+| `postalCode` | `map[string]any` | No |  |
 | `region` | `string` | No |  |
-| `start_of_week` | `string` | No |  |
+| `startOfWeek` | `string` | No |  |
 | `status` | `string` | No |  |
 | `subregion` | `string` | No |  |
-| `timezone` | `[]any` | No |  |
+| `timezones` | `[]any` | No |  |
 | `tld` | `[]any` | No |  |
-| `translation` | `map[string]any` | No |  |
-| `un_member` | `bool` | No |  |
+| `translations` | `map[string]any` | No |  |
+| `unMember` | `bool` | No |  |
 
 ### Operations
 
@@ -278,40 +280,41 @@ fmt.Println(capital.GetName()) // "capital"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `[]any` | No |  |
+| `altSpellings` | `[]any` | No |  |
 | `area` | `float64` | No |  |
-| `border` | `[]any` | No |  |
+| `borders` | `[]any` | No |  |
 | `capital` | `[]any` | No |  |
-| `capital_info` | `map[string]any` | No |  |
+| `capitalInfo` | `map[string]any` | No |  |
 | `car` | `map[string]any` | No |  |
 | `cca2` | `string` | No |  |
 | `cca3` | `string` | No |  |
 | `ccn3` | `string` | No |  |
 | `cioc` | `string` | No |  |
-| `coat_of_arm` | `map[string]any` | No |  |
-| `continent` | `[]any` | No |  |
-| `currency` | `map[string]any` | No |  |
-| `demonym` | `map[string]any` | No |  |
+| `coatOfArms` | `map[string]any` | No |  |
+| `continents` | `[]any` | No |  |
+| `currencies` | `map[string]any` | No |  |
+| `demonyms` | `map[string]any` | No |  |
 | `fifa` | `string` | No |  |
 | `flag` | `string` | No |  |
+| `flags` | `map[string]any` | No |  |
 | `gini` | `map[string]any` | No |  |
 | `idd` | `map[string]any` | No |  |
 | `independent` | `bool` | No |  |
 | `landlocked` | `bool` | No |  |
-| `language` | `map[string]any` | No |  |
+| `languages` | `map[string]any` | No |  |
 | `latlng` | `[]any` | No |  |
-| `map` | `map[string]any` | No |  |
+| `maps` | `map[string]any` | No |  |
 | `name` | `map[string]any` | No |  |
 | `population` | `int` | No |  |
-| `postal_code` | `map[string]any` | No |  |
+| `postalCode` | `map[string]any` | No |  |
 | `region` | `string` | No |  |
-| `start_of_week` | `string` | No |  |
+| `startOfWeek` | `string` | No |  |
 | `status` | `string` | No |  |
 | `subregion` | `string` | No |  |
-| `timezone` | `[]any` | No |  |
+| `timezones` | `[]any` | No |  |
 | `tld` | `[]any` | No |  |
-| `translation` | `map[string]any` | No |  |
-| `un_member` | `bool` | No |  |
+| `translations` | `map[string]any` | No |  |
+| `unMember` | `bool` | No |  |
 
 ### Operations
 
@@ -362,40 +365,41 @@ fmt.Println(name.GetName()) // "name"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `[]any` | No |  |
+| `altSpellings` | `[]any` | No |  |
 | `area` | `float64` | No |  |
-| `border` | `[]any` | No |  |
+| `borders` | `[]any` | No |  |
 | `capital` | `[]any` | No |  |
-| `capital_info` | `map[string]any` | No |  |
+| `capitalInfo` | `map[string]any` | No |  |
 | `car` | `map[string]any` | No |  |
 | `cca2` | `string` | No |  |
 | `cca3` | `string` | No |  |
 | `ccn3` | `string` | No |  |
 | `cioc` | `string` | No |  |
-| `coat_of_arm` | `map[string]any` | No |  |
-| `continent` | `[]any` | No |  |
-| `currency` | `map[string]any` | No |  |
-| `demonym` | `map[string]any` | No |  |
+| `coatOfArms` | `map[string]any` | No |  |
+| `continents` | `[]any` | No |  |
+| `currencies` | `map[string]any` | No |  |
+| `demonyms` | `map[string]any` | No |  |
 | `fifa` | `string` | No |  |
 | `flag` | `string` | No |  |
+| `flags` | `map[string]any` | No |  |
 | `gini` | `map[string]any` | No |  |
 | `idd` | `map[string]any` | No |  |
 | `independent` | `bool` | No |  |
 | `landlocked` | `bool` | No |  |
-| `language` | `map[string]any` | No |  |
+| `languages` | `map[string]any` | No |  |
 | `latlng` | `[]any` | No |  |
-| `map` | `map[string]any` | No |  |
+| `maps` | `map[string]any` | No |  |
 | `name` | `map[string]any` | No |  |
 | `population` | `int` | No |  |
-| `postal_code` | `map[string]any` | No |  |
+| `postalCode` | `map[string]any` | No |  |
 | `region` | `string` | No |  |
-| `start_of_week` | `string` | No |  |
+| `startOfWeek` | `string` | No |  |
 | `status` | `string` | No |  |
 | `subregion` | `string` | No |  |
-| `timezone` | `[]any` | No |  |
+| `timezones` | `[]any` | No |  |
 | `tld` | `[]any` | No |  |
-| `translation` | `map[string]any` | No |  |
-| `un_member` | `bool` | No |  |
+| `translations` | `map[string]any` | No |  |
+| `unMember` | `bool` | No |  |
 
 ### Operations
 

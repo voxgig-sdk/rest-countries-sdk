@@ -38,7 +38,7 @@ try {
     // list() returns an array of All records — iterate directly.
     $alls = $client->All()->list();
     foreach ($alls as $item) {
-        echo $item["alt_spelling"] . "\n";
+        echo $item["altSpellings"] . "\n";
     }
 } catch (\Throwable $err) {
     echo "Error: " . $err->getMessage();
@@ -53,7 +53,7 @@ Entity operations throw a `\Throwable` on failure, so wrap them in
 
 ```php
 try {
-    $alls = $client->All()->list();
+    $alpha = $client->Alpha()->load(["id" => "example_id"]);
 } catch (\Throwable $err) {
     echo "Error: " . $err->getMessage();
 }
@@ -120,14 +120,18 @@ print_r($fetchdef["headers"]);
 
 ### Use test mode
 
-Create a mock client for unit testing — no server required:
+Create a mock client for unit testing — no server required. Seed fixture
+data via the `entity` option so offline calls resolve without a live server:
 
 ```php
-$client = RestCountriesSDK::test();
+$client = RestCountriesSDK::test([
+    "entity" => ["alpha" => ["test01" => ["id" => "test01"]]],
+]);
 
-// Entity ops return the bare mock record (throws on error).
-$all = $client->All()->list();
-print_r($all);
+// Entity ops return the ENTITY (throws on error);
+// call data_get() for the mock record.
+$alpha = $client->Alpha()->load(["id" => "test01"]);
+print_r($alpha);
 ```
 
 ### Use a custom fetch function
@@ -228,7 +232,7 @@ All entities share the same interface.
 
 ### Result shape
 
-Entity operations return the bare result data (an `array` for single-entity
+Entity operations return the ENTITY (call data_get() for the record) (an `array` for single-entity
 ops, a `list` for `list`) and throw on error. Wrap calls in
 `try`/`catch` to handle failures.
 
@@ -250,40 +254,41 @@ On error, `ok` is `false` and `$err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `alt_spelling` |  |
+| `altSpellings` |  |
 | `area` |  |
-| `border` |  |
+| `borders` |  |
 | `capital` |  |
-| `capital_info` |  |
+| `capitalInfo` |  |
 | `car` |  |
 | `cca2` |  |
 | `cca3` |  |
 | `ccn3` |  |
 | `cioc` |  |
-| `coat_of_arm` |  |
-| `continent` |  |
-| `currency` |  |
-| `demonym` |  |
+| `coatOfArms` |  |
+| `continents` |  |
+| `currencies` |  |
+| `demonyms` |  |
 | `fifa` |  |
 | `flag` |  |
+| `flags` |  |
 | `gini` |  |
 | `idd` |  |
 | `independent` |  |
 | `landlocked` |  |
-| `language` |  |
+| `languages` |  |
 | `latlng` |  |
-| `map` |  |
+| `maps` |  |
 | `name` |  |
 | `population` |  |
-| `postal_code` |  |
+| `postalCode` |  |
 | `region` |  |
-| `start_of_week` |  |
+| `startOfWeek` |  |
 | `status` |  |
 | `subregion` |  |
-| `timezone` |  |
+| `timezones` |  |
 | `tld` |  |
-| `translation` |  |
-| `un_member` |  |
+| `translations` |  |
+| `unMember` |  |
 
 Operations: List.
 
@@ -293,40 +298,41 @@ API path: `/all`
 
 | Field | Description |
 | --- | --- |
-| `alt_spelling` |  |
+| `altSpellings` |  |
 | `area` |  |
-| `border` |  |
+| `borders` |  |
 | `capital` |  |
-| `capital_info` |  |
+| `capitalInfo` |  |
 | `car` |  |
 | `cca2` |  |
 | `cca3` |  |
 | `ccn3` |  |
 | `cioc` |  |
-| `coat_of_arm` |  |
-| `continent` |  |
-| `currency` |  |
-| `demonym` |  |
+| `coatOfArms` |  |
+| `continents` |  |
+| `currencies` |  |
+| `demonyms` |  |
 | `fifa` |  |
 | `flag` |  |
+| `flags` |  |
 | `gini` |  |
 | `idd` |  |
 | `independent` |  |
 | `landlocked` |  |
-| `language` |  |
+| `languages` |  |
 | `latlng` |  |
-| `map` |  |
+| `maps` |  |
 | `name` |  |
 | `population` |  |
-| `postal_code` |  |
+| `postalCode` |  |
 | `region` |  |
-| `start_of_week` |  |
+| `startOfWeek` |  |
 | `status` |  |
 | `subregion` |  |
-| `timezone` |  |
+| `timezones` |  |
 | `tld` |  |
-| `translation` |  |
-| `un_member` |  |
+| `translations` |  |
+| `unMember` |  |
 
 Operations: Load.
 
@@ -336,40 +342,41 @@ API path: `/alpha/{code}`
 
 | Field | Description |
 | --- | --- |
-| `alt_spelling` |  |
+| `altSpellings` |  |
 | `area` |  |
-| `border` |  |
+| `borders` |  |
 | `capital` |  |
-| `capital_info` |  |
+| `capitalInfo` |  |
 | `car` |  |
 | `cca2` |  |
 | `cca3` |  |
 | `ccn3` |  |
 | `cioc` |  |
-| `coat_of_arm` |  |
-| `continent` |  |
-| `currency` |  |
-| `demonym` |  |
+| `coatOfArms` |  |
+| `continents` |  |
+| `currencies` |  |
+| `demonyms` |  |
 | `fifa` |  |
 | `flag` |  |
+| `flags` |  |
 | `gini` |  |
 | `idd` |  |
 | `independent` |  |
 | `landlocked` |  |
-| `language` |  |
+| `languages` |  |
 | `latlng` |  |
-| `map` |  |
+| `maps` |  |
 | `name` |  |
 | `population` |  |
-| `postal_code` |  |
+| `postalCode` |  |
 | `region` |  |
-| `start_of_week` |  |
+| `startOfWeek` |  |
 | `status` |  |
 | `subregion` |  |
-| `timezone` |  |
+| `timezones` |  |
 | `tld` |  |
-| `translation` |  |
-| `un_member` |  |
+| `translations` |  |
+| `unMember` |  |
 
 Operations: Load.
 
@@ -379,40 +386,41 @@ API path: `/capital/{capital}`
 
 | Field | Description |
 | --- | --- |
-| `alt_spelling` |  |
+| `altSpellings` |  |
 | `area` |  |
-| `border` |  |
+| `borders` |  |
 | `capital` |  |
-| `capital_info` |  |
+| `capitalInfo` |  |
 | `car` |  |
 | `cca2` |  |
 | `cca3` |  |
 | `ccn3` |  |
 | `cioc` |  |
-| `coat_of_arm` |  |
-| `continent` |  |
-| `currency` |  |
-| `demonym` |  |
+| `coatOfArms` |  |
+| `continents` |  |
+| `currencies` |  |
+| `demonyms` |  |
 | `fifa` |  |
 | `flag` |  |
+| `flags` |  |
 | `gini` |  |
 | `idd` |  |
 | `independent` |  |
 | `landlocked` |  |
-| `language` |  |
+| `languages` |  |
 | `latlng` |  |
-| `map` |  |
+| `maps` |  |
 | `name` |  |
 | `population` |  |
-| `postal_code` |  |
+| `postalCode` |  |
 | `region` |  |
-| `start_of_week` |  |
+| `startOfWeek` |  |
 | `status` |  |
 | `subregion` |  |
-| `timezone` |  |
+| `timezones` |  |
 | `tld` |  |
-| `translation` |  |
-| `un_member` |  |
+| `translations` |  |
+| `unMember` |  |
 
 Operations: Load.
 
@@ -437,40 +445,41 @@ Create an instance: `$all = $client->All();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `array` |  |
+| `altSpellings` | `array` |  |
 | `area` | `float` |  |
-| `border` | `array` |  |
+| `borders` | `array` |  |
 | `capital` | `array` |  |
-| `capital_info` | `array` |  |
+| `capitalInfo` | `array` |  |
 | `car` | `array` |  |
 | `cca2` | `string` |  |
 | `cca3` | `string` |  |
 | `ccn3` | `string` |  |
 | `cioc` | `string` |  |
-| `coat_of_arm` | `array` |  |
-| `continent` | `array` |  |
-| `currency` | `array` |  |
-| `demonym` | `array` |  |
+| `coatOfArms` | `array` |  |
+| `continents` | `array` |  |
+| `currencies` | `array` |  |
+| `demonyms` | `array` |  |
 | `fifa` | `string` |  |
 | `flag` | `string` |  |
+| `flags` | `array` |  |
 | `gini` | `array` |  |
 | `idd` | `array` |  |
 | `independent` | `bool` |  |
 | `landlocked` | `bool` |  |
-| `language` | `array` |  |
+| `languages` | `array` |  |
 | `latlng` | `array` |  |
-| `map` | `array` |  |
+| `maps` | `array` |  |
 | `name` | `array` |  |
 | `population` | `int` |  |
-| `postal_code` | `array` |  |
+| `postalCode` | `array` |  |
 | `region` | `string` |  |
-| `start_of_week` | `string` |  |
+| `startOfWeek` | `string` |  |
 | `status` | `string` |  |
 | `subregion` | `string` |  |
-| `timezone` | `array` |  |
+| `timezones` | `array` |  |
 | `tld` | `array` |  |
-| `translation` | `array` |  |
-| `un_member` | `bool` |  |
+| `translations` | `array` |  |
+| `unMember` | `bool` |  |
 
 #### Example: List
 
@@ -494,45 +503,46 @@ Create an instance: `$alpha = $client->Alpha();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `array` |  |
+| `altSpellings` | `array` |  |
 | `area` | `float` |  |
-| `border` | `array` |  |
+| `borders` | `array` |  |
 | `capital` | `array` |  |
-| `capital_info` | `array` |  |
+| `capitalInfo` | `array` |  |
 | `car` | `array` |  |
 | `cca2` | `string` |  |
 | `cca3` | `string` |  |
 | `ccn3` | `string` |  |
 | `cioc` | `string` |  |
-| `coat_of_arm` | `array` |  |
-| `continent` | `array` |  |
-| `currency` | `array` |  |
-| `demonym` | `array` |  |
+| `coatOfArms` | `array` |  |
+| `continents` | `array` |  |
+| `currencies` | `array` |  |
+| `demonyms` | `array` |  |
 | `fifa` | `string` |  |
 | `flag` | `string` |  |
+| `flags` | `array` |  |
 | `gini` | `array` |  |
 | `idd` | `array` |  |
 | `independent` | `bool` |  |
 | `landlocked` | `bool` |  |
-| `language` | `array` |  |
+| `languages` | `array` |  |
 | `latlng` | `array` |  |
-| `map` | `array` |  |
+| `maps` | `array` |  |
 | `name` | `array` |  |
 | `population` | `int` |  |
-| `postal_code` | `array` |  |
+| `postalCode` | `array` |  |
 | `region` | `string` |  |
-| `start_of_week` | `string` |  |
+| `startOfWeek` | `string` |  |
 | `status` | `string` |  |
 | `subregion` | `string` |  |
-| `timezone` | `array` |  |
+| `timezones` | `array` |  |
 | `tld` | `array` |  |
-| `translation` | `array` |  |
-| `un_member` | `bool` |  |
+| `translations` | `array` |  |
+| `unMember` | `bool` |  |
 
 #### Example: Load
 
 ```php
-// load() returns the bare Alpha record (throws on error).
+// load() returns the ENTITY — call data_get() for the Alpha record (throws on error).
 $alpha = $client->Alpha()->load(["id" => "alpha_id"]);
 ```
 
@@ -551,45 +561,46 @@ Create an instance: `$capital = $client->Capital();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `array` |  |
+| `altSpellings` | `array` |  |
 | `area` | `float` |  |
-| `border` | `array` |  |
+| `borders` | `array` |  |
 | `capital` | `array` |  |
-| `capital_info` | `array` |  |
+| `capitalInfo` | `array` |  |
 | `car` | `array` |  |
 | `cca2` | `string` |  |
 | `cca3` | `string` |  |
 | `ccn3` | `string` |  |
 | `cioc` | `string` |  |
-| `coat_of_arm` | `array` |  |
-| `continent` | `array` |  |
-| `currency` | `array` |  |
-| `demonym` | `array` |  |
+| `coatOfArms` | `array` |  |
+| `continents` | `array` |  |
+| `currencies` | `array` |  |
+| `demonyms` | `array` |  |
 | `fifa` | `string` |  |
 | `flag` | `string` |  |
+| `flags` | `array` |  |
 | `gini` | `array` |  |
 | `idd` | `array` |  |
 | `independent` | `bool` |  |
 | `landlocked` | `bool` |  |
-| `language` | `array` |  |
+| `languages` | `array` |  |
 | `latlng` | `array` |  |
-| `map` | `array` |  |
+| `maps` | `array` |  |
 | `name` | `array` |  |
 | `population` | `int` |  |
-| `postal_code` | `array` |  |
+| `postalCode` | `array` |  |
 | `region` | `string` |  |
-| `start_of_week` | `string` |  |
+| `startOfWeek` | `string` |  |
 | `status` | `string` |  |
 | `subregion` | `string` |  |
-| `timezone` | `array` |  |
+| `timezones` | `array` |  |
 | `tld` | `array` |  |
-| `translation` | `array` |  |
-| `un_member` | `bool` |  |
+| `translations` | `array` |  |
+| `unMember` | `bool` |  |
 
 #### Example: Load
 
 ```php
-// load() returns the bare Capital record (throws on error).
+// load() returns the ENTITY — call data_get() for the Capital record (throws on error).
 $capital = $client->Capital()->load(["id" => "capital_id"]);
 ```
 
@@ -608,45 +619,46 @@ Create an instance: `$name = $client->Name();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `array` |  |
+| `altSpellings` | `array` |  |
 | `area` | `float` |  |
-| `border` | `array` |  |
+| `borders` | `array` |  |
 | `capital` | `array` |  |
-| `capital_info` | `array` |  |
+| `capitalInfo` | `array` |  |
 | `car` | `array` |  |
 | `cca2` | `string` |  |
 | `cca3` | `string` |  |
 | `ccn3` | `string` |  |
 | `cioc` | `string` |  |
-| `coat_of_arm` | `array` |  |
-| `continent` | `array` |  |
-| `currency` | `array` |  |
-| `demonym` | `array` |  |
+| `coatOfArms` | `array` |  |
+| `continents` | `array` |  |
+| `currencies` | `array` |  |
+| `demonyms` | `array` |  |
 | `fifa` | `string` |  |
 | `flag` | `string` |  |
+| `flags` | `array` |  |
 | `gini` | `array` |  |
 | `idd` | `array` |  |
 | `independent` | `bool` |  |
 | `landlocked` | `bool` |  |
-| `language` | `array` |  |
+| `languages` | `array` |  |
 | `latlng` | `array` |  |
-| `map` | `array` |  |
+| `maps` | `array` |  |
 | `name` | `array` |  |
 | `population` | `int` |  |
-| `postal_code` | `array` |  |
+| `postalCode` | `array` |  |
 | `region` | `string` |  |
-| `start_of_week` | `string` |  |
+| `startOfWeek` | `string` |  |
 | `status` | `string` |  |
 | `subregion` | `string` |  |
-| `timezone` | `array` |  |
+| `timezones` | `array` |  |
 | `tld` | `array` |  |
-| `translation` | `array` |  |
-| `un_member` | `bool` |  |
+| `translations` | `array` |  |
+| `unMember` | `bool` |  |
 
 #### Example: Load
 
 ```php
-// load() returns the bare Name record (throws on error).
+// load() returns the ENTITY — call data_get() for the Name record (throws on error).
 $name = $client->Name()->load(["id" => "name_id"]);
 ```
 
@@ -723,15 +735,15 @@ when needed.
 
 ### Entity state
 
-Entity instances are stateful. After a successful `list`, the entity
+Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```php
-$all = $client->All();
-$all->list();
+$alpha = $client->Alpha();
+$alpha->load(["id" => "example_id"]);
 
-// $all->data_get() now returns the all data from the last list
-// $all->match_get() returns the last match criteria
+// $alpha->data_get() now returns the alpha data from the last load
+// $alpha->match_get() returns the last match criteria
 ```
 
 Call `make()` to create a fresh instance with the same configuration

@@ -99,40 +99,41 @@ all = client.All()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `list` | No |  |
+| `altSpellings` | `list` | No |  |
 | `area` | `float` | No |  |
-| `border` | `list` | No |  |
+| `borders` | `list` | No |  |
 | `capital` | `list` | No |  |
-| `capital_info` | `dict` | No |  |
+| `capitalInfo` | `dict` | No |  |
 | `car` | `dict` | No |  |
 | `cca2` | `str` | No |  |
 | `cca3` | `str` | No |  |
 | `ccn3` | `str` | No |  |
 | `cioc` | `str` | No |  |
-| `coat_of_arm` | `dict` | No |  |
-| `continent` | `list` | No |  |
-| `currency` | `dict` | No |  |
-| `demonym` | `dict` | No |  |
+| `coatOfArms` | `dict` | No |  |
+| `continents` | `list` | No |  |
+| `currencies` | `dict` | No |  |
+| `demonyms` | `dict` | No |  |
 | `fifa` | `str` | No |  |
 | `flag` | `str` | No |  |
+| `flags` | `dict` | No |  |
 | `gini` | `dict` | No |  |
 | `idd` | `dict` | No |  |
 | `independent` | `bool` | No |  |
 | `landlocked` | `bool` | No |  |
-| `language` | `dict` | No |  |
+| `languages` | `dict` | No |  |
 | `latlng` | `list` | No |  |
-| `map` | `dict` | No |  |
+| `maps` | `dict` | No |  |
 | `name` | `dict` | No |  |
 | `population` | `int` | No |  |
-| `postal_code` | `dict` | No |  |
+| `postalCode` | `dict` | No |  |
 | `region` | `str` | No |  |
-| `start_of_week` | `str` | No |  |
+| `startOfWeek` | `str` | No |  |
 | `status` | `str` | No |  |
 | `subregion` | `str` | No |  |
-| `timezone` | `list` | No |  |
+| `timezones` | `list` | No |  |
 | `tld` | `list` | No |  |
-| `translation` | `dict` | No |  |
-| `un_member` | `bool` | No |  |
+| `translations` | `dict` | No |  |
+| `unMember` | `bool` | No |  |
 
 ### Operations
 
@@ -185,40 +186,41 @@ alpha = client.Alpha()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `list` | No |  |
+| `altSpellings` | `list` | No |  |
 | `area` | `float` | No |  |
-| `border` | `list` | No |  |
+| `borders` | `list` | No |  |
 | `capital` | `list` | No |  |
-| `capital_info` | `dict` | No |  |
+| `capitalInfo` | `dict` | No |  |
 | `car` | `dict` | No |  |
 | `cca2` | `str` | No |  |
 | `cca3` | `str` | No |  |
 | `ccn3` | `str` | No |  |
 | `cioc` | `str` | No |  |
-| `coat_of_arm` | `dict` | No |  |
-| `continent` | `list` | No |  |
-| `currency` | `dict` | No |  |
-| `demonym` | `dict` | No |  |
+| `coatOfArms` | `dict` | No |  |
+| `continents` | `list` | No |  |
+| `currencies` | `dict` | No |  |
+| `demonyms` | `dict` | No |  |
 | `fifa` | `str` | No |  |
 | `flag` | `str` | No |  |
+| `flags` | `dict` | No |  |
 | `gini` | `dict` | No |  |
 | `idd` | `dict` | No |  |
 | `independent` | `bool` | No |  |
 | `landlocked` | `bool` | No |  |
-| `language` | `dict` | No |  |
+| `languages` | `dict` | No |  |
 | `latlng` | `list` | No |  |
-| `map` | `dict` | No |  |
+| `maps` | `dict` | No |  |
 | `name` | `dict` | No |  |
 | `population` | `int` | No |  |
-| `postal_code` | `dict` | No |  |
+| `postalCode` | `dict` | No |  |
 | `region` | `str` | No |  |
-| `start_of_week` | `str` | No |  |
+| `startOfWeek` | `str` | No |  |
 | `status` | `str` | No |  |
 | `subregion` | `str` | No |  |
-| `timezone` | `list` | No |  |
+| `timezones` | `list` | No |  |
 | `tld` | `list` | No |  |
-| `translation` | `dict` | No |  |
-| `un_member` | `bool` | No |  |
+| `translations` | `dict` | No |  |
+| `unMember` | `bool` | No |  |
 
 ### Operations
 
@@ -269,40 +271,41 @@ capital = client.Capital()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `list` | No |  |
+| `altSpellings` | `list` | No |  |
 | `area` | `float` | No |  |
-| `border` | `list` | No |  |
+| `borders` | `list` | No |  |
 | `capital` | `list` | No |  |
-| `capital_info` | `dict` | No |  |
+| `capitalInfo` | `dict` | No |  |
 | `car` | `dict` | No |  |
 | `cca2` | `str` | No |  |
 | `cca3` | `str` | No |  |
 | `ccn3` | `str` | No |  |
 | `cioc` | `str` | No |  |
-| `coat_of_arm` | `dict` | No |  |
-| `continent` | `list` | No |  |
-| `currency` | `dict` | No |  |
-| `demonym` | `dict` | No |  |
+| `coatOfArms` | `dict` | No |  |
+| `continents` | `list` | No |  |
+| `currencies` | `dict` | No |  |
+| `demonyms` | `dict` | No |  |
 | `fifa` | `str` | No |  |
 | `flag` | `str` | No |  |
+| `flags` | `dict` | No |  |
 | `gini` | `dict` | No |  |
 | `idd` | `dict` | No |  |
 | `independent` | `bool` | No |  |
 | `landlocked` | `bool` | No |  |
-| `language` | `dict` | No |  |
+| `languages` | `dict` | No |  |
 | `latlng` | `list` | No |  |
-| `map` | `dict` | No |  |
+| `maps` | `dict` | No |  |
 | `name` | `dict` | No |  |
 | `population` | `int` | No |  |
-| `postal_code` | `dict` | No |  |
+| `postalCode` | `dict` | No |  |
 | `region` | `str` | No |  |
-| `start_of_week` | `str` | No |  |
+| `startOfWeek` | `str` | No |  |
 | `status` | `str` | No |  |
 | `subregion` | `str` | No |  |
-| `timezone` | `list` | No |  |
+| `timezones` | `list` | No |  |
 | `tld` | `list` | No |  |
-| `translation` | `dict` | No |  |
-| `un_member` | `bool` | No |  |
+| `translations` | `dict` | No |  |
+| `unMember` | `bool` | No |  |
 
 ### Operations
 
@@ -353,40 +356,41 @@ name = client.Name()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `list` | No |  |
+| `altSpellings` | `list` | No |  |
 | `area` | `float` | No |  |
-| `border` | `list` | No |  |
+| `borders` | `list` | No |  |
 | `capital` | `list` | No |  |
-| `capital_info` | `dict` | No |  |
+| `capitalInfo` | `dict` | No |  |
 | `car` | `dict` | No |  |
 | `cca2` | `str` | No |  |
 | `cca3` | `str` | No |  |
 | `ccn3` | `str` | No |  |
 | `cioc` | `str` | No |  |
-| `coat_of_arm` | `dict` | No |  |
-| `continent` | `list` | No |  |
-| `currency` | `dict` | No |  |
-| `demonym` | `dict` | No |  |
+| `coatOfArms` | `dict` | No |  |
+| `continents` | `list` | No |  |
+| `currencies` | `dict` | No |  |
+| `demonyms` | `dict` | No |  |
 | `fifa` | `str` | No |  |
 | `flag` | `str` | No |  |
+| `flags` | `dict` | No |  |
 | `gini` | `dict` | No |  |
 | `idd` | `dict` | No |  |
 | `independent` | `bool` | No |  |
 | `landlocked` | `bool` | No |  |
-| `language` | `dict` | No |  |
+| `languages` | `dict` | No |  |
 | `latlng` | `list` | No |  |
-| `map` | `dict` | No |  |
+| `maps` | `dict` | No |  |
 | `name` | `dict` | No |  |
 | `population` | `int` | No |  |
-| `postal_code` | `dict` | No |  |
+| `postalCode` | `dict` | No |  |
 | `region` | `str` | No |  |
-| `start_of_week` | `str` | No |  |
+| `startOfWeek` | `str` | No |  |
 | `status` | `str` | No |  |
 | `subregion` | `str` | No |  |
-| `timezone` | `list` | No |  |
+| `timezones` | `list` | No |  |
 | `tld` | `list` | No |  |
-| `translation` | `dict` | No |  |
-| `un_member` | `bool` | No |  |
+| `translations` | `dict` | No |  |
+| `unMember` | `bool` | No |  |
 
 ### Operations
 

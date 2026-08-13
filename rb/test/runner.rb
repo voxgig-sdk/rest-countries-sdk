@@ -23,8 +23,8 @@ module RestCountriesTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("RESTCOUNTRIES_TEST_LIVE")
-    override = getenv("RESTCOUNTRIES_TEST_OVERRIDE")
+    live = getenv("REST_COUNTRIES_TEST_LIVE")
+    override = getenv("REST_COUNTRIES_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module RestCountriesTestRunner
       end
     end
 
-    explain = getenv("RESTCOUNTRIES_TEST_EXPLAIN")
-    m["RESTCOUNTRIES_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("REST_COUNTRIES_TEST_EXPLAIN")
+    m["REST_COUNTRIES_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

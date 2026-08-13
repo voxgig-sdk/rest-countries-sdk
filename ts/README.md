@@ -35,7 +35,9 @@ const client = new RestCountriesSDK()
 
 ### 2. List all records
 
-`list()` resolves to an array of All objects — iterate it directly:
+`list()` resolves to an array of All ENTITIES — every operation
+resolves to entities, not raw records. Iterate them directly, and call
+`.data()` on one for the record it holds:
 
 ```ts
 const alls = await client.All().list()
@@ -52,10 +54,10 @@ Entity operations reject on failure, so wrap them in `try` / `catch`:
 
 ```ts
 try {
-  const alls = await client.All().list()
-  console.log(alls)
+  const alpha = await client.Alpha().load({ id: "example_id" })
+  console.log(alpha)
 } catch (err) {
-  console.error('list failed:', err)
+  console.error('load failed:', err)
 }
 ```
 
@@ -119,9 +121,10 @@ Create a mock client for unit testing — no server required:
 ```ts
 const client = RestCountriesSDK.test()
 
-const all = await client.All().list()
-// all is a bare entity populated with mock response data
-console.log(all)
+const alpha = await client.Alpha().load({ id: 'test01' })
+// alpha is the entity, populated with mock response data
+// — call alpha.data() for the record itself
+console.log(alpha)
 ```
 
 You can also use the instance method:
@@ -136,10 +139,10 @@ const testClient = client.tester()
 Entity instances remember their last match and data:
 
 ```ts
-const entity = client.All()
+const entity = client.Alpha()
 
 // First call runs the operation and stores its result
-await entity.list()
+await entity.load({ id: 'example' })
 
 // Subsequent calls reuse the stored state
 const data = entity.data()
@@ -289,40 +292,41 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `alt_spelling` |  |
+| `altSpellings` |  |
 | `area` |  |
-| `border` |  |
+| `borders` |  |
 | `capital` |  |
-| `capital_info` |  |
+| `capitalInfo` |  |
 | `car` |  |
 | `cca2` |  |
 | `cca3` |  |
 | `ccn3` |  |
 | `cioc` |  |
-| `coat_of_arm` |  |
-| `continent` |  |
-| `currency` |  |
-| `demonym` |  |
+| `coatOfArms` |  |
+| `continents` |  |
+| `currencies` |  |
+| `demonyms` |  |
 | `fifa` |  |
 | `flag` |  |
+| `flags` |  |
 | `gini` |  |
 | `idd` |  |
 | `independent` |  |
 | `landlocked` |  |
-| `language` |  |
+| `languages` |  |
 | `latlng` |  |
-| `map` |  |
+| `maps` |  |
 | `name` |  |
 | `population` |  |
-| `postal_code` |  |
+| `postalCode` |  |
 | `region` |  |
-| `start_of_week` |  |
+| `startOfWeek` |  |
 | `status` |  |
 | `subregion` |  |
-| `timezone` |  |
+| `timezones` |  |
 | `tld` |  |
-| `translation` |  |
-| `un_member` |  |
+| `translations` |  |
+| `unMember` |  |
 
 Operations: list.
 
@@ -332,40 +336,41 @@ API path: `/all`
 
 | Field | Description |
 | --- | --- |
-| `alt_spelling` |  |
+| `altSpellings` |  |
 | `area` |  |
-| `border` |  |
+| `borders` |  |
 | `capital` |  |
-| `capital_info` |  |
+| `capitalInfo` |  |
 | `car` |  |
 | `cca2` |  |
 | `cca3` |  |
 | `ccn3` |  |
 | `cioc` |  |
-| `coat_of_arm` |  |
-| `continent` |  |
-| `currency` |  |
-| `demonym` |  |
+| `coatOfArms` |  |
+| `continents` |  |
+| `currencies` |  |
+| `demonyms` |  |
 | `fifa` |  |
 | `flag` |  |
+| `flags` |  |
 | `gini` |  |
 | `idd` |  |
 | `independent` |  |
 | `landlocked` |  |
-| `language` |  |
+| `languages` |  |
 | `latlng` |  |
-| `map` |  |
+| `maps` |  |
 | `name` |  |
 | `population` |  |
-| `postal_code` |  |
+| `postalCode` |  |
 | `region` |  |
-| `start_of_week` |  |
+| `startOfWeek` |  |
 | `status` |  |
 | `subregion` |  |
-| `timezone` |  |
+| `timezones` |  |
 | `tld` |  |
-| `translation` |  |
-| `un_member` |  |
+| `translations` |  |
+| `unMember` |  |
 
 Operations: load.
 
@@ -375,40 +380,41 @@ API path: `/alpha/{code}`
 
 | Field | Description |
 | --- | --- |
-| `alt_spelling` |  |
+| `altSpellings` |  |
 | `area` |  |
-| `border` |  |
+| `borders` |  |
 | `capital` |  |
-| `capital_info` |  |
+| `capitalInfo` |  |
 | `car` |  |
 | `cca2` |  |
 | `cca3` |  |
 | `ccn3` |  |
 | `cioc` |  |
-| `coat_of_arm` |  |
-| `continent` |  |
-| `currency` |  |
-| `demonym` |  |
+| `coatOfArms` |  |
+| `continents` |  |
+| `currencies` |  |
+| `demonyms` |  |
 | `fifa` |  |
 | `flag` |  |
+| `flags` |  |
 | `gini` |  |
 | `idd` |  |
 | `independent` |  |
 | `landlocked` |  |
-| `language` |  |
+| `languages` |  |
 | `latlng` |  |
-| `map` |  |
+| `maps` |  |
 | `name` |  |
 | `population` |  |
-| `postal_code` |  |
+| `postalCode` |  |
 | `region` |  |
-| `start_of_week` |  |
+| `startOfWeek` |  |
 | `status` |  |
 | `subregion` |  |
-| `timezone` |  |
+| `timezones` |  |
 | `tld` |  |
-| `translation` |  |
-| `un_member` |  |
+| `translations` |  |
+| `unMember` |  |
 
 Operations: load.
 
@@ -418,40 +424,41 @@ API path: `/capital/{capital}`
 
 | Field | Description |
 | --- | --- |
-| `alt_spelling` |  |
+| `altSpellings` |  |
 | `area` |  |
-| `border` |  |
+| `borders` |  |
 | `capital` |  |
-| `capital_info` |  |
+| `capitalInfo` |  |
 | `car` |  |
 | `cca2` |  |
 | `cca3` |  |
 | `ccn3` |  |
 | `cioc` |  |
-| `coat_of_arm` |  |
-| `continent` |  |
-| `currency` |  |
-| `demonym` |  |
+| `coatOfArms` |  |
+| `continents` |  |
+| `currencies` |  |
+| `demonyms` |  |
 | `fifa` |  |
 | `flag` |  |
+| `flags` |  |
 | `gini` |  |
 | `idd` |  |
 | `independent` |  |
 | `landlocked` |  |
-| `language` |  |
+| `languages` |  |
 | `latlng` |  |
-| `map` |  |
+| `maps` |  |
 | `name` |  |
 | `population` |  |
-| `postal_code` |  |
+| `postalCode` |  |
 | `region` |  |
-| `start_of_week` |  |
+| `startOfWeek` |  |
 | `status` |  |
 | `subregion` |  |
-| `timezone` |  |
+| `timezones` |  |
 | `tld` |  |
-| `translation` |  |
-| `un_member` |  |
+| `translations` |  |
+| `unMember` |  |
 
 Operations: load.
 
@@ -476,40 +483,41 @@ Create an instance: `const all = client.All()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `any[]` |  |
+| `altSpellings` | `any[]` |  |
 | `area` | `number` |  |
-| `border` | `any[]` |  |
+| `borders` | `any[]` |  |
 | `capital` | `any[]` |  |
-| `capital_info` | `Record<string, any>` |  |
+| `capitalInfo` | `Record<string, any>` |  |
 | `car` | `Record<string, any>` |  |
 | `cca2` | `string` |  |
 | `cca3` | `string` |  |
 | `ccn3` | `string` |  |
 | `cioc` | `string` |  |
-| `coat_of_arm` | `Record<string, any>` |  |
-| `continent` | `any[]` |  |
-| `currency` | `Record<string, any>` |  |
-| `demonym` | `Record<string, any>` |  |
+| `coatOfArms` | `Record<string, any>` |  |
+| `continents` | `any[]` |  |
+| `currencies` | `Record<string, any>` |  |
+| `demonyms` | `Record<string, any>` |  |
 | `fifa` | `string` |  |
 | `flag` | `string` |  |
+| `flags` | `Record<string, any>` |  |
 | `gini` | `Record<string, any>` |  |
 | `idd` | `Record<string, any>` |  |
 | `independent` | `boolean` |  |
 | `landlocked` | `boolean` |  |
-| `language` | `Record<string, any>` |  |
+| `languages` | `Record<string, any>` |  |
 | `latlng` | `any[]` |  |
-| `map` | `Record<string, any>` |  |
+| `maps` | `Record<string, any>` |  |
 | `name` | `Record<string, any>` |  |
 | `population` | `number` |  |
-| `postal_code` | `Record<string, any>` |  |
+| `postalCode` | `Record<string, any>` |  |
 | `region` | `string` |  |
-| `start_of_week` | `string` |  |
+| `startOfWeek` | `string` |  |
 | `status` | `string` |  |
 | `subregion` | `string` |  |
-| `timezone` | `any[]` |  |
+| `timezones` | `any[]` |  |
 | `tld` | `any[]` |  |
-| `translation` | `Record<string, any>` |  |
-| `un_member` | `boolean` |  |
+| `translations` | `Record<string, any>` |  |
+| `unMember` | `boolean` |  |
 
 #### Example: List
 
@@ -532,40 +540,41 @@ Create an instance: `const alpha = client.Alpha()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `any[]` |  |
+| `altSpellings` | `any[]` |  |
 | `area` | `number` |  |
-| `border` | `any[]` |  |
+| `borders` | `any[]` |  |
 | `capital` | `any[]` |  |
-| `capital_info` | `Record<string, any>` |  |
+| `capitalInfo` | `Record<string, any>` |  |
 | `car` | `Record<string, any>` |  |
 | `cca2` | `string` |  |
 | `cca3` | `string` |  |
 | `ccn3` | `string` |  |
 | `cioc` | `string` |  |
-| `coat_of_arm` | `Record<string, any>` |  |
-| `continent` | `any[]` |  |
-| `currency` | `Record<string, any>` |  |
-| `demonym` | `Record<string, any>` |  |
+| `coatOfArms` | `Record<string, any>` |  |
+| `continents` | `any[]` |  |
+| `currencies` | `Record<string, any>` |  |
+| `demonyms` | `Record<string, any>` |  |
 | `fifa` | `string` |  |
 | `flag` | `string` |  |
+| `flags` | `Record<string, any>` |  |
 | `gini` | `Record<string, any>` |  |
 | `idd` | `Record<string, any>` |  |
 | `independent` | `boolean` |  |
 | `landlocked` | `boolean` |  |
-| `language` | `Record<string, any>` |  |
+| `languages` | `Record<string, any>` |  |
 | `latlng` | `any[]` |  |
-| `map` | `Record<string, any>` |  |
+| `maps` | `Record<string, any>` |  |
 | `name` | `Record<string, any>` |  |
 | `population` | `number` |  |
-| `postal_code` | `Record<string, any>` |  |
+| `postalCode` | `Record<string, any>` |  |
 | `region` | `string` |  |
-| `start_of_week` | `string` |  |
+| `startOfWeek` | `string` |  |
 | `status` | `string` |  |
 | `subregion` | `string` |  |
-| `timezone` | `any[]` |  |
+| `timezones` | `any[]` |  |
 | `tld` | `any[]` |  |
-| `translation` | `Record<string, any>` |  |
-| `un_member` | `boolean` |  |
+| `translations` | `Record<string, any>` |  |
+| `unMember` | `boolean` |  |
 
 #### Example: Load
 
@@ -588,40 +597,41 @@ Create an instance: `const capital = client.Capital()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `any[]` |  |
+| `altSpellings` | `any[]` |  |
 | `area` | `number` |  |
-| `border` | `any[]` |  |
+| `borders` | `any[]` |  |
 | `capital` | `any[]` |  |
-| `capital_info` | `Record<string, any>` |  |
+| `capitalInfo` | `Record<string, any>` |  |
 | `car` | `Record<string, any>` |  |
 | `cca2` | `string` |  |
 | `cca3` | `string` |  |
 | `ccn3` | `string` |  |
 | `cioc` | `string` |  |
-| `coat_of_arm` | `Record<string, any>` |  |
-| `continent` | `any[]` |  |
-| `currency` | `Record<string, any>` |  |
-| `demonym` | `Record<string, any>` |  |
+| `coatOfArms` | `Record<string, any>` |  |
+| `continents` | `any[]` |  |
+| `currencies` | `Record<string, any>` |  |
+| `demonyms` | `Record<string, any>` |  |
 | `fifa` | `string` |  |
 | `flag` | `string` |  |
+| `flags` | `Record<string, any>` |  |
 | `gini` | `Record<string, any>` |  |
 | `idd` | `Record<string, any>` |  |
 | `independent` | `boolean` |  |
 | `landlocked` | `boolean` |  |
-| `language` | `Record<string, any>` |  |
+| `languages` | `Record<string, any>` |  |
 | `latlng` | `any[]` |  |
-| `map` | `Record<string, any>` |  |
+| `maps` | `Record<string, any>` |  |
 | `name` | `Record<string, any>` |  |
 | `population` | `number` |  |
-| `postal_code` | `Record<string, any>` |  |
+| `postalCode` | `Record<string, any>` |  |
 | `region` | `string` |  |
-| `start_of_week` | `string` |  |
+| `startOfWeek` | `string` |  |
 | `status` | `string` |  |
 | `subregion` | `string` |  |
-| `timezone` | `any[]` |  |
+| `timezones` | `any[]` |  |
 | `tld` | `any[]` |  |
-| `translation` | `Record<string, any>` |  |
-| `un_member` | `boolean` |  |
+| `translations` | `Record<string, any>` |  |
+| `unMember` | `boolean` |  |
 
 #### Example: Load
 
@@ -644,40 +654,41 @@ Create an instance: `const name = client.Name()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `any[]` |  |
+| `altSpellings` | `any[]` |  |
 | `area` | `number` |  |
-| `border` | `any[]` |  |
+| `borders` | `any[]` |  |
 | `capital` | `any[]` |  |
-| `capital_info` | `Record<string, any>` |  |
+| `capitalInfo` | `Record<string, any>` |  |
 | `car` | `Record<string, any>` |  |
 | `cca2` | `string` |  |
 | `cca3` | `string` |  |
 | `ccn3` | `string` |  |
 | `cioc` | `string` |  |
-| `coat_of_arm` | `Record<string, any>` |  |
-| `continent` | `any[]` |  |
-| `currency` | `Record<string, any>` |  |
-| `demonym` | `Record<string, any>` |  |
+| `coatOfArms` | `Record<string, any>` |  |
+| `continents` | `any[]` |  |
+| `currencies` | `Record<string, any>` |  |
+| `demonyms` | `Record<string, any>` |  |
 | `fifa` | `string` |  |
 | `flag` | `string` |  |
+| `flags` | `Record<string, any>` |  |
 | `gini` | `Record<string, any>` |  |
 | `idd` | `Record<string, any>` |  |
 | `independent` | `boolean` |  |
 | `landlocked` | `boolean` |  |
-| `language` | `Record<string, any>` |  |
+| `languages` | `Record<string, any>` |  |
 | `latlng` | `any[]` |  |
-| `map` | `Record<string, any>` |  |
+| `maps` | `Record<string, any>` |  |
 | `name` | `Record<string, any>` |  |
 | `population` | `number` |  |
-| `postal_code` | `Record<string, any>` |  |
+| `postalCode` | `Record<string, any>` |  |
 | `region` | `string` |  |
-| `start_of_week` | `string` |  |
+| `startOfWeek` | `string` |  |
 | `status` | `string` |  |
 | `subregion` | `string` |  |
-| `timezone` | `any[]` |  |
+| `timezones` | `any[]` |  |
 | `tld` | `any[]` |  |
-| `translation` | `Record<string, any>` |  |
-| `un_member` | `boolean` |  |
+| `translations` | `Record<string, any>` |  |
+| `unMember` | `boolean` |  |
 
 #### Example: Load
 
@@ -750,16 +761,16 @@ import { RestCountriesSDK } from '@voxgig-sdk/rest-countries'
 
 ### Entity state
 
-Entity instances are stateful. After a successful `list`, the entity
+Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally. Subsequent
 calls on the same instance can rely on this state.
 
 ```ts
-const all = client.All()
-await all.list()
+const alpha = client.Alpha()
+await alpha.load({ id: "example_id" })
 
-// all.data() now returns the all data from the last `list`
-// all.match() returns the last match criteria
+// alpha.data() now returns the alpha data from the last `load`
+// alpha.match() returns { id: "example_id" }
 ```
 
 Call `make()` to create a fresh instance with the same configuration

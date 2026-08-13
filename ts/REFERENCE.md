@@ -152,40 +152,41 @@ const all = client.All()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `any[]` | No |  |
+| `altSpellings` | `any[]` | No |  |
 | `area` | `number` | No |  |
-| `border` | `any[]` | No |  |
+| `borders` | `any[]` | No |  |
 | `capital` | `any[]` | No |  |
-| `capital_info` | `Record<string, any>` | No |  |
+| `capitalInfo` | `Record<string, any>` | No |  |
 | `car` | `Record<string, any>` | No |  |
 | `cca2` | `string` | No |  |
 | `cca3` | `string` | No |  |
 | `ccn3` | `string` | No |  |
 | `cioc` | `string` | No |  |
-| `coat_of_arm` | `Record<string, any>` | No |  |
-| `continent` | `any[]` | No |  |
-| `currency` | `Record<string, any>` | No |  |
-| `demonym` | `Record<string, any>` | No |  |
+| `coatOfArms` | `Record<string, any>` | No |  |
+| `continents` | `any[]` | No |  |
+| `currencies` | `Record<string, any>` | No |  |
+| `demonyms` | `Record<string, any>` | No |  |
 | `fifa` | `string` | No |  |
 | `flag` | `string` | No |  |
+| `flags` | `Record<string, any>` | No |  |
 | `gini` | `Record<string, any>` | No |  |
 | `idd` | `Record<string, any>` | No |  |
 | `independent` | `boolean` | No |  |
 | `landlocked` | `boolean` | No |  |
-| `language` | `Record<string, any>` | No |  |
+| `languages` | `Record<string, any>` | No |  |
 | `latlng` | `any[]` | No |  |
-| `map` | `Record<string, any>` | No |  |
+| `maps` | `Record<string, any>` | No |  |
 | `name` | `Record<string, any>` | No |  |
 | `population` | `number` | No |  |
-| `postal_code` | `Record<string, any>` | No |  |
+| `postalCode` | `Record<string, any>` | No |  |
 | `region` | `string` | No |  |
-| `start_of_week` | `string` | No |  |
+| `startOfWeek` | `string` | No |  |
 | `status` | `string` | No |  |
 | `subregion` | `string` | No |  |
-| `timezone` | `any[]` | No |  |
+| `timezones` | `any[]` | No |  |
 | `tld` | `any[]` | No |  |
-| `translation` | `Record<string, any>` | No |  |
-| `un_member` | `boolean` | No |  |
+| `translations` | `Record<string, any>` | No |  |
+| `unMember` | `boolean` | No |  |
 
 ### Operations
 
@@ -235,40 +236,41 @@ const alpha = client.Alpha()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `any[]` | No |  |
+| `altSpellings` | `any[]` | No |  |
 | `area` | `number` | No |  |
-| `border` | `any[]` | No |  |
+| `borders` | `any[]` | No |  |
 | `capital` | `any[]` | No |  |
-| `capital_info` | `Record<string, any>` | No |  |
+| `capitalInfo` | `Record<string, any>` | No |  |
 | `car` | `Record<string, any>` | No |  |
 | `cca2` | `string` | No |  |
 | `cca3` | `string` | No |  |
 | `ccn3` | `string` | No |  |
 | `cioc` | `string` | No |  |
-| `coat_of_arm` | `Record<string, any>` | No |  |
-| `continent` | `any[]` | No |  |
-| `currency` | `Record<string, any>` | No |  |
-| `demonym` | `Record<string, any>` | No |  |
+| `coatOfArms` | `Record<string, any>` | No |  |
+| `continents` | `any[]` | No |  |
+| `currencies` | `Record<string, any>` | No |  |
+| `demonyms` | `Record<string, any>` | No |  |
 | `fifa` | `string` | No |  |
 | `flag` | `string` | No |  |
+| `flags` | `Record<string, any>` | No |  |
 | `gini` | `Record<string, any>` | No |  |
 | `idd` | `Record<string, any>` | No |  |
 | `independent` | `boolean` | No |  |
 | `landlocked` | `boolean` | No |  |
-| `language` | `Record<string, any>` | No |  |
+| `languages` | `Record<string, any>` | No |  |
 | `latlng` | `any[]` | No |  |
-| `map` | `Record<string, any>` | No |  |
+| `maps` | `Record<string, any>` | No |  |
 | `name` | `Record<string, any>` | No |  |
 | `population` | `number` | No |  |
-| `postal_code` | `Record<string, any>` | No |  |
+| `postalCode` | `Record<string, any>` | No |  |
 | `region` | `string` | No |  |
-| `start_of_week` | `string` | No |  |
+| `startOfWeek` | `string` | No |  |
 | `status` | `string` | No |  |
 | `subregion` | `string` | No |  |
-| `timezone` | `any[]` | No |  |
+| `timezones` | `any[]` | No |  |
 | `tld` | `any[]` | No |  |
-| `translation` | `Record<string, any>` | No |  |
-| `un_member` | `boolean` | No |  |
+| `translations` | `Record<string, any>` | No |  |
+| `unMember` | `boolean` | No |  |
 
 ### Operations
 
@@ -318,40 +320,41 @@ const capital = client.Capital()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `any[]` | No |  |
+| `altSpellings` | `any[]` | No |  |
 | `area` | `number` | No |  |
-| `border` | `any[]` | No |  |
+| `borders` | `any[]` | No |  |
 | `capital` | `any[]` | No |  |
-| `capital_info` | `Record<string, any>` | No |  |
+| `capitalInfo` | `Record<string, any>` | No |  |
 | `car` | `Record<string, any>` | No |  |
 | `cca2` | `string` | No |  |
 | `cca3` | `string` | No |  |
 | `ccn3` | `string` | No |  |
 | `cioc` | `string` | No |  |
-| `coat_of_arm` | `Record<string, any>` | No |  |
-| `continent` | `any[]` | No |  |
-| `currency` | `Record<string, any>` | No |  |
-| `demonym` | `Record<string, any>` | No |  |
+| `coatOfArms` | `Record<string, any>` | No |  |
+| `continents` | `any[]` | No |  |
+| `currencies` | `Record<string, any>` | No |  |
+| `demonyms` | `Record<string, any>` | No |  |
 | `fifa` | `string` | No |  |
 | `flag` | `string` | No |  |
+| `flags` | `Record<string, any>` | No |  |
 | `gini` | `Record<string, any>` | No |  |
 | `idd` | `Record<string, any>` | No |  |
 | `independent` | `boolean` | No |  |
 | `landlocked` | `boolean` | No |  |
-| `language` | `Record<string, any>` | No |  |
+| `languages` | `Record<string, any>` | No |  |
 | `latlng` | `any[]` | No |  |
-| `map` | `Record<string, any>` | No |  |
+| `maps` | `Record<string, any>` | No |  |
 | `name` | `Record<string, any>` | No |  |
 | `population` | `number` | No |  |
-| `postal_code` | `Record<string, any>` | No |  |
+| `postalCode` | `Record<string, any>` | No |  |
 | `region` | `string` | No |  |
-| `start_of_week` | `string` | No |  |
+| `startOfWeek` | `string` | No |  |
 | `status` | `string` | No |  |
 | `subregion` | `string` | No |  |
-| `timezone` | `any[]` | No |  |
+| `timezones` | `any[]` | No |  |
 | `tld` | `any[]` | No |  |
-| `translation` | `Record<string, any>` | No |  |
-| `un_member` | `boolean` | No |  |
+| `translations` | `Record<string, any>` | No |  |
+| `unMember` | `boolean` | No |  |
 
 ### Operations
 
@@ -401,40 +404,41 @@ const name = client.Name()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `any[]` | No |  |
+| `altSpellings` | `any[]` | No |  |
 | `area` | `number` | No |  |
-| `border` | `any[]` | No |  |
+| `borders` | `any[]` | No |  |
 | `capital` | `any[]` | No |  |
-| `capital_info` | `Record<string, any>` | No |  |
+| `capitalInfo` | `Record<string, any>` | No |  |
 | `car` | `Record<string, any>` | No |  |
 | `cca2` | `string` | No |  |
 | `cca3` | `string` | No |  |
 | `ccn3` | `string` | No |  |
 | `cioc` | `string` | No |  |
-| `coat_of_arm` | `Record<string, any>` | No |  |
-| `continent` | `any[]` | No |  |
-| `currency` | `Record<string, any>` | No |  |
-| `demonym` | `Record<string, any>` | No |  |
+| `coatOfArms` | `Record<string, any>` | No |  |
+| `continents` | `any[]` | No |  |
+| `currencies` | `Record<string, any>` | No |  |
+| `demonyms` | `Record<string, any>` | No |  |
 | `fifa` | `string` | No |  |
 | `flag` | `string` | No |  |
+| `flags` | `Record<string, any>` | No |  |
 | `gini` | `Record<string, any>` | No |  |
 | `idd` | `Record<string, any>` | No |  |
 | `independent` | `boolean` | No |  |
 | `landlocked` | `boolean` | No |  |
-| `language` | `Record<string, any>` | No |  |
+| `languages` | `Record<string, any>` | No |  |
 | `latlng` | `any[]` | No |  |
-| `map` | `Record<string, any>` | No |  |
+| `maps` | `Record<string, any>` | No |  |
 | `name` | `Record<string, any>` | No |  |
 | `population` | `number` | No |  |
-| `postal_code` | `Record<string, any>` | No |  |
+| `postalCode` | `Record<string, any>` | No |  |
 | `region` | `string` | No |  |
-| `start_of_week` | `string` | No |  |
+| `startOfWeek` | `string` | No |  |
 | `status` | `string` | No |  |
 | `subregion` | `string` | No |  |
-| `timezone` | `any[]` | No |  |
+| `timezones` | `any[]` | No |  |
 | `tld` | `any[]` | No |  |
-| `translation` | `Record<string, any>` | No |  |
-| `un_member` | `boolean` | No |  |
+| `translations` | `Record<string, any>` | No |  |
+| `unMember` | `boolean` | No |  |
 
 ### Operations
 

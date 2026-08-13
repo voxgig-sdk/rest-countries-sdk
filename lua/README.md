@@ -54,7 +54,7 @@ Entity operations return `(value, err)`. Check `err` before using
 the value:
 
 ```lua
-local alls, err = client:All():list()
+local alpha, err = client:Alpha():load({ id = "example_id" })
 if err then error(err) end
 ```
 
@@ -112,7 +112,7 @@ Create a mock client for unit testing — no server required:
 ```lua
 local client = sdk.test()
 
-local result, err = client:All():list()
+local result, err = client:Alpha():load({ id = "test01" })
 -- result is the returned data; err is set on failure
 ```
 
@@ -223,9 +223,9 @@ data **directly** — there is no wrapper:
 
 Check `err` first (it is non-`nil` on failure), then use `value`:
 
-    local all, err = client:All():load()
+    local alpha, err = client:Alpha():load({ id = "example_id" })
     if err then error(err) end
-    -- all is the loaded record
+    -- alpha is the loaded record
 
 Only `direct()` returns a response envelope — a `table` with `ok`,
 `status`, `headers`, and `data` keys.
@@ -236,40 +236,41 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `alt_spelling` |  |
+| `altSpellings` |  |
 | `area` |  |
-| `border` |  |
+| `borders` |  |
 | `capital` |  |
-| `capital_info` |  |
+| `capitalInfo` |  |
 | `car` |  |
 | `cca2` |  |
 | `cca3` |  |
 | `ccn3` |  |
 | `cioc` |  |
-| `coat_of_arm` |  |
-| `continent` |  |
-| `currency` |  |
-| `demonym` |  |
+| `coatOfArms` |  |
+| `continents` |  |
+| `currencies` |  |
+| `demonyms` |  |
 | `fifa` |  |
 | `flag` |  |
+| `flags` |  |
 | `gini` |  |
 | `idd` |  |
 | `independent` |  |
 | `landlocked` |  |
-| `language` |  |
+| `languages` |  |
 | `latlng` |  |
-| `map` |  |
+| `maps` |  |
 | `name` |  |
 | `population` |  |
-| `postal_code` |  |
+| `postalCode` |  |
 | `region` |  |
-| `start_of_week` |  |
+| `startOfWeek` |  |
 | `status` |  |
 | `subregion` |  |
-| `timezone` |  |
+| `timezones` |  |
 | `tld` |  |
-| `translation` |  |
-| `un_member` |  |
+| `translations` |  |
+| `unMember` |  |
 
 Operations: List.
 
@@ -279,40 +280,41 @@ API path: `/all`
 
 | Field | Description |
 | --- | --- |
-| `alt_spelling` |  |
+| `altSpellings` |  |
 | `area` |  |
-| `border` |  |
+| `borders` |  |
 | `capital` |  |
-| `capital_info` |  |
+| `capitalInfo` |  |
 | `car` |  |
 | `cca2` |  |
 | `cca3` |  |
 | `ccn3` |  |
 | `cioc` |  |
-| `coat_of_arm` |  |
-| `continent` |  |
-| `currency` |  |
-| `demonym` |  |
+| `coatOfArms` |  |
+| `continents` |  |
+| `currencies` |  |
+| `demonyms` |  |
 | `fifa` |  |
 | `flag` |  |
+| `flags` |  |
 | `gini` |  |
 | `idd` |  |
 | `independent` |  |
 | `landlocked` |  |
-| `language` |  |
+| `languages` |  |
 | `latlng` |  |
-| `map` |  |
+| `maps` |  |
 | `name` |  |
 | `population` |  |
-| `postal_code` |  |
+| `postalCode` |  |
 | `region` |  |
-| `start_of_week` |  |
+| `startOfWeek` |  |
 | `status` |  |
 | `subregion` |  |
-| `timezone` |  |
+| `timezones` |  |
 | `tld` |  |
-| `translation` |  |
-| `un_member` |  |
+| `translations` |  |
+| `unMember` |  |
 
 Operations: Load.
 
@@ -322,40 +324,41 @@ API path: `/alpha/{code}`
 
 | Field | Description |
 | --- | --- |
-| `alt_spelling` |  |
+| `altSpellings` |  |
 | `area` |  |
-| `border` |  |
+| `borders` |  |
 | `capital` |  |
-| `capital_info` |  |
+| `capitalInfo` |  |
 | `car` |  |
 | `cca2` |  |
 | `cca3` |  |
 | `ccn3` |  |
 | `cioc` |  |
-| `coat_of_arm` |  |
-| `continent` |  |
-| `currency` |  |
-| `demonym` |  |
+| `coatOfArms` |  |
+| `continents` |  |
+| `currencies` |  |
+| `demonyms` |  |
 | `fifa` |  |
 | `flag` |  |
+| `flags` |  |
 | `gini` |  |
 | `idd` |  |
 | `independent` |  |
 | `landlocked` |  |
-| `language` |  |
+| `languages` |  |
 | `latlng` |  |
-| `map` |  |
+| `maps` |  |
 | `name` |  |
 | `population` |  |
-| `postal_code` |  |
+| `postalCode` |  |
 | `region` |  |
-| `start_of_week` |  |
+| `startOfWeek` |  |
 | `status` |  |
 | `subregion` |  |
-| `timezone` |  |
+| `timezones` |  |
 | `tld` |  |
-| `translation` |  |
-| `un_member` |  |
+| `translations` |  |
+| `unMember` |  |
 
 Operations: Load.
 
@@ -365,40 +368,41 @@ API path: `/capital/{capital}`
 
 | Field | Description |
 | --- | --- |
-| `alt_spelling` |  |
+| `altSpellings` |  |
 | `area` |  |
-| `border` |  |
+| `borders` |  |
 | `capital` |  |
-| `capital_info` |  |
+| `capitalInfo` |  |
 | `car` |  |
 | `cca2` |  |
 | `cca3` |  |
 | `ccn3` |  |
 | `cioc` |  |
-| `coat_of_arm` |  |
-| `continent` |  |
-| `currency` |  |
-| `demonym` |  |
+| `coatOfArms` |  |
+| `continents` |  |
+| `currencies` |  |
+| `demonyms` |  |
 | `fifa` |  |
 | `flag` |  |
+| `flags` |  |
 | `gini` |  |
 | `idd` |  |
 | `independent` |  |
 | `landlocked` |  |
-| `language` |  |
+| `languages` |  |
 | `latlng` |  |
-| `map` |  |
+| `maps` |  |
 | `name` |  |
 | `population` |  |
-| `postal_code` |  |
+| `postalCode` |  |
 | `region` |  |
-| `start_of_week` |  |
+| `startOfWeek` |  |
 | `status` |  |
 | `subregion` |  |
-| `timezone` |  |
+| `timezones` |  |
 | `tld` |  |
-| `translation` |  |
-| `un_member` |  |
+| `translations` |  |
+| `unMember` |  |
 
 Operations: Load.
 
@@ -423,40 +427,41 @@ Create an instance: `local all = client:All(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `table` |  |
+| `altSpellings` | `table` |  |
 | `area` | `number` |  |
-| `border` | `table` |  |
+| `borders` | `table` |  |
 | `capital` | `table` |  |
-| `capital_info` | `table` |  |
+| `capitalInfo` | `table` |  |
 | `car` | `table` |  |
 | `cca2` | `string` |  |
 | `cca3` | `string` |  |
 | `ccn3` | `string` |  |
 | `cioc` | `string` |  |
-| `coat_of_arm` | `table` |  |
-| `continent` | `table` |  |
-| `currency` | `table` |  |
-| `demonym` | `table` |  |
+| `coatOfArms` | `table` |  |
+| `continents` | `table` |  |
+| `currencies` | `table` |  |
+| `demonyms` | `table` |  |
 | `fifa` | `string` |  |
 | `flag` | `string` |  |
+| `flags` | `table` |  |
 | `gini` | `table` |  |
 | `idd` | `table` |  |
 | `independent` | `boolean` |  |
 | `landlocked` | `boolean` |  |
-| `language` | `table` |  |
+| `languages` | `table` |  |
 | `latlng` | `table` |  |
-| `map` | `table` |  |
+| `maps` | `table` |  |
 | `name` | `table` |  |
 | `population` | `number` |  |
-| `postal_code` | `table` |  |
+| `postalCode` | `table` |  |
 | `region` | `string` |  |
-| `start_of_week` | `string` |  |
+| `startOfWeek` | `string` |  |
 | `status` | `string` |  |
 | `subregion` | `string` |  |
-| `timezone` | `table` |  |
+| `timezones` | `table` |  |
 | `tld` | `table` |  |
-| `translation` | `table` |  |
-| `un_member` | `boolean` |  |
+| `translations` | `table` |  |
+| `unMember` | `boolean` |  |
 
 #### Example: List
 
@@ -479,40 +484,41 @@ Create an instance: `local alpha = client:Alpha(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `table` |  |
+| `altSpellings` | `table` |  |
 | `area` | `number` |  |
-| `border` | `table` |  |
+| `borders` | `table` |  |
 | `capital` | `table` |  |
-| `capital_info` | `table` |  |
+| `capitalInfo` | `table` |  |
 | `car` | `table` |  |
 | `cca2` | `string` |  |
 | `cca3` | `string` |  |
 | `ccn3` | `string` |  |
 | `cioc` | `string` |  |
-| `coat_of_arm` | `table` |  |
-| `continent` | `table` |  |
-| `currency` | `table` |  |
-| `demonym` | `table` |  |
+| `coatOfArms` | `table` |  |
+| `continents` | `table` |  |
+| `currencies` | `table` |  |
+| `demonyms` | `table` |  |
 | `fifa` | `string` |  |
 | `flag` | `string` |  |
+| `flags` | `table` |  |
 | `gini` | `table` |  |
 | `idd` | `table` |  |
 | `independent` | `boolean` |  |
 | `landlocked` | `boolean` |  |
-| `language` | `table` |  |
+| `languages` | `table` |  |
 | `latlng` | `table` |  |
-| `map` | `table` |  |
+| `maps` | `table` |  |
 | `name` | `table` |  |
 | `population` | `number` |  |
-| `postal_code` | `table` |  |
+| `postalCode` | `table` |  |
 | `region` | `string` |  |
-| `start_of_week` | `string` |  |
+| `startOfWeek` | `string` |  |
 | `status` | `string` |  |
 | `subregion` | `string` |  |
-| `timezone` | `table` |  |
+| `timezones` | `table` |  |
 | `tld` | `table` |  |
-| `translation` | `table` |  |
-| `un_member` | `boolean` |  |
+| `translations` | `table` |  |
+| `unMember` | `boolean` |  |
 
 #### Example: Load
 
@@ -535,40 +541,41 @@ Create an instance: `local capital = client:Capital(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `table` |  |
+| `altSpellings` | `table` |  |
 | `area` | `number` |  |
-| `border` | `table` |  |
+| `borders` | `table` |  |
 | `capital` | `table` |  |
-| `capital_info` | `table` |  |
+| `capitalInfo` | `table` |  |
 | `car` | `table` |  |
 | `cca2` | `string` |  |
 | `cca3` | `string` |  |
 | `ccn3` | `string` |  |
 | `cioc` | `string` |  |
-| `coat_of_arm` | `table` |  |
-| `continent` | `table` |  |
-| `currency` | `table` |  |
-| `demonym` | `table` |  |
+| `coatOfArms` | `table` |  |
+| `continents` | `table` |  |
+| `currencies` | `table` |  |
+| `demonyms` | `table` |  |
 | `fifa` | `string` |  |
 | `flag` | `string` |  |
+| `flags` | `table` |  |
 | `gini` | `table` |  |
 | `idd` | `table` |  |
 | `independent` | `boolean` |  |
 | `landlocked` | `boolean` |  |
-| `language` | `table` |  |
+| `languages` | `table` |  |
 | `latlng` | `table` |  |
-| `map` | `table` |  |
+| `maps` | `table` |  |
 | `name` | `table` |  |
 | `population` | `number` |  |
-| `postal_code` | `table` |  |
+| `postalCode` | `table` |  |
 | `region` | `string` |  |
-| `start_of_week` | `string` |  |
+| `startOfWeek` | `string` |  |
 | `status` | `string` |  |
 | `subregion` | `string` |  |
-| `timezone` | `table` |  |
+| `timezones` | `table` |  |
 | `tld` | `table` |  |
-| `translation` | `table` |  |
-| `un_member` | `boolean` |  |
+| `translations` | `table` |  |
+| `unMember` | `boolean` |  |
 
 #### Example: Load
 
@@ -591,40 +598,41 @@ Create an instance: `local name = client:Name(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `table` |  |
+| `altSpellings` | `table` |  |
 | `area` | `number` |  |
-| `border` | `table` |  |
+| `borders` | `table` |  |
 | `capital` | `table` |  |
-| `capital_info` | `table` |  |
+| `capitalInfo` | `table` |  |
 | `car` | `table` |  |
 | `cca2` | `string` |  |
 | `cca3` | `string` |  |
 | `ccn3` | `string` |  |
 | `cioc` | `string` |  |
-| `coat_of_arm` | `table` |  |
-| `continent` | `table` |  |
-| `currency` | `table` |  |
-| `demonym` | `table` |  |
+| `coatOfArms` | `table` |  |
+| `continents` | `table` |  |
+| `currencies` | `table` |  |
+| `demonyms` | `table` |  |
 | `fifa` | `string` |  |
 | `flag` | `string` |  |
+| `flags` | `table` |  |
 | `gini` | `table` |  |
 | `idd` | `table` |  |
 | `independent` | `boolean` |  |
 | `landlocked` | `boolean` |  |
-| `language` | `table` |  |
+| `languages` | `table` |  |
 | `latlng` | `table` |  |
-| `map` | `table` |  |
+| `maps` | `table` |  |
 | `name` | `table` |  |
 | `population` | `number` |  |
-| `postal_code` | `table` |  |
+| `postalCode` | `table` |  |
 | `region` | `string` |  |
-| `start_of_week` | `string` |  |
+| `startOfWeek` | `string` |  |
 | `status` | `string` |  |
 | `subregion` | `string` |  |
-| `timezone` | `table` |  |
+| `timezones` | `table` |  |
 | `tld` | `table` |  |
-| `translation` | `table` |  |
-| `un_member` | `boolean` |  |
+| `translations` | `table` |  |
+| `unMember` | `boolean` |  |
 
 #### Example: Load
 
@@ -705,15 +713,15 @@ when needed.
 
 ### Entity state
 
-Entity instances are stateful. After a successful `list`, the entity
+Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```lua
-local all = client:All()
-all:list()
+local alpha = client:Alpha()
+alpha:load({ id = "example_id" })
 
--- all:data_get() now returns the all data from the last list
--- all:match_get() returns the last match criteria
+-- alpha:data_get() now returns the alpha data from the last load
+-- alpha:match_get() returns the last match criteria
 ```
 
 Call `make()` to create a fresh instance with the same configuration

@@ -5,6 +5,10 @@
       "desc": ""
     },
     "kit": {
+      "author": {
+        "name": "",
+        "url": ""
+      },
       "config": {
         "docs_order": [
           "ts",
@@ -18,6 +22,7 @@
           "content-type": "application/json"
         }
       },
+      "contributor": {},
       "entity": {
         "all": {
           "active": true,
@@ -27,7 +32,7 @@
           "fields": [
             {
               "active": true,
-              "name": "alt_spelling",
+              "name": "altSpellings",
               "req": false,
               "type": "`$ARRAY`"
             },
@@ -39,7 +44,7 @@
             },
             {
               "active": true,
-              "name": "border",
+              "name": "borders",
               "req": false,
               "type": "`$ARRAY`"
             },
@@ -51,7 +56,7 @@
             },
             {
               "active": true,
-              "name": "capital_info",
+              "name": "capitalInfo",
               "req": false,
               "type": "`$OBJECT`"
             },
@@ -87,25 +92,25 @@
             },
             {
               "active": true,
-              "name": "coat_of_arm",
+              "name": "coatOfArms",
               "req": false,
               "type": "`$OBJECT`"
             },
             {
               "active": true,
-              "name": "continent",
+              "name": "continents",
               "req": false,
               "type": "`$ARRAY`"
             },
             {
               "active": true,
-              "name": "currency",
+              "name": "currencies",
               "req": false,
               "type": "`$OBJECT`"
             },
             {
               "active": true,
-              "name": "demonym",
+              "name": "demonyms",
               "req": false,
               "type": "`$OBJECT`"
             },
@@ -120,6 +125,12 @@
               "name": "flag",
               "req": false,
               "type": "`$STRING`"
+            },
+            {
+              "active": true,
+              "name": "flags",
+              "req": false,
+              "type": "`$OBJECT`"
             },
             {
               "active": true,
@@ -147,7 +158,7 @@
             },
             {
               "active": true,
-              "name": "language",
+              "name": "languages",
               "req": false,
               "type": "`$OBJECT`"
             },
@@ -159,7 +170,7 @@
             },
             {
               "active": true,
-              "name": "map",
+              "name": "maps",
               "req": false,
               "type": "`$OBJECT`"
             },
@@ -177,7 +188,7 @@
             },
             {
               "active": true,
-              "name": "postal_code",
+              "name": "postalCode",
               "req": false,
               "type": "`$OBJECT`"
             },
@@ -189,7 +200,7 @@
             },
             {
               "active": true,
-              "name": "start_of_week",
+              "name": "startOfWeek",
               "req": false,
               "type": "`$STRING`"
             },
@@ -207,7 +218,7 @@
             },
             {
               "active": true,
-              "name": "timezone",
+              "name": "timezones",
               "req": false,
               "type": "`$ARRAY`"
             },
@@ -219,13 +230,13 @@
             },
             {
               "active": true,
-              "name": "translation",
+              "name": "translations",
               "req": false,
               "type": "`$OBJECT`"
             },
             {
               "active": true,
-              "name": "un_member",
+              "name": "unMember",
               "req": false,
               "type": "`$BOOLEAN`"
             }
@@ -251,6 +262,7 @@
                       }
                     ]
                   },
+                  "kind": "http",
                   "method": "GET",
                   "orig": "/all",
                   "parts": [
@@ -281,7 +293,7 @@
           "fields": [
             {
               "active": true,
-              "name": "alt_spelling",
+              "name": "altSpellings",
               "req": false,
               "type": "`$ARRAY`"
             },
@@ -293,7 +305,7 @@
             },
             {
               "active": true,
-              "name": "border",
+              "name": "borders",
               "req": false,
               "type": "`$ARRAY`"
             },
@@ -305,7 +317,7 @@
             },
             {
               "active": true,
-              "name": "capital_info",
+              "name": "capitalInfo",
               "req": false,
               "type": "`$OBJECT`"
             },
@@ -341,25 +353,25 @@
             },
             {
               "active": true,
-              "name": "coat_of_arm",
+              "name": "coatOfArms",
               "req": false,
               "type": "`$OBJECT`"
             },
             {
               "active": true,
-              "name": "continent",
+              "name": "continents",
               "req": false,
               "type": "`$ARRAY`"
             },
             {
               "active": true,
-              "name": "currency",
+              "name": "currencies",
               "req": false,
               "type": "`$OBJECT`"
             },
             {
               "active": true,
-              "name": "demonym",
+              "name": "demonyms",
               "req": false,
               "type": "`$OBJECT`"
             },
@@ -374,6 +386,12 @@
               "name": "flag",
               "req": false,
               "type": "`$STRING`"
+            },
+            {
+              "active": true,
+              "name": "flags",
+              "req": false,
+              "type": "`$OBJECT`"
             },
             {
               "active": true,
@@ -401,7 +419,7 @@
             },
             {
               "active": true,
-              "name": "language",
+              "name": "languages",
               "req": false,
               "type": "`$OBJECT`"
             },
@@ -413,7 +431,7 @@
             },
             {
               "active": true,
-              "name": "map",
+              "name": "maps",
               "req": false,
               "type": "`$OBJECT`"
             },
@@ -431,7 +449,7 @@
             },
             {
               "active": true,
-              "name": "postal_code",
+              "name": "postalCode",
               "req": false,
               "type": "`$OBJECT`"
             },
@@ -443,7 +461,7 @@
             },
             {
               "active": true,
-              "name": "start_of_week",
+              "name": "startOfWeek",
               "req": false,
               "type": "`$STRING`"
             },
@@ -461,7 +479,7 @@
             },
             {
               "active": true,
-              "name": "timezone",
+              "name": "timezones",
               "req": false,
               "type": "`$ARRAY`"
             },
@@ -473,13 +491,13 @@
             },
             {
               "active": true,
-              "name": "translation",
+              "name": "translations",
               "req": false,
               "type": "`$OBJECT`"
             },
             {
               "active": true,
-              "name": "un_member",
+              "name": "unMember",
               "req": false,
               "type": "`$BOOLEAN`"
             }
@@ -515,6 +533,7 @@
                       }
                     ]
                   },
+                  "kind": "http",
                   "method": "GET",
                   "orig": "/alpha/{code}",
                   "parts": [
@@ -552,7 +571,7 @@
           "fields": [
             {
               "active": true,
-              "name": "alt_spelling",
+              "name": "altSpellings",
               "req": false,
               "type": "`$ARRAY`"
             },
@@ -564,7 +583,7 @@
             },
             {
               "active": true,
-              "name": "border",
+              "name": "borders",
               "req": false,
               "type": "`$ARRAY`"
             },
@@ -576,7 +595,7 @@
             },
             {
               "active": true,
-              "name": "capital_info",
+              "name": "capitalInfo",
               "req": false,
               "type": "`$OBJECT`"
             },
@@ -612,25 +631,25 @@
             },
             {
               "active": true,
-              "name": "coat_of_arm",
+              "name": "coatOfArms",
               "req": false,
               "type": "`$OBJECT`"
             },
             {
               "active": true,
-              "name": "continent",
+              "name": "continents",
               "req": false,
               "type": "`$ARRAY`"
             },
             {
               "active": true,
-              "name": "currency",
+              "name": "currencies",
               "req": false,
               "type": "`$OBJECT`"
             },
             {
               "active": true,
-              "name": "demonym",
+              "name": "demonyms",
               "req": false,
               "type": "`$OBJECT`"
             },
@@ -645,6 +664,12 @@
               "name": "flag",
               "req": false,
               "type": "`$STRING`"
+            },
+            {
+              "active": true,
+              "name": "flags",
+              "req": false,
+              "type": "`$OBJECT`"
             },
             {
               "active": true,
@@ -672,7 +697,7 @@
             },
             {
               "active": true,
-              "name": "language",
+              "name": "languages",
               "req": false,
               "type": "`$OBJECT`"
             },
@@ -684,7 +709,7 @@
             },
             {
               "active": true,
-              "name": "map",
+              "name": "maps",
               "req": false,
               "type": "`$OBJECT`"
             },
@@ -702,7 +727,7 @@
             },
             {
               "active": true,
-              "name": "postal_code",
+              "name": "postalCode",
               "req": false,
               "type": "`$OBJECT`"
             },
@@ -714,7 +739,7 @@
             },
             {
               "active": true,
-              "name": "start_of_week",
+              "name": "startOfWeek",
               "req": false,
               "type": "`$STRING`"
             },
@@ -732,7 +757,7 @@
             },
             {
               "active": true,
-              "name": "timezone",
+              "name": "timezones",
               "req": false,
               "type": "`$ARRAY`"
             },
@@ -744,13 +769,13 @@
             },
             {
               "active": true,
-              "name": "translation",
+              "name": "translations",
               "req": false,
               "type": "`$OBJECT`"
             },
             {
               "active": true,
-              "name": "un_member",
+              "name": "unMember",
               "req": false,
               "type": "`$BOOLEAN`"
             }
@@ -786,6 +811,7 @@
                       }
                     ]
                   },
+                  "kind": "http",
                   "method": "GET",
                   "orig": "/capital/{capital}",
                   "parts": [
@@ -823,7 +849,7 @@
           "fields": [
             {
               "active": true,
-              "name": "alt_spelling",
+              "name": "altSpellings",
               "req": false,
               "type": "`$ARRAY`"
             },
@@ -835,7 +861,7 @@
             },
             {
               "active": true,
-              "name": "border",
+              "name": "borders",
               "req": false,
               "type": "`$ARRAY`"
             },
@@ -847,7 +873,7 @@
             },
             {
               "active": true,
-              "name": "capital_info",
+              "name": "capitalInfo",
               "req": false,
               "type": "`$OBJECT`"
             },
@@ -883,25 +909,25 @@
             },
             {
               "active": true,
-              "name": "coat_of_arm",
+              "name": "coatOfArms",
               "req": false,
               "type": "`$OBJECT`"
             },
             {
               "active": true,
-              "name": "continent",
+              "name": "continents",
               "req": false,
               "type": "`$ARRAY`"
             },
             {
               "active": true,
-              "name": "currency",
+              "name": "currencies",
               "req": false,
               "type": "`$OBJECT`"
             },
             {
               "active": true,
-              "name": "demonym",
+              "name": "demonyms",
               "req": false,
               "type": "`$OBJECT`"
             },
@@ -916,6 +942,12 @@
               "name": "flag",
               "req": false,
               "type": "`$STRING`"
+            },
+            {
+              "active": true,
+              "name": "flags",
+              "req": false,
+              "type": "`$OBJECT`"
             },
             {
               "active": true,
@@ -943,7 +975,7 @@
             },
             {
               "active": true,
-              "name": "language",
+              "name": "languages",
               "req": false,
               "type": "`$OBJECT`"
             },
@@ -955,7 +987,7 @@
             },
             {
               "active": true,
-              "name": "map",
+              "name": "maps",
               "req": false,
               "type": "`$OBJECT`"
             },
@@ -973,7 +1005,7 @@
             },
             {
               "active": true,
-              "name": "postal_code",
+              "name": "postalCode",
               "req": false,
               "type": "`$OBJECT`"
             },
@@ -985,7 +1017,7 @@
             },
             {
               "active": true,
-              "name": "start_of_week",
+              "name": "startOfWeek",
               "req": false,
               "type": "`$STRING`"
             },
@@ -1003,7 +1035,7 @@
             },
             {
               "active": true,
-              "name": "timezone",
+              "name": "timezones",
               "req": false,
               "type": "`$ARRAY`"
             },
@@ -1015,13 +1047,13 @@
             },
             {
               "active": true,
-              "name": "translation",
+              "name": "translations",
               "req": false,
               "type": "`$OBJECT`"
             },
             {
               "active": true,
-              "name": "un_member",
+              "name": "unMember",
               "req": false,
               "type": "`$BOOLEAN`"
             }
@@ -1066,6 +1098,7 @@
                       }
                     ]
                   },
+                  "kind": "http",
                   "method": "GET",
                   "orig": "/name/{name}",
                   "parts": [
@@ -1337,18 +1370,41 @@
         "website": "https://restcountries.com"
       },
       "option": {},
+      "repo": {
+        "host": "github.com",
+        "path": ""
+      },
       "target": {
         "go": {
           "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
           "comment": {
             "line": "//"
           },
           "deps": {},
           "ext": "go",
+          "feature": {
+            "fullset": [
+              "test/feature_test.go"
+            ],
+            "trim": true
+          },
           "module": {
-            "name": "rest-countries"
+            "goversion": "",
+            "name": "rest-countries",
+            "package": "",
+            "path": ""
           },
           "name": "go",
+          "output": {
+            "adopt": false,
+            "path": "",
+            "repo": "",
+            "sdkrel": ""
+          },
           "publish": {
             "registry": {
               "active": false,
@@ -1370,22 +1426,40 @@
                 "recipe": "github"
               },
               "via": "port"
-            }
+            },
+            "version": "0.0.1"
           },
           "srcfeature": false,
           "title": "Golang"
         },
         "go-cli": {
           "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
           "comment": {
             "line": "//"
           },
           "deps": {},
           "ext": "go",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
           "module": {
-            "name": "rest-countries"
+            "goversion": "",
+            "name": "rest-countries",
+            "package": "",
+            "path": ""
           },
           "name": "go-cli",
+          "output": {
+            "adopt": false,
+            "path": "",
+            "repo": "",
+            "sdkrel": ""
+          },
           "phase": {
             "agentguide": {
               "active": false
@@ -1424,21 +1498,39 @@
                 "recipe": "github"
               },
               "via": "root"
-            }
+            },
+            "version": "0.0.1"
           },
           "title": "Go CLI"
         },
         "go-mcp": {
           "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
           "comment": {
             "line": "//"
           },
           "deps": {},
           "ext": "go",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
           "module": {
-            "name": "rest-countries"
+            "goversion": "",
+            "name": "rest-countries",
+            "package": "",
+            "path": ""
           },
           "name": "go-mcp",
+          "output": {
+            "adopt": false,
+            "path": "",
+            "repo": "",
+            "sdkrel": ""
+          },
           "phase": {
             "agentguide": {
               "active": false
@@ -1477,12 +1569,17 @@
                 "recipe": "github"
               },
               "via": "root"
-            }
+            },
+            "version": "0.0.1"
           },
           "title": "Go MCP server"
         },
         "lua": {
           "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
           "comment": {
             "line": "--"
           },
@@ -1494,10 +1591,23 @@
             }
           },
           "ext": "lua",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
           "module": {
-            "name": "rest-countries"
+            "goversion": "",
+            "name": "rest-countries",
+            "package": "",
+            "path": ""
           },
           "name": "lua",
+          "output": {
+            "adopt": false,
+            "path": "",
+            "repo": "",
+            "sdkrel": ""
+          },
           "publish": {
             "registry": {
               "active": false,
@@ -1519,22 +1629,40 @@
                 "recipe": "github"
               },
               "via": "port"
-            }
+            },
+            "version": "0.0.1"
           },
           "srcfeature": false,
           "title": "Lua"
         },
         "php": {
           "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
           "comment": {
             "line": "//"
           },
           "deps": {},
           "ext": "php",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
           "module": {
-            "name": "rest-countries"
+            "goversion": "",
+            "name": "rest-countries",
+            "package": "",
+            "path": ""
           },
           "name": "php",
+          "output": {
+            "adopt": false,
+            "path": "",
+            "repo": "",
+            "sdkrel": ""
+          },
           "publish": {
             "registry": {
               "active": false,
@@ -1556,13 +1684,18 @@
                 "recipe": "github"
               },
               "via": "port"
-            }
+            },
+            "version": "0.0.1"
           },
           "srcfeature": false,
           "title": "PHP"
         },
         "py": {
           "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
           "comment": {
             "line": "#"
           },
@@ -1574,10 +1707,23 @@
             }
           },
           "ext": "py",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
           "module": {
-            "name": "rest-countries"
+            "goversion": "",
+            "name": "rest-countries",
+            "package": "",
+            "path": ""
           },
           "name": "py",
+          "output": {
+            "adopt": false,
+            "path": "",
+            "repo": "",
+            "sdkrel": ""
+          },
           "publish": {
             "registry": {
               "active": false,
@@ -1599,13 +1745,18 @@
                 "recipe": "github"
               },
               "via": "port"
-            }
+            },
+            "version": "0.0.1"
           },
           "srcfeature": false,
           "title": "Python"
         },
         "rb": {
           "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
           "comment": {
             "line": "#"
           },
@@ -1622,10 +1773,23 @@
             }
           },
           "ext": "rb",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
           "module": {
-            "name": "rest-countries"
+            "goversion": "",
+            "name": "rest-countries",
+            "package": "",
+            "path": ""
           },
           "name": "rb",
+          "output": {
+            "adopt": false,
+            "path": "",
+            "repo": "",
+            "sdkrel": ""
+          },
           "publish": {
             "registry": {
               "active": false,
@@ -1647,13 +1811,18 @@
                 "recipe": "github"
               },
               "via": "port"
-            }
+            },
+            "version": "0.0.1"
           },
           "srcfeature": false,
           "title": "Ruby"
         },
         "ts": {
           "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
           "base": "node_modules/@voxgig/sdkgen/project/.sdk",
           "comment": {
             "line": "//"
@@ -1676,10 +1845,23 @@
             }
           },
           "ext": "ts",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
           "module": {
-            "name": "rest-countries"
+            "goversion": "",
+            "name": "rest-countries",
+            "package": "",
+            "path": ""
           },
           "name": "ts",
+          "output": {
+            "adopt": false,
+            "path": "",
+            "repo": "",
+            "sdkrel": ""
+          },
           "publish": {
             "registry": {
               "active": false,
@@ -1701,9 +1883,17 @@
                 "recipe": "github"
               },
               "via": "port"
-            }
+            },
+            "version": "0.0.1"
           },
           "title": "TypeScript"
+        }
+      },
+      "test": {
+        "live": {
+          "app": false,
+          "base": "",
+          "strict": false
         }
       }
     }

@@ -26,8 +26,8 @@ import {
 describe('AllEntity', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when RESTCOUNTRIES_TEST_LIVE=TRUE.
-  afterEach(liveDelay('RESTCOUNTRIES_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when REST_COUNTRIES_TEST_LIVE=TRUE.
+  afterEach(liveDelay('REST_COUNTRIES_TEST_LIVE'))
 
   test('instance', async () => {
     const testsdk = RestCountriesSDK.test()
@@ -63,7 +63,7 @@ describe('AllEntity', async () => {
     const all_ref01_ent = client.All()
     const all_ref01_match: any = {}
 
-    const all_ref01_list = await all_ref01_ent.list(all_ref01_match)
+    const all_ref01_list = (await all_ref01_ent.list(all_ref01_match)).map((e: any) => e.data())
 
 
   })

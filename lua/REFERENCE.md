@@ -102,40 +102,41 @@ local all = client:All(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `table` | No |  |
+| `altSpellings` | `table` | No |  |
 | `area` | `number` | No |  |
-| `border` | `table` | No |  |
+| `borders` | `table` | No |  |
 | `capital` | `table` | No |  |
-| `capital_info` | `table` | No |  |
+| `capitalInfo` | `table` | No |  |
 | `car` | `table` | No |  |
 | `cca2` | `string` | No |  |
 | `cca3` | `string` | No |  |
 | `ccn3` | `string` | No |  |
 | `cioc` | `string` | No |  |
-| `coat_of_arm` | `table` | No |  |
-| `continent` | `table` | No |  |
-| `currency` | `table` | No |  |
-| `demonym` | `table` | No |  |
+| `coatOfArms` | `table` | No |  |
+| `continents` | `table` | No |  |
+| `currencies` | `table` | No |  |
+| `demonyms` | `table` | No |  |
 | `fifa` | `string` | No |  |
 | `flag` | `string` | No |  |
+| `flags` | `table` | No |  |
 | `gini` | `table` | No |  |
 | `idd` | `table` | No |  |
 | `independent` | `boolean` | No |  |
 | `landlocked` | `boolean` | No |  |
-| `language` | `table` | No |  |
+| `languages` | `table` | No |  |
 | `latlng` | `table` | No |  |
-| `map` | `table` | No |  |
+| `maps` | `table` | No |  |
 | `name` | `table` | No |  |
 | `population` | `number` | No |  |
-| `postal_code` | `table` | No |  |
+| `postalCode` | `table` | No |  |
 | `region` | `string` | No |  |
-| `start_of_week` | `string` | No |  |
+| `startOfWeek` | `string` | No |  |
 | `status` | `string` | No |  |
 | `subregion` | `string` | No |  |
-| `timezone` | `table` | No |  |
+| `timezones` | `table` | No |  |
 | `tld` | `table` | No |  |
-| `translation` | `table` | No |  |
-| `un_member` | `boolean` | No |  |
+| `translations` | `table` | No |  |
+| `unMember` | `boolean` | No |  |
 
 ### Operations
 
@@ -187,40 +188,41 @@ local alpha = client:Alpha(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `table` | No |  |
+| `altSpellings` | `table` | No |  |
 | `area` | `number` | No |  |
-| `border` | `table` | No |  |
+| `borders` | `table` | No |  |
 | `capital` | `table` | No |  |
-| `capital_info` | `table` | No |  |
+| `capitalInfo` | `table` | No |  |
 | `car` | `table` | No |  |
 | `cca2` | `string` | No |  |
 | `cca3` | `string` | No |  |
 | `ccn3` | `string` | No |  |
 | `cioc` | `string` | No |  |
-| `coat_of_arm` | `table` | No |  |
-| `continent` | `table` | No |  |
-| `currency` | `table` | No |  |
-| `demonym` | `table` | No |  |
+| `coatOfArms` | `table` | No |  |
+| `continents` | `table` | No |  |
+| `currencies` | `table` | No |  |
+| `demonyms` | `table` | No |  |
 | `fifa` | `string` | No |  |
 | `flag` | `string` | No |  |
+| `flags` | `table` | No |  |
 | `gini` | `table` | No |  |
 | `idd` | `table` | No |  |
 | `independent` | `boolean` | No |  |
 | `landlocked` | `boolean` | No |  |
-| `language` | `table` | No |  |
+| `languages` | `table` | No |  |
 | `latlng` | `table` | No |  |
-| `map` | `table` | No |  |
+| `maps` | `table` | No |  |
 | `name` | `table` | No |  |
 | `population` | `number` | No |  |
-| `postal_code` | `table` | No |  |
+| `postalCode` | `table` | No |  |
 | `region` | `string` | No |  |
-| `start_of_week` | `string` | No |  |
+| `startOfWeek` | `string` | No |  |
 | `status` | `string` | No |  |
 | `subregion` | `string` | No |  |
-| `timezone` | `table` | No |  |
+| `timezones` | `table` | No |  |
 | `tld` | `table` | No |  |
-| `translation` | `table` | No |  |
-| `un_member` | `boolean` | No |  |
+| `translations` | `table` | No |  |
+| `unMember` | `boolean` | No |  |
 
 ### Operations
 
@@ -272,40 +274,41 @@ local capital = client:Capital(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `table` | No |  |
+| `altSpellings` | `table` | No |  |
 | `area` | `number` | No |  |
-| `border` | `table` | No |  |
+| `borders` | `table` | No |  |
 | `capital` | `table` | No |  |
-| `capital_info` | `table` | No |  |
+| `capitalInfo` | `table` | No |  |
 | `car` | `table` | No |  |
 | `cca2` | `string` | No |  |
 | `cca3` | `string` | No |  |
 | `ccn3` | `string` | No |  |
 | `cioc` | `string` | No |  |
-| `coat_of_arm` | `table` | No |  |
-| `continent` | `table` | No |  |
-| `currency` | `table` | No |  |
-| `demonym` | `table` | No |  |
+| `coatOfArms` | `table` | No |  |
+| `continents` | `table` | No |  |
+| `currencies` | `table` | No |  |
+| `demonyms` | `table` | No |  |
 | `fifa` | `string` | No |  |
 | `flag` | `string` | No |  |
+| `flags` | `table` | No |  |
 | `gini` | `table` | No |  |
 | `idd` | `table` | No |  |
 | `independent` | `boolean` | No |  |
 | `landlocked` | `boolean` | No |  |
-| `language` | `table` | No |  |
+| `languages` | `table` | No |  |
 | `latlng` | `table` | No |  |
-| `map` | `table` | No |  |
+| `maps` | `table` | No |  |
 | `name` | `table` | No |  |
 | `population` | `number` | No |  |
-| `postal_code` | `table` | No |  |
+| `postalCode` | `table` | No |  |
 | `region` | `string` | No |  |
-| `start_of_week` | `string` | No |  |
+| `startOfWeek` | `string` | No |  |
 | `status` | `string` | No |  |
 | `subregion` | `string` | No |  |
-| `timezone` | `table` | No |  |
+| `timezones` | `table` | No |  |
 | `tld` | `table` | No |  |
-| `translation` | `table` | No |  |
-| `un_member` | `boolean` | No |  |
+| `translations` | `table` | No |  |
+| `unMember` | `boolean` | No |  |
 
 ### Operations
 
@@ -357,40 +360,41 @@ local name = client:Name(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `alt_spelling` | `table` | No |  |
+| `altSpellings` | `table` | No |  |
 | `area` | `number` | No |  |
-| `border` | `table` | No |  |
+| `borders` | `table` | No |  |
 | `capital` | `table` | No |  |
-| `capital_info` | `table` | No |  |
+| `capitalInfo` | `table` | No |  |
 | `car` | `table` | No |  |
 | `cca2` | `string` | No |  |
 | `cca3` | `string` | No |  |
 | `ccn3` | `string` | No |  |
 | `cioc` | `string` | No |  |
-| `coat_of_arm` | `table` | No |  |
-| `continent` | `table` | No |  |
-| `currency` | `table` | No |  |
-| `demonym` | `table` | No |  |
+| `coatOfArms` | `table` | No |  |
+| `continents` | `table` | No |  |
+| `currencies` | `table` | No |  |
+| `demonyms` | `table` | No |  |
 | `fifa` | `string` | No |  |
 | `flag` | `string` | No |  |
+| `flags` | `table` | No |  |
 | `gini` | `table` | No |  |
 | `idd` | `table` | No |  |
 | `independent` | `boolean` | No |  |
 | `landlocked` | `boolean` | No |  |
-| `language` | `table` | No |  |
+| `languages` | `table` | No |  |
 | `latlng` | `table` | No |  |
-| `map` | `table` | No |  |
+| `maps` | `table` | No |  |
 | `name` | `table` | No |  |
 | `population` | `number` | No |  |
-| `postal_code` | `table` | No |  |
+| `postalCode` | `table` | No |  |
 | `region` | `string` | No |  |
-| `start_of_week` | `string` | No |  |
+| `startOfWeek` | `string` | No |  |
 | `status` | `string` | No |  |
 | `subregion` | `string` | No |  |
-| `timezone` | `table` | No |  |
+| `timezones` | `table` | No |  |
 | `tld` | `table` | No |  |
-| `translation` | `table` | No |  |
-| `un_member` | `boolean` | No |  |
+| `translations` | `table` | No |  |
+| `unMember` | `boolean` | No |  |
 
 ### Operations
 

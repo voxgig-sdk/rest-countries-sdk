@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import RestCountriesControl
-from core.error import RestCountriesError
-from core.result import RestCountriesResult
-from core.spec import RestCountriesSpec
+from restcountries_sdk.config import make_config
+from restcountries_sdk.features import _make_feature
+from restcountries_sdk.core.control import RestCountriesControl
+from restcountries_sdk.core.error import RestCountriesError
+from restcountries_sdk.core.result import RestCountriesResult
+from restcountries_sdk.core.spec import RestCountriesSpec
 
 
 # True when this SDK was generated with the named feature.

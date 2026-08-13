@@ -68,11 +68,11 @@ function capital_direct_setup(mockres)
   local calls = {}
 
   local env = runner.env_override({
-    ["RESTCOUNTRIES_TEST_CAPITAL_ENTID"] = {},
-    ["RESTCOUNTRIES_TEST_LIVE"] = "FALSE",
+    ["REST_COUNTRIES_TEST_CAPITAL_ENTID"] = {},
+    ["REST_COUNTRIES_TEST_LIVE"] = "FALSE",
   })
 
-  local live = env["RESTCOUNTRIES_TEST_LIVE"] == "TRUE"
+  local live = env["REST_COUNTRIES_TEST_LIVE"] == "TRUE"
 
   if live then
     local merged_opts = {

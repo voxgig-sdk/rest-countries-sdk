@@ -24,6 +24,7 @@ require_relative 'prepare_method'
 require_relative 'prepare_params'
 require_relative 'prepare_path'
 require_relative 'prepare_query'
+require_relative 'graphql'
 require_relative 'result_basic'
 require_relative 'result_body'
 require_relative 'result_headers'
@@ -55,6 +56,8 @@ RestCountriesUtility.registrar = ->(u) {
   u.prepare_params = RestCountriesUtilities::PrepareParams
   u.prepare_path = RestCountriesUtilities::PreparePath
   u.prepare_query = RestCountriesUtilities::PrepareQuery
+  u.graphql_body = RestCountriesUtilities::GraphqlBody
+  u.graphql_errors = RestCountriesUtilities::GraphqlErrors
   u.result_basic = RestCountriesUtilities::ResultBasic
   u.result_body = RestCountriesUtilities::ResultBody
   u.result_headers = RestCountriesUtilities::ResultHeaders

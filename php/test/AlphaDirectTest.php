@@ -73,11 +73,11 @@ function alpha_direct_setup($mockres)
     $calls = new \ArrayObject();
 
     $env = Runner::env_override([
-        "RESTCOUNTRIES_TEST_ALPHA_ENTID" => [],
-        "RESTCOUNTRIES_TEST_LIVE" => "FALSE",
+        "REST_COUNTRIES_TEST_ALPHA_ENTID" => [],
+        "REST_COUNTRIES_TEST_LIVE" => "FALSE",
     ]);
 
-    $live = $env["RESTCOUNTRIES_TEST_LIVE"] === "TRUE";
+    $live = $env["REST_COUNTRIES_TEST_LIVE"] === "TRUE";
 
     if ($live) {
         $merged_opts = [

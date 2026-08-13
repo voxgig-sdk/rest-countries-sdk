@@ -57,10 +57,10 @@ Entity operations raise on failure, so wrap them in `try` / `except`:
 
 ```python
 try:
-    alls = client.All().list()
-    print(alls)
+    alpha = client.Alpha().load({"id": "example_id"})
+    print(alpha)
 except Exception as err:
-    print(f"list failed: {err}")
+    print(f"load failed: {err}")
 ```
 
 `direct()` does **not** raise — it returns the result envelope. Branch
@@ -124,9 +124,10 @@ Create a mock client for unit testing — no server required:
 ```python
 client = RestCountriesSDK.test()
 
-# Entity ops return the bare record and raise on error.
-all = client.All().list()
-# all contains the mock response record
+# Entity ops return the ENTITY and raises on error;
+# call data_get() for the record.
+alpha = client.Alpha().load({"id": "test01"})
+# alpha contains the mock response record
 ```
 
 ### Use a custom fetch function
@@ -224,7 +225,7 @@ All entities share the same interface.
 
 ### Result shape
 
-Entity operations return the bare result data (a `dict` for single-entity
+Entity operations return the ENTITY (call data_get() for the record) (a `dict` for single-entity
 ops, a `list` for `list`) and raise on error. Wrap calls in
 `try`/`except` to handle failures.
 
@@ -246,40 +247,41 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `alt_spelling` |  |
+| `altSpellings` |  |
 | `area` |  |
-| `border` |  |
+| `borders` |  |
 | `capital` |  |
-| `capital_info` |  |
+| `capitalInfo` |  |
 | `car` |  |
 | `cca2` |  |
 | `cca3` |  |
 | `ccn3` |  |
 | `cioc` |  |
-| `coat_of_arm` |  |
-| `continent` |  |
-| `currency` |  |
-| `demonym` |  |
+| `coatOfArms` |  |
+| `continents` |  |
+| `currencies` |  |
+| `demonyms` |  |
 | `fifa` |  |
 | `flag` |  |
+| `flags` |  |
 | `gini` |  |
 | `idd` |  |
 | `independent` |  |
 | `landlocked` |  |
-| `language` |  |
+| `languages` |  |
 | `latlng` |  |
-| `map` |  |
+| `maps` |  |
 | `name` |  |
 | `population` |  |
-| `postal_code` |  |
+| `postalCode` |  |
 | `region` |  |
-| `start_of_week` |  |
+| `startOfWeek` |  |
 | `status` |  |
 | `subregion` |  |
-| `timezone` |  |
+| `timezones` |  |
 | `tld` |  |
-| `translation` |  |
-| `un_member` |  |
+| `translations` |  |
+| `unMember` |  |
 
 Operations: List.
 
@@ -289,40 +291,41 @@ API path: `/all`
 
 | Field | Description |
 | --- | --- |
-| `alt_spelling` |  |
+| `altSpellings` |  |
 | `area` |  |
-| `border` |  |
+| `borders` |  |
 | `capital` |  |
-| `capital_info` |  |
+| `capitalInfo` |  |
 | `car` |  |
 | `cca2` |  |
 | `cca3` |  |
 | `ccn3` |  |
 | `cioc` |  |
-| `coat_of_arm` |  |
-| `continent` |  |
-| `currency` |  |
-| `demonym` |  |
+| `coatOfArms` |  |
+| `continents` |  |
+| `currencies` |  |
+| `demonyms` |  |
 | `fifa` |  |
 | `flag` |  |
+| `flags` |  |
 | `gini` |  |
 | `idd` |  |
 | `independent` |  |
 | `landlocked` |  |
-| `language` |  |
+| `languages` |  |
 | `latlng` |  |
-| `map` |  |
+| `maps` |  |
 | `name` |  |
 | `population` |  |
-| `postal_code` |  |
+| `postalCode` |  |
 | `region` |  |
-| `start_of_week` |  |
+| `startOfWeek` |  |
 | `status` |  |
 | `subregion` |  |
-| `timezone` |  |
+| `timezones` |  |
 | `tld` |  |
-| `translation` |  |
-| `un_member` |  |
+| `translations` |  |
+| `unMember` |  |
 
 Operations: Load.
 
@@ -332,40 +335,41 @@ API path: `/alpha/{code}`
 
 | Field | Description |
 | --- | --- |
-| `alt_spelling` |  |
+| `altSpellings` |  |
 | `area` |  |
-| `border` |  |
+| `borders` |  |
 | `capital` |  |
-| `capital_info` |  |
+| `capitalInfo` |  |
 | `car` |  |
 | `cca2` |  |
 | `cca3` |  |
 | `ccn3` |  |
 | `cioc` |  |
-| `coat_of_arm` |  |
-| `continent` |  |
-| `currency` |  |
-| `demonym` |  |
+| `coatOfArms` |  |
+| `continents` |  |
+| `currencies` |  |
+| `demonyms` |  |
 | `fifa` |  |
 | `flag` |  |
+| `flags` |  |
 | `gini` |  |
 | `idd` |  |
 | `independent` |  |
 | `landlocked` |  |
-| `language` |  |
+| `languages` |  |
 | `latlng` |  |
-| `map` |  |
+| `maps` |  |
 | `name` |  |
 | `population` |  |
-| `postal_code` |  |
+| `postalCode` |  |
 | `region` |  |
-| `start_of_week` |  |
+| `startOfWeek` |  |
 | `status` |  |
 | `subregion` |  |
-| `timezone` |  |
+| `timezones` |  |
 | `tld` |  |
-| `translation` |  |
-| `un_member` |  |
+| `translations` |  |
+| `unMember` |  |
 
 Operations: Load.
 
@@ -375,40 +379,41 @@ API path: `/capital/{capital}`
 
 | Field | Description |
 | --- | --- |
-| `alt_spelling` |  |
+| `altSpellings` |  |
 | `area` |  |
-| `border` |  |
+| `borders` |  |
 | `capital` |  |
-| `capital_info` |  |
+| `capitalInfo` |  |
 | `car` |  |
 | `cca2` |  |
 | `cca3` |  |
 | `ccn3` |  |
 | `cioc` |  |
-| `coat_of_arm` |  |
-| `continent` |  |
-| `currency` |  |
-| `demonym` |  |
+| `coatOfArms` |  |
+| `continents` |  |
+| `currencies` |  |
+| `demonyms` |  |
 | `fifa` |  |
 | `flag` |  |
+| `flags` |  |
 | `gini` |  |
 | `idd` |  |
 | `independent` |  |
 | `landlocked` |  |
-| `language` |  |
+| `languages` |  |
 | `latlng` |  |
-| `map` |  |
+| `maps` |  |
 | `name` |  |
 | `population` |  |
-| `postal_code` |  |
+| `postalCode` |  |
 | `region` |  |
-| `start_of_week` |  |
+| `startOfWeek` |  |
 | `status` |  |
 | `subregion` |  |
-| `timezone` |  |
+| `timezones` |  |
 | `tld` |  |
-| `translation` |  |
-| `un_member` |  |
+| `translations` |  |
+| `unMember` |  |
 
 Operations: Load.
 
@@ -433,40 +438,41 @@ Create an instance: `all = client.All()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `list` |  |
+| `altSpellings` | `list` |  |
 | `area` | `float` |  |
-| `border` | `list` |  |
+| `borders` | `list` |  |
 | `capital` | `list` |  |
-| `capital_info` | `dict` |  |
+| `capitalInfo` | `dict` |  |
 | `car` | `dict` |  |
 | `cca2` | `str` |  |
 | `cca3` | `str` |  |
 | `ccn3` | `str` |  |
 | `cioc` | `str` |  |
-| `coat_of_arm` | `dict` |  |
-| `continent` | `list` |  |
-| `currency` | `dict` |  |
-| `demonym` | `dict` |  |
+| `coatOfArms` | `dict` |  |
+| `continents` | `list` |  |
+| `currencies` | `dict` |  |
+| `demonyms` | `dict` |  |
 | `fifa` | `str` |  |
 | `flag` | `str` |  |
+| `flags` | `dict` |  |
 | `gini` | `dict` |  |
 | `idd` | `dict` |  |
 | `independent` | `bool` |  |
 | `landlocked` | `bool` |  |
-| `language` | `dict` |  |
+| `languages` | `dict` |  |
 | `latlng` | `list` |  |
-| `map` | `dict` |  |
+| `maps` | `dict` |  |
 | `name` | `dict` |  |
 | `population` | `int` |  |
-| `postal_code` | `dict` |  |
+| `postalCode` | `dict` |  |
 | `region` | `str` |  |
-| `start_of_week` | `str` |  |
+| `startOfWeek` | `str` |  |
 | `status` | `str` |  |
 | `subregion` | `str` |  |
-| `timezone` | `list` |  |
+| `timezones` | `list` |  |
 | `tld` | `list` |  |
-| `translation` | `dict` |  |
-| `un_member` | `bool` |  |
+| `translations` | `dict` |  |
+| `unMember` | `bool` |  |
 
 #### Example: List
 
@@ -489,40 +495,41 @@ Create an instance: `alpha = client.Alpha()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `list` |  |
+| `altSpellings` | `list` |  |
 | `area` | `float` |  |
-| `border` | `list` |  |
+| `borders` | `list` |  |
 | `capital` | `list` |  |
-| `capital_info` | `dict` |  |
+| `capitalInfo` | `dict` |  |
 | `car` | `dict` |  |
 | `cca2` | `str` |  |
 | `cca3` | `str` |  |
 | `ccn3` | `str` |  |
 | `cioc` | `str` |  |
-| `coat_of_arm` | `dict` |  |
-| `continent` | `list` |  |
-| `currency` | `dict` |  |
-| `demonym` | `dict` |  |
+| `coatOfArms` | `dict` |  |
+| `continents` | `list` |  |
+| `currencies` | `dict` |  |
+| `demonyms` | `dict` |  |
 | `fifa` | `str` |  |
 | `flag` | `str` |  |
+| `flags` | `dict` |  |
 | `gini` | `dict` |  |
 | `idd` | `dict` |  |
 | `independent` | `bool` |  |
 | `landlocked` | `bool` |  |
-| `language` | `dict` |  |
+| `languages` | `dict` |  |
 | `latlng` | `list` |  |
-| `map` | `dict` |  |
+| `maps` | `dict` |  |
 | `name` | `dict` |  |
 | `population` | `int` |  |
-| `postal_code` | `dict` |  |
+| `postalCode` | `dict` |  |
 | `region` | `str` |  |
-| `start_of_week` | `str` |  |
+| `startOfWeek` | `str` |  |
 | `status` | `str` |  |
 | `subregion` | `str` |  |
-| `timezone` | `list` |  |
+| `timezones` | `list` |  |
 | `tld` | `list` |  |
-| `translation` | `dict` |  |
-| `un_member` | `bool` |  |
+| `translations` | `dict` |  |
+| `unMember` | `bool` |  |
 
 #### Example: Load
 
@@ -545,40 +552,41 @@ Create an instance: `capital = client.Capital()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `list` |  |
+| `altSpellings` | `list` |  |
 | `area` | `float` |  |
-| `border` | `list` |  |
+| `borders` | `list` |  |
 | `capital` | `list` |  |
-| `capital_info` | `dict` |  |
+| `capitalInfo` | `dict` |  |
 | `car` | `dict` |  |
 | `cca2` | `str` |  |
 | `cca3` | `str` |  |
 | `ccn3` | `str` |  |
 | `cioc` | `str` |  |
-| `coat_of_arm` | `dict` |  |
-| `continent` | `list` |  |
-| `currency` | `dict` |  |
-| `demonym` | `dict` |  |
+| `coatOfArms` | `dict` |  |
+| `continents` | `list` |  |
+| `currencies` | `dict` |  |
+| `demonyms` | `dict` |  |
 | `fifa` | `str` |  |
 | `flag` | `str` |  |
+| `flags` | `dict` |  |
 | `gini` | `dict` |  |
 | `idd` | `dict` |  |
 | `independent` | `bool` |  |
 | `landlocked` | `bool` |  |
-| `language` | `dict` |  |
+| `languages` | `dict` |  |
 | `latlng` | `list` |  |
-| `map` | `dict` |  |
+| `maps` | `dict` |  |
 | `name` | `dict` |  |
 | `population` | `int` |  |
-| `postal_code` | `dict` |  |
+| `postalCode` | `dict` |  |
 | `region` | `str` |  |
-| `start_of_week` | `str` |  |
+| `startOfWeek` | `str` |  |
 | `status` | `str` |  |
 | `subregion` | `str` |  |
-| `timezone` | `list` |  |
+| `timezones` | `list` |  |
 | `tld` | `list` |  |
-| `translation` | `dict` |  |
-| `un_member` | `bool` |  |
+| `translations` | `dict` |  |
+| `unMember` | `bool` |  |
 
 #### Example: Load
 
@@ -601,40 +609,41 @@ Create an instance: `name = client.Name()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `list` |  |
+| `altSpellings` | `list` |  |
 | `area` | `float` |  |
-| `border` | `list` |  |
+| `borders` | `list` |  |
 | `capital` | `list` |  |
-| `capital_info` | `dict` |  |
+| `capitalInfo` | `dict` |  |
 | `car` | `dict` |  |
 | `cca2` | `str` |  |
 | `cca3` | `str` |  |
 | `ccn3` | `str` |  |
 | `cioc` | `str` |  |
-| `coat_of_arm` | `dict` |  |
-| `continent` | `list` |  |
-| `currency` | `dict` |  |
-| `demonym` | `dict` |  |
+| `coatOfArms` | `dict` |  |
+| `continents` | `list` |  |
+| `currencies` | `dict` |  |
+| `demonyms` | `dict` |  |
 | `fifa` | `str` |  |
 | `flag` | `str` |  |
+| `flags` | `dict` |  |
 | `gini` | `dict` |  |
 | `idd` | `dict` |  |
 | `independent` | `bool` |  |
 | `landlocked` | `bool` |  |
-| `language` | `dict` |  |
+| `languages` | `dict` |  |
 | `latlng` | `list` |  |
-| `map` | `dict` |  |
+| `maps` | `dict` |  |
 | `name` | `dict` |  |
 | `population` | `int` |  |
-| `postal_code` | `dict` |  |
+| `postalCode` | `dict` |  |
 | `region` | `str` |  |
-| `start_of_week` | `str` |  |
+| `startOfWeek` | `str` |  |
 | `status` | `str` |  |
 | `subregion` | `str` |  |
-| `timezone` | `list` |  |
+| `timezones` | `list` |  |
 | `tld` | `list` |  |
-| `translation` | `dict` |  |
-| `un_member` | `bool` |  |
+| `translations` | `dict` |  |
+| `unMember` | `bool` |  |
 
 #### Example: Load
 
@@ -714,15 +723,15 @@ Import entity or utility modules directly only when needed.
 
 ### Entity state
 
-Entity instances are stateful. After a successful `list`, the entity
+Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```python
-all = client.All()
-all.list()
+alpha = client.Alpha()
+alpha.load({"id": "example_id"})
 
-# all.data_get() now returns the all data from the last list
-# all.match_get() returns the last match criteria
+# alpha.data_get() now returns the alpha data from the last load
+# alpha.match_get() returns the last match criteria
 ```
 
 Call `make()` to create a fresh instance with the same configuration

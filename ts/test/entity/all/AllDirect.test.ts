@@ -19,11 +19,15 @@ import {
 describe('AllDirect', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when RESTCOUNTRIES_TEST_LIVE=TRUE.
-  afterEach(liveDelay('RESTCOUNTRIES_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when REST_COUNTRIES_TEST_LIVE=TRUE.
+  afterEach(liveDelay('REST_COUNTRIES_TEST_LIVE'))
 
   test('direct-exists', async () => {
     const sdk = new RestCountriesSDK({
+      // Concrete base: a live construction must satisfy any server
+      // variables a templated base URL declares; overriding base with a
+      // literal (as the direct flow tests do) sidesteps the requirement.
+      base: 'http://localhost:8080',
       system: { fetch: async () => ({}) }
     })
     assert('function' === typeof sdk.direct)
@@ -77,17 +81,17 @@ function directSetup(mockres?: any) {
   const calls: any[] = []
 
   const env = envOverride({
-    'RESTCOUNTRIES_TEST_ALL_ENTID': {},
-    'RESTCOUNTRIES_TEST_LIVE': 'FALSE',
+    'REST_COUNTRIES_TEST_ALL_ENTID': {},
+    'REST_COUNTRIES_TEST_LIVE': 'FALSE',
   })
 
-  const live = 'TRUE' === env.RESTCOUNTRIES_TEST_LIVE
+  const live = 'TRUE' === env.REST_COUNTRIES_TEST_LIVE
 
   if (live) {
     const client = new RestCountriesSDK({
     })
 
-    let idmap: any = env['RESTCOUNTRIES_TEST_ALL_ENTID']
+    let idmap: any = env['REST_COUNTRIES_TEST_ALL_ENTID']
     if ('string' === typeof idmap && idmap.startsWith('{')) {
       idmap = JSON.parse(idmap)
     }

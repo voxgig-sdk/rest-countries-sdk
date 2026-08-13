@@ -37,7 +37,7 @@ begin
   # list returns an Array of All records — iterate directly.
   alls = client.All.list
   alls.each do |item|
-    puts "#{item["alt_spelling"]}"
+    puts "#{item["altSpellings"]}"
   end
 rescue => err
   warn "list failed: #{err}"
@@ -51,9 +51,9 @@ Entity operations raise on failure, so rescue them:
 
 ```ruby
 begin
-  alls = client.All.list()
+  alpha = client.Alpha.load({ "id" => "example_id" })
 rescue => err
-  warn "list failed: #{err}"
+  warn "load failed: #{err}"
 end
 ```
 
@@ -114,14 +114,18 @@ end
 
 ### Use test mode
 
-Create a mock client for unit testing — no server required:
+Create a mock client for unit testing — no server required. Seed fixture
+data via the `entity` option so offline calls resolve without a live server:
 
 ```ruby
-client = RestCountriesSDK.test
+client = RestCountriesSDK.test({
+  "entity" => { "alpha" => { "test01" => { "id" => "test01" } } },
+})
 
-# Entity ops return the bare mock record (raises on error).
-all = client.All.list()
-puts all
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
+alpha = client.Alpha.load({ "id" => "test01" })
+puts alpha
 ```
 
 ### Use a custom fetch function
@@ -240,40 +244,41 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `alt_spelling` |  |
+| `altSpellings` |  |
 | `area` |  |
-| `border` |  |
+| `borders` |  |
 | `capital` |  |
-| `capital_info` |  |
+| `capitalInfo` |  |
 | `car` |  |
 | `cca2` |  |
 | `cca3` |  |
 | `ccn3` |  |
 | `cioc` |  |
-| `coat_of_arm` |  |
-| `continent` |  |
-| `currency` |  |
-| `demonym` |  |
+| `coatOfArms` |  |
+| `continents` |  |
+| `currencies` |  |
+| `demonyms` |  |
 | `fifa` |  |
 | `flag` |  |
+| `flags` |  |
 | `gini` |  |
 | `idd` |  |
 | `independent` |  |
 | `landlocked` |  |
-| `language` |  |
+| `languages` |  |
 | `latlng` |  |
-| `map` |  |
+| `maps` |  |
 | `name` |  |
 | `population` |  |
-| `postal_code` |  |
+| `postalCode` |  |
 | `region` |  |
-| `start_of_week` |  |
+| `startOfWeek` |  |
 | `status` |  |
 | `subregion` |  |
-| `timezone` |  |
+| `timezones` |  |
 | `tld` |  |
-| `translation` |  |
-| `un_member` |  |
+| `translations` |  |
+| `unMember` |  |
 
 Operations: List.
 
@@ -283,40 +288,41 @@ API path: `/all`
 
 | Field | Description |
 | --- | --- |
-| `alt_spelling` |  |
+| `altSpellings` |  |
 | `area` |  |
-| `border` |  |
+| `borders` |  |
 | `capital` |  |
-| `capital_info` |  |
+| `capitalInfo` |  |
 | `car` |  |
 | `cca2` |  |
 | `cca3` |  |
 | `ccn3` |  |
 | `cioc` |  |
-| `coat_of_arm` |  |
-| `continent` |  |
-| `currency` |  |
-| `demonym` |  |
+| `coatOfArms` |  |
+| `continents` |  |
+| `currencies` |  |
+| `demonyms` |  |
 | `fifa` |  |
 | `flag` |  |
+| `flags` |  |
 | `gini` |  |
 | `idd` |  |
 | `independent` |  |
 | `landlocked` |  |
-| `language` |  |
+| `languages` |  |
 | `latlng` |  |
-| `map` |  |
+| `maps` |  |
 | `name` |  |
 | `population` |  |
-| `postal_code` |  |
+| `postalCode` |  |
 | `region` |  |
-| `start_of_week` |  |
+| `startOfWeek` |  |
 | `status` |  |
 | `subregion` |  |
-| `timezone` |  |
+| `timezones` |  |
 | `tld` |  |
-| `translation` |  |
-| `un_member` |  |
+| `translations` |  |
+| `unMember` |  |
 
 Operations: Load.
 
@@ -326,40 +332,41 @@ API path: `/alpha/{code}`
 
 | Field | Description |
 | --- | --- |
-| `alt_spelling` |  |
+| `altSpellings` |  |
 | `area` |  |
-| `border` |  |
+| `borders` |  |
 | `capital` |  |
-| `capital_info` |  |
+| `capitalInfo` |  |
 | `car` |  |
 | `cca2` |  |
 | `cca3` |  |
 | `ccn3` |  |
 | `cioc` |  |
-| `coat_of_arm` |  |
-| `continent` |  |
-| `currency` |  |
-| `demonym` |  |
+| `coatOfArms` |  |
+| `continents` |  |
+| `currencies` |  |
+| `demonyms` |  |
 | `fifa` |  |
 | `flag` |  |
+| `flags` |  |
 | `gini` |  |
 | `idd` |  |
 | `independent` |  |
 | `landlocked` |  |
-| `language` |  |
+| `languages` |  |
 | `latlng` |  |
-| `map` |  |
+| `maps` |  |
 | `name` |  |
 | `population` |  |
-| `postal_code` |  |
+| `postalCode` |  |
 | `region` |  |
-| `start_of_week` |  |
+| `startOfWeek` |  |
 | `status` |  |
 | `subregion` |  |
-| `timezone` |  |
+| `timezones` |  |
 | `tld` |  |
-| `translation` |  |
-| `un_member` |  |
+| `translations` |  |
+| `unMember` |  |
 
 Operations: Load.
 
@@ -369,40 +376,41 @@ API path: `/capital/{capital}`
 
 | Field | Description |
 | --- | --- |
-| `alt_spelling` |  |
+| `altSpellings` |  |
 | `area` |  |
-| `border` |  |
+| `borders` |  |
 | `capital` |  |
-| `capital_info` |  |
+| `capitalInfo` |  |
 | `car` |  |
 | `cca2` |  |
 | `cca3` |  |
 | `ccn3` |  |
 | `cioc` |  |
-| `coat_of_arm` |  |
-| `continent` |  |
-| `currency` |  |
-| `demonym` |  |
+| `coatOfArms` |  |
+| `continents` |  |
+| `currencies` |  |
+| `demonyms` |  |
 | `fifa` |  |
 | `flag` |  |
+| `flags` |  |
 | `gini` |  |
 | `idd` |  |
 | `independent` |  |
 | `landlocked` |  |
-| `language` |  |
+| `languages` |  |
 | `latlng` |  |
-| `map` |  |
+| `maps` |  |
 | `name` |  |
 | `population` |  |
-| `postal_code` |  |
+| `postalCode` |  |
 | `region` |  |
-| `start_of_week` |  |
+| `startOfWeek` |  |
 | `status` |  |
 | `subregion` |  |
-| `timezone` |  |
+| `timezones` |  |
 | `tld` |  |
-| `translation` |  |
-| `un_member` |  |
+| `translations` |  |
+| `unMember` |  |
 
 Operations: Load.
 
@@ -427,40 +435,41 @@ Create an instance: `all = client.All`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `Array` |  |
+| `altSpellings` | `Array` |  |
 | `area` | `Float` |  |
-| `border` | `Array` |  |
+| `borders` | `Array` |  |
 | `capital` | `Array` |  |
-| `capital_info` | `Hash` |  |
+| `capitalInfo` | `Hash` |  |
 | `car` | `Hash` |  |
 | `cca2` | `String` |  |
 | `cca3` | `String` |  |
 | `ccn3` | `String` |  |
 | `cioc` | `String` |  |
-| `coat_of_arm` | `Hash` |  |
-| `continent` | `Array` |  |
-| `currency` | `Hash` |  |
-| `demonym` | `Hash` |  |
+| `coatOfArms` | `Hash` |  |
+| `continents` | `Array` |  |
+| `currencies` | `Hash` |  |
+| `demonyms` | `Hash` |  |
 | `fifa` | `String` |  |
 | `flag` | `String` |  |
+| `flags` | `Hash` |  |
 | `gini` | `Hash` |  |
 | `idd` | `Hash` |  |
 | `independent` | `Boolean` |  |
 | `landlocked` | `Boolean` |  |
-| `language` | `Hash` |  |
+| `languages` | `Hash` |  |
 | `latlng` | `Array` |  |
-| `map` | `Hash` |  |
+| `maps` | `Hash` |  |
 | `name` | `Hash` |  |
 | `population` | `Integer` |  |
-| `postal_code` | `Hash` |  |
+| `postalCode` | `Hash` |  |
 | `region` | `String` |  |
-| `start_of_week` | `String` |  |
+| `startOfWeek` | `String` |  |
 | `status` | `String` |  |
 | `subregion` | `String` |  |
-| `timezone` | `Array` |  |
+| `timezones` | `Array` |  |
 | `tld` | `Array` |  |
-| `translation` | `Hash` |  |
-| `un_member` | `Boolean` |  |
+| `translations` | `Hash` |  |
+| `unMember` | `Boolean` |  |
 
 #### Example: List
 
@@ -484,45 +493,46 @@ Create an instance: `alpha = client.Alpha`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `Array` |  |
+| `altSpellings` | `Array` |  |
 | `area` | `Float` |  |
-| `border` | `Array` |  |
+| `borders` | `Array` |  |
 | `capital` | `Array` |  |
-| `capital_info` | `Hash` |  |
+| `capitalInfo` | `Hash` |  |
 | `car` | `Hash` |  |
 | `cca2` | `String` |  |
 | `cca3` | `String` |  |
 | `ccn3` | `String` |  |
 | `cioc` | `String` |  |
-| `coat_of_arm` | `Hash` |  |
-| `continent` | `Array` |  |
-| `currency` | `Hash` |  |
-| `demonym` | `Hash` |  |
+| `coatOfArms` | `Hash` |  |
+| `continents` | `Array` |  |
+| `currencies` | `Hash` |  |
+| `demonyms` | `Hash` |  |
 | `fifa` | `String` |  |
 | `flag` | `String` |  |
+| `flags` | `Hash` |  |
 | `gini` | `Hash` |  |
 | `idd` | `Hash` |  |
 | `independent` | `Boolean` |  |
 | `landlocked` | `Boolean` |  |
-| `language` | `Hash` |  |
+| `languages` | `Hash` |  |
 | `latlng` | `Array` |  |
-| `map` | `Hash` |  |
+| `maps` | `Hash` |  |
 | `name` | `Hash` |  |
 | `population` | `Integer` |  |
-| `postal_code` | `Hash` |  |
+| `postalCode` | `Hash` |  |
 | `region` | `String` |  |
-| `start_of_week` | `String` |  |
+| `startOfWeek` | `String` |  |
 | `status` | `String` |  |
 | `subregion` | `String` |  |
-| `timezone` | `Array` |  |
+| `timezones` | `Array` |  |
 | `tld` | `Array` |  |
-| `translation` | `Hash` |  |
-| `un_member` | `Boolean` |  |
+| `translations` | `Hash` |  |
+| `unMember` | `Boolean` |  |
 
 #### Example: Load
 
 ```ruby
-# load returns the bare Alpha record (raises on error).
+# load returns the ENTITY — call data_get for the Alpha record (raises on error).
 alpha = client.Alpha.load({ "id" => "alpha_id" })
 ```
 
@@ -541,45 +551,46 @@ Create an instance: `capital = client.Capital`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `Array` |  |
+| `altSpellings` | `Array` |  |
 | `area` | `Float` |  |
-| `border` | `Array` |  |
+| `borders` | `Array` |  |
 | `capital` | `Array` |  |
-| `capital_info` | `Hash` |  |
+| `capitalInfo` | `Hash` |  |
 | `car` | `Hash` |  |
 | `cca2` | `String` |  |
 | `cca3` | `String` |  |
 | `ccn3` | `String` |  |
 | `cioc` | `String` |  |
-| `coat_of_arm` | `Hash` |  |
-| `continent` | `Array` |  |
-| `currency` | `Hash` |  |
-| `demonym` | `Hash` |  |
+| `coatOfArms` | `Hash` |  |
+| `continents` | `Array` |  |
+| `currencies` | `Hash` |  |
+| `demonyms` | `Hash` |  |
 | `fifa` | `String` |  |
 | `flag` | `String` |  |
+| `flags` | `Hash` |  |
 | `gini` | `Hash` |  |
 | `idd` | `Hash` |  |
 | `independent` | `Boolean` |  |
 | `landlocked` | `Boolean` |  |
-| `language` | `Hash` |  |
+| `languages` | `Hash` |  |
 | `latlng` | `Array` |  |
-| `map` | `Hash` |  |
+| `maps` | `Hash` |  |
 | `name` | `Hash` |  |
 | `population` | `Integer` |  |
-| `postal_code` | `Hash` |  |
+| `postalCode` | `Hash` |  |
 | `region` | `String` |  |
-| `start_of_week` | `String` |  |
+| `startOfWeek` | `String` |  |
 | `status` | `String` |  |
 | `subregion` | `String` |  |
-| `timezone` | `Array` |  |
+| `timezones` | `Array` |  |
 | `tld` | `Array` |  |
-| `translation` | `Hash` |  |
-| `un_member` | `Boolean` |  |
+| `translations` | `Hash` |  |
+| `unMember` | `Boolean` |  |
 
 #### Example: Load
 
 ```ruby
-# load returns the bare Capital record (raises on error).
+# load returns the ENTITY — call data_get for the Capital record (raises on error).
 capital = client.Capital.load({ "id" => "capital_id" })
 ```
 
@@ -598,45 +609,46 @@ Create an instance: `name = client.Name`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `alt_spelling` | `Array` |  |
+| `altSpellings` | `Array` |  |
 | `area` | `Float` |  |
-| `border` | `Array` |  |
+| `borders` | `Array` |  |
 | `capital` | `Array` |  |
-| `capital_info` | `Hash` |  |
+| `capitalInfo` | `Hash` |  |
 | `car` | `Hash` |  |
 | `cca2` | `String` |  |
 | `cca3` | `String` |  |
 | `ccn3` | `String` |  |
 | `cioc` | `String` |  |
-| `coat_of_arm` | `Hash` |  |
-| `continent` | `Array` |  |
-| `currency` | `Hash` |  |
-| `demonym` | `Hash` |  |
+| `coatOfArms` | `Hash` |  |
+| `continents` | `Array` |  |
+| `currencies` | `Hash` |  |
+| `demonyms` | `Hash` |  |
 | `fifa` | `String` |  |
 | `flag` | `String` |  |
+| `flags` | `Hash` |  |
 | `gini` | `Hash` |  |
 | `idd` | `Hash` |  |
 | `independent` | `Boolean` |  |
 | `landlocked` | `Boolean` |  |
-| `language` | `Hash` |  |
+| `languages` | `Hash` |  |
 | `latlng` | `Array` |  |
-| `map` | `Hash` |  |
+| `maps` | `Hash` |  |
 | `name` | `Hash` |  |
 | `population` | `Integer` |  |
-| `postal_code` | `Hash` |  |
+| `postalCode` | `Hash` |  |
 | `region` | `String` |  |
-| `start_of_week` | `String` |  |
+| `startOfWeek` | `String` |  |
 | `status` | `String` |  |
 | `subregion` | `String` |  |
-| `timezone` | `Array` |  |
+| `timezones` | `Array` |  |
 | `tld` | `Array` |  |
-| `translation` | `Hash` |  |
-| `un_member` | `Boolean` |  |
+| `translations` | `Hash` |  |
+| `unMember` | `Boolean` |  |
 
 #### Example: Load
 
 ```ruby
-# load returns the bare Name record (raises on error).
+# load returns the ENTITY — call data_get for the Name record (raises on error).
 name = client.Name.load({ "id" => "name_id" })
 ```
 
@@ -713,15 +725,15 @@ when needed.
 
 ### Entity state
 
-Entity instances are stateful. After a successful `list`, the entity
+Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```ruby
-all = client.All
-all.list()
+alpha = client.Alpha
+alpha.load({ "id" => "example_id" })
 
-# all.data_get now returns the all data from the last list
-# all.match_get returns the last match criteria
+# alpha.data_get now returns the alpha data from the last load
+# alpha.match_get returns the last match criteria
 ```
 
 Call `make` to create a fresh instance with the same configuration

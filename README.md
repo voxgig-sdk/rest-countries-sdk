@@ -38,18 +38,27 @@ network, and no credentials:
 ### TypeScript
 
 ```ts
-const client = RestCountriesSDK.test()
-const alls = await client.All().list()
-// alls is an array of bare All records populated with mock data
-console.log(alls)
+// The offline mock starts EMPTY — seed it with the records the test needs.
+// Shape: { entity: { <entity-name>: { <id>: <record> } } }
+const client = RestCountriesSDK.test({
+  entity: {
+    alpha: {
+      test01: { id: 'test01' },
+    },
+  },
+})
+const alpha = await client.Alpha().load({ id: 'test01' })
+// alpha is the Alpha entity, populated with mock data
+// — call alpha.data() for the record itself
+console.log(alpha)
 ```
 
 ### Python
 
 ```python
 client = RestCountriesSDK.test()
-alls = client.All().list()
-print(alls)
+alpha = client.Alpha().load({"id": "test01"})
+print(alpha)
 ```
 
 ### PHP
@@ -57,17 +66,17 @@ print(alls)
 ```php
 // Seed fixture data so offline calls resolve without a live server.
 $client = RestCountriesSDK::test([
-    "entity" => ["all" => ["test01" => []]],
+    "entity" => ["alpha" => ["test01" => ["id" => "test01"]]],
 ]);
-$alls = $client->All()->list();
+$alpha = $client->Alpha()->load(["id" => "test01"]);
 ```
 
 ### Golang
 
 ```go
 client := sdk.Test()
-result, err := client.All(nil).List(
-    nil, nil,
+result, err := client.Alpha(nil).Load(
+    map[string]any{"id": "test01"}, nil,
 )
 ```
 
@@ -76,16 +85,16 @@ result, err := client.All(nil).List(
 ```ruby
 # Seed fixture data so offline calls resolve without a live server.
 client = RestCountriesSDK.test({
-  "entity" => { "all" => { "test01" => {} } },
+  "entity" => { "alpha" => { "test01" => { "id" => "test01" } } },
 })
-alls = client.All.list()
+alpha = client.Alpha.load({ "id" => "test01" })
 ```
 
 ### Lua
 
 ```lua
 local client = sdk.test()
-local results, err = client:All():list()
+local result, err = client:Alpha():load({ id = "test01" })
 ```
 
 ## Packages
@@ -110,7 +119,7 @@ import { RestCountriesSDK } from '@voxgig-sdk/rest-countries'
 
 const client = new RestCountriesSDK()
 
-// List all alls (returns All[])
+// List all alls (returns AllEntity[] — .data() for the record)
 const alls = await client.All().list()
 for (const all of alls) {
   console.log(all)
@@ -346,6 +355,9 @@ Pass custom features via the `extend` option at construction time.
 
 This SDK is generated from the upstream OpenAPI specification. It is an
 unofficial client and is not affiliated with the API provider.
+
+The OpenAPI spec(s) this SDK was generated from are kept in the
+[`.sdk/def/`](.sdk/def/) folder.
 
 - Upstream API: [https://restcountries.com/](https://restcountries.com/)
 

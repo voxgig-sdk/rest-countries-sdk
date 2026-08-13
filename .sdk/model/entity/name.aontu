@@ -6,7 +6,7 @@ main: kit: entity: name: {
 
   fields: [
     {
-      name: "alt_spelling"
+      name: "altSpellings"
       req: false
       type: "`$ARRAY`"
     }
@@ -16,7 +16,7 @@ main: kit: entity: name: {
       type: "`$NUMBER`"
     }
     {
-      name: "border"
+      name: "borders"
       req: false
       type: "`$ARRAY`"
     }
@@ -26,7 +26,7 @@ main: kit: entity: name: {
       type: "`$ARRAY`"
     }
     {
-      name: "capital_info"
+      name: "capitalInfo"
       req: false
       type: "`$OBJECT`"
     }
@@ -56,22 +56,22 @@ main: kit: entity: name: {
       type: "`$STRING`"
     }
     {
-      name: "coat_of_arm"
+      name: "coatOfArms"
       req: false
       type: "`$OBJECT`"
     }
     {
-      name: "continent"
+      name: "continents"
       req: false
       type: "`$ARRAY`"
     }
     {
-      name: "currency"
+      name: "currencies"
       req: false
       type: "`$OBJECT`"
     }
     {
-      name: "demonym"
+      name: "demonyms"
       req: false
       type: "`$OBJECT`"
     }
@@ -84,6 +84,11 @@ main: kit: entity: name: {
       name: "flag"
       req: false
       type: "`$STRING`"
+    }
+    {
+      name: "flags"
+      req: false
+      type: "`$OBJECT`"
     }
     {
       name: "gini"
@@ -106,7 +111,7 @@ main: kit: entity: name: {
       type: "`$BOOLEAN`"
     }
     {
-      name: "language"
+      name: "languages"
       req: false
       type: "`$OBJECT`"
     }
@@ -116,7 +121,7 @@ main: kit: entity: name: {
       type: "`$ARRAY`"
     }
     {
-      name: "map"
+      name: "maps"
       req: false
       type: "`$OBJECT`"
     }
@@ -131,7 +136,7 @@ main: kit: entity: name: {
       type: "`$INTEGER`"
     }
     {
-      name: "postal_code"
+      name: "postalCode"
       req: false
       type: "`$OBJECT`"
     }
@@ -141,7 +146,7 @@ main: kit: entity: name: {
       type: "`$STRING`"
     }
     {
-      name: "start_of_week"
+      name: "startOfWeek"
       req: false
       type: "`$STRING`"
     }
@@ -156,7 +161,7 @@ main: kit: entity: name: {
       type: "`$STRING`"
     }
     {
-      name: "timezone"
+      name: "timezones"
       req: false
       type: "`$ARRAY`"
     }
@@ -166,12 +171,12 @@ main: kit: entity: name: {
       type: "`$ARRAY`"
     }
     {
-      name: "translation"
+      name: "translations"
       req: false
       type: "`$OBJECT`"
     }
     {
-      name: "un_member"
+      name: "unMember"
       req: false
       type: "`$BOOLEAN`"
     }

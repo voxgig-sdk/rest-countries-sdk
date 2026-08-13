@@ -26,8 +26,8 @@ import {
 describe('CapitalEntity', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when RESTCOUNTRIES_TEST_LIVE=TRUE.
-  afterEach(liveDelay('RESTCOUNTRIES_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when REST_COUNTRIES_TEST_LIVE=TRUE.
+  afterEach(liveDelay('REST_COUNTRIES_TEST_LIVE'))
 
   test('instance', async () => {
     const testsdk = RestCountriesSDK.test()

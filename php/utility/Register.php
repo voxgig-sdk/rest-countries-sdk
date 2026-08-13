@@ -23,6 +23,7 @@ require_once __DIR__ . '/MakeUrl.php';
 require_once __DIR__ . '/Param.php';
 require_once __DIR__ . '/PrepareAuth.php';
 require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
 require_once __DIR__ . '/PrepareHeaders.php';
 require_once __DIR__ . '/PrepareMethod.php';
 require_once __DIR__ . '/PrepareParams.php';
@@ -59,6 +60,8 @@ RestCountriesUtility::setRegistrar(function (RestCountriesUtility $u): void {
     $u->prepare_params = [RestCountriesPrepareParams::class, 'call'];
     $u->prepare_path = [RestCountriesPreparePath::class, 'call'];
     $u->prepare_query = [RestCountriesPrepareQuery::class, 'call'];
+    $u->graphql_body = [RestCountriesGraphql::class, 'body'];
+    $u->graphql_errors = [RestCountriesGraphql::class, 'errors'];
     $u->result_basic = [RestCountriesResultBasic::class, 'call'];
     $u->result_body = [RestCountriesResultBody::class, 'call'];
     $u->result_headers = [RestCountriesResultHeaders::class, 'call'];

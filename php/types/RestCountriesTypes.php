@@ -15,118 +15,121 @@ declare(strict_types=1);
 /** All entity data model. */
 class All
 {
-    public ?array $alt_spelling = null;
+    public ?array $altSpellings = null;
     public ?float $area = null;
-    public ?array $border = null;
+    public ?array $borders = null;
     public ?array $capital = null;
-    public ?array $capital_info = null;
+    public ?array $capitalInfo = null;
     public ?array $car = null;
     public ?string $cca2 = null;
     public ?string $cca3 = null;
     public ?string $ccn3 = null;
     public ?string $cioc = null;
-    public ?array $coat_of_arm = null;
-    public ?array $continent = null;
-    public ?array $currency = null;
-    public ?array $demonym = null;
+    public ?array $coatOfArms = null;
+    public ?array $continents = null;
+    public ?array $currencies = null;
+    public ?array $demonyms = null;
     public ?string $fifa = null;
     public ?string $flag = null;
+    public ?array $flags = null;
     public ?array $gini = null;
     public ?array $idd = null;
     public ?bool $independent = null;
     public ?bool $landlocked = null;
-    public ?array $language = null;
+    public ?array $languages = null;
     public ?array $latlng = null;
-    public ?array $map = null;
+    public ?array $maps = null;
     public ?array $name = null;
     public ?int $population = null;
-    public ?array $postal_code = null;
+    public ?array $postalCode = null;
     public ?string $region = null;
-    public ?string $start_of_week = null;
+    public ?string $startOfWeek = null;
     public ?string $status = null;
     public ?string $subregion = null;
-    public ?array $timezone = null;
+    public ?array $timezones = null;
     public ?array $tld = null;
-    public ?array $translation = null;
-    public ?bool $un_member = null;
+    public ?array $translations = null;
+    public ?bool $unMember = null;
 }
 
 /** Request payload for All#list. */
 class AllListMatch
 {
-    public ?array $alt_spelling = null;
+    public ?array $altSpellings = null;
     public ?float $area = null;
-    public ?array $border = null;
+    public ?array $borders = null;
     public ?array $capital = null;
-    public ?array $capital_info = null;
+    public ?array $capitalInfo = null;
     public ?array $car = null;
     public ?string $cca2 = null;
     public ?string $cca3 = null;
     public ?string $ccn3 = null;
     public ?string $cioc = null;
-    public ?array $coat_of_arm = null;
-    public ?array $continent = null;
-    public ?array $currency = null;
-    public ?array $demonym = null;
+    public ?array $coatOfArms = null;
+    public ?array $continents = null;
+    public ?array $currencies = null;
+    public ?array $demonyms = null;
     public ?string $fifa = null;
     public ?string $flag = null;
+    public ?array $flags = null;
     public ?array $gini = null;
     public ?array $idd = null;
     public ?bool $independent = null;
     public ?bool $landlocked = null;
-    public ?array $language = null;
+    public ?array $languages = null;
     public ?array $latlng = null;
-    public ?array $map = null;
+    public ?array $maps = null;
     public ?array $name = null;
     public ?int $population = null;
-    public ?array $postal_code = null;
+    public ?array $postalCode = null;
     public ?string $region = null;
-    public ?string $start_of_week = null;
+    public ?string $startOfWeek = null;
     public ?string $status = null;
     public ?string $subregion = null;
-    public ?array $timezone = null;
+    public ?array $timezones = null;
     public ?array $tld = null;
-    public ?array $translation = null;
-    public ?bool $un_member = null;
+    public ?array $translations = null;
+    public ?bool $unMember = null;
 }
 
 /** Alpha entity data model. */
 class Alpha
 {
-    public ?array $alt_spelling = null;
+    public ?array $altSpellings = null;
     public ?float $area = null;
-    public ?array $border = null;
+    public ?array $borders = null;
     public ?array $capital = null;
-    public ?array $capital_info = null;
+    public ?array $capitalInfo = null;
     public ?array $car = null;
     public ?string $cca2 = null;
     public ?string $cca3 = null;
     public ?string $ccn3 = null;
     public ?string $cioc = null;
-    public ?array $coat_of_arm = null;
-    public ?array $continent = null;
-    public ?array $currency = null;
-    public ?array $demonym = null;
+    public ?array $coatOfArms = null;
+    public ?array $continents = null;
+    public ?array $currencies = null;
+    public ?array $demonyms = null;
     public ?string $fifa = null;
     public ?string $flag = null;
+    public ?array $flags = null;
     public ?array $gini = null;
     public ?array $idd = null;
     public ?bool $independent = null;
     public ?bool $landlocked = null;
-    public ?array $language = null;
+    public ?array $languages = null;
     public ?array $latlng = null;
-    public ?array $map = null;
+    public ?array $maps = null;
     public ?array $name = null;
     public ?int $population = null;
-    public ?array $postal_code = null;
+    public ?array $postalCode = null;
     public ?string $region = null;
-    public ?string $start_of_week = null;
+    public ?string $startOfWeek = null;
     public ?string $status = null;
     public ?string $subregion = null;
-    public ?array $timezone = null;
+    public ?array $timezones = null;
     public ?array $tld = null;
-    public ?array $translation = null;
-    public ?bool $un_member = null;
+    public ?array $translations = null;
+    public ?bool $unMember = null;
 }
 
 /** Request payload for Alpha#load. */
@@ -138,40 +141,41 @@ class AlphaLoadMatch
 /** Capital entity data model. */
 class Capital
 {
-    public ?array $alt_spelling = null;
+    public ?array $altSpellings = null;
     public ?float $area = null;
-    public ?array $border = null;
+    public ?array $borders = null;
     public ?array $capital = null;
-    public ?array $capital_info = null;
+    public ?array $capitalInfo = null;
     public ?array $car = null;
     public ?string $cca2 = null;
     public ?string $cca3 = null;
     public ?string $ccn3 = null;
     public ?string $cioc = null;
-    public ?array $coat_of_arm = null;
-    public ?array $continent = null;
-    public ?array $currency = null;
-    public ?array $demonym = null;
+    public ?array $coatOfArms = null;
+    public ?array $continents = null;
+    public ?array $currencies = null;
+    public ?array $demonyms = null;
     public ?string $fifa = null;
     public ?string $flag = null;
+    public ?array $flags = null;
     public ?array $gini = null;
     public ?array $idd = null;
     public ?bool $independent = null;
     public ?bool $landlocked = null;
-    public ?array $language = null;
+    public ?array $languages = null;
     public ?array $latlng = null;
-    public ?array $map = null;
+    public ?array $maps = null;
     public ?array $name = null;
     public ?int $population = null;
-    public ?array $postal_code = null;
+    public ?array $postalCode = null;
     public ?string $region = null;
-    public ?string $start_of_week = null;
+    public ?string $startOfWeek = null;
     public ?string $status = null;
     public ?string $subregion = null;
-    public ?array $timezone = null;
+    public ?array $timezones = null;
     public ?array $tld = null;
-    public ?array $translation = null;
-    public ?bool $un_member = null;
+    public ?array $translations = null;
+    public ?bool $unMember = null;
 }
 
 /** Request payload for Capital#load. */
@@ -183,40 +187,41 @@ class CapitalLoadMatch
 /** Name entity data model. */
 class Name
 {
-    public ?array $alt_spelling = null;
+    public ?array $altSpellings = null;
     public ?float $area = null;
-    public ?array $border = null;
+    public ?array $borders = null;
     public ?array $capital = null;
-    public ?array $capital_info = null;
+    public ?array $capitalInfo = null;
     public ?array $car = null;
     public ?string $cca2 = null;
     public ?string $cca3 = null;
     public ?string $ccn3 = null;
     public ?string $cioc = null;
-    public ?array $coat_of_arm = null;
-    public ?array $continent = null;
-    public ?array $currency = null;
-    public ?array $demonym = null;
+    public ?array $coatOfArms = null;
+    public ?array $continents = null;
+    public ?array $currencies = null;
+    public ?array $demonyms = null;
     public ?string $fifa = null;
     public ?string $flag = null;
+    public ?array $flags = null;
     public ?array $gini = null;
     public ?array $idd = null;
     public ?bool $independent = null;
     public ?bool $landlocked = null;
-    public ?array $language = null;
+    public ?array $languages = null;
     public ?array $latlng = null;
-    public ?array $map = null;
+    public ?array $maps = null;
     public ?array $name = null;
     public ?int $population = null;
-    public ?array $postal_code = null;
+    public ?array $postalCode = null;
     public ?string $region = null;
-    public ?string $start_of_week = null;
+    public ?string $startOfWeek = null;
     public ?string $status = null;
     public ?string $subregion = null;
-    public ?array $timezone = null;
+    public ?array $timezones = null;
     public ?array $tld = null;
-    public ?array $translation = null;
-    public ?bool $un_member = null;
+    public ?array $translations = null;
+    public ?bool $unMember = null;
 }
 
 /** Request payload for Name#load. */
