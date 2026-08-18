@@ -40,7 +40,7 @@ class RestCountriesSDK
         $utility = new RestCountriesUtility();
         $this->_utility = $utility;
 
-        $config = RestCountriesConfig::make_config();
+        $config = RestCountriesConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

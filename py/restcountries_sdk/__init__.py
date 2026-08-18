@@ -23,8 +23,8 @@ class RestCountriesSDK:
         utility = RestCountriesUtility()
         self._utility = utility
 
-        from restcountries_sdk.config import make_config
-        config = make_config()
+        from restcountries_sdk.config import shared_config
+        config = shared_config()
 
         self._rootctx = utility.make_context({
             "client": self,

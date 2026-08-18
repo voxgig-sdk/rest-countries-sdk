@@ -28,7 +28,7 @@ class RestCountriesSDK
     utility = RestCountriesUtility.new
     @_utility = utility
 
-    config = RestCountriesConfig.make_config
+    config = RestCountriesConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,

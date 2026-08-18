@@ -40,7 +40,7 @@ class AllEntityTest extends TestCase
         $this->assertCount(3, $seen);
 
         // Inbound: streaming active -> yields each item from the feature.
-        $cfg = RestCountriesConfig::make_config();
+        $cfg = RestCountriesConfig::shared_config();
         if (isset($cfg["feature"]) && is_array($cfg["feature"]) && isset($cfg["feature"]["streaming"])) {
             $sdk = RestCountriesSDK::test($seed, ["feature" => ["streaming" => ["active" => true]]]);
             $got = [];
