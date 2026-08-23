@@ -152,41 +152,41 @@ const all = client.All()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `altSpellings` | `any[]` | No |  |
-| `area` | `number` | No |  |
-| `borders` | `any[]` | No |  |
-| `capital` | `any[]` | No |  |
+| `altSpellings` | `any[]` | No | Alternative country name spellings |
+| `area` | `number` | No | Country area in square kilometers |
+| `borders` | `any[]` | No | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `any[]` | No | Capital city or cities |
 | `capitalInfo` | `Record<string, any>` | No |  |
 | `car` | `Record<string, any>` | No |  |
-| `cca2` | `string` | No |  |
-| `cca3` | `string` | No |  |
-| `ccn3` | `string` | No |  |
-| `cioc` | `string` | No |  |
+| `cca2` | `string` | No | ISO 3166-1 alpha-2 code |
+| `cca3` | `string` | No | ISO 3166-1 alpha-3 code |
+| `ccn3` | `string` | No | ISO 3166-1 numeric code |
+| `cioc` | `string` | No | International Olympic Committee code |
 | `coatOfArms` | `Record<string, any>` | No |  |
-| `continents` | `any[]` | No |  |
+| `continents` | `any[]` | No | Continents |
 | `currencies` | `Record<string, any>` | No |  |
 | `demonyms` | `Record<string, any>` | No |  |
-| `fifa` | `string` | No |  |
-| `flag` | `string` | No |  |
+| `fifa` | `string` | No | FIFA country code |
+| `flag` | `string` | No | Flag emoji |
 | `flags` | `Record<string, any>` | No |  |
-| `gini` | `Record<string, any>` | No |  |
-| `idd` | `Record<string, any>` | No |  |
-| `independent` | `boolean` | No |  |
-| `landlocked` | `boolean` | No |  |
-| `languages` | `Record<string, any>` | No |  |
-| `latlng` | `any[]` | No |  |
+| `gini` | `Record<string, any>` | No | Gini coefficient |
+| `idd` | `Record<string, any>` | No | International direct dialing |
+| `independent` | `boolean` | No | Independence status |
+| `landlocked` | `boolean` | No | Landlocked status |
+| `languages` | `Record<string, any>` | No | Languages spoken |
+| `latlng` | `any[]` | No | Latitude and longitude |
 | `maps` | `Record<string, any>` | No |  |
 | `name` | `Record<string, any>` | No |  |
-| `population` | `number` | No |  |
+| `population` | `number` | No | Country population |
 | `postalCode` | `Record<string, any>` | No |  |
-| `region` | `string` | No |  |
-| `startOfWeek` | `string` | No |  |
-| `status` | `string` | No |  |
-| `subregion` | `string` | No |  |
-| `timezones` | `any[]` | No |  |
-| `tld` | `any[]` | No |  |
+| `region` | `string` | No | Geographic region |
+| `startOfWeek` | `string` | No | Start of week day |
+| `status` | `string` | No | ISO 3166-1 assignment status |
+| `subregion` | `string` | No | Geographic subregion |
+| `timezones` | `any[]` | No | Timezones |
+| `tld` | `any[]` | No | Top-level domains |
 | `translations` | `Record<string, any>` | No |  |
-| `unMember` | `boolean` | No |  |
+| `unMember` | `boolean` | No | UN membership status |
 
 ### Operations
 
@@ -236,41 +236,41 @@ const alpha = client.Alpha()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `altSpellings` | `any[]` | No |  |
-| `area` | `number` | No |  |
-| `borders` | `any[]` | No |  |
-| `capital` | `any[]` | No |  |
+| `altSpellings` | `any[]` | No | Alternative country name spellings |
+| `area` | `number` | No | Country area in square kilometers |
+| `borders` | `any[]` | No | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `any[]` | No | Capital city or cities |
 | `capitalInfo` | `Record<string, any>` | No |  |
 | `car` | `Record<string, any>` | No |  |
-| `cca2` | `string` | No |  |
-| `cca3` | `string` | No |  |
-| `ccn3` | `string` | No |  |
-| `cioc` | `string` | No |  |
+| `cca2` | `string` | No | ISO 3166-1 alpha-2 code |
+| `cca3` | `string` | No | ISO 3166-1 alpha-3 code |
+| `ccn3` | `string` | No | ISO 3166-1 numeric code |
+| `cioc` | `string` | No | International Olympic Committee code |
 | `coatOfArms` | `Record<string, any>` | No |  |
-| `continents` | `any[]` | No |  |
+| `continents` | `any[]` | No | Continents |
 | `currencies` | `Record<string, any>` | No |  |
 | `demonyms` | `Record<string, any>` | No |  |
-| `fifa` | `string` | No |  |
-| `flag` | `string` | No |  |
+| `fifa` | `string` | No | FIFA country code |
+| `flag` | `string` | No | Flag emoji |
 | `flags` | `Record<string, any>` | No |  |
-| `gini` | `Record<string, any>` | No |  |
-| `idd` | `Record<string, any>` | No |  |
-| `independent` | `boolean` | No |  |
-| `landlocked` | `boolean` | No |  |
-| `languages` | `Record<string, any>` | No |  |
-| `latlng` | `any[]` | No |  |
+| `gini` | `Record<string, any>` | No | Gini coefficient |
+| `idd` | `Record<string, any>` | No | International direct dialing |
+| `independent` | `boolean` | No | Independence status |
+| `landlocked` | `boolean` | No | Landlocked status |
+| `languages` | `Record<string, any>` | No | Languages spoken |
+| `latlng` | `any[]` | No | Latitude and longitude |
 | `maps` | `Record<string, any>` | No |  |
 | `name` | `Record<string, any>` | No |  |
-| `population` | `number` | No |  |
+| `population` | `number` | No | Country population |
 | `postalCode` | `Record<string, any>` | No |  |
-| `region` | `string` | No |  |
-| `startOfWeek` | `string` | No |  |
-| `status` | `string` | No |  |
-| `subregion` | `string` | No |  |
-| `timezones` | `any[]` | No |  |
-| `tld` | `any[]` | No |  |
+| `region` | `string` | No | Geographic region |
+| `startOfWeek` | `string` | No | Start of week day |
+| `status` | `string` | No | ISO 3166-1 assignment status |
+| `subregion` | `string` | No | Geographic subregion |
+| `timezones` | `any[]` | No | Timezones |
+| `tld` | `any[]` | No | Top-level domains |
 | `translations` | `Record<string, any>` | No |  |
-| `unMember` | `boolean` | No |  |
+| `unMember` | `boolean` | No | UN membership status |
 
 ### Operations
 
@@ -320,41 +320,41 @@ const capital = client.Capital()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `altSpellings` | `any[]` | No |  |
-| `area` | `number` | No |  |
-| `borders` | `any[]` | No |  |
-| `capital` | `any[]` | No |  |
+| `altSpellings` | `any[]` | No | Alternative country name spellings |
+| `area` | `number` | No | Country area in square kilometers |
+| `borders` | `any[]` | No | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `any[]` | No | Capital city or cities |
 | `capitalInfo` | `Record<string, any>` | No |  |
 | `car` | `Record<string, any>` | No |  |
-| `cca2` | `string` | No |  |
-| `cca3` | `string` | No |  |
-| `ccn3` | `string` | No |  |
-| `cioc` | `string` | No |  |
+| `cca2` | `string` | No | ISO 3166-1 alpha-2 code |
+| `cca3` | `string` | No | ISO 3166-1 alpha-3 code |
+| `ccn3` | `string` | No | ISO 3166-1 numeric code |
+| `cioc` | `string` | No | International Olympic Committee code |
 | `coatOfArms` | `Record<string, any>` | No |  |
-| `continents` | `any[]` | No |  |
+| `continents` | `any[]` | No | Continents |
 | `currencies` | `Record<string, any>` | No |  |
 | `demonyms` | `Record<string, any>` | No |  |
-| `fifa` | `string` | No |  |
-| `flag` | `string` | No |  |
+| `fifa` | `string` | No | FIFA country code |
+| `flag` | `string` | No | Flag emoji |
 | `flags` | `Record<string, any>` | No |  |
-| `gini` | `Record<string, any>` | No |  |
-| `idd` | `Record<string, any>` | No |  |
-| `independent` | `boolean` | No |  |
-| `landlocked` | `boolean` | No |  |
-| `languages` | `Record<string, any>` | No |  |
-| `latlng` | `any[]` | No |  |
+| `gini` | `Record<string, any>` | No | Gini coefficient |
+| `idd` | `Record<string, any>` | No | International direct dialing |
+| `independent` | `boolean` | No | Independence status |
+| `landlocked` | `boolean` | No | Landlocked status |
+| `languages` | `Record<string, any>` | No | Languages spoken |
+| `latlng` | `any[]` | No | Latitude and longitude |
 | `maps` | `Record<string, any>` | No |  |
 | `name` | `Record<string, any>` | No |  |
-| `population` | `number` | No |  |
+| `population` | `number` | No | Country population |
 | `postalCode` | `Record<string, any>` | No |  |
-| `region` | `string` | No |  |
-| `startOfWeek` | `string` | No |  |
-| `status` | `string` | No |  |
-| `subregion` | `string` | No |  |
-| `timezones` | `any[]` | No |  |
-| `tld` | `any[]` | No |  |
+| `region` | `string` | No | Geographic region |
+| `startOfWeek` | `string` | No | Start of week day |
+| `status` | `string` | No | ISO 3166-1 assignment status |
+| `subregion` | `string` | No | Geographic subregion |
+| `timezones` | `any[]` | No | Timezones |
+| `tld` | `any[]` | No | Top-level domains |
 | `translations` | `Record<string, any>` | No |  |
-| `unMember` | `boolean` | No |  |
+| `unMember` | `boolean` | No | UN membership status |
 
 ### Operations
 
@@ -404,41 +404,41 @@ const name = client.Name()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `altSpellings` | `any[]` | No |  |
-| `area` | `number` | No |  |
-| `borders` | `any[]` | No |  |
-| `capital` | `any[]` | No |  |
+| `altSpellings` | `any[]` | No | Alternative country name spellings |
+| `area` | `number` | No | Country area in square kilometers |
+| `borders` | `any[]` | No | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `any[]` | No | Capital city or cities |
 | `capitalInfo` | `Record<string, any>` | No |  |
 | `car` | `Record<string, any>` | No |  |
-| `cca2` | `string` | No |  |
-| `cca3` | `string` | No |  |
-| `ccn3` | `string` | No |  |
-| `cioc` | `string` | No |  |
+| `cca2` | `string` | No | ISO 3166-1 alpha-2 code |
+| `cca3` | `string` | No | ISO 3166-1 alpha-3 code |
+| `ccn3` | `string` | No | ISO 3166-1 numeric code |
+| `cioc` | `string` | No | International Olympic Committee code |
 | `coatOfArms` | `Record<string, any>` | No |  |
-| `continents` | `any[]` | No |  |
+| `continents` | `any[]` | No | Continents |
 | `currencies` | `Record<string, any>` | No |  |
 | `demonyms` | `Record<string, any>` | No |  |
-| `fifa` | `string` | No |  |
-| `flag` | `string` | No |  |
+| `fifa` | `string` | No | FIFA country code |
+| `flag` | `string` | No | Flag emoji |
 | `flags` | `Record<string, any>` | No |  |
-| `gini` | `Record<string, any>` | No |  |
-| `idd` | `Record<string, any>` | No |  |
-| `independent` | `boolean` | No |  |
-| `landlocked` | `boolean` | No |  |
-| `languages` | `Record<string, any>` | No |  |
-| `latlng` | `any[]` | No |  |
+| `gini` | `Record<string, any>` | No | Gini coefficient |
+| `idd` | `Record<string, any>` | No | International direct dialing |
+| `independent` | `boolean` | No | Independence status |
+| `landlocked` | `boolean` | No | Landlocked status |
+| `languages` | `Record<string, any>` | No | Languages spoken |
+| `latlng` | `any[]` | No | Latitude and longitude |
 | `maps` | `Record<string, any>` | No |  |
 | `name` | `Record<string, any>` | No |  |
-| `population` | `number` | No |  |
+| `population` | `number` | No | Country population |
 | `postalCode` | `Record<string, any>` | No |  |
-| `region` | `string` | No |  |
-| `startOfWeek` | `string` | No |  |
-| `status` | `string` | No |  |
-| `subregion` | `string` | No |  |
-| `timezones` | `any[]` | No |  |
-| `tld` | `any[]` | No |  |
+| `region` | `string` | No | Geographic region |
+| `startOfWeek` | `string` | No | Start of week day |
+| `status` | `string` | No | ISO 3166-1 assignment status |
+| `subregion` | `string` | No | Geographic subregion |
+| `timezones` | `any[]` | No | Timezones |
+| `tld` | `any[]` | No | Top-level domains |
 | `translations` | `Record<string, any>` | No |  |
-| `unMember` | `boolean` | No |  |
+| `unMember` | `boolean` | No | UN membership status |
 
 ### Operations
 

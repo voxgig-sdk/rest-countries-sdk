@@ -36,24 +36,28 @@
               "active": true,
               "name": "altSpellings",
               "req": false,
+              "short": "Alternative country name spellings",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "area",
               "req": false,
+              "short": "Country area in square kilometers",
               "type": "`$NUMBER`"
             },
             {
               "active": true,
               "name": "borders",
               "req": false,
+              "short": "Border countries (ISO 3166-1 alpha-3 codes)",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "capital",
               "req": false,
+              "short": "Capital city or cities",
               "type": "`$ARRAY`"
             },
             {
@@ -72,24 +76,28 @@
               "active": true,
               "name": "cca2",
               "req": false,
+              "short": "ISO 3166-1 alpha-2 code",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "cca3",
               "req": false,
+              "short": "ISO 3166-1 alpha-3 code",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "ccn3",
               "req": false,
+              "short": "ISO 3166-1 numeric code",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "cioc",
               "req": false,
+              "short": "International Olympic Committee code",
               "type": "`$STRING`"
             },
             {
@@ -102,6 +110,7 @@
               "active": true,
               "name": "continents",
               "req": false,
+              "short": "Continents",
               "type": "`$ARRAY`"
             },
             {
@@ -120,12 +129,14 @@
               "active": true,
               "name": "fifa",
               "req": false,
+              "short": "FIFA country code",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "flag",
               "req": false,
+              "short": "Flag emoji",
               "type": "`$STRING`"
             },
             {
@@ -138,36 +149,42 @@
               "active": true,
               "name": "gini",
               "req": false,
+              "short": "Gini coefficient",
               "type": "`$OBJECT`"
             },
             {
               "active": true,
               "name": "idd",
               "req": false,
+              "short": "International direct dialing",
               "type": "`$OBJECT`"
             },
             {
               "active": true,
               "name": "independent",
               "req": false,
+              "short": "Independence status",
               "type": "`$BOOLEAN`"
             },
             {
               "active": true,
               "name": "landlocked",
               "req": false,
+              "short": "Landlocked status",
               "type": "`$BOOLEAN`"
             },
             {
               "active": true,
               "name": "languages",
               "req": false,
+              "short": "Languages spoken",
               "type": "`$OBJECT`"
             },
             {
               "active": true,
               "name": "latlng",
               "req": false,
+              "short": "Latitude and longitude",
               "type": "`$ARRAY`"
             },
             {
@@ -186,6 +203,7 @@
               "active": true,
               "name": "population",
               "req": false,
+              "short": "Country population",
               "type": "`$INTEGER`"
             },
             {
@@ -198,36 +216,42 @@
               "active": true,
               "name": "region",
               "req": false,
+              "short": "Geographic region",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "startOfWeek",
               "req": false,
+              "short": "Start of week day",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "status",
               "req": false,
+              "short": "ISO 3166-1 assignment status",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "subregion",
               "req": false,
+              "short": "Geographic subregion",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "timezones",
               "req": false,
+              "short": "Timezones",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "tld",
               "req": false,
+              "short": "Top-level domains",
               "type": "`$ARRAY`"
             },
             {
@@ -240,6 +264,7 @@
               "active": true,
               "name": "unMember",
               "req": false,
+              "short": "UN membership status",
               "type": "`$BOOLEAN`"
             }
           ],
@@ -297,24 +322,28 @@
               "active": true,
               "name": "altSpellings",
               "req": false,
+              "short": "Alternative country name spellings",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "area",
               "req": false,
+              "short": "Country area in square kilometers",
               "type": "`$NUMBER`"
             },
             {
               "active": true,
               "name": "borders",
               "req": false,
+              "short": "Border countries (ISO 3166-1 alpha-3 codes)",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "capital",
               "req": false,
+              "short": "Capital city or cities",
               "type": "`$ARRAY`"
             },
             {
@@ -333,24 +362,28 @@
               "active": true,
               "name": "cca2",
               "req": false,
+              "short": "ISO 3166-1 alpha-2 code",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "cca3",
               "req": false,
+              "short": "ISO 3166-1 alpha-3 code",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "ccn3",
               "req": false,
+              "short": "ISO 3166-1 numeric code",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "cioc",
               "req": false,
+              "short": "International Olympic Committee code",
               "type": "`$STRING`"
             },
             {
@@ -363,6 +396,7 @@
               "active": true,
               "name": "continents",
               "req": false,
+              "short": "Continents",
               "type": "`$ARRAY`"
             },
             {
@@ -381,12 +415,14 @@
               "active": true,
               "name": "fifa",
               "req": false,
+              "short": "FIFA country code",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "flag",
               "req": false,
+              "short": "Flag emoji",
               "type": "`$STRING`"
             },
             {
@@ -399,36 +435,42 @@
               "active": true,
               "name": "gini",
               "req": false,
+              "short": "Gini coefficient",
               "type": "`$OBJECT`"
             },
             {
               "active": true,
               "name": "idd",
               "req": false,
+              "short": "International direct dialing",
               "type": "`$OBJECT`"
             },
             {
               "active": true,
               "name": "independent",
               "req": false,
+              "short": "Independence status",
               "type": "`$BOOLEAN`"
             },
             {
               "active": true,
               "name": "landlocked",
               "req": false,
+              "short": "Landlocked status",
               "type": "`$BOOLEAN`"
             },
             {
               "active": true,
               "name": "languages",
               "req": false,
+              "short": "Languages spoken",
               "type": "`$OBJECT`"
             },
             {
               "active": true,
               "name": "latlng",
               "req": false,
+              "short": "Latitude and longitude",
               "type": "`$ARRAY`"
             },
             {
@@ -447,6 +489,7 @@
               "active": true,
               "name": "population",
               "req": false,
+              "short": "Country population",
               "type": "`$INTEGER`"
             },
             {
@@ -459,36 +502,42 @@
               "active": true,
               "name": "region",
               "req": false,
+              "short": "Geographic region",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "startOfWeek",
               "req": false,
+              "short": "Start of week day",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "status",
               "req": false,
+              "short": "ISO 3166-1 assignment status",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "subregion",
               "req": false,
+              "short": "Geographic subregion",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "timezones",
               "req": false,
+              "short": "Timezones",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "tld",
               "req": false,
+              "short": "Top-level domains",
               "type": "`$ARRAY`"
             },
             {
@@ -501,6 +550,7 @@
               "active": true,
               "name": "unMember",
               "req": false,
+              "short": "UN membership status",
               "type": "`$BOOLEAN`"
             }
           ],
@@ -575,24 +625,28 @@
               "active": true,
               "name": "altSpellings",
               "req": false,
+              "short": "Alternative country name spellings",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "area",
               "req": false,
+              "short": "Country area in square kilometers",
               "type": "`$NUMBER`"
             },
             {
               "active": true,
               "name": "borders",
               "req": false,
+              "short": "Border countries (ISO 3166-1 alpha-3 codes)",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "capital",
               "req": false,
+              "short": "Capital city or cities",
               "type": "`$ARRAY`"
             },
             {
@@ -611,24 +665,28 @@
               "active": true,
               "name": "cca2",
               "req": false,
+              "short": "ISO 3166-1 alpha-2 code",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "cca3",
               "req": false,
+              "short": "ISO 3166-1 alpha-3 code",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "ccn3",
               "req": false,
+              "short": "ISO 3166-1 numeric code",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "cioc",
               "req": false,
+              "short": "International Olympic Committee code",
               "type": "`$STRING`"
             },
             {
@@ -641,6 +699,7 @@
               "active": true,
               "name": "continents",
               "req": false,
+              "short": "Continents",
               "type": "`$ARRAY`"
             },
             {
@@ -659,12 +718,14 @@
               "active": true,
               "name": "fifa",
               "req": false,
+              "short": "FIFA country code",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "flag",
               "req": false,
+              "short": "Flag emoji",
               "type": "`$STRING`"
             },
             {
@@ -677,36 +738,42 @@
               "active": true,
               "name": "gini",
               "req": false,
+              "short": "Gini coefficient",
               "type": "`$OBJECT`"
             },
             {
               "active": true,
               "name": "idd",
               "req": false,
+              "short": "International direct dialing",
               "type": "`$OBJECT`"
             },
             {
               "active": true,
               "name": "independent",
               "req": false,
+              "short": "Independence status",
               "type": "`$BOOLEAN`"
             },
             {
               "active": true,
               "name": "landlocked",
               "req": false,
+              "short": "Landlocked status",
               "type": "`$BOOLEAN`"
             },
             {
               "active": true,
               "name": "languages",
               "req": false,
+              "short": "Languages spoken",
               "type": "`$OBJECT`"
             },
             {
               "active": true,
               "name": "latlng",
               "req": false,
+              "short": "Latitude and longitude",
               "type": "`$ARRAY`"
             },
             {
@@ -725,6 +792,7 @@
               "active": true,
               "name": "population",
               "req": false,
+              "short": "Country population",
               "type": "`$INTEGER`"
             },
             {
@@ -737,36 +805,42 @@
               "active": true,
               "name": "region",
               "req": false,
+              "short": "Geographic region",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "startOfWeek",
               "req": false,
+              "short": "Start of week day",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "status",
               "req": false,
+              "short": "ISO 3166-1 assignment status",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "subregion",
               "req": false,
+              "short": "Geographic subregion",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "timezones",
               "req": false,
+              "short": "Timezones",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "tld",
               "req": false,
+              "short": "Top-level domains",
               "type": "`$ARRAY`"
             },
             {
@@ -779,6 +853,7 @@
               "active": true,
               "name": "unMember",
               "req": false,
+              "short": "UN membership status",
               "type": "`$BOOLEAN`"
             }
           ],
@@ -853,24 +928,28 @@
               "active": true,
               "name": "altSpellings",
               "req": false,
+              "short": "Alternative country name spellings",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "area",
               "req": false,
+              "short": "Country area in square kilometers",
               "type": "`$NUMBER`"
             },
             {
               "active": true,
               "name": "borders",
               "req": false,
+              "short": "Border countries (ISO 3166-1 alpha-3 codes)",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "capital",
               "req": false,
+              "short": "Capital city or cities",
               "type": "`$ARRAY`"
             },
             {
@@ -889,24 +968,28 @@
               "active": true,
               "name": "cca2",
               "req": false,
+              "short": "ISO 3166-1 alpha-2 code",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "cca3",
               "req": false,
+              "short": "ISO 3166-1 alpha-3 code",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "ccn3",
               "req": false,
+              "short": "ISO 3166-1 numeric code",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "cioc",
               "req": false,
+              "short": "International Olympic Committee code",
               "type": "`$STRING`"
             },
             {
@@ -919,6 +1002,7 @@
               "active": true,
               "name": "continents",
               "req": false,
+              "short": "Continents",
               "type": "`$ARRAY`"
             },
             {
@@ -937,12 +1021,14 @@
               "active": true,
               "name": "fifa",
               "req": false,
+              "short": "FIFA country code",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "flag",
               "req": false,
+              "short": "Flag emoji",
               "type": "`$STRING`"
             },
             {
@@ -955,36 +1041,42 @@
               "active": true,
               "name": "gini",
               "req": false,
+              "short": "Gini coefficient",
               "type": "`$OBJECT`"
             },
             {
               "active": true,
               "name": "idd",
               "req": false,
+              "short": "International direct dialing",
               "type": "`$OBJECT`"
             },
             {
               "active": true,
               "name": "independent",
               "req": false,
+              "short": "Independence status",
               "type": "`$BOOLEAN`"
             },
             {
               "active": true,
               "name": "landlocked",
               "req": false,
+              "short": "Landlocked status",
               "type": "`$BOOLEAN`"
             },
             {
               "active": true,
               "name": "languages",
               "req": false,
+              "short": "Languages spoken",
               "type": "`$OBJECT`"
             },
             {
               "active": true,
               "name": "latlng",
               "req": false,
+              "short": "Latitude and longitude",
               "type": "`$ARRAY`"
             },
             {
@@ -1003,6 +1095,7 @@
               "active": true,
               "name": "population",
               "req": false,
+              "short": "Country population",
               "type": "`$INTEGER`"
             },
             {
@@ -1015,36 +1108,42 @@
               "active": true,
               "name": "region",
               "req": false,
+              "short": "Geographic region",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "startOfWeek",
               "req": false,
+              "short": "Start of week day",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "status",
               "req": false,
+              "short": "ISO 3166-1 assignment status",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "subregion",
               "req": false,
+              "short": "Geographic subregion",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "timezones",
               "req": false,
+              "short": "Timezones",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "tld",
               "req": false,
+              "short": "Top-level domains",
               "type": "`$ARRAY`"
             },
             {
@@ -1057,6 +1156,7 @@
               "active": true,
               "name": "unMember",
               "req": false,
+              "short": "UN membership status",
               "type": "`$BOOLEAN`"
             }
           ],

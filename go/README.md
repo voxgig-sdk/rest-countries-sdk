@@ -6,7 +6,7 @@ The Golang SDK for the RestCountries API — an entity-oriented client using sta
 
 It exposes the API as capitalised, semantic **Entities** — e.g. `client.All(nil)` — each with the same small set of operations (`List`, `Load`) instead of raw URL paths and query strings. You call meaning, not endpoints, which keeps the cognitive load low.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb`, `ts` — see
 > the [top-level README](../README.md).
 
 
@@ -265,41 +265,41 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"altSpellings"` |  |
-| `"area"` |  |
-| `"borders"` |  |
-| `"capital"` |  |
+| `"altSpellings"` | Alternative country name spellings |
+| `"area"` | Country area in square kilometers |
+| `"borders"` | Border countries (ISO 3166-1 alpha-3 codes) |
+| `"capital"` | Capital city or cities |
 | `"capitalInfo"` |  |
 | `"car"` |  |
-| `"cca2"` |  |
-| `"cca3"` |  |
-| `"ccn3"` |  |
-| `"cioc"` |  |
+| `"cca2"` | ISO 3166-1 alpha-2 code |
+| `"cca3"` | ISO 3166-1 alpha-3 code |
+| `"ccn3"` | ISO 3166-1 numeric code |
+| `"cioc"` | International Olympic Committee code |
 | `"coatOfArms"` |  |
-| `"continents"` |  |
+| `"continents"` | Continents |
 | `"currencies"` |  |
 | `"demonyms"` |  |
-| `"fifa"` |  |
-| `"flag"` |  |
+| `"fifa"` | FIFA country code |
+| `"flag"` | Flag emoji |
 | `"flags"` |  |
-| `"gini"` |  |
-| `"idd"` |  |
-| `"independent"` |  |
-| `"landlocked"` |  |
-| `"languages"` |  |
-| `"latlng"` |  |
+| `"gini"` | Gini coefficient |
+| `"idd"` | International direct dialing |
+| `"independent"` | Independence status |
+| `"landlocked"` | Landlocked status |
+| `"languages"` | Languages spoken |
+| `"latlng"` | Latitude and longitude |
 | `"maps"` |  |
 | `"name"` |  |
-| `"population"` |  |
+| `"population"` | Country population |
 | `"postalCode"` |  |
-| `"region"` |  |
-| `"startOfWeek"` |  |
-| `"status"` |  |
-| `"subregion"` |  |
-| `"timezones"` |  |
-| `"tld"` |  |
+| `"region"` | Geographic region |
+| `"startOfWeek"` | Start of week day |
+| `"status"` | ISO 3166-1 assignment status |
+| `"subregion"` | Geographic subregion |
+| `"timezones"` | Timezones |
+| `"tld"` | Top-level domains |
 | `"translations"` |  |
-| `"unMember"` |  |
+| `"unMember"` | UN membership status |
 
 Operations: List.
 
@@ -309,41 +309,41 @@ API path: `/all`
 
 | Field | Description |
 | --- | --- |
-| `"altSpellings"` |  |
-| `"area"` |  |
-| `"borders"` |  |
-| `"capital"` |  |
+| `"altSpellings"` | Alternative country name spellings |
+| `"area"` | Country area in square kilometers |
+| `"borders"` | Border countries (ISO 3166-1 alpha-3 codes) |
+| `"capital"` | Capital city or cities |
 | `"capitalInfo"` |  |
 | `"car"` |  |
-| `"cca2"` |  |
-| `"cca3"` |  |
-| `"ccn3"` |  |
-| `"cioc"` |  |
+| `"cca2"` | ISO 3166-1 alpha-2 code |
+| `"cca3"` | ISO 3166-1 alpha-3 code |
+| `"ccn3"` | ISO 3166-1 numeric code |
+| `"cioc"` | International Olympic Committee code |
 | `"coatOfArms"` |  |
-| `"continents"` |  |
+| `"continents"` | Continents |
 | `"currencies"` |  |
 | `"demonyms"` |  |
-| `"fifa"` |  |
-| `"flag"` |  |
+| `"fifa"` | FIFA country code |
+| `"flag"` | Flag emoji |
 | `"flags"` |  |
-| `"gini"` |  |
-| `"idd"` |  |
-| `"independent"` |  |
-| `"landlocked"` |  |
-| `"languages"` |  |
-| `"latlng"` |  |
+| `"gini"` | Gini coefficient |
+| `"idd"` | International direct dialing |
+| `"independent"` | Independence status |
+| `"landlocked"` | Landlocked status |
+| `"languages"` | Languages spoken |
+| `"latlng"` | Latitude and longitude |
 | `"maps"` |  |
 | `"name"` |  |
-| `"population"` |  |
+| `"population"` | Country population |
 | `"postalCode"` |  |
-| `"region"` |  |
-| `"startOfWeek"` |  |
-| `"status"` |  |
-| `"subregion"` |  |
-| `"timezones"` |  |
-| `"tld"` |  |
+| `"region"` | Geographic region |
+| `"startOfWeek"` | Start of week day |
+| `"status"` | ISO 3166-1 assignment status |
+| `"subregion"` | Geographic subregion |
+| `"timezones"` | Timezones |
+| `"tld"` | Top-level domains |
 | `"translations"` |  |
-| `"unMember"` |  |
+| `"unMember"` | UN membership status |
 
 Operations: Load.
 
@@ -353,41 +353,41 @@ API path: `/alpha/{code}`
 
 | Field | Description |
 | --- | --- |
-| `"altSpellings"` |  |
-| `"area"` |  |
-| `"borders"` |  |
-| `"capital"` |  |
+| `"altSpellings"` | Alternative country name spellings |
+| `"area"` | Country area in square kilometers |
+| `"borders"` | Border countries (ISO 3166-1 alpha-3 codes) |
+| `"capital"` | Capital city or cities |
 | `"capitalInfo"` |  |
 | `"car"` |  |
-| `"cca2"` |  |
-| `"cca3"` |  |
-| `"ccn3"` |  |
-| `"cioc"` |  |
+| `"cca2"` | ISO 3166-1 alpha-2 code |
+| `"cca3"` | ISO 3166-1 alpha-3 code |
+| `"ccn3"` | ISO 3166-1 numeric code |
+| `"cioc"` | International Olympic Committee code |
 | `"coatOfArms"` |  |
-| `"continents"` |  |
+| `"continents"` | Continents |
 | `"currencies"` |  |
 | `"demonyms"` |  |
-| `"fifa"` |  |
-| `"flag"` |  |
+| `"fifa"` | FIFA country code |
+| `"flag"` | Flag emoji |
 | `"flags"` |  |
-| `"gini"` |  |
-| `"idd"` |  |
-| `"independent"` |  |
-| `"landlocked"` |  |
-| `"languages"` |  |
-| `"latlng"` |  |
+| `"gini"` | Gini coefficient |
+| `"idd"` | International direct dialing |
+| `"independent"` | Independence status |
+| `"landlocked"` | Landlocked status |
+| `"languages"` | Languages spoken |
+| `"latlng"` | Latitude and longitude |
 | `"maps"` |  |
 | `"name"` |  |
-| `"population"` |  |
+| `"population"` | Country population |
 | `"postalCode"` |  |
-| `"region"` |  |
-| `"startOfWeek"` |  |
-| `"status"` |  |
-| `"subregion"` |  |
-| `"timezones"` |  |
-| `"tld"` |  |
+| `"region"` | Geographic region |
+| `"startOfWeek"` | Start of week day |
+| `"status"` | ISO 3166-1 assignment status |
+| `"subregion"` | Geographic subregion |
+| `"timezones"` | Timezones |
+| `"tld"` | Top-level domains |
 | `"translations"` |  |
-| `"unMember"` |  |
+| `"unMember"` | UN membership status |
 
 Operations: Load.
 
@@ -397,41 +397,41 @@ API path: `/capital/{capital}`
 
 | Field | Description |
 | --- | --- |
-| `"altSpellings"` |  |
-| `"area"` |  |
-| `"borders"` |  |
-| `"capital"` |  |
+| `"altSpellings"` | Alternative country name spellings |
+| `"area"` | Country area in square kilometers |
+| `"borders"` | Border countries (ISO 3166-1 alpha-3 codes) |
+| `"capital"` | Capital city or cities |
 | `"capitalInfo"` |  |
 | `"car"` |  |
-| `"cca2"` |  |
-| `"cca3"` |  |
-| `"ccn3"` |  |
-| `"cioc"` |  |
+| `"cca2"` | ISO 3166-1 alpha-2 code |
+| `"cca3"` | ISO 3166-1 alpha-3 code |
+| `"ccn3"` | ISO 3166-1 numeric code |
+| `"cioc"` | International Olympic Committee code |
 | `"coatOfArms"` |  |
-| `"continents"` |  |
+| `"continents"` | Continents |
 | `"currencies"` |  |
 | `"demonyms"` |  |
-| `"fifa"` |  |
-| `"flag"` |  |
+| `"fifa"` | FIFA country code |
+| `"flag"` | Flag emoji |
 | `"flags"` |  |
-| `"gini"` |  |
-| `"idd"` |  |
-| `"independent"` |  |
-| `"landlocked"` |  |
-| `"languages"` |  |
-| `"latlng"` |  |
+| `"gini"` | Gini coefficient |
+| `"idd"` | International direct dialing |
+| `"independent"` | Independence status |
+| `"landlocked"` | Landlocked status |
+| `"languages"` | Languages spoken |
+| `"latlng"` | Latitude and longitude |
 | `"maps"` |  |
 | `"name"` |  |
-| `"population"` |  |
+| `"population"` | Country population |
 | `"postalCode"` |  |
-| `"region"` |  |
-| `"startOfWeek"` |  |
-| `"status"` |  |
-| `"subregion"` |  |
-| `"timezones"` |  |
-| `"tld"` |  |
+| `"region"` | Geographic region |
+| `"startOfWeek"` | Start of week day |
+| `"status"` | ISO 3166-1 assignment status |
+| `"subregion"` | Geographic subregion |
+| `"timezones"` | Timezones |
+| `"tld"` | Top-level domains |
 | `"translations"` |  |
-| `"unMember"` |  |
+| `"unMember"` | UN membership status |
 
 Operations: Load.
 
@@ -456,41 +456,41 @@ Create an instance: `all := client.All(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `altSpellings` | `[]any` |  |
-| `area` | `float64` |  |
-| `borders` | `[]any` |  |
-| `capital` | `[]any` |  |
+| `altSpellings` | `[]any` | Alternative country name spellings |
+| `area` | `float64` | Country area in square kilometers |
+| `borders` | `[]any` | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `[]any` | Capital city or cities |
 | `capitalInfo` | `map[string]any` |  |
 | `car` | `map[string]any` |  |
-| `cca2` | `string` |  |
-| `cca3` | `string` |  |
-| `ccn3` | `string` |  |
-| `cioc` | `string` |  |
+| `cca2` | `string` | ISO 3166-1 alpha-2 code |
+| `cca3` | `string` | ISO 3166-1 alpha-3 code |
+| `ccn3` | `string` | ISO 3166-1 numeric code |
+| `cioc` | `string` | International Olympic Committee code |
 | `coatOfArms` | `map[string]any` |  |
-| `continents` | `[]any` |  |
+| `continents` | `[]any` | Continents |
 | `currencies` | `map[string]any` |  |
 | `demonyms` | `map[string]any` |  |
-| `fifa` | `string` |  |
-| `flag` | `string` |  |
+| `fifa` | `string` | FIFA country code |
+| `flag` | `string` | Flag emoji |
 | `flags` | `map[string]any` |  |
-| `gini` | `map[string]any` |  |
-| `idd` | `map[string]any` |  |
-| `independent` | `bool` |  |
-| `landlocked` | `bool` |  |
-| `languages` | `map[string]any` |  |
-| `latlng` | `[]any` |  |
+| `gini` | `map[string]any` | Gini coefficient |
+| `idd` | `map[string]any` | International direct dialing |
+| `independent` | `bool` | Independence status |
+| `landlocked` | `bool` | Landlocked status |
+| `languages` | `map[string]any` | Languages spoken |
+| `latlng` | `[]any` | Latitude and longitude |
 | `maps` | `map[string]any` |  |
 | `name` | `map[string]any` |  |
-| `population` | `int` |  |
+| `population` | `int` | Country population |
 | `postalCode` | `map[string]any` |  |
-| `region` | `string` |  |
-| `startOfWeek` | `string` |  |
-| `status` | `string` |  |
-| `subregion` | `string` |  |
-| `timezones` | `[]any` |  |
-| `tld` | `[]any` |  |
+| `region` | `string` | Geographic region |
+| `startOfWeek` | `string` | Start of week day |
+| `status` | `string` | ISO 3166-1 assignment status |
+| `subregion` | `string` | Geographic subregion |
+| `timezones` | `[]any` | Timezones |
+| `tld` | `[]any` | Top-level domains |
 | `translations` | `map[string]any` |  |
-| `unMember` | `bool` |  |
+| `unMember` | `bool` | UN membership status |
 
 #### Example: List
 
@@ -517,41 +517,41 @@ Create an instance: `alpha := client.Alpha(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `altSpellings` | `[]any` |  |
-| `area` | `float64` |  |
-| `borders` | `[]any` |  |
-| `capital` | `[]any` |  |
+| `altSpellings` | `[]any` | Alternative country name spellings |
+| `area` | `float64` | Country area in square kilometers |
+| `borders` | `[]any` | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `[]any` | Capital city or cities |
 | `capitalInfo` | `map[string]any` |  |
 | `car` | `map[string]any` |  |
-| `cca2` | `string` |  |
-| `cca3` | `string` |  |
-| `ccn3` | `string` |  |
-| `cioc` | `string` |  |
+| `cca2` | `string` | ISO 3166-1 alpha-2 code |
+| `cca3` | `string` | ISO 3166-1 alpha-3 code |
+| `ccn3` | `string` | ISO 3166-1 numeric code |
+| `cioc` | `string` | International Olympic Committee code |
 | `coatOfArms` | `map[string]any` |  |
-| `continents` | `[]any` |  |
+| `continents` | `[]any` | Continents |
 | `currencies` | `map[string]any` |  |
 | `demonyms` | `map[string]any` |  |
-| `fifa` | `string` |  |
-| `flag` | `string` |  |
+| `fifa` | `string` | FIFA country code |
+| `flag` | `string` | Flag emoji |
 | `flags` | `map[string]any` |  |
-| `gini` | `map[string]any` |  |
-| `idd` | `map[string]any` |  |
-| `independent` | `bool` |  |
-| `landlocked` | `bool` |  |
-| `languages` | `map[string]any` |  |
-| `latlng` | `[]any` |  |
+| `gini` | `map[string]any` | Gini coefficient |
+| `idd` | `map[string]any` | International direct dialing |
+| `independent` | `bool` | Independence status |
+| `landlocked` | `bool` | Landlocked status |
+| `languages` | `map[string]any` | Languages spoken |
+| `latlng` | `[]any` | Latitude and longitude |
 | `maps` | `map[string]any` |  |
 | `name` | `map[string]any` |  |
-| `population` | `int` |  |
+| `population` | `int` | Country population |
 | `postalCode` | `map[string]any` |  |
-| `region` | `string` |  |
-| `startOfWeek` | `string` |  |
-| `status` | `string` |  |
-| `subregion` | `string` |  |
-| `timezones` | `[]any` |  |
-| `tld` | `[]any` |  |
+| `region` | `string` | Geographic region |
+| `startOfWeek` | `string` | Start of week day |
+| `status` | `string` | ISO 3166-1 assignment status |
+| `subregion` | `string` | Geographic subregion |
+| `timezones` | `[]any` | Timezones |
+| `tld` | `[]any` | Top-level domains |
 | `translations` | `map[string]any` |  |
-| `unMember` | `bool` |  |
+| `unMember` | `bool` | UN membership status |
 
 #### Example: Load
 
@@ -578,41 +578,41 @@ Create an instance: `capital := client.Capital(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `altSpellings` | `[]any` |  |
-| `area` | `float64` |  |
-| `borders` | `[]any` |  |
-| `capital` | `[]any` |  |
+| `altSpellings` | `[]any` | Alternative country name spellings |
+| `area` | `float64` | Country area in square kilometers |
+| `borders` | `[]any` | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `[]any` | Capital city or cities |
 | `capitalInfo` | `map[string]any` |  |
 | `car` | `map[string]any` |  |
-| `cca2` | `string` |  |
-| `cca3` | `string` |  |
-| `ccn3` | `string` |  |
-| `cioc` | `string` |  |
+| `cca2` | `string` | ISO 3166-1 alpha-2 code |
+| `cca3` | `string` | ISO 3166-1 alpha-3 code |
+| `ccn3` | `string` | ISO 3166-1 numeric code |
+| `cioc` | `string` | International Olympic Committee code |
 | `coatOfArms` | `map[string]any` |  |
-| `continents` | `[]any` |  |
+| `continents` | `[]any` | Continents |
 | `currencies` | `map[string]any` |  |
 | `demonyms` | `map[string]any` |  |
-| `fifa` | `string` |  |
-| `flag` | `string` |  |
+| `fifa` | `string` | FIFA country code |
+| `flag` | `string` | Flag emoji |
 | `flags` | `map[string]any` |  |
-| `gini` | `map[string]any` |  |
-| `idd` | `map[string]any` |  |
-| `independent` | `bool` |  |
-| `landlocked` | `bool` |  |
-| `languages` | `map[string]any` |  |
-| `latlng` | `[]any` |  |
+| `gini` | `map[string]any` | Gini coefficient |
+| `idd` | `map[string]any` | International direct dialing |
+| `independent` | `bool` | Independence status |
+| `landlocked` | `bool` | Landlocked status |
+| `languages` | `map[string]any` | Languages spoken |
+| `latlng` | `[]any` | Latitude and longitude |
 | `maps` | `map[string]any` |  |
 | `name` | `map[string]any` |  |
-| `population` | `int` |  |
+| `population` | `int` | Country population |
 | `postalCode` | `map[string]any` |  |
-| `region` | `string` |  |
-| `startOfWeek` | `string` |  |
-| `status` | `string` |  |
-| `subregion` | `string` |  |
-| `timezones` | `[]any` |  |
-| `tld` | `[]any` |  |
+| `region` | `string` | Geographic region |
+| `startOfWeek` | `string` | Start of week day |
+| `status` | `string` | ISO 3166-1 assignment status |
+| `subregion` | `string` | Geographic subregion |
+| `timezones` | `[]any` | Timezones |
+| `tld` | `[]any` | Top-level domains |
 | `translations` | `map[string]any` |  |
-| `unMember` | `bool` |  |
+| `unMember` | `bool` | UN membership status |
 
 #### Example: Load
 
@@ -639,41 +639,41 @@ Create an instance: `name := client.Name(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `altSpellings` | `[]any` |  |
-| `area` | `float64` |  |
-| `borders` | `[]any` |  |
-| `capital` | `[]any` |  |
+| `altSpellings` | `[]any` | Alternative country name spellings |
+| `area` | `float64` | Country area in square kilometers |
+| `borders` | `[]any` | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `[]any` | Capital city or cities |
 | `capitalInfo` | `map[string]any` |  |
 | `car` | `map[string]any` |  |
-| `cca2` | `string` |  |
-| `cca3` | `string` |  |
-| `ccn3` | `string` |  |
-| `cioc` | `string` |  |
+| `cca2` | `string` | ISO 3166-1 alpha-2 code |
+| `cca3` | `string` | ISO 3166-1 alpha-3 code |
+| `ccn3` | `string` | ISO 3166-1 numeric code |
+| `cioc` | `string` | International Olympic Committee code |
 | `coatOfArms` | `map[string]any` |  |
-| `continents` | `[]any` |  |
+| `continents` | `[]any` | Continents |
 | `currencies` | `map[string]any` |  |
 | `demonyms` | `map[string]any` |  |
-| `fifa` | `string` |  |
-| `flag` | `string` |  |
+| `fifa` | `string` | FIFA country code |
+| `flag` | `string` | Flag emoji |
 | `flags` | `map[string]any` |  |
-| `gini` | `map[string]any` |  |
-| `idd` | `map[string]any` |  |
-| `independent` | `bool` |  |
-| `landlocked` | `bool` |  |
-| `languages` | `map[string]any` |  |
-| `latlng` | `[]any` |  |
+| `gini` | `map[string]any` | Gini coefficient |
+| `idd` | `map[string]any` | International direct dialing |
+| `independent` | `bool` | Independence status |
+| `landlocked` | `bool` | Landlocked status |
+| `languages` | `map[string]any` | Languages spoken |
+| `latlng` | `[]any` | Latitude and longitude |
 | `maps` | `map[string]any` |  |
 | `name` | `map[string]any` |  |
-| `population` | `int` |  |
+| `population` | `int` | Country population |
 | `postalCode` | `map[string]any` |  |
-| `region` | `string` |  |
-| `startOfWeek` | `string` |  |
-| `status` | `string` |  |
-| `subregion` | `string` |  |
-| `timezones` | `[]any` |  |
-| `tld` | `[]any` |  |
+| `region` | `string` | Geographic region |
+| `startOfWeek` | `string` | Start of week day |
+| `status` | `string` | ISO 3166-1 assignment status |
+| `subregion` | `string` | Geographic subregion |
+| `timezones` | `[]any` | Timezones |
+| `tld` | `[]any` | Top-level domains |
 | `translations` | `map[string]any` |  |
-| `unMember` | `bool` |  |
+| `unMember` | `bool` | UN membership status |
 
 #### Example: Load
 

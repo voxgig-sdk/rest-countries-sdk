@@ -244,41 +244,41 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `altSpellings` |  |
-| `area` |  |
-| `borders` |  |
-| `capital` |  |
+| `altSpellings` | Alternative country name spellings |
+| `area` | Country area in square kilometers |
+| `borders` | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | Capital city or cities |
 | `capitalInfo` |  |
 | `car` |  |
-| `cca2` |  |
-| `cca3` |  |
-| `ccn3` |  |
-| `cioc` |  |
+| `cca2` | ISO 3166-1 alpha-2 code |
+| `cca3` | ISO 3166-1 alpha-3 code |
+| `ccn3` | ISO 3166-1 numeric code |
+| `cioc` | International Olympic Committee code |
 | `coatOfArms` |  |
-| `continents` |  |
+| `continents` | Continents |
 | `currencies` |  |
 | `demonyms` |  |
-| `fifa` |  |
-| `flag` |  |
+| `fifa` | FIFA country code |
+| `flag` | Flag emoji |
 | `flags` |  |
-| `gini` |  |
-| `idd` |  |
-| `independent` |  |
-| `landlocked` |  |
-| `languages` |  |
-| `latlng` |  |
+| `gini` | Gini coefficient |
+| `idd` | International direct dialing |
+| `independent` | Independence status |
+| `landlocked` | Landlocked status |
+| `languages` | Languages spoken |
+| `latlng` | Latitude and longitude |
 | `maps` |  |
 | `name` |  |
-| `population` |  |
+| `population` | Country population |
 | `postalCode` |  |
-| `region` |  |
-| `startOfWeek` |  |
-| `status` |  |
-| `subregion` |  |
-| `timezones` |  |
-| `tld` |  |
+| `region` | Geographic region |
+| `startOfWeek` | Start of week day |
+| `status` | ISO 3166-1 assignment status |
+| `subregion` | Geographic subregion |
+| `timezones` | Timezones |
+| `tld` | Top-level domains |
 | `translations` |  |
-| `unMember` |  |
+| `unMember` | UN membership status |
 
 Operations: List.
 
@@ -288,41 +288,41 @@ API path: `/all`
 
 | Field | Description |
 | --- | --- |
-| `altSpellings` |  |
-| `area` |  |
-| `borders` |  |
-| `capital` |  |
+| `altSpellings` | Alternative country name spellings |
+| `area` | Country area in square kilometers |
+| `borders` | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | Capital city or cities |
 | `capitalInfo` |  |
 | `car` |  |
-| `cca2` |  |
-| `cca3` |  |
-| `ccn3` |  |
-| `cioc` |  |
+| `cca2` | ISO 3166-1 alpha-2 code |
+| `cca3` | ISO 3166-1 alpha-3 code |
+| `ccn3` | ISO 3166-1 numeric code |
+| `cioc` | International Olympic Committee code |
 | `coatOfArms` |  |
-| `continents` |  |
+| `continents` | Continents |
 | `currencies` |  |
 | `demonyms` |  |
-| `fifa` |  |
-| `flag` |  |
+| `fifa` | FIFA country code |
+| `flag` | Flag emoji |
 | `flags` |  |
-| `gini` |  |
-| `idd` |  |
-| `independent` |  |
-| `landlocked` |  |
-| `languages` |  |
-| `latlng` |  |
+| `gini` | Gini coefficient |
+| `idd` | International direct dialing |
+| `independent` | Independence status |
+| `landlocked` | Landlocked status |
+| `languages` | Languages spoken |
+| `latlng` | Latitude and longitude |
 | `maps` |  |
 | `name` |  |
-| `population` |  |
+| `population` | Country population |
 | `postalCode` |  |
-| `region` |  |
-| `startOfWeek` |  |
-| `status` |  |
-| `subregion` |  |
-| `timezones` |  |
-| `tld` |  |
+| `region` | Geographic region |
+| `startOfWeek` | Start of week day |
+| `status` | ISO 3166-1 assignment status |
+| `subregion` | Geographic subregion |
+| `timezones` | Timezones |
+| `tld` | Top-level domains |
 | `translations` |  |
-| `unMember` |  |
+| `unMember` | UN membership status |
 
 Operations: Load.
 
@@ -332,41 +332,41 @@ API path: `/alpha/{code}`
 
 | Field | Description |
 | --- | --- |
-| `altSpellings` |  |
-| `area` |  |
-| `borders` |  |
-| `capital` |  |
+| `altSpellings` | Alternative country name spellings |
+| `area` | Country area in square kilometers |
+| `borders` | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | Capital city or cities |
 | `capitalInfo` |  |
 | `car` |  |
-| `cca2` |  |
-| `cca3` |  |
-| `ccn3` |  |
-| `cioc` |  |
+| `cca2` | ISO 3166-1 alpha-2 code |
+| `cca3` | ISO 3166-1 alpha-3 code |
+| `ccn3` | ISO 3166-1 numeric code |
+| `cioc` | International Olympic Committee code |
 | `coatOfArms` |  |
-| `continents` |  |
+| `continents` | Continents |
 | `currencies` |  |
 | `demonyms` |  |
-| `fifa` |  |
-| `flag` |  |
+| `fifa` | FIFA country code |
+| `flag` | Flag emoji |
 | `flags` |  |
-| `gini` |  |
-| `idd` |  |
-| `independent` |  |
-| `landlocked` |  |
-| `languages` |  |
-| `latlng` |  |
+| `gini` | Gini coefficient |
+| `idd` | International direct dialing |
+| `independent` | Independence status |
+| `landlocked` | Landlocked status |
+| `languages` | Languages spoken |
+| `latlng` | Latitude and longitude |
 | `maps` |  |
 | `name` |  |
-| `population` |  |
+| `population` | Country population |
 | `postalCode` |  |
-| `region` |  |
-| `startOfWeek` |  |
-| `status` |  |
-| `subregion` |  |
-| `timezones` |  |
-| `tld` |  |
+| `region` | Geographic region |
+| `startOfWeek` | Start of week day |
+| `status` | ISO 3166-1 assignment status |
+| `subregion` | Geographic subregion |
+| `timezones` | Timezones |
+| `tld` | Top-level domains |
 | `translations` |  |
-| `unMember` |  |
+| `unMember` | UN membership status |
 
 Operations: Load.
 
@@ -376,41 +376,41 @@ API path: `/capital/{capital}`
 
 | Field | Description |
 | --- | --- |
-| `altSpellings` |  |
-| `area` |  |
-| `borders` |  |
-| `capital` |  |
+| `altSpellings` | Alternative country name spellings |
+| `area` | Country area in square kilometers |
+| `borders` | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | Capital city or cities |
 | `capitalInfo` |  |
 | `car` |  |
-| `cca2` |  |
-| `cca3` |  |
-| `ccn3` |  |
-| `cioc` |  |
+| `cca2` | ISO 3166-1 alpha-2 code |
+| `cca3` | ISO 3166-1 alpha-3 code |
+| `ccn3` | ISO 3166-1 numeric code |
+| `cioc` | International Olympic Committee code |
 | `coatOfArms` |  |
-| `continents` |  |
+| `continents` | Continents |
 | `currencies` |  |
 | `demonyms` |  |
-| `fifa` |  |
-| `flag` |  |
+| `fifa` | FIFA country code |
+| `flag` | Flag emoji |
 | `flags` |  |
-| `gini` |  |
-| `idd` |  |
-| `independent` |  |
-| `landlocked` |  |
-| `languages` |  |
-| `latlng` |  |
+| `gini` | Gini coefficient |
+| `idd` | International direct dialing |
+| `independent` | Independence status |
+| `landlocked` | Landlocked status |
+| `languages` | Languages spoken |
+| `latlng` | Latitude and longitude |
 | `maps` |  |
 | `name` |  |
-| `population` |  |
+| `population` | Country population |
 | `postalCode` |  |
-| `region` |  |
-| `startOfWeek` |  |
-| `status` |  |
-| `subregion` |  |
-| `timezones` |  |
-| `tld` |  |
+| `region` | Geographic region |
+| `startOfWeek` | Start of week day |
+| `status` | ISO 3166-1 assignment status |
+| `subregion` | Geographic subregion |
+| `timezones` | Timezones |
+| `tld` | Top-level domains |
 | `translations` |  |
-| `unMember` |  |
+| `unMember` | UN membership status |
 
 Operations: Load.
 
@@ -435,41 +435,41 @@ Create an instance: `all = client.All`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `altSpellings` | `Array` |  |
-| `area` | `Float` |  |
-| `borders` | `Array` |  |
-| `capital` | `Array` |  |
+| `altSpellings` | `Array` | Alternative country name spellings |
+| `area` | `Float` | Country area in square kilometers |
+| `borders` | `Array` | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `Array` | Capital city or cities |
 | `capitalInfo` | `Hash` |  |
 | `car` | `Hash` |  |
-| `cca2` | `String` |  |
-| `cca3` | `String` |  |
-| `ccn3` | `String` |  |
-| `cioc` | `String` |  |
+| `cca2` | `String` | ISO 3166-1 alpha-2 code |
+| `cca3` | `String` | ISO 3166-1 alpha-3 code |
+| `ccn3` | `String` | ISO 3166-1 numeric code |
+| `cioc` | `String` | International Olympic Committee code |
 | `coatOfArms` | `Hash` |  |
-| `continents` | `Array` |  |
+| `continents` | `Array` | Continents |
 | `currencies` | `Hash` |  |
 | `demonyms` | `Hash` |  |
-| `fifa` | `String` |  |
-| `flag` | `String` |  |
+| `fifa` | `String` | FIFA country code |
+| `flag` | `String` | Flag emoji |
 | `flags` | `Hash` |  |
-| `gini` | `Hash` |  |
-| `idd` | `Hash` |  |
-| `independent` | `Boolean` |  |
-| `landlocked` | `Boolean` |  |
-| `languages` | `Hash` |  |
-| `latlng` | `Array` |  |
+| `gini` | `Hash` | Gini coefficient |
+| `idd` | `Hash` | International direct dialing |
+| `independent` | `Boolean` | Independence status |
+| `landlocked` | `Boolean` | Landlocked status |
+| `languages` | `Hash` | Languages spoken |
+| `latlng` | `Array` | Latitude and longitude |
 | `maps` | `Hash` |  |
 | `name` | `Hash` |  |
-| `population` | `Integer` |  |
+| `population` | `Integer` | Country population |
 | `postalCode` | `Hash` |  |
-| `region` | `String` |  |
-| `startOfWeek` | `String` |  |
-| `status` | `String` |  |
-| `subregion` | `String` |  |
-| `timezones` | `Array` |  |
-| `tld` | `Array` |  |
+| `region` | `String` | Geographic region |
+| `startOfWeek` | `String` | Start of week day |
+| `status` | `String` | ISO 3166-1 assignment status |
+| `subregion` | `String` | Geographic subregion |
+| `timezones` | `Array` | Timezones |
+| `tld` | `Array` | Top-level domains |
 | `translations` | `Hash` |  |
-| `unMember` | `Boolean` |  |
+| `unMember` | `Boolean` | UN membership status |
 
 #### Example: List
 
@@ -493,41 +493,41 @@ Create an instance: `alpha = client.Alpha`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `altSpellings` | `Array` |  |
-| `area` | `Float` |  |
-| `borders` | `Array` |  |
-| `capital` | `Array` |  |
+| `altSpellings` | `Array` | Alternative country name spellings |
+| `area` | `Float` | Country area in square kilometers |
+| `borders` | `Array` | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `Array` | Capital city or cities |
 | `capitalInfo` | `Hash` |  |
 | `car` | `Hash` |  |
-| `cca2` | `String` |  |
-| `cca3` | `String` |  |
-| `ccn3` | `String` |  |
-| `cioc` | `String` |  |
+| `cca2` | `String` | ISO 3166-1 alpha-2 code |
+| `cca3` | `String` | ISO 3166-1 alpha-3 code |
+| `ccn3` | `String` | ISO 3166-1 numeric code |
+| `cioc` | `String` | International Olympic Committee code |
 | `coatOfArms` | `Hash` |  |
-| `continents` | `Array` |  |
+| `continents` | `Array` | Continents |
 | `currencies` | `Hash` |  |
 | `demonyms` | `Hash` |  |
-| `fifa` | `String` |  |
-| `flag` | `String` |  |
+| `fifa` | `String` | FIFA country code |
+| `flag` | `String` | Flag emoji |
 | `flags` | `Hash` |  |
-| `gini` | `Hash` |  |
-| `idd` | `Hash` |  |
-| `independent` | `Boolean` |  |
-| `landlocked` | `Boolean` |  |
-| `languages` | `Hash` |  |
-| `latlng` | `Array` |  |
+| `gini` | `Hash` | Gini coefficient |
+| `idd` | `Hash` | International direct dialing |
+| `independent` | `Boolean` | Independence status |
+| `landlocked` | `Boolean` | Landlocked status |
+| `languages` | `Hash` | Languages spoken |
+| `latlng` | `Array` | Latitude and longitude |
 | `maps` | `Hash` |  |
 | `name` | `Hash` |  |
-| `population` | `Integer` |  |
+| `population` | `Integer` | Country population |
 | `postalCode` | `Hash` |  |
-| `region` | `String` |  |
-| `startOfWeek` | `String` |  |
-| `status` | `String` |  |
-| `subregion` | `String` |  |
-| `timezones` | `Array` |  |
-| `tld` | `Array` |  |
+| `region` | `String` | Geographic region |
+| `startOfWeek` | `String` | Start of week day |
+| `status` | `String` | ISO 3166-1 assignment status |
+| `subregion` | `String` | Geographic subregion |
+| `timezones` | `Array` | Timezones |
+| `tld` | `Array` | Top-level domains |
 | `translations` | `Hash` |  |
-| `unMember` | `Boolean` |  |
+| `unMember` | `Boolean` | UN membership status |
 
 #### Example: Load
 
@@ -551,41 +551,41 @@ Create an instance: `capital = client.Capital`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `altSpellings` | `Array` |  |
-| `area` | `Float` |  |
-| `borders` | `Array` |  |
-| `capital` | `Array` |  |
+| `altSpellings` | `Array` | Alternative country name spellings |
+| `area` | `Float` | Country area in square kilometers |
+| `borders` | `Array` | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `Array` | Capital city or cities |
 | `capitalInfo` | `Hash` |  |
 | `car` | `Hash` |  |
-| `cca2` | `String` |  |
-| `cca3` | `String` |  |
-| `ccn3` | `String` |  |
-| `cioc` | `String` |  |
+| `cca2` | `String` | ISO 3166-1 alpha-2 code |
+| `cca3` | `String` | ISO 3166-1 alpha-3 code |
+| `ccn3` | `String` | ISO 3166-1 numeric code |
+| `cioc` | `String` | International Olympic Committee code |
 | `coatOfArms` | `Hash` |  |
-| `continents` | `Array` |  |
+| `continents` | `Array` | Continents |
 | `currencies` | `Hash` |  |
 | `demonyms` | `Hash` |  |
-| `fifa` | `String` |  |
-| `flag` | `String` |  |
+| `fifa` | `String` | FIFA country code |
+| `flag` | `String` | Flag emoji |
 | `flags` | `Hash` |  |
-| `gini` | `Hash` |  |
-| `idd` | `Hash` |  |
-| `independent` | `Boolean` |  |
-| `landlocked` | `Boolean` |  |
-| `languages` | `Hash` |  |
-| `latlng` | `Array` |  |
+| `gini` | `Hash` | Gini coefficient |
+| `idd` | `Hash` | International direct dialing |
+| `independent` | `Boolean` | Independence status |
+| `landlocked` | `Boolean` | Landlocked status |
+| `languages` | `Hash` | Languages spoken |
+| `latlng` | `Array` | Latitude and longitude |
 | `maps` | `Hash` |  |
 | `name` | `Hash` |  |
-| `population` | `Integer` |  |
+| `population` | `Integer` | Country population |
 | `postalCode` | `Hash` |  |
-| `region` | `String` |  |
-| `startOfWeek` | `String` |  |
-| `status` | `String` |  |
-| `subregion` | `String` |  |
-| `timezones` | `Array` |  |
-| `tld` | `Array` |  |
+| `region` | `String` | Geographic region |
+| `startOfWeek` | `String` | Start of week day |
+| `status` | `String` | ISO 3166-1 assignment status |
+| `subregion` | `String` | Geographic subregion |
+| `timezones` | `Array` | Timezones |
+| `tld` | `Array` | Top-level domains |
 | `translations` | `Hash` |  |
-| `unMember` | `Boolean` |  |
+| `unMember` | `Boolean` | UN membership status |
 
 #### Example: Load
 
@@ -609,41 +609,41 @@ Create an instance: `name = client.Name`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `altSpellings` | `Array` |  |
-| `area` | `Float` |  |
-| `borders` | `Array` |  |
-| `capital` | `Array` |  |
+| `altSpellings` | `Array` | Alternative country name spellings |
+| `area` | `Float` | Country area in square kilometers |
+| `borders` | `Array` | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `Array` | Capital city or cities |
 | `capitalInfo` | `Hash` |  |
 | `car` | `Hash` |  |
-| `cca2` | `String` |  |
-| `cca3` | `String` |  |
-| `ccn3` | `String` |  |
-| `cioc` | `String` |  |
+| `cca2` | `String` | ISO 3166-1 alpha-2 code |
+| `cca3` | `String` | ISO 3166-1 alpha-3 code |
+| `ccn3` | `String` | ISO 3166-1 numeric code |
+| `cioc` | `String` | International Olympic Committee code |
 | `coatOfArms` | `Hash` |  |
-| `continents` | `Array` |  |
+| `continents` | `Array` | Continents |
 | `currencies` | `Hash` |  |
 | `demonyms` | `Hash` |  |
-| `fifa` | `String` |  |
-| `flag` | `String` |  |
+| `fifa` | `String` | FIFA country code |
+| `flag` | `String` | Flag emoji |
 | `flags` | `Hash` |  |
-| `gini` | `Hash` |  |
-| `idd` | `Hash` |  |
-| `independent` | `Boolean` |  |
-| `landlocked` | `Boolean` |  |
-| `languages` | `Hash` |  |
-| `latlng` | `Array` |  |
+| `gini` | `Hash` | Gini coefficient |
+| `idd` | `Hash` | International direct dialing |
+| `independent` | `Boolean` | Independence status |
+| `landlocked` | `Boolean` | Landlocked status |
+| `languages` | `Hash` | Languages spoken |
+| `latlng` | `Array` | Latitude and longitude |
 | `maps` | `Hash` |  |
 | `name` | `Hash` |  |
-| `population` | `Integer` |  |
+| `population` | `Integer` | Country population |
 | `postalCode` | `Hash` |  |
-| `region` | `String` |  |
-| `startOfWeek` | `String` |  |
-| `status` | `String` |  |
-| `subregion` | `String` |  |
-| `timezones` | `Array` |  |
-| `tld` | `Array` |  |
+| `region` | `String` | Geographic region |
+| `startOfWeek` | `String` | Start of week day |
+| `status` | `String` | ISO 3166-1 assignment status |
+| `subregion` | `String` | Geographic subregion |
+| `timezones` | `Array` | Timezones |
+| `tld` | `Array` | Top-level domains |
 | `translations` | `Hash` |  |
-| `unMember` | `Boolean` |  |
+| `unMember` | `Boolean` | UN membership status |
 
 #### Example: Load
 

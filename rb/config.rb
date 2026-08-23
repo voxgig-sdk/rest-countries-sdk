@@ -19,6 +19,9 @@ module RestCountriesConfig
     {
       "main" => {
         "name" => "RestCountries",
+        "slug" => "rest-countries",
+        "version" => "0.0.1",
+        "target" => "rb",
       },
       "feature" => {
         "test" => {
@@ -44,18 +47,22 @@ module RestCountriesConfig
           "fields" => [
             {
               "name" => "altSpellings",
+              "short" => "Alternative country name spellings",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "area",
+              "short" => "Country area in square kilometers",
               "type" => "`$NUMBER`",
             },
             {
               "name" => "borders",
+              "short" => "Border countries (ISO 3166-1 alpha-3 codes)",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "capital",
+              "short" => "Capital city or cities",
               "type" => "`$ARRAY`",
             },
             {
@@ -68,18 +75,22 @@ module RestCountriesConfig
             },
             {
               "name" => "cca2",
+              "short" => "ISO 3166-1 alpha-2 code",
               "type" => "`$STRING`",
             },
             {
               "name" => "cca3",
+              "short" => "ISO 3166-1 alpha-3 code",
               "type" => "`$STRING`",
             },
             {
               "name" => "ccn3",
+              "short" => "ISO 3166-1 numeric code",
               "type" => "`$STRING`",
             },
             {
               "name" => "cioc",
+              "short" => "International Olympic Committee code",
               "type" => "`$STRING`",
             },
             {
@@ -88,6 +99,7 @@ module RestCountriesConfig
             },
             {
               "name" => "continents",
+              "short" => "Continents",
               "type" => "`$ARRAY`",
             },
             {
@@ -100,10 +112,12 @@ module RestCountriesConfig
             },
             {
               "name" => "fifa",
+              "short" => "FIFA country code",
               "type" => "`$STRING`",
             },
             {
               "name" => "flag",
+              "short" => "Flag emoji",
               "type" => "`$STRING`",
             },
             {
@@ -112,26 +126,32 @@ module RestCountriesConfig
             },
             {
               "name" => "gini",
+              "short" => "Gini coefficient",
               "type" => "`$OBJECT`",
             },
             {
               "name" => "idd",
+              "short" => "International direct dialing",
               "type" => "`$OBJECT`",
             },
             {
               "name" => "independent",
+              "short" => "Independence status",
               "type" => "`$BOOLEAN`",
             },
             {
               "name" => "landlocked",
+              "short" => "Landlocked status",
               "type" => "`$BOOLEAN`",
             },
             {
               "name" => "languages",
+              "short" => "Languages spoken",
               "type" => "`$OBJECT`",
             },
             {
               "name" => "latlng",
+              "short" => "Latitude and longitude",
               "type" => "`$ARRAY`",
             },
             {
@@ -144,6 +164,7 @@ module RestCountriesConfig
             },
             {
               "name" => "population",
+              "short" => "Country population",
               "type" => "`$INTEGER`",
             },
             {
@@ -152,26 +173,32 @@ module RestCountriesConfig
             },
             {
               "name" => "region",
+              "short" => "Geographic region",
               "type" => "`$STRING`",
             },
             {
               "name" => "startOfWeek",
+              "short" => "Start of week day",
               "type" => "`$STRING`",
             },
             {
               "name" => "status",
+              "short" => "ISO 3166-1 assignment status",
               "type" => "`$STRING`",
             },
             {
               "name" => "subregion",
+              "short" => "Geographic subregion",
               "type" => "`$STRING`",
             },
             {
               "name" => "timezones",
+              "short" => "Timezones",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "tld",
+              "short" => "Top-level domains",
               "type" => "`$ARRAY`",
             },
             {
@@ -180,6 +207,7 @@ module RestCountriesConfig
             },
             {
               "name" => "unMember",
+              "short" => "UN membership status",
               "type" => "`$BOOLEAN`",
             },
           ],
@@ -228,18 +256,22 @@ module RestCountriesConfig
           "fields" => [
             {
               "name" => "altSpellings",
+              "short" => "Alternative country name spellings",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "area",
+              "short" => "Country area in square kilometers",
               "type" => "`$NUMBER`",
             },
             {
               "name" => "borders",
+              "short" => "Border countries (ISO 3166-1 alpha-3 codes)",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "capital",
+              "short" => "Capital city or cities",
               "type" => "`$ARRAY`",
             },
             {
@@ -252,18 +284,22 @@ module RestCountriesConfig
             },
             {
               "name" => "cca2",
+              "short" => "ISO 3166-1 alpha-2 code",
               "type" => "`$STRING`",
             },
             {
               "name" => "cca3",
+              "short" => "ISO 3166-1 alpha-3 code",
               "type" => "`$STRING`",
             },
             {
               "name" => "ccn3",
+              "short" => "ISO 3166-1 numeric code",
               "type" => "`$STRING`",
             },
             {
               "name" => "cioc",
+              "short" => "International Olympic Committee code",
               "type" => "`$STRING`",
             },
             {
@@ -272,6 +308,7 @@ module RestCountriesConfig
             },
             {
               "name" => "continents",
+              "short" => "Continents",
               "type" => "`$ARRAY`",
             },
             {
@@ -284,10 +321,12 @@ module RestCountriesConfig
             },
             {
               "name" => "fifa",
+              "short" => "FIFA country code",
               "type" => "`$STRING`",
             },
             {
               "name" => "flag",
+              "short" => "Flag emoji",
               "type" => "`$STRING`",
             },
             {
@@ -296,26 +335,32 @@ module RestCountriesConfig
             },
             {
               "name" => "gini",
+              "short" => "Gini coefficient",
               "type" => "`$OBJECT`",
             },
             {
               "name" => "idd",
+              "short" => "International direct dialing",
               "type" => "`$OBJECT`",
             },
             {
               "name" => "independent",
+              "short" => "Independence status",
               "type" => "`$BOOLEAN`",
             },
             {
               "name" => "landlocked",
+              "short" => "Landlocked status",
               "type" => "`$BOOLEAN`",
             },
             {
               "name" => "languages",
+              "short" => "Languages spoken",
               "type" => "`$OBJECT`",
             },
             {
               "name" => "latlng",
+              "short" => "Latitude and longitude",
               "type" => "`$ARRAY`",
             },
             {
@@ -328,6 +373,7 @@ module RestCountriesConfig
             },
             {
               "name" => "population",
+              "short" => "Country population",
               "type" => "`$INTEGER`",
             },
             {
@@ -336,26 +382,32 @@ module RestCountriesConfig
             },
             {
               "name" => "region",
+              "short" => "Geographic region",
               "type" => "`$STRING`",
             },
             {
               "name" => "startOfWeek",
+              "short" => "Start of week day",
               "type" => "`$STRING`",
             },
             {
               "name" => "status",
+              "short" => "ISO 3166-1 assignment status",
               "type" => "`$STRING`",
             },
             {
               "name" => "subregion",
+              "short" => "Geographic subregion",
               "type" => "`$STRING`",
             },
             {
               "name" => "timezones",
+              "short" => "Timezones",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "tld",
+              "short" => "Top-level domains",
               "type" => "`$ARRAY`",
             },
             {
@@ -364,6 +416,7 @@ module RestCountriesConfig
             },
             {
               "name" => "unMember",
+              "short" => "UN membership status",
               "type" => "`$BOOLEAN`",
             },
           ],
@@ -428,18 +481,22 @@ module RestCountriesConfig
           "fields" => [
             {
               "name" => "altSpellings",
+              "short" => "Alternative country name spellings",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "area",
+              "short" => "Country area in square kilometers",
               "type" => "`$NUMBER`",
             },
             {
               "name" => "borders",
+              "short" => "Border countries (ISO 3166-1 alpha-3 codes)",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "capital",
+              "short" => "Capital city or cities",
               "type" => "`$ARRAY`",
             },
             {
@@ -452,18 +509,22 @@ module RestCountriesConfig
             },
             {
               "name" => "cca2",
+              "short" => "ISO 3166-1 alpha-2 code",
               "type" => "`$STRING`",
             },
             {
               "name" => "cca3",
+              "short" => "ISO 3166-1 alpha-3 code",
               "type" => "`$STRING`",
             },
             {
               "name" => "ccn3",
+              "short" => "ISO 3166-1 numeric code",
               "type" => "`$STRING`",
             },
             {
               "name" => "cioc",
+              "short" => "International Olympic Committee code",
               "type" => "`$STRING`",
             },
             {
@@ -472,6 +533,7 @@ module RestCountriesConfig
             },
             {
               "name" => "continents",
+              "short" => "Continents",
               "type" => "`$ARRAY`",
             },
             {
@@ -484,10 +546,12 @@ module RestCountriesConfig
             },
             {
               "name" => "fifa",
+              "short" => "FIFA country code",
               "type" => "`$STRING`",
             },
             {
               "name" => "flag",
+              "short" => "Flag emoji",
               "type" => "`$STRING`",
             },
             {
@@ -496,26 +560,32 @@ module RestCountriesConfig
             },
             {
               "name" => "gini",
+              "short" => "Gini coefficient",
               "type" => "`$OBJECT`",
             },
             {
               "name" => "idd",
+              "short" => "International direct dialing",
               "type" => "`$OBJECT`",
             },
             {
               "name" => "independent",
+              "short" => "Independence status",
               "type" => "`$BOOLEAN`",
             },
             {
               "name" => "landlocked",
+              "short" => "Landlocked status",
               "type" => "`$BOOLEAN`",
             },
             {
               "name" => "languages",
+              "short" => "Languages spoken",
               "type" => "`$OBJECT`",
             },
             {
               "name" => "latlng",
+              "short" => "Latitude and longitude",
               "type" => "`$ARRAY`",
             },
             {
@@ -528,6 +598,7 @@ module RestCountriesConfig
             },
             {
               "name" => "population",
+              "short" => "Country population",
               "type" => "`$INTEGER`",
             },
             {
@@ -536,26 +607,32 @@ module RestCountriesConfig
             },
             {
               "name" => "region",
+              "short" => "Geographic region",
               "type" => "`$STRING`",
             },
             {
               "name" => "startOfWeek",
+              "short" => "Start of week day",
               "type" => "`$STRING`",
             },
             {
               "name" => "status",
+              "short" => "ISO 3166-1 assignment status",
               "type" => "`$STRING`",
             },
             {
               "name" => "subregion",
+              "short" => "Geographic subregion",
               "type" => "`$STRING`",
             },
             {
               "name" => "timezones",
+              "short" => "Timezones",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "tld",
+              "short" => "Top-level domains",
               "type" => "`$ARRAY`",
             },
             {
@@ -564,6 +641,7 @@ module RestCountriesConfig
             },
             {
               "name" => "unMember",
+              "short" => "UN membership status",
               "type" => "`$BOOLEAN`",
             },
           ],
@@ -628,18 +706,22 @@ module RestCountriesConfig
           "fields" => [
             {
               "name" => "altSpellings",
+              "short" => "Alternative country name spellings",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "area",
+              "short" => "Country area in square kilometers",
               "type" => "`$NUMBER`",
             },
             {
               "name" => "borders",
+              "short" => "Border countries (ISO 3166-1 alpha-3 codes)",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "capital",
+              "short" => "Capital city or cities",
               "type" => "`$ARRAY`",
             },
             {
@@ -652,18 +734,22 @@ module RestCountriesConfig
             },
             {
               "name" => "cca2",
+              "short" => "ISO 3166-1 alpha-2 code",
               "type" => "`$STRING`",
             },
             {
               "name" => "cca3",
+              "short" => "ISO 3166-1 alpha-3 code",
               "type" => "`$STRING`",
             },
             {
               "name" => "ccn3",
+              "short" => "ISO 3166-1 numeric code",
               "type" => "`$STRING`",
             },
             {
               "name" => "cioc",
+              "short" => "International Olympic Committee code",
               "type" => "`$STRING`",
             },
             {
@@ -672,6 +758,7 @@ module RestCountriesConfig
             },
             {
               "name" => "continents",
+              "short" => "Continents",
               "type" => "`$ARRAY`",
             },
             {
@@ -684,10 +771,12 @@ module RestCountriesConfig
             },
             {
               "name" => "fifa",
+              "short" => "FIFA country code",
               "type" => "`$STRING`",
             },
             {
               "name" => "flag",
+              "short" => "Flag emoji",
               "type" => "`$STRING`",
             },
             {
@@ -696,26 +785,32 @@ module RestCountriesConfig
             },
             {
               "name" => "gini",
+              "short" => "Gini coefficient",
               "type" => "`$OBJECT`",
             },
             {
               "name" => "idd",
+              "short" => "International direct dialing",
               "type" => "`$OBJECT`",
             },
             {
               "name" => "independent",
+              "short" => "Independence status",
               "type" => "`$BOOLEAN`",
             },
             {
               "name" => "landlocked",
+              "short" => "Landlocked status",
               "type" => "`$BOOLEAN`",
             },
             {
               "name" => "languages",
+              "short" => "Languages spoken",
               "type" => "`$OBJECT`",
             },
             {
               "name" => "latlng",
+              "short" => "Latitude and longitude",
               "type" => "`$ARRAY`",
             },
             {
@@ -728,6 +823,7 @@ module RestCountriesConfig
             },
             {
               "name" => "population",
+              "short" => "Country population",
               "type" => "`$INTEGER`",
             },
             {
@@ -736,26 +832,32 @@ module RestCountriesConfig
             },
             {
               "name" => "region",
+              "short" => "Geographic region",
               "type" => "`$STRING`",
             },
             {
               "name" => "startOfWeek",
+              "short" => "Start of week day",
               "type" => "`$STRING`",
             },
             {
               "name" => "status",
+              "short" => "ISO 3166-1 assignment status",
               "type" => "`$STRING`",
             },
             {
               "name" => "subregion",
+              "short" => "Geographic subregion",
               "type" => "`$STRING`",
             },
             {
               "name" => "timezones",
+              "short" => "Timezones",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "tld",
+              "short" => "Top-level domains",
               "type" => "`$ARRAY`",
             },
             {
@@ -764,6 +866,7 @@ module RestCountriesConfig
             },
             {
               "name" => "unMember",
+              "short" => "UN membership status",
               "type" => "`$BOOLEAN`",
             },
           ],

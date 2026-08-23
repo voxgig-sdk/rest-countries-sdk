@@ -1,0 +1,249 @@
+# Entity: all
+
+main: kit: entity: all: {
+
+  alias: field: {}
+
+  fields: [
+    {
+      name: "altSpellings"
+      req: false
+      short: "Alternative country name spellings"
+      type: "`$ARRAY`"
+    }
+    {
+      name: "area"
+      req: false
+      short: "Country area in square kilometers"
+      type: "`$NUMBER`"
+    }
+    {
+      name: "borders"
+      req: false
+      short: "Border countries (ISO 3166-1 alpha-3 codes)"
+      type: "`$ARRAY`"
+    }
+    {
+      name: "capital"
+      req: false
+      short: "Capital city or cities"
+      type: "`$ARRAY`"
+    }
+    {
+      name: "capitalInfo"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "car"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "cca2"
+      req: false
+      short: "ISO 3166-1 alpha-2 code"
+      type: "`$STRING`"
+    }
+    {
+      name: "cca3"
+      req: false
+      short: "ISO 3166-1 alpha-3 code"
+      type: "`$STRING`"
+    }
+    {
+      name: "ccn3"
+      req: false
+      short: "ISO 3166-1 numeric code"
+      type: "`$STRING`"
+    }
+    {
+      name: "cioc"
+      req: false
+      short: "International Olympic Committee code"
+      type: "`$STRING`"
+    }
+    {
+      name: "coatOfArms"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "continents"
+      req: false
+      short: "Continents"
+      type: "`$ARRAY`"
+    }
+    {
+      name: "currencies"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "demonyms"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "fifa"
+      req: false
+      short: "FIFA country code"
+      type: "`$STRING`"
+    }
+    {
+      name: "flag"
+      req: false
+      short: "Flag emoji"
+      type: "`$STRING`"
+    }
+    {
+      name: "flags"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "gini"
+      req: false
+      short: "Gini coefficient"
+      type: "`$OBJECT`"
+    }
+    {
+      name: "idd"
+      req: false
+      short: "International direct dialing"
+      type: "`$OBJECT`"
+    }
+    {
+      name: "independent"
+      req: false
+      short: "Independence status"
+      type: "`$BOOLEAN`"
+    }
+    {
+      name: "landlocked"
+      req: false
+      short: "Landlocked status"
+      type: "`$BOOLEAN`"
+    }
+    {
+      name: "languages"
+      req: false
+      short: "Languages spoken"
+      type: "`$OBJECT`"
+    }
+    {
+      name: "latlng"
+      req: false
+      short: "Latitude and longitude"
+      type: "`$ARRAY`"
+    }
+    {
+      name: "maps"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "name"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "population"
+      req: false
+      short: "Country population"
+      type: "`$INTEGER`"
+    }
+    {
+      name: "postalCode"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "region"
+      req: false
+      short: "Geographic region"
+      type: "`$STRING`"
+    }
+    {
+      name: "startOfWeek"
+      req: false
+      short: "Start of week day"
+      type: "`$STRING`"
+    }
+    {
+      name: "status"
+      req: false
+      short: "ISO 3166-1 assignment status"
+      type: "`$STRING`"
+    }
+    {
+      name: "subregion"
+      req: false
+      short: "Geographic subregion"
+      type: "`$STRING`"
+    }
+    {
+      name: "timezones"
+      req: false
+      short: "Timezones"
+      type: "`$ARRAY`"
+    }
+    {
+      name: "tld"
+      req: false
+      short: "Top-level domains"
+      type: "`$ARRAY`"
+    }
+    {
+      name: "translations"
+      req: false
+      type: "`$OBJECT`"
+    }
+    {
+      name: "unMember"
+      req: false
+      short: "UN membership status"
+      type: "`$BOOLEAN`"
+    }
+  ]
+
+  name: "all"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          args: {
+            query: [
+              {
+                example: "name,capital,population"
+                kind: "query"
+                name: "field"
+                orig: "field"
+                reqd: false
+                type: "`$STRING`"
+              }
+            ]
+          }
+          method: "GET"
+          orig: "/all"
+          parts: [
+            "all"
+          ]
+          select: {
+            exist: [
+              "field"
+            ]
+          }
+          transform: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

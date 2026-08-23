@@ -99,41 +99,41 @@ all = client.All()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `altSpellings` | `list` | No |  |
-| `area` | `float` | No |  |
-| `borders` | `list` | No |  |
-| `capital` | `list` | No |  |
+| `altSpellings` | `list` | No | Alternative country name spellings |
+| `area` | `float` | No | Country area in square kilometers |
+| `borders` | `list` | No | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `list` | No | Capital city or cities |
 | `capitalInfo` | `dict` | No |  |
 | `car` | `dict` | No |  |
-| `cca2` | `str` | No |  |
-| `cca3` | `str` | No |  |
-| `ccn3` | `str` | No |  |
-| `cioc` | `str` | No |  |
+| `cca2` | `str` | No | ISO 3166-1 alpha-2 code |
+| `cca3` | `str` | No | ISO 3166-1 alpha-3 code |
+| `ccn3` | `str` | No | ISO 3166-1 numeric code |
+| `cioc` | `str` | No | International Olympic Committee code |
 | `coatOfArms` | `dict` | No |  |
-| `continents` | `list` | No |  |
+| `continents` | `list` | No | Continents |
 | `currencies` | `dict` | No |  |
 | `demonyms` | `dict` | No |  |
-| `fifa` | `str` | No |  |
-| `flag` | `str` | No |  |
+| `fifa` | `str` | No | FIFA country code |
+| `flag` | `str` | No | Flag emoji |
 | `flags` | `dict` | No |  |
-| `gini` | `dict` | No |  |
-| `idd` | `dict` | No |  |
-| `independent` | `bool` | No |  |
-| `landlocked` | `bool` | No |  |
-| `languages` | `dict` | No |  |
-| `latlng` | `list` | No |  |
+| `gini` | `dict` | No | Gini coefficient |
+| `idd` | `dict` | No | International direct dialing |
+| `independent` | `bool` | No | Independence status |
+| `landlocked` | `bool` | No | Landlocked status |
+| `languages` | `dict` | No | Languages spoken |
+| `latlng` | `list` | No | Latitude and longitude |
 | `maps` | `dict` | No |  |
 | `name` | `dict` | No |  |
-| `population` | `int` | No |  |
+| `population` | `int` | No | Country population |
 | `postalCode` | `dict` | No |  |
-| `region` | `str` | No |  |
-| `startOfWeek` | `str` | No |  |
-| `status` | `str` | No |  |
-| `subregion` | `str` | No |  |
-| `timezones` | `list` | No |  |
-| `tld` | `list` | No |  |
+| `region` | `str` | No | Geographic region |
+| `startOfWeek` | `str` | No | Start of week day |
+| `status` | `str` | No | ISO 3166-1 assignment status |
+| `subregion` | `str` | No | Geographic subregion |
+| `timezones` | `list` | No | Timezones |
+| `tld` | `list` | No | Top-level domains |
 | `translations` | `dict` | No |  |
-| `unMember` | `bool` | No |  |
+| `unMember` | `bool` | No | UN membership status |
 
 ### Operations
 
@@ -186,41 +186,41 @@ alpha = client.Alpha()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `altSpellings` | `list` | No |  |
-| `area` | `float` | No |  |
-| `borders` | `list` | No |  |
-| `capital` | `list` | No |  |
+| `altSpellings` | `list` | No | Alternative country name spellings |
+| `area` | `float` | No | Country area in square kilometers |
+| `borders` | `list` | No | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `list` | No | Capital city or cities |
 | `capitalInfo` | `dict` | No |  |
 | `car` | `dict` | No |  |
-| `cca2` | `str` | No |  |
-| `cca3` | `str` | No |  |
-| `ccn3` | `str` | No |  |
-| `cioc` | `str` | No |  |
+| `cca2` | `str` | No | ISO 3166-1 alpha-2 code |
+| `cca3` | `str` | No | ISO 3166-1 alpha-3 code |
+| `ccn3` | `str` | No | ISO 3166-1 numeric code |
+| `cioc` | `str` | No | International Olympic Committee code |
 | `coatOfArms` | `dict` | No |  |
-| `continents` | `list` | No |  |
+| `continents` | `list` | No | Continents |
 | `currencies` | `dict` | No |  |
 | `demonyms` | `dict` | No |  |
-| `fifa` | `str` | No |  |
-| `flag` | `str` | No |  |
+| `fifa` | `str` | No | FIFA country code |
+| `flag` | `str` | No | Flag emoji |
 | `flags` | `dict` | No |  |
-| `gini` | `dict` | No |  |
-| `idd` | `dict` | No |  |
-| `independent` | `bool` | No |  |
-| `landlocked` | `bool` | No |  |
-| `languages` | `dict` | No |  |
-| `latlng` | `list` | No |  |
+| `gini` | `dict` | No | Gini coefficient |
+| `idd` | `dict` | No | International direct dialing |
+| `independent` | `bool` | No | Independence status |
+| `landlocked` | `bool` | No | Landlocked status |
+| `languages` | `dict` | No | Languages spoken |
+| `latlng` | `list` | No | Latitude and longitude |
 | `maps` | `dict` | No |  |
 | `name` | `dict` | No |  |
-| `population` | `int` | No |  |
+| `population` | `int` | No | Country population |
 | `postalCode` | `dict` | No |  |
-| `region` | `str` | No |  |
-| `startOfWeek` | `str` | No |  |
-| `status` | `str` | No |  |
-| `subregion` | `str` | No |  |
-| `timezones` | `list` | No |  |
-| `tld` | `list` | No |  |
+| `region` | `str` | No | Geographic region |
+| `startOfWeek` | `str` | No | Start of week day |
+| `status` | `str` | No | ISO 3166-1 assignment status |
+| `subregion` | `str` | No | Geographic subregion |
+| `timezones` | `list` | No | Timezones |
+| `tld` | `list` | No | Top-level domains |
 | `translations` | `dict` | No |  |
-| `unMember` | `bool` | No |  |
+| `unMember` | `bool` | No | UN membership status |
 
 ### Operations
 
@@ -271,41 +271,41 @@ capital = client.Capital()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `altSpellings` | `list` | No |  |
-| `area` | `float` | No |  |
-| `borders` | `list` | No |  |
-| `capital` | `list` | No |  |
+| `altSpellings` | `list` | No | Alternative country name spellings |
+| `area` | `float` | No | Country area in square kilometers |
+| `borders` | `list` | No | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `list` | No | Capital city or cities |
 | `capitalInfo` | `dict` | No |  |
 | `car` | `dict` | No |  |
-| `cca2` | `str` | No |  |
-| `cca3` | `str` | No |  |
-| `ccn3` | `str` | No |  |
-| `cioc` | `str` | No |  |
+| `cca2` | `str` | No | ISO 3166-1 alpha-2 code |
+| `cca3` | `str` | No | ISO 3166-1 alpha-3 code |
+| `ccn3` | `str` | No | ISO 3166-1 numeric code |
+| `cioc` | `str` | No | International Olympic Committee code |
 | `coatOfArms` | `dict` | No |  |
-| `continents` | `list` | No |  |
+| `continents` | `list` | No | Continents |
 | `currencies` | `dict` | No |  |
 | `demonyms` | `dict` | No |  |
-| `fifa` | `str` | No |  |
-| `flag` | `str` | No |  |
+| `fifa` | `str` | No | FIFA country code |
+| `flag` | `str` | No | Flag emoji |
 | `flags` | `dict` | No |  |
-| `gini` | `dict` | No |  |
-| `idd` | `dict` | No |  |
-| `independent` | `bool` | No |  |
-| `landlocked` | `bool` | No |  |
-| `languages` | `dict` | No |  |
-| `latlng` | `list` | No |  |
+| `gini` | `dict` | No | Gini coefficient |
+| `idd` | `dict` | No | International direct dialing |
+| `independent` | `bool` | No | Independence status |
+| `landlocked` | `bool` | No | Landlocked status |
+| `languages` | `dict` | No | Languages spoken |
+| `latlng` | `list` | No | Latitude and longitude |
 | `maps` | `dict` | No |  |
 | `name` | `dict` | No |  |
-| `population` | `int` | No |  |
+| `population` | `int` | No | Country population |
 | `postalCode` | `dict` | No |  |
-| `region` | `str` | No |  |
-| `startOfWeek` | `str` | No |  |
-| `status` | `str` | No |  |
-| `subregion` | `str` | No |  |
-| `timezones` | `list` | No |  |
-| `tld` | `list` | No |  |
+| `region` | `str` | No | Geographic region |
+| `startOfWeek` | `str` | No | Start of week day |
+| `status` | `str` | No | ISO 3166-1 assignment status |
+| `subregion` | `str` | No | Geographic subregion |
+| `timezones` | `list` | No | Timezones |
+| `tld` | `list` | No | Top-level domains |
 | `translations` | `dict` | No |  |
-| `unMember` | `bool` | No |  |
+| `unMember` | `bool` | No | UN membership status |
 
 ### Operations
 
@@ -356,41 +356,41 @@ name = client.Name()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `altSpellings` | `list` | No |  |
-| `area` | `float` | No |  |
-| `borders` | `list` | No |  |
-| `capital` | `list` | No |  |
+| `altSpellings` | `list` | No | Alternative country name spellings |
+| `area` | `float` | No | Country area in square kilometers |
+| `borders` | `list` | No | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `list` | No | Capital city or cities |
 | `capitalInfo` | `dict` | No |  |
 | `car` | `dict` | No |  |
-| `cca2` | `str` | No |  |
-| `cca3` | `str` | No |  |
-| `ccn3` | `str` | No |  |
-| `cioc` | `str` | No |  |
+| `cca2` | `str` | No | ISO 3166-1 alpha-2 code |
+| `cca3` | `str` | No | ISO 3166-1 alpha-3 code |
+| `ccn3` | `str` | No | ISO 3166-1 numeric code |
+| `cioc` | `str` | No | International Olympic Committee code |
 | `coatOfArms` | `dict` | No |  |
-| `continents` | `list` | No |  |
+| `continents` | `list` | No | Continents |
 | `currencies` | `dict` | No |  |
 | `demonyms` | `dict` | No |  |
-| `fifa` | `str` | No |  |
-| `flag` | `str` | No |  |
+| `fifa` | `str` | No | FIFA country code |
+| `flag` | `str` | No | Flag emoji |
 | `flags` | `dict` | No |  |
-| `gini` | `dict` | No |  |
-| `idd` | `dict` | No |  |
-| `independent` | `bool` | No |  |
-| `landlocked` | `bool` | No |  |
-| `languages` | `dict` | No |  |
-| `latlng` | `list` | No |  |
+| `gini` | `dict` | No | Gini coefficient |
+| `idd` | `dict` | No | International direct dialing |
+| `independent` | `bool` | No | Independence status |
+| `landlocked` | `bool` | No | Landlocked status |
+| `languages` | `dict` | No | Languages spoken |
+| `latlng` | `list` | No | Latitude and longitude |
 | `maps` | `dict` | No |  |
 | `name` | `dict` | No |  |
-| `population` | `int` | No |  |
+| `population` | `int` | No | Country population |
 | `postalCode` | `dict` | No |  |
-| `region` | `str` | No |  |
-| `startOfWeek` | `str` | No |  |
-| `status` | `str` | No |  |
-| `subregion` | `str` | No |  |
-| `timezones` | `list` | No |  |
-| `tld` | `list` | No |  |
+| `region` | `str` | No | Geographic region |
+| `startOfWeek` | `str` | No | Start of week day |
+| `status` | `str` | No | ISO 3166-1 assignment status |
+| `subregion` | `str` | No | Geographic subregion |
+| `timezones` | `list` | No | Timezones |
+| `tld` | `list` | No | Top-level domains |
 | `translations` | `dict` | No |  |
-| `unMember` | `bool` | No |  |
+| `unMember` | `bool` | No | UN membership status |
 
 ### Operations
 

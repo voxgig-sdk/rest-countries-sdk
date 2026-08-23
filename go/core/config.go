@@ -11,6 +11,9 @@ func MakeConfig() map[string]any {
 	return map[string]any{
 		"main": map[string]any{
 			"name": "RestCountries",
+			"slug": "rest-countries",
+			"version": "0.0.1",
+			"target": "go",
 		},
 		"feature": map[string]any{
 			"test": map[string]any{
@@ -36,18 +39,22 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "altSpellings",
+						"short": "Alternative country name spellings",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "area",
+						"short": "Country area in square kilometers",
 						"type": "`$NUMBER`",
 					},
 					map[string]any{
 						"name": "borders",
+						"short": "Border countries (ISO 3166-1 alpha-3 codes)",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "capital",
+						"short": "Capital city or cities",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
@@ -60,18 +67,22 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "cca2",
+						"short": "ISO 3166-1 alpha-2 code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "cca3",
+						"short": "ISO 3166-1 alpha-3 code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "ccn3",
+						"short": "ISO 3166-1 numeric code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "cioc",
+						"short": "International Olympic Committee code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
@@ -80,6 +91,7 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "continents",
+						"short": "Continents",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
@@ -92,10 +104,12 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "fifa",
+						"short": "FIFA country code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "flag",
+						"short": "Flag emoji",
 						"type": "`$STRING`",
 					},
 					map[string]any{
@@ -104,26 +118,32 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "gini",
+						"short": "Gini coefficient",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "idd",
+						"short": "International direct dialing",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "independent",
+						"short": "Independence status",
 						"type": "`$BOOLEAN`",
 					},
 					map[string]any{
 						"name": "landlocked",
+						"short": "Landlocked status",
 						"type": "`$BOOLEAN`",
 					},
 					map[string]any{
 						"name": "languages",
+						"short": "Languages spoken",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "latlng",
+						"short": "Latitude and longitude",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
@@ -136,6 +156,7 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "population",
+						"short": "Country population",
 						"type": "`$INTEGER`",
 					},
 					map[string]any{
@@ -144,26 +165,32 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "region",
+						"short": "Geographic region",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "startOfWeek",
+						"short": "Start of week day",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "status",
+						"short": "ISO 3166-1 assignment status",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "subregion",
+						"short": "Geographic subregion",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "timezones",
+						"short": "Timezones",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "tld",
+						"short": "Top-level domains",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
@@ -172,6 +199,7 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "unMember",
+						"short": "UN membership status",
 						"type": "`$BOOLEAN`",
 					},
 				},
@@ -220,18 +248,22 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "altSpellings",
+						"short": "Alternative country name spellings",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "area",
+						"short": "Country area in square kilometers",
 						"type": "`$NUMBER`",
 					},
 					map[string]any{
 						"name": "borders",
+						"short": "Border countries (ISO 3166-1 alpha-3 codes)",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "capital",
+						"short": "Capital city or cities",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
@@ -244,18 +276,22 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "cca2",
+						"short": "ISO 3166-1 alpha-2 code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "cca3",
+						"short": "ISO 3166-1 alpha-3 code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "ccn3",
+						"short": "ISO 3166-1 numeric code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "cioc",
+						"short": "International Olympic Committee code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
@@ -264,6 +300,7 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "continents",
+						"short": "Continents",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
@@ -276,10 +313,12 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "fifa",
+						"short": "FIFA country code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "flag",
+						"short": "Flag emoji",
 						"type": "`$STRING`",
 					},
 					map[string]any{
@@ -288,26 +327,32 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "gini",
+						"short": "Gini coefficient",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "idd",
+						"short": "International direct dialing",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "independent",
+						"short": "Independence status",
 						"type": "`$BOOLEAN`",
 					},
 					map[string]any{
 						"name": "landlocked",
+						"short": "Landlocked status",
 						"type": "`$BOOLEAN`",
 					},
 					map[string]any{
 						"name": "languages",
+						"short": "Languages spoken",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "latlng",
+						"short": "Latitude and longitude",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
@@ -320,6 +365,7 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "population",
+						"short": "Country population",
 						"type": "`$INTEGER`",
 					},
 					map[string]any{
@@ -328,26 +374,32 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "region",
+						"short": "Geographic region",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "startOfWeek",
+						"short": "Start of week day",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "status",
+						"short": "ISO 3166-1 assignment status",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "subregion",
+						"short": "Geographic subregion",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "timezones",
+						"short": "Timezones",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "tld",
+						"short": "Top-level domains",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
@@ -356,6 +408,7 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "unMember",
+						"short": "UN membership status",
 						"type": "`$BOOLEAN`",
 					},
 				},
@@ -420,18 +473,22 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "altSpellings",
+						"short": "Alternative country name spellings",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "area",
+						"short": "Country area in square kilometers",
 						"type": "`$NUMBER`",
 					},
 					map[string]any{
 						"name": "borders",
+						"short": "Border countries (ISO 3166-1 alpha-3 codes)",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "capital",
+						"short": "Capital city or cities",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
@@ -444,18 +501,22 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "cca2",
+						"short": "ISO 3166-1 alpha-2 code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "cca3",
+						"short": "ISO 3166-1 alpha-3 code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "ccn3",
+						"short": "ISO 3166-1 numeric code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "cioc",
+						"short": "International Olympic Committee code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
@@ -464,6 +525,7 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "continents",
+						"short": "Continents",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
@@ -476,10 +538,12 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "fifa",
+						"short": "FIFA country code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "flag",
+						"short": "Flag emoji",
 						"type": "`$STRING`",
 					},
 					map[string]any{
@@ -488,26 +552,32 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "gini",
+						"short": "Gini coefficient",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "idd",
+						"short": "International direct dialing",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "independent",
+						"short": "Independence status",
 						"type": "`$BOOLEAN`",
 					},
 					map[string]any{
 						"name": "landlocked",
+						"short": "Landlocked status",
 						"type": "`$BOOLEAN`",
 					},
 					map[string]any{
 						"name": "languages",
+						"short": "Languages spoken",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "latlng",
+						"short": "Latitude and longitude",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
@@ -520,6 +590,7 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "population",
+						"short": "Country population",
 						"type": "`$INTEGER`",
 					},
 					map[string]any{
@@ -528,26 +599,32 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "region",
+						"short": "Geographic region",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "startOfWeek",
+						"short": "Start of week day",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "status",
+						"short": "ISO 3166-1 assignment status",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "subregion",
+						"short": "Geographic subregion",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "timezones",
+						"short": "Timezones",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "tld",
+						"short": "Top-level domains",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
@@ -556,6 +633,7 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "unMember",
+						"short": "UN membership status",
 						"type": "`$BOOLEAN`",
 					},
 				},
@@ -620,18 +698,22 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "altSpellings",
+						"short": "Alternative country name spellings",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "area",
+						"short": "Country area in square kilometers",
 						"type": "`$NUMBER`",
 					},
 					map[string]any{
 						"name": "borders",
+						"short": "Border countries (ISO 3166-1 alpha-3 codes)",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "capital",
+						"short": "Capital city or cities",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
@@ -644,18 +726,22 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "cca2",
+						"short": "ISO 3166-1 alpha-2 code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "cca3",
+						"short": "ISO 3166-1 alpha-3 code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "ccn3",
+						"short": "ISO 3166-1 numeric code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "cioc",
+						"short": "International Olympic Committee code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
@@ -664,6 +750,7 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "continents",
+						"short": "Continents",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
@@ -676,10 +763,12 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "fifa",
+						"short": "FIFA country code",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "flag",
+						"short": "Flag emoji",
 						"type": "`$STRING`",
 					},
 					map[string]any{
@@ -688,26 +777,32 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "gini",
+						"short": "Gini coefficient",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "idd",
+						"short": "International direct dialing",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "independent",
+						"short": "Independence status",
 						"type": "`$BOOLEAN`",
 					},
 					map[string]any{
 						"name": "landlocked",
+						"short": "Landlocked status",
 						"type": "`$BOOLEAN`",
 					},
 					map[string]any{
 						"name": "languages",
+						"short": "Languages spoken",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "latlng",
+						"short": "Latitude and longitude",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
@@ -720,6 +815,7 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "population",
+						"short": "Country population",
 						"type": "`$INTEGER`",
 					},
 					map[string]any{
@@ -728,26 +824,32 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "region",
+						"short": "Geographic region",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "startOfWeek",
+						"short": "Start of week day",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "status",
+						"short": "ISO 3166-1 assignment status",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "subregion",
+						"short": "Geographic subregion",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "timezones",
+						"short": "Timezones",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "tld",
+						"short": "Top-level domains",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
@@ -756,6 +858,7 @@ func MakeConfig() map[string]any {
 					},
 					map[string]any{
 						"name": "unMember",
+						"short": "UN membership status",
 						"type": "`$BOOLEAN`",
 					},
 				},

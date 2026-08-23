@@ -110,41 +110,41 @@ fmt.Println(all.GetName()) // "all"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `altSpellings` | `[]any` | No |  |
-| `area` | `float64` | No |  |
-| `borders` | `[]any` | No |  |
-| `capital` | `[]any` | No |  |
+| `altSpellings` | `[]any` | No | Alternative country name spellings |
+| `area` | `float64` | No | Country area in square kilometers |
+| `borders` | `[]any` | No | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `[]any` | No | Capital city or cities |
 | `capitalInfo` | `map[string]any` | No |  |
 | `car` | `map[string]any` | No |  |
-| `cca2` | `string` | No |  |
-| `cca3` | `string` | No |  |
-| `ccn3` | `string` | No |  |
-| `cioc` | `string` | No |  |
+| `cca2` | `string` | No | ISO 3166-1 alpha-2 code |
+| `cca3` | `string` | No | ISO 3166-1 alpha-3 code |
+| `ccn3` | `string` | No | ISO 3166-1 numeric code |
+| `cioc` | `string` | No | International Olympic Committee code |
 | `coatOfArms` | `map[string]any` | No |  |
-| `continents` | `[]any` | No |  |
+| `continents` | `[]any` | No | Continents |
 | `currencies` | `map[string]any` | No |  |
 | `demonyms` | `map[string]any` | No |  |
-| `fifa` | `string` | No |  |
-| `flag` | `string` | No |  |
+| `fifa` | `string` | No | FIFA country code |
+| `flag` | `string` | No | Flag emoji |
 | `flags` | `map[string]any` | No |  |
-| `gini` | `map[string]any` | No |  |
-| `idd` | `map[string]any` | No |  |
-| `independent` | `bool` | No |  |
-| `landlocked` | `bool` | No |  |
-| `languages` | `map[string]any` | No |  |
-| `latlng` | `[]any` | No |  |
+| `gini` | `map[string]any` | No | Gini coefficient |
+| `idd` | `map[string]any` | No | International direct dialing |
+| `independent` | `bool` | No | Independence status |
+| `landlocked` | `bool` | No | Landlocked status |
+| `languages` | `map[string]any` | No | Languages spoken |
+| `latlng` | `[]any` | No | Latitude and longitude |
 | `maps` | `map[string]any` | No |  |
 | `name` | `map[string]any` | No |  |
-| `population` | `int` | No |  |
+| `population` | `int` | No | Country population |
 | `postalCode` | `map[string]any` | No |  |
-| `region` | `string` | No |  |
-| `startOfWeek` | `string` | No |  |
-| `status` | `string` | No |  |
-| `subregion` | `string` | No |  |
-| `timezones` | `[]any` | No |  |
-| `tld` | `[]any` | No |  |
+| `region` | `string` | No | Geographic region |
+| `startOfWeek` | `string` | No | Start of week day |
+| `status` | `string` | No | ISO 3166-1 assignment status |
+| `subregion` | `string` | No | Geographic subregion |
+| `timezones` | `[]any` | No | Timezones |
+| `tld` | `[]any` | No | Top-level domains |
 | `translations` | `map[string]any` | No |  |
-| `unMember` | `bool` | No |  |
+| `unMember` | `bool` | No | UN membership status |
 
 ### Operations
 
@@ -195,41 +195,41 @@ fmt.Println(alpha.GetName()) // "alpha"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `altSpellings` | `[]any` | No |  |
-| `area` | `float64` | No |  |
-| `borders` | `[]any` | No |  |
-| `capital` | `[]any` | No |  |
+| `altSpellings` | `[]any` | No | Alternative country name spellings |
+| `area` | `float64` | No | Country area in square kilometers |
+| `borders` | `[]any` | No | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `[]any` | No | Capital city or cities |
 | `capitalInfo` | `map[string]any` | No |  |
 | `car` | `map[string]any` | No |  |
-| `cca2` | `string` | No |  |
-| `cca3` | `string` | No |  |
-| `ccn3` | `string` | No |  |
-| `cioc` | `string` | No |  |
+| `cca2` | `string` | No | ISO 3166-1 alpha-2 code |
+| `cca3` | `string` | No | ISO 3166-1 alpha-3 code |
+| `ccn3` | `string` | No | ISO 3166-1 numeric code |
+| `cioc` | `string` | No | International Olympic Committee code |
 | `coatOfArms` | `map[string]any` | No |  |
-| `continents` | `[]any` | No |  |
+| `continents` | `[]any` | No | Continents |
 | `currencies` | `map[string]any` | No |  |
 | `demonyms` | `map[string]any` | No |  |
-| `fifa` | `string` | No |  |
-| `flag` | `string` | No |  |
+| `fifa` | `string` | No | FIFA country code |
+| `flag` | `string` | No | Flag emoji |
 | `flags` | `map[string]any` | No |  |
-| `gini` | `map[string]any` | No |  |
-| `idd` | `map[string]any` | No |  |
-| `independent` | `bool` | No |  |
-| `landlocked` | `bool` | No |  |
-| `languages` | `map[string]any` | No |  |
-| `latlng` | `[]any` | No |  |
+| `gini` | `map[string]any` | No | Gini coefficient |
+| `idd` | `map[string]any` | No | International direct dialing |
+| `independent` | `bool` | No | Independence status |
+| `landlocked` | `bool` | No | Landlocked status |
+| `languages` | `map[string]any` | No | Languages spoken |
+| `latlng` | `[]any` | No | Latitude and longitude |
 | `maps` | `map[string]any` | No |  |
 | `name` | `map[string]any` | No |  |
-| `population` | `int` | No |  |
+| `population` | `int` | No | Country population |
 | `postalCode` | `map[string]any` | No |  |
-| `region` | `string` | No |  |
-| `startOfWeek` | `string` | No |  |
-| `status` | `string` | No |  |
-| `subregion` | `string` | No |  |
-| `timezones` | `[]any` | No |  |
-| `tld` | `[]any` | No |  |
+| `region` | `string` | No | Geographic region |
+| `startOfWeek` | `string` | No | Start of week day |
+| `status` | `string` | No | ISO 3166-1 assignment status |
+| `subregion` | `string` | No | Geographic subregion |
+| `timezones` | `[]any` | No | Timezones |
+| `tld` | `[]any` | No | Top-level domains |
 | `translations` | `map[string]any` | No |  |
-| `unMember` | `bool` | No |  |
+| `unMember` | `bool` | No | UN membership status |
 
 ### Operations
 
@@ -280,41 +280,41 @@ fmt.Println(capital.GetName()) // "capital"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `altSpellings` | `[]any` | No |  |
-| `area` | `float64` | No |  |
-| `borders` | `[]any` | No |  |
-| `capital` | `[]any` | No |  |
+| `altSpellings` | `[]any` | No | Alternative country name spellings |
+| `area` | `float64` | No | Country area in square kilometers |
+| `borders` | `[]any` | No | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `[]any` | No | Capital city or cities |
 | `capitalInfo` | `map[string]any` | No |  |
 | `car` | `map[string]any` | No |  |
-| `cca2` | `string` | No |  |
-| `cca3` | `string` | No |  |
-| `ccn3` | `string` | No |  |
-| `cioc` | `string` | No |  |
+| `cca2` | `string` | No | ISO 3166-1 alpha-2 code |
+| `cca3` | `string` | No | ISO 3166-1 alpha-3 code |
+| `ccn3` | `string` | No | ISO 3166-1 numeric code |
+| `cioc` | `string` | No | International Olympic Committee code |
 | `coatOfArms` | `map[string]any` | No |  |
-| `continents` | `[]any` | No |  |
+| `continents` | `[]any` | No | Continents |
 | `currencies` | `map[string]any` | No |  |
 | `demonyms` | `map[string]any` | No |  |
-| `fifa` | `string` | No |  |
-| `flag` | `string` | No |  |
+| `fifa` | `string` | No | FIFA country code |
+| `flag` | `string` | No | Flag emoji |
 | `flags` | `map[string]any` | No |  |
-| `gini` | `map[string]any` | No |  |
-| `idd` | `map[string]any` | No |  |
-| `independent` | `bool` | No |  |
-| `landlocked` | `bool` | No |  |
-| `languages` | `map[string]any` | No |  |
-| `latlng` | `[]any` | No |  |
+| `gini` | `map[string]any` | No | Gini coefficient |
+| `idd` | `map[string]any` | No | International direct dialing |
+| `independent` | `bool` | No | Independence status |
+| `landlocked` | `bool` | No | Landlocked status |
+| `languages` | `map[string]any` | No | Languages spoken |
+| `latlng` | `[]any` | No | Latitude and longitude |
 | `maps` | `map[string]any` | No |  |
 | `name` | `map[string]any` | No |  |
-| `population` | `int` | No |  |
+| `population` | `int` | No | Country population |
 | `postalCode` | `map[string]any` | No |  |
-| `region` | `string` | No |  |
-| `startOfWeek` | `string` | No |  |
-| `status` | `string` | No |  |
-| `subregion` | `string` | No |  |
-| `timezones` | `[]any` | No |  |
-| `tld` | `[]any` | No |  |
+| `region` | `string` | No | Geographic region |
+| `startOfWeek` | `string` | No | Start of week day |
+| `status` | `string` | No | ISO 3166-1 assignment status |
+| `subregion` | `string` | No | Geographic subregion |
+| `timezones` | `[]any` | No | Timezones |
+| `tld` | `[]any` | No | Top-level domains |
 | `translations` | `map[string]any` | No |  |
-| `unMember` | `bool` | No |  |
+| `unMember` | `bool` | No | UN membership status |
 
 ### Operations
 
@@ -365,41 +365,41 @@ fmt.Println(name.GetName()) // "name"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `altSpellings` | `[]any` | No |  |
-| `area` | `float64` | No |  |
-| `borders` | `[]any` | No |  |
-| `capital` | `[]any` | No |  |
+| `altSpellings` | `[]any` | No | Alternative country name spellings |
+| `area` | `float64` | No | Country area in square kilometers |
+| `borders` | `[]any` | No | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `[]any` | No | Capital city or cities |
 | `capitalInfo` | `map[string]any` | No |  |
 | `car` | `map[string]any` | No |  |
-| `cca2` | `string` | No |  |
-| `cca3` | `string` | No |  |
-| `ccn3` | `string` | No |  |
-| `cioc` | `string` | No |  |
+| `cca2` | `string` | No | ISO 3166-1 alpha-2 code |
+| `cca3` | `string` | No | ISO 3166-1 alpha-3 code |
+| `ccn3` | `string` | No | ISO 3166-1 numeric code |
+| `cioc` | `string` | No | International Olympic Committee code |
 | `coatOfArms` | `map[string]any` | No |  |
-| `continents` | `[]any` | No |  |
+| `continents` | `[]any` | No | Continents |
 | `currencies` | `map[string]any` | No |  |
 | `demonyms` | `map[string]any` | No |  |
-| `fifa` | `string` | No |  |
-| `flag` | `string` | No |  |
+| `fifa` | `string` | No | FIFA country code |
+| `flag` | `string` | No | Flag emoji |
 | `flags` | `map[string]any` | No |  |
-| `gini` | `map[string]any` | No |  |
-| `idd` | `map[string]any` | No |  |
-| `independent` | `bool` | No |  |
-| `landlocked` | `bool` | No |  |
-| `languages` | `map[string]any` | No |  |
-| `latlng` | `[]any` | No |  |
+| `gini` | `map[string]any` | No | Gini coefficient |
+| `idd` | `map[string]any` | No | International direct dialing |
+| `independent` | `bool` | No | Independence status |
+| `landlocked` | `bool` | No | Landlocked status |
+| `languages` | `map[string]any` | No | Languages spoken |
+| `latlng` | `[]any` | No | Latitude and longitude |
 | `maps` | `map[string]any` | No |  |
 | `name` | `map[string]any` | No |  |
-| `population` | `int` | No |  |
+| `population` | `int` | No | Country population |
 | `postalCode` | `map[string]any` | No |  |
-| `region` | `string` | No |  |
-| `startOfWeek` | `string` | No |  |
-| `status` | `string` | No |  |
-| `subregion` | `string` | No |  |
-| `timezones` | `[]any` | No |  |
-| `tld` | `[]any` | No |  |
+| `region` | `string` | No | Geographic region |
+| `startOfWeek` | `string` | No | Start of week day |
+| `status` | `string` | No | ISO 3166-1 assignment status |
+| `subregion` | `string` | No | Geographic subregion |
+| `timezones` | `[]any` | No | Timezones |
+| `tld` | `[]any` | No | Top-level domains |
 | `translations` | `map[string]any` | No |  |
-| `unMember` | `bool` | No |  |
+| `unMember` | `bool` | No | UN membership status |
 
 ### Operations
 

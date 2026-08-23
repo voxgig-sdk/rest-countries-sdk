@@ -104,41 +104,41 @@ $all = $client->All();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `altSpellings` | `array` | No |  |
-| `area` | `float` | No |  |
-| `borders` | `array` | No |  |
-| `capital` | `array` | No |  |
+| `altSpellings` | `array` | No | Alternative country name spellings |
+| `area` | `float` | No | Country area in square kilometers |
+| `borders` | `array` | No | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `array` | No | Capital city or cities |
 | `capitalInfo` | `array` | No |  |
 | `car` | `array` | No |  |
-| `cca2` | `string` | No |  |
-| `cca3` | `string` | No |  |
-| `ccn3` | `string` | No |  |
-| `cioc` | `string` | No |  |
+| `cca2` | `string` | No | ISO 3166-1 alpha-2 code |
+| `cca3` | `string` | No | ISO 3166-1 alpha-3 code |
+| `ccn3` | `string` | No | ISO 3166-1 numeric code |
+| `cioc` | `string` | No | International Olympic Committee code |
 | `coatOfArms` | `array` | No |  |
-| `continents` | `array` | No |  |
+| `continents` | `array` | No | Continents |
 | `currencies` | `array` | No |  |
 | `demonyms` | `array` | No |  |
-| `fifa` | `string` | No |  |
-| `flag` | `string` | No |  |
+| `fifa` | `string` | No | FIFA country code |
+| `flag` | `string` | No | Flag emoji |
 | `flags` | `array` | No |  |
-| `gini` | `array` | No |  |
-| `idd` | `array` | No |  |
-| `independent` | `bool` | No |  |
-| `landlocked` | `bool` | No |  |
-| `languages` | `array` | No |  |
-| `latlng` | `array` | No |  |
+| `gini` | `array` | No | Gini coefficient |
+| `idd` | `array` | No | International direct dialing |
+| `independent` | `bool` | No | Independence status |
+| `landlocked` | `bool` | No | Landlocked status |
+| `languages` | `array` | No | Languages spoken |
+| `latlng` | `array` | No | Latitude and longitude |
 | `maps` | `array` | No |  |
 | `name` | `array` | No |  |
-| `population` | `int` | No |  |
+| `population` | `int` | No | Country population |
 | `postalCode` | `array` | No |  |
-| `region` | `string` | No |  |
-| `startOfWeek` | `string` | No |  |
-| `status` | `string` | No |  |
-| `subregion` | `string` | No |  |
-| `timezones` | `array` | No |  |
-| `tld` | `array` | No |  |
+| `region` | `string` | No | Geographic region |
+| `startOfWeek` | `string` | No | Start of week day |
+| `status` | `string` | No | ISO 3166-1 assignment status |
+| `subregion` | `string` | No | Geographic subregion |
+| `timezones` | `array` | No | Timezones |
+| `tld` | `array` | No | Top-level domains |
 | `translations` | `array` | No |  |
-| `unMember` | `bool` | No |  |
+| `unMember` | `bool` | No | UN membership status |
 
 ### Operations
 
@@ -190,41 +190,41 @@ $alpha = $client->Alpha();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `altSpellings` | `array` | No |  |
-| `area` | `float` | No |  |
-| `borders` | `array` | No |  |
-| `capital` | `array` | No |  |
+| `altSpellings` | `array` | No | Alternative country name spellings |
+| `area` | `float` | No | Country area in square kilometers |
+| `borders` | `array` | No | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `array` | No | Capital city or cities |
 | `capitalInfo` | `array` | No |  |
 | `car` | `array` | No |  |
-| `cca2` | `string` | No |  |
-| `cca3` | `string` | No |  |
-| `ccn3` | `string` | No |  |
-| `cioc` | `string` | No |  |
+| `cca2` | `string` | No | ISO 3166-1 alpha-2 code |
+| `cca3` | `string` | No | ISO 3166-1 alpha-3 code |
+| `ccn3` | `string` | No | ISO 3166-1 numeric code |
+| `cioc` | `string` | No | International Olympic Committee code |
 | `coatOfArms` | `array` | No |  |
-| `continents` | `array` | No |  |
+| `continents` | `array` | No | Continents |
 | `currencies` | `array` | No |  |
 | `demonyms` | `array` | No |  |
-| `fifa` | `string` | No |  |
-| `flag` | `string` | No |  |
+| `fifa` | `string` | No | FIFA country code |
+| `flag` | `string` | No | Flag emoji |
 | `flags` | `array` | No |  |
-| `gini` | `array` | No |  |
-| `idd` | `array` | No |  |
-| `independent` | `bool` | No |  |
-| `landlocked` | `bool` | No |  |
-| `languages` | `array` | No |  |
-| `latlng` | `array` | No |  |
+| `gini` | `array` | No | Gini coefficient |
+| `idd` | `array` | No | International direct dialing |
+| `independent` | `bool` | No | Independence status |
+| `landlocked` | `bool` | No | Landlocked status |
+| `languages` | `array` | No | Languages spoken |
+| `latlng` | `array` | No | Latitude and longitude |
 | `maps` | `array` | No |  |
 | `name` | `array` | No |  |
-| `population` | `int` | No |  |
+| `population` | `int` | No | Country population |
 | `postalCode` | `array` | No |  |
-| `region` | `string` | No |  |
-| `startOfWeek` | `string` | No |  |
-| `status` | `string` | No |  |
-| `subregion` | `string` | No |  |
-| `timezones` | `array` | No |  |
-| `tld` | `array` | No |  |
+| `region` | `string` | No | Geographic region |
+| `startOfWeek` | `string` | No | Start of week day |
+| `status` | `string` | No | ISO 3166-1 assignment status |
+| `subregion` | `string` | No | Geographic subregion |
+| `timezones` | `array` | No | Timezones |
+| `tld` | `array` | No | Top-level domains |
 | `translations` | `array` | No |  |
-| `unMember` | `bool` | No |  |
+| `unMember` | `bool` | No | UN membership status |
 
 ### Operations
 
@@ -276,41 +276,41 @@ $capital = $client->Capital();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `altSpellings` | `array` | No |  |
-| `area` | `float` | No |  |
-| `borders` | `array` | No |  |
-| `capital` | `array` | No |  |
+| `altSpellings` | `array` | No | Alternative country name spellings |
+| `area` | `float` | No | Country area in square kilometers |
+| `borders` | `array` | No | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `array` | No | Capital city or cities |
 | `capitalInfo` | `array` | No |  |
 | `car` | `array` | No |  |
-| `cca2` | `string` | No |  |
-| `cca3` | `string` | No |  |
-| `ccn3` | `string` | No |  |
-| `cioc` | `string` | No |  |
+| `cca2` | `string` | No | ISO 3166-1 alpha-2 code |
+| `cca3` | `string` | No | ISO 3166-1 alpha-3 code |
+| `ccn3` | `string` | No | ISO 3166-1 numeric code |
+| `cioc` | `string` | No | International Olympic Committee code |
 | `coatOfArms` | `array` | No |  |
-| `continents` | `array` | No |  |
+| `continents` | `array` | No | Continents |
 | `currencies` | `array` | No |  |
 | `demonyms` | `array` | No |  |
-| `fifa` | `string` | No |  |
-| `flag` | `string` | No |  |
+| `fifa` | `string` | No | FIFA country code |
+| `flag` | `string` | No | Flag emoji |
 | `flags` | `array` | No |  |
-| `gini` | `array` | No |  |
-| `idd` | `array` | No |  |
-| `independent` | `bool` | No |  |
-| `landlocked` | `bool` | No |  |
-| `languages` | `array` | No |  |
-| `latlng` | `array` | No |  |
+| `gini` | `array` | No | Gini coefficient |
+| `idd` | `array` | No | International direct dialing |
+| `independent` | `bool` | No | Independence status |
+| `landlocked` | `bool` | No | Landlocked status |
+| `languages` | `array` | No | Languages spoken |
+| `latlng` | `array` | No | Latitude and longitude |
 | `maps` | `array` | No |  |
 | `name` | `array` | No |  |
-| `population` | `int` | No |  |
+| `population` | `int` | No | Country population |
 | `postalCode` | `array` | No |  |
-| `region` | `string` | No |  |
-| `startOfWeek` | `string` | No |  |
-| `status` | `string` | No |  |
-| `subregion` | `string` | No |  |
-| `timezones` | `array` | No |  |
-| `tld` | `array` | No |  |
+| `region` | `string` | No | Geographic region |
+| `startOfWeek` | `string` | No | Start of week day |
+| `status` | `string` | No | ISO 3166-1 assignment status |
+| `subregion` | `string` | No | Geographic subregion |
+| `timezones` | `array` | No | Timezones |
+| `tld` | `array` | No | Top-level domains |
 | `translations` | `array` | No |  |
-| `unMember` | `bool` | No |  |
+| `unMember` | `bool` | No | UN membership status |
 
 ### Operations
 
@@ -362,41 +362,41 @@ $name = $client->Name();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `altSpellings` | `array` | No |  |
-| `area` | `float` | No |  |
-| `borders` | `array` | No |  |
-| `capital` | `array` | No |  |
+| `altSpellings` | `array` | No | Alternative country name spellings |
+| `area` | `float` | No | Country area in square kilometers |
+| `borders` | `array` | No | Border countries (ISO 3166-1 alpha-3 codes) |
+| `capital` | `array` | No | Capital city or cities |
 | `capitalInfo` | `array` | No |  |
 | `car` | `array` | No |  |
-| `cca2` | `string` | No |  |
-| `cca3` | `string` | No |  |
-| `ccn3` | `string` | No |  |
-| `cioc` | `string` | No |  |
+| `cca2` | `string` | No | ISO 3166-1 alpha-2 code |
+| `cca3` | `string` | No | ISO 3166-1 alpha-3 code |
+| `ccn3` | `string` | No | ISO 3166-1 numeric code |
+| `cioc` | `string` | No | International Olympic Committee code |
 | `coatOfArms` | `array` | No |  |
-| `continents` | `array` | No |  |
+| `continents` | `array` | No | Continents |
 | `currencies` | `array` | No |  |
 | `demonyms` | `array` | No |  |
-| `fifa` | `string` | No |  |
-| `flag` | `string` | No |  |
+| `fifa` | `string` | No | FIFA country code |
+| `flag` | `string` | No | Flag emoji |
 | `flags` | `array` | No |  |
-| `gini` | `array` | No |  |
-| `idd` | `array` | No |  |
-| `independent` | `bool` | No |  |
-| `landlocked` | `bool` | No |  |
-| `languages` | `array` | No |  |
-| `latlng` | `array` | No |  |
+| `gini` | `array` | No | Gini coefficient |
+| `idd` | `array` | No | International direct dialing |
+| `independent` | `bool` | No | Independence status |
+| `landlocked` | `bool` | No | Landlocked status |
+| `languages` | `array` | No | Languages spoken |
+| `latlng` | `array` | No | Latitude and longitude |
 | `maps` | `array` | No |  |
 | `name` | `array` | No |  |
-| `population` | `int` | No |  |
+| `population` | `int` | No | Country population |
 | `postalCode` | `array` | No |  |
-| `region` | `string` | No |  |
-| `startOfWeek` | `string` | No |  |
-| `status` | `string` | No |  |
-| `subregion` | `string` | No |  |
-| `timezones` | `array` | No |  |
-| `tld` | `array` | No |  |
+| `region` | `string` | No | Geographic region |
+| `startOfWeek` | `string` | No | Start of week day |
+| `status` | `string` | No | ISO 3166-1 assignment status |
+| `subregion` | `string` | No | Geographic subregion |
+| `timezones` | `array` | No | Timezones |
+| `tld` | `array` | No | Top-level domains |
 | `translations` | `array` | No |  |
-| `unMember` | `bool` | No |  |
+| `unMember` | `bool` | No | UN membership status |
 
 ### Operations
 
