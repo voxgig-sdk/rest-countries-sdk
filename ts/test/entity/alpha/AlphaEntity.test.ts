@@ -59,9 +59,12 @@ describe('AlphaEntity', async () => {
 
     let alpha_ref01_data = Object.values(setup.data.existing.alpha)[0] as any
 
-    // LOAD: skipped — no entity id field and load requires path params.
-    // Entity-var is declared here so later flow steps still compile.
+    // LOAD
     const alpha_ref01_ent = client.Alpha()
+    const alpha_ref01_match_dt0: any = {}
+    alpha_ref01_match_dt0.id = alpha_ref01_data.id
+    const alpha_ref01_data_dt0 = (await alpha_ref01_ent.load(alpha_ref01_match_dt0)).data()
+    assert(alpha_ref01_data_dt0.id === alpha_ref01_data.id)
 
 
   })

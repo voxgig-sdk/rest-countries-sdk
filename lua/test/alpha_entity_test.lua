@@ -44,10 +44,14 @@ describe("AlphaEntity", function()
 
     -- LOAD
     local alpha_ref01_ent = client:Alpha(nil)
-    local alpha_ref01_match_dt0 = {}
+    local alpha_ref01_match_dt0 = {
+      id = alpha_ref01_data["id"],
+    }
     local alpha_ref01_data_dt0_loaded, err = alpha_ref01_ent:load(alpha_ref01_match_dt0, nil)
     assert.is_nil(err)
-    assert.is_not_nil(alpha_ref01_data_dt0_loaded)
+    local alpha_ref01_data_dt0_load_result = helpers.to_map(type(alpha_ref01_data_dt0_loaded) == 'table' and alpha_ref01_data_dt0_loaded.data_get and alpha_ref01_data_dt0_loaded:data_get() or alpha_ref01_data_dt0_loaded)
+    assert.is_not_nil(alpha_ref01_data_dt0_load_result)
+    assert.are.equal(alpha_ref01_data_dt0_load_result["id"], alpha_ref01_data["id"])
 
   end)
 end)

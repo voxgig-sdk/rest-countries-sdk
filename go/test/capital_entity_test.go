@@ -61,13 +61,19 @@ func TestCapitalEntity(t *testing.T) {
 
 		// LOAD
 		capitalRef01Ent := client.Capital(nil)
-		capitalRef01MatchDt0 := map[string]any{}
+		capitalRef01MatchDt0 := map[string]any{
+			"id": capitalRef01Data["id"],
+		}
 		capitalRef01DataDt0Loaded, err := capitalRef01Ent.Load(capitalRef01MatchDt0, nil)
 		if err != nil {
 			t.Fatalf("load failed: %v", err)
 		}
-		if capitalRef01DataDt0Loaded == nil {
-			t.Fatal("expected load result to be non-nil")
+		capitalRef01DataDt0LoadResult := core.ToMapAny(entityData(capitalRef01DataDt0Loaded))
+		if capitalRef01DataDt0LoadResult == nil {
+			t.Fatal("expected load result to be a map")
+		}
+		if capitalRef01DataDt0LoadResult["id"] != capitalRef01Data["id"] {
+			t.Fatal("expected load result id to match")
 		}
 
 	})

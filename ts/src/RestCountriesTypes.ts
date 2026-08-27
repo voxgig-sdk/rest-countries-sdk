@@ -100,6 +100,7 @@ export interface Alpha {
   flag?: string
   flags?: Record<string, any>
   gini?: Record<string, any>
+  id?: string
   idd?: Record<string, any>
   independent?: boolean
   landlocked?: boolean
@@ -142,6 +143,7 @@ export interface Capital {
   flag?: string
   flags?: Record<string, any>
   gini?: Record<string, any>
+  id?: string
   idd?: Record<string, any>
   independent?: boolean
   landlocked?: boolean
@@ -184,6 +186,7 @@ export interface Name {
   flag?: string
   flags?: Record<string, any>
   gini?: Record<string, any>
+  id?: string
   idd?: Record<string, any>
   independent?: boolean
   landlocked?: boolean

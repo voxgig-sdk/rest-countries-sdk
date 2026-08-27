@@ -113,6 +113,7 @@ class Alpha
     public ?string $flag = null;
     public ?array $flags = null;
     public ?array $gini = null;
+    public ?string $id = null;
     public ?array $idd = null;
     public ?bool $independent = null;
     public ?bool $landlocked = null;
@@ -159,6 +160,7 @@ class Capital
     public ?string $flag = null;
     public ?array $flags = null;
     public ?array $gini = null;
+    public ?string $id = null;
     public ?array $idd = null;
     public ?bool $independent = null;
     public ?bool $landlocked = null;
@@ -205,6 +207,7 @@ class Name
     public ?string $flag = null;
     public ?array $flags = null;
     public ?array $gini = null;
+    public ?string $id = null;
     public ?array $idd = null;
     public ?bool $independent = null;
     public ?bool $landlocked = null;

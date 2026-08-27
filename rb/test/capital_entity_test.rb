@@ -41,9 +41,13 @@ class CapitalEntityTest < Minitest::Test
 
     # LOAD
     capital_ref01_ent = client.Capital(nil)
-    capital_ref01_match_dt0 = {}
+    capital_ref01_match_dt0 = {
+      "id" => capital_ref01_data["id"],
+    }
     capital_ref01_data_dt0_loaded = capital_ref01_ent.load(capital_ref01_match_dt0, nil)
-    assert !capital_ref01_data_dt0_loaded.nil?
+    capital_ref01_data_dt0_load_result = Helpers.to_map(capital_ref01_data_dt0_loaded.respond_to?(:data_get) ? capital_ref01_data_dt0_loaded.data_get : capital_ref01_data_dt0_loaded)
+    assert !capital_ref01_data_dt0_load_result.nil?
+    assert_equal capital_ref01_data_dt0_load_result["id"], capital_ref01_data["id"]
 
   end
 end

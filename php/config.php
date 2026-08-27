@@ -42,6 +42,7 @@ class RestCountriesConfig
           'options' => [
             'active' => false,
           ],
+          'transport' => 'base',
         ],
             ],
             "options" => [
@@ -353,6 +354,10 @@ class RestCountriesConfig
               'type' => '`$OBJECT`',
             ],
             [
+              'name' => 'id',
+              'type' => '`$STRING`',
+            ],
+            [
               'name' => 'idd',
               'short' => 'International direct dialing',
               'type' => '`$OBJECT`',
@@ -578,6 +583,10 @@ class RestCountriesConfig
               'type' => '`$OBJECT`',
             ],
             [
+              'name' => 'id',
+              'type' => '`$STRING`',
+            ],
+            [
               'name' => 'idd',
               'short' => 'International direct dialing',
               'type' => '`$OBJECT`',
@@ -801,6 +810,10 @@ class RestCountriesConfig
               'name' => 'gini',
               'short' => 'Gini coefficient',
               'type' => '`$OBJECT`',
+            ],
+            [
+              'name' => 'id',
+              'type' => '`$STRING`',
             ],
             [
               'name' => 'idd',

@@ -354,6 +354,9 @@ AllListMatch = Struct.new(
 # @!attribute [rw] gini
 #   @return [Hash, nil]
 #
+# @!attribute [rw] id
+#   @return [String, nil]
+#
 # @!attribute [rw] idd
 #   @return [Hash, nil]
 #
@@ -423,6 +426,7 @@ Alpha = Struct.new(
   :flag,
   :flags,
   :gini,
+  :id,
   :idd,
   :independent,
   :landlocked,
@@ -508,6 +512,9 @@ AlphaLoadMatch = Struct.new(
 # @!attribute [rw] gini
 #   @return [Hash, nil]
 #
+# @!attribute [rw] id
+#   @return [String, nil]
+#
 # @!attribute [rw] idd
 #   @return [Hash, nil]
 #
@@ -577,6 +584,7 @@ Capital = Struct.new(
   :flag,
   :flags,
   :gini,
+  :id,
   :idd,
   :independent,
   :landlocked,
@@ -662,6 +670,9 @@ CapitalLoadMatch = Struct.new(
 # @!attribute [rw] gini
 #   @return [Hash, nil]
 #
+# @!attribute [rw] id
+#   @return [String, nil]
+#
 # @!attribute [rw] idd
 #   @return [Hash, nil]
 #
@@ -731,6 +742,7 @@ Name = Struct.new(
   :flag,
   :flags,
   :gini,
+  :id,
   :idd,
   :independent,
   :landlocked,

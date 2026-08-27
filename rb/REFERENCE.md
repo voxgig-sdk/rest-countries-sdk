@@ -209,6 +209,7 @@ alpha = client.Alpha
 | `flag` | `String` | No | Flag emoji |
 | `flags` | `Hash` | No |  |
 | `gini` | `Hash` | No | Gini coefficient |
+| `id` | `String` | No |  |
 | `idd` | `Hash` | No | International direct dialing |
 | `independent` | `Boolean` | No | Independence status |
 | `landlocked` | `Boolean` | No | Landlocked status |
@@ -295,6 +296,7 @@ capital = client.Capital
 | `flag` | `String` | No | Flag emoji |
 | `flags` | `Hash` | No |  |
 | `gini` | `Hash` | No | Gini coefficient |
+| `id` | `String` | No |  |
 | `idd` | `Hash` | No | International direct dialing |
 | `independent` | `Boolean` | No | Independence status |
 | `landlocked` | `Boolean` | No | Landlocked status |
@@ -381,6 +383,7 @@ name = client.Name
 | `flag` | `String` | No | Flag emoji |
 | `flags` | `Hash` | No |  |
 | `gini` | `Hash` | No | Gini coefficient |
+| `id` | `String` | No |  |
 | `idd` | `Hash` | No | International direct dialing |
 | `independent` | `Boolean` | No | Independence status |
 | `landlocked` | `Boolean` | No | Landlocked status |

@@ -254,6 +254,7 @@ const alpha = client.Alpha()
 | `flag` | `string` | No | Flag emoji |
 | `flags` | `Record<string, any>` | No |  |
 | `gini` | `Record<string, any>` | No | Gini coefficient |
+| `id` | `string` | No |  |
 | `idd` | `Record<string, any>` | No | International direct dialing |
 | `independent` | `boolean` | No | Independence status |
 | `landlocked` | `boolean` | No | Landlocked status |
@@ -338,6 +339,7 @@ const capital = client.Capital()
 | `flag` | `string` | No | Flag emoji |
 | `flags` | `Record<string, any>` | No |  |
 | `gini` | `Record<string, any>` | No | Gini coefficient |
+| `id` | `string` | No |  |
 | `idd` | `Record<string, any>` | No | International direct dialing |
 | `independent` | `boolean` | No | Independence status |
 | `landlocked` | `boolean` | No | Landlocked status |
@@ -422,6 +424,7 @@ const name = client.Name()
 | `flag` | `string` | No | Flag emoji |
 | `flags` | `Record<string, any>` | No |  |
 | `gini` | `Record<string, any>` | No | Gini coefficient |
+| `id` | `string` | No |  |
 | `idd` | `Record<string, any>` | No | International direct dialing |
 | `independent` | `boolean` | No | Independence status |
 | `landlocked` | `boolean` | No | Landlocked status |

@@ -208,6 +208,7 @@ $alpha = $client->Alpha();
 | `flag` | `string` | No | Flag emoji |
 | `flags` | `array` | No |  |
 | `gini` | `array` | No | Gini coefficient |
+| `id` | `string` | No |  |
 | `idd` | `array` | No | International direct dialing |
 | `independent` | `bool` | No | Independence status |
 | `landlocked` | `bool` | No | Landlocked status |
@@ -294,6 +295,7 @@ $capital = $client->Capital();
 | `flag` | `string` | No | Flag emoji |
 | `flags` | `array` | No |  |
 | `gini` | `array` | No | Gini coefficient |
+| `id` | `string` | No |  |
 | `idd` | `array` | No | International direct dialing |
 | `independent` | `bool` | No | Independence status |
 | `landlocked` | `bool` | No | Landlocked status |
@@ -380,6 +382,7 @@ $name = $client->Name();
 | `flag` | `string` | No | Flag emoji |
 | `flags` | `array` | No |  |
 | `gini` | `array` | No | Gini coefficient |
+| `id` | `string` | No |  |
 | `idd` | `array` | No | International direct dialing |
 | `independent` | `bool` | No | Independence status |
 | `landlocked` | `bool` | No | Landlocked status |

@@ -99,6 +99,7 @@
 ---@field flag? string
 ---@field flags? table
 ---@field gini? table
+---@field id? string
 ---@field idd? table
 ---@field independent? boolean
 ---@field landlocked? boolean
@@ -139,6 +140,7 @@
 ---@field flag? string
 ---@field flags? table
 ---@field gini? table
+---@field id? string
 ---@field idd? table
 ---@field independent? boolean
 ---@field landlocked? boolean
@@ -179,6 +181,7 @@
 ---@field flag? string
 ---@field flags? table
 ---@field gini? table
+---@field id? string
 ---@field idd? table
 ---@field independent? boolean
 ---@field landlocked? boolean

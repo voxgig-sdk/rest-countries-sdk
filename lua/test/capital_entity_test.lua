@@ -44,10 +44,14 @@ describe("CapitalEntity", function()
 
     -- LOAD
     local capital_ref01_ent = client:Capital(nil)
-    local capital_ref01_match_dt0 = {}
+    local capital_ref01_match_dt0 = {
+      id = capital_ref01_data["id"],
+    }
     local capital_ref01_data_dt0_loaded, err = capital_ref01_ent:load(capital_ref01_match_dt0, nil)
     assert.is_nil(err)
-    assert.is_not_nil(capital_ref01_data_dt0_loaded)
+    local capital_ref01_data_dt0_load_result = helpers.to_map(type(capital_ref01_data_dt0_loaded) == 'table' and capital_ref01_data_dt0_loaded.data_get and capital_ref01_data_dt0_loaded:data_get() or capital_ref01_data_dt0_loaded)
+    assert.is_not_nil(capital_ref01_data_dt0_load_result)
+    assert.are.equal(capital_ref01_data_dt0_load_result["id"], capital_ref01_data["id"])
 
   end)
 end)

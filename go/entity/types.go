@@ -110,6 +110,7 @@ type Alpha struct {
 	Flag *string `json:"flag,omitempty"`
 	Flags *map[string]any `json:"flags,omitempty"`
 	Gini *map[string]any `json:"gini,omitempty"`
+	Id *string `json:"id,omitempty"`
 	Idd *map[string]any `json:"idd,omitempty"`
 	Independent *bool `json:"independent,omitempty"`
 	Landlocked *bool `json:"landlocked,omitempty"`
@@ -154,6 +155,7 @@ type Capital struct {
 	Flag *string `json:"flag,omitempty"`
 	Flags *map[string]any `json:"flags,omitempty"`
 	Gini *map[string]any `json:"gini,omitempty"`
+	Id *string `json:"id,omitempty"`
 	Idd *map[string]any `json:"idd,omitempty"`
 	Independent *bool `json:"independent,omitempty"`
 	Landlocked *bool `json:"landlocked,omitempty"`
@@ -198,6 +200,7 @@ type Name struct {
 	Flag *string `json:"flag,omitempty"`
 	Flags *map[string]any `json:"flags,omitempty"`
 	Gini *map[string]any `json:"gini,omitempty"`
+	Id *string `json:"id,omitempty"`
 	Idd *map[string]any `json:"idd,omitempty"`
 	Independent *bool `json:"independent,omitempty"`
 	Landlocked *bool `json:"landlocked,omitempty"`

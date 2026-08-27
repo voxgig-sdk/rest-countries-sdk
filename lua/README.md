@@ -298,6 +298,7 @@ API path: `/all`
 | `flag` | Flag emoji |
 | `flags` |  |
 | `gini` | Gini coefficient |
+| `id` |  |
 | `idd` | International direct dialing |
 | `independent` | Independence status |
 | `landlocked` | Landlocked status |
@@ -342,6 +343,7 @@ API path: `/alpha/{code}`
 | `flag` | Flag emoji |
 | `flags` |  |
 | `gini` | Gini coefficient |
+| `id` |  |
 | `idd` | International direct dialing |
 | `independent` | Independence status |
 | `landlocked` | Landlocked status |
@@ -386,6 +388,7 @@ API path: `/capital/{capital}`
 | `flag` | Flag emoji |
 | `flags` |  |
 | `gini` | Gini coefficient |
+| `id` |  |
 | `idd` | International direct dialing |
 | `independent` | Independence status |
 | `landlocked` | Landlocked status |
@@ -502,6 +505,7 @@ Create an instance: `local alpha = client:Alpha(nil)`
 | `flag` | `string` | Flag emoji |
 | `flags` | `table` |  |
 | `gini` | `table` | Gini coefficient |
+| `id` | `string` |  |
 | `idd` | `table` | International direct dialing |
 | `independent` | `boolean` | Independence status |
 | `landlocked` | `boolean` | Landlocked status |
@@ -559,6 +563,7 @@ Create an instance: `local capital = client:Capital(nil)`
 | `flag` | `string` | Flag emoji |
 | `flags` | `table` |  |
 | `gini` | `table` | Gini coefficient |
+| `id` | `string` |  |
 | `idd` | `table` | International direct dialing |
 | `independent` | `boolean` | Independence status |
 | `landlocked` | `boolean` | Landlocked status |
@@ -616,6 +621,7 @@ Create an instance: `local name = client:Name(nil)`
 | `flag` | `string` | Flag emoji |
 | `flags` | `table` |  |
 | `gini` | `table` | Gini coefficient |
+| `id` | `string` |  |
 | `idd` | `table` | International direct dialing |
 | `independent` | `boolean` | Independence status |
 | `landlocked` | `boolean` | Landlocked status |

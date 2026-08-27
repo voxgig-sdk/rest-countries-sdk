@@ -41,9 +41,13 @@ class AlphaEntityTest < Minitest::Test
 
     # LOAD
     alpha_ref01_ent = client.Alpha(nil)
-    alpha_ref01_match_dt0 = {}
+    alpha_ref01_match_dt0 = {
+      "id" => alpha_ref01_data["id"],
+    }
     alpha_ref01_data_dt0_loaded = alpha_ref01_ent.load(alpha_ref01_match_dt0, nil)
-    assert !alpha_ref01_data_dt0_loaded.nil?
+    alpha_ref01_data_dt0_load_result = Helpers.to_map(alpha_ref01_data_dt0_loaded.respond_to?(:data_get) ? alpha_ref01_data_dt0_loaded.data_get : alpha_ref01_data_dt0_loaded)
+    assert !alpha_ref01_data_dt0_load_result.nil?
+    assert_equal alpha_ref01_data_dt0_load_result["id"], alpha_ref01_data["id"]
 
   end
 end

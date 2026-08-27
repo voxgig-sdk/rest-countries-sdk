@@ -41,9 +41,13 @@ class NameEntityTest < Minitest::Test
 
     # LOAD
     name_ref01_ent = client.Name(nil)
-    name_ref01_match_dt0 = {}
+    name_ref01_match_dt0 = {
+      "id" => name_ref01_data["id"],
+    }
     name_ref01_data_dt0_loaded = name_ref01_ent.load(name_ref01_match_dt0, nil)
-    assert !name_ref01_data_dt0_loaded.nil?
+    name_ref01_data_dt0_load_result = Helpers.to_map(name_ref01_data_dt0_loaded.respond_to?(:data_get) ? name_ref01_data_dt0_loaded.data_get : name_ref01_data_dt0_loaded)
+    assert !name_ref01_data_dt0_load_result.nil?
+    assert_equal name_ref01_data_dt0_load_result["id"], name_ref01_data["id"]
 
   end
 end

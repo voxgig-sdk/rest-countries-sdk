@@ -48,9 +48,13 @@ class TestAlphaEntity:
 
         # LOAD
         alpha_ref01_ent = client.Alpha(None)
-        alpha_ref01_match_dt0 = {}
+        alpha_ref01_match_dt0 = {
+            "id": alpha_ref01_data["id"],
+        }
         alpha_ref01_data_dt0_loaded = alpha_ref01_ent.load(alpha_ref01_match_dt0, None)
-        assert alpha_ref01_data_dt0_loaded is not None
+        alpha_ref01_data_dt0_load_result = helpers.to_map(runner.entity_data(alpha_ref01_data_dt0_loaded))
+        assert alpha_ref01_data_dt0_load_result is not None
+        assert alpha_ref01_data_dt0_load_result["id"] == alpha_ref01_data["id"]
 
 
 

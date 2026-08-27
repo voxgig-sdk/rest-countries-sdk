@@ -16,6 +16,7 @@ local function make_config()
         ["options"] = {
           ["active"] = false,
         },
+        ["transport"] = "base",
       },
     },
     options = {
@@ -327,6 +328,10 @@ local function make_config()
             ["type"] = "`$OBJECT`",
           },
           {
+            ["name"] = "id",
+            ["type"] = "`$STRING`",
+          },
+          {
             ["name"] = "idd",
             ["short"] = "International direct dialing",
             ["type"] = "`$OBJECT`",
@@ -552,6 +557,10 @@ local function make_config()
             ["type"] = "`$OBJECT`",
           },
           {
+            ["name"] = "id",
+            ["type"] = "`$STRING`",
+          },
+          {
             ["name"] = "idd",
             ["short"] = "International direct dialing",
             ["type"] = "`$OBJECT`",
@@ -775,6 +784,10 @@ local function make_config()
             ["name"] = "gini",
             ["short"] = "Gini coefficient",
             ["type"] = "`$OBJECT`",
+          },
+          {
+            ["name"] = "id",
+            ["type"] = "`$STRING`",
           },
           {
             ["name"] = "idd",

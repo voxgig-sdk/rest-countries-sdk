@@ -204,6 +204,7 @@ alpha = client.Alpha()
 | `flag` | `str` | No | Flag emoji |
 | `flags` | `dict` | No |  |
 | `gini` | `dict` | No | Gini coefficient |
+| `id` | `str` | No |  |
 | `idd` | `dict` | No | International direct dialing |
 | `independent` | `bool` | No | Independence status |
 | `landlocked` | `bool` | No | Landlocked status |
@@ -289,6 +290,7 @@ capital = client.Capital()
 | `flag` | `str` | No | Flag emoji |
 | `flags` | `dict` | No |  |
 | `gini` | `dict` | No | Gini coefficient |
+| `id` | `str` | No |  |
 | `idd` | `dict` | No | International direct dialing |
 | `independent` | `bool` | No | Independence status |
 | `landlocked` | `bool` | No | Landlocked status |
@@ -374,6 +376,7 @@ name = client.Name()
 | `flag` | `str` | No | Flag emoji |
 | `flags` | `dict` | No |  |
 | `gini` | `dict` | No | Gini coefficient |
+| `id` | `str` | No |  |
 | `idd` | `dict` | No | International direct dialing |
 | `independent` | `bool` | No | Independence status |
 | `landlocked` | `bool` | No | Landlocked status |

@@ -48,9 +48,13 @@ class AlphaEntityTest extends TestCase
 
         // LOAD
         $alpha_ref01_ent = $client->Alpha(null);
-        $alpha_ref01_match_dt0 = [];
+        $alpha_ref01_match_dt0 = [
+            "id" => $alpha_ref01_data["id"],
+        ];
         $alpha_ref01_data_dt0_loaded = $alpha_ref01_ent->load($alpha_ref01_match_dt0, null);
-        $this->assertNotNull($alpha_ref01_data_dt0_loaded);
+        $alpha_ref01_data_dt0_load_result = Helpers::to_map(is_object($alpha_ref01_data_dt0_loaded) && method_exists($alpha_ref01_data_dt0_loaded, 'data_get') ? $alpha_ref01_data_dt0_loaded->data_get() : $alpha_ref01_data_dt0_loaded);
+        $this->assertNotNull($alpha_ref01_data_dt0_load_result);
+        $this->assertEquals($alpha_ref01_data_dt0_load_result["id"], $alpha_ref01_data["id"]);
 
     }
 }

@@ -40,7 +40,8 @@ class Config {
      test:     {
       "options": {
         "active": false
-      }
+      },
+      "transport": "base"
     },
 
   }
@@ -368,6 +369,10 @@ class Config {
           "type": "`$OBJECT`"
         },
         {
+          "name": "id",
+          "type": "`$STRING`"
+        },
+        {
           "name": "idd",
           "short": "International direct dialing",
           "type": "`$OBJECT`"
@@ -593,6 +598,10 @@ class Config {
           "type": "`$OBJECT`"
         },
         {
+          "name": "id",
+          "type": "`$STRING`"
+        },
+        {
           "name": "idd",
           "short": "International direct dialing",
           "type": "`$OBJECT`"
@@ -816,6 +825,10 @@ class Config {
           "name": "gini",
           "short": "Gini coefficient",
           "type": "`$OBJECT`"
+        },
+        {
+          "name": "id",
+          "type": "`$STRING`"
         },
         {
           "name": "idd",

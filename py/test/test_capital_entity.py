@@ -48,9 +48,13 @@ class TestCapitalEntity:
 
         # LOAD
         capital_ref01_ent = client.Capital(None)
-        capital_ref01_match_dt0 = {}
+        capital_ref01_match_dt0 = {
+            "id": capital_ref01_data["id"],
+        }
         capital_ref01_data_dt0_loaded = capital_ref01_ent.load(capital_ref01_match_dt0, None)
-        assert capital_ref01_data_dt0_loaded is not None
+        capital_ref01_data_dt0_load_result = helpers.to_map(runner.entity_data(capital_ref01_data_dt0_loaded))
+        assert capital_ref01_data_dt0_load_result is not None
+        assert capital_ref01_data_dt0_load_result["id"] == capital_ref01_data["id"]
 
 
 

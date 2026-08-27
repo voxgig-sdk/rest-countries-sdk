@@ -206,6 +206,7 @@ local alpha = client:Alpha(nil)
 | `flag` | `string` | No | Flag emoji |
 | `flags` | `table` | No |  |
 | `gini` | `table` | No | Gini coefficient |
+| `id` | `string` | No |  |
 | `idd` | `table` | No | International direct dialing |
 | `independent` | `boolean` | No | Independence status |
 | `landlocked` | `boolean` | No | Landlocked status |
@@ -292,6 +293,7 @@ local capital = client:Capital(nil)
 | `flag` | `string` | No | Flag emoji |
 | `flags` | `table` | No |  |
 | `gini` | `table` | No | Gini coefficient |
+| `id` | `string` | No |  |
 | `idd` | `table` | No | International direct dialing |
 | `independent` | `boolean` | No | Independence status |
 | `landlocked` | `boolean` | No | Landlocked status |
@@ -378,6 +380,7 @@ local name = client:Name(nil)
 | `flag` | `string` | No | Flag emoji |
 | `flags` | `table` | No |  |
 | `gini` | `table` | No | Gini coefficient |
+| `id` | `string` | No |  |
 | `idd` | `table` | No | International direct dialing |
 | `independent` | `boolean` | No | Independence status |
 | `landlocked` | `boolean` | No | Landlocked status |

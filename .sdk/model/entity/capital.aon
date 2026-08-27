@@ -108,6 +108,11 @@ main: kit: entity: capital: {
       type: "`$OBJECT`"
     }
     {
+      name: "id"
+      req: false
+      type: "`$STRING`"
+    }
+    {
       name: "idd"
       req: false
       short: "International direct dialing"
@@ -206,6 +211,11 @@ main: kit: entity: capital: {
       type: "`$BOOLEAN`"
     }
   ]
+
+  id: {
+    field: "id"
+    name: "id"
+  }
 
   name: "capital"
   op: {

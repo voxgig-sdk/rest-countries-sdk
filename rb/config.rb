@@ -28,6 +28,7 @@ module RestCountriesConfig
           "options" => {
             "active" => false,
           },
+          "transport" => "base",
         },
       },
       "options" => {
@@ -339,6 +340,10 @@ module RestCountriesConfig
               "type" => "`$OBJECT`",
             },
             {
+              "name" => "id",
+              "type" => "`$STRING`",
+            },
+            {
               "name" => "idd",
               "short" => "International direct dialing",
               "type" => "`$OBJECT`",
@@ -564,6 +569,10 @@ module RestCountriesConfig
               "type" => "`$OBJECT`",
             },
             {
+              "name" => "id",
+              "type" => "`$STRING`",
+            },
+            {
               "name" => "idd",
               "short" => "International direct dialing",
               "type" => "`$OBJECT`",
@@ -787,6 +796,10 @@ module RestCountriesConfig
               "name" => "gini",
               "short" => "Gini coefficient",
               "type" => "`$OBJECT`",
+            },
+            {
+              "name" => "id",
+              "type" => "`$STRING`",
             },
             {
               "name" => "idd",

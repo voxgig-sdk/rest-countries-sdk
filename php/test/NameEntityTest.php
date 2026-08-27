@@ -48,9 +48,13 @@ class NameEntityTest extends TestCase
 
         // LOAD
         $name_ref01_ent = $client->Name(null);
-        $name_ref01_match_dt0 = [];
+        $name_ref01_match_dt0 = [
+            "id" => $name_ref01_data["id"],
+        ];
         $name_ref01_data_dt0_loaded = $name_ref01_ent->load($name_ref01_match_dt0, null);
-        $this->assertNotNull($name_ref01_data_dt0_loaded);
+        $name_ref01_data_dt0_load_result = Helpers::to_map(is_object($name_ref01_data_dt0_loaded) && method_exists($name_ref01_data_dt0_loaded, 'data_get') ? $name_ref01_data_dt0_loaded->data_get() : $name_ref01_data_dt0_loaded);
+        $this->assertNotNull($name_ref01_data_dt0_load_result);
+        $this->assertEquals($name_ref01_data_dt0_load_result["id"], $name_ref01_data["id"]);
 
     }
 }

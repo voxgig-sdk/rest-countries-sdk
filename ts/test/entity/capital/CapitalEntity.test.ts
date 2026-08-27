@@ -59,9 +59,12 @@ describe('CapitalEntity', async () => {
 
     let capital_ref01_data = Object.values(setup.data.existing.capital)[0] as any
 
-    // LOAD: skipped — no entity id field and load requires path params.
-    // Entity-var is declared here so later flow steps still compile.
+    // LOAD
     const capital_ref01_ent = client.Capital()
+    const capital_ref01_match_dt0: any = {}
+    capital_ref01_match_dt0.id = capital_ref01_data.id
+    const capital_ref01_data_dt0 = (await capital_ref01_ent.load(capital_ref01_match_dt0)).data()
+    assert(capital_ref01_data_dt0.id === capital_ref01_data.id)
 
 
   })

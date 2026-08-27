@@ -440,6 +440,12 @@
             },
             {
               "active": true,
+              "name": "id",
+              "req": false,
+              "type": "`$STRING`"
+            },
+            {
+              "active": true,
               "name": "idd",
               "req": false,
               "short": "International direct dialing",
@@ -554,6 +560,10 @@
               "type": "`$BOOLEAN`"
             }
           ],
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
           "name": "alpha",
           "op": {
             "load": {
@@ -743,6 +753,12 @@
             },
             {
               "active": true,
+              "name": "id",
+              "req": false,
+              "type": "`$STRING`"
+            },
+            {
+              "active": true,
               "name": "idd",
               "req": false,
               "short": "International direct dialing",
@@ -857,6 +873,10 @@
               "type": "`$BOOLEAN`"
             }
           ],
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
           "name": "capital",
           "op": {
             "load": {
@@ -1046,6 +1066,12 @@
             },
             {
               "active": true,
+              "name": "id",
+              "req": false,
+              "type": "`$STRING`"
+            },
+            {
+              "active": true,
               "name": "idd",
               "req": false,
               "short": "International direct dialing",
@@ -1160,6 +1186,10 @@
               "type": "`$BOOLEAN`"
             }
           ],
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
           "name": "name",
           "op": {
             "load": {
@@ -1325,6 +1355,7 @@
             }
           },
           "title": "In-memory mock transport for testing without a live server",
+          "transport": "base",
           "version": "0.0.1"
         }
       },
@@ -1508,6 +1539,7 @@
           "origname": "",
           "output": {
             "adopt": false,
+            "create": true,
             "path": "",
             "repo": "",
             "sdkrel": ""
@@ -1566,6 +1598,7 @@
           "origname": "",
           "output": {
             "adopt": false,
+            "create": true,
             "path": "",
             "repo": "",
             "sdkrel": ""
@@ -1640,6 +1673,7 @@
           "origname": "",
           "output": {
             "adopt": false,
+            "create": true,
             "path": "",
             "repo": "",
             "sdkrel": ""
@@ -1720,6 +1754,7 @@
           "origname": "",
           "output": {
             "adopt": false,
+            "create": true,
             "path": "",
             "repo": "",
             "sdkrel": ""
@@ -1778,6 +1813,7 @@
           "origname": "",
           "output": {
             "adopt": false,
+            "create": true,
             "path": "",
             "repo": "",
             "sdkrel": ""
@@ -1842,6 +1878,7 @@
           "origname": "",
           "output": {
             "adopt": false,
+            "create": true,
             "path": "",
             "repo": "",
             "sdkrel": ""
@@ -1911,6 +1948,7 @@
           "origname": "",
           "output": {
             "adopt": false,
+            "create": true,
             "path": "",
             "repo": "",
             "sdkrel": ""
@@ -1985,6 +2023,7 @@
           "origname": "",
           "output": {
             "adopt": false,
+            "create": true,
             "path": "",
             "repo": "",
             "sdkrel": ""

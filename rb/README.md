@@ -306,6 +306,7 @@ API path: `/all`
 | `flag` | Flag emoji |
 | `flags` |  |
 | `gini` | Gini coefficient |
+| `id` |  |
 | `idd` | International direct dialing |
 | `independent` | Independence status |
 | `landlocked` | Landlocked status |
@@ -350,6 +351,7 @@ API path: `/alpha/{code}`
 | `flag` | Flag emoji |
 | `flags` |  |
 | `gini` | Gini coefficient |
+| `id` |  |
 | `idd` | International direct dialing |
 | `independent` | Independence status |
 | `landlocked` | Landlocked status |
@@ -394,6 +396,7 @@ API path: `/capital/{capital}`
 | `flag` | Flag emoji |
 | `flags` |  |
 | `gini` | Gini coefficient |
+| `id` |  |
 | `idd` | International direct dialing |
 | `independent` | Independence status |
 | `landlocked` | Landlocked status |
@@ -511,6 +514,7 @@ Create an instance: `alpha = client.Alpha`
 | `flag` | `String` | Flag emoji |
 | `flags` | `Hash` |  |
 | `gini` | `Hash` | Gini coefficient |
+| `id` | `String` |  |
 | `idd` | `Hash` | International direct dialing |
 | `independent` | `Boolean` | Independence status |
 | `landlocked` | `Boolean` | Landlocked status |
@@ -569,6 +573,7 @@ Create an instance: `capital = client.Capital`
 | `flag` | `String` | Flag emoji |
 | `flags` | `Hash` |  |
 | `gini` | `Hash` | Gini coefficient |
+| `id` | `String` |  |
 | `idd` | `Hash` | International direct dialing |
 | `independent` | `Boolean` | Independence status |
 | `landlocked` | `Boolean` | Landlocked status |
@@ -627,6 +632,7 @@ Create an instance: `name = client.Name`
 | `flag` | `String` | Flag emoji |
 | `flags` | `Hash` |  |
 | `gini` | `Hash` | Gini coefficient |
+| `id` | `String` |  |
 | `idd` | `Hash` | International direct dialing |
 | `independent` | `Boolean` | Independence status |
 | `landlocked` | `Boolean` | Landlocked status |

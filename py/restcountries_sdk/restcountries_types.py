@@ -111,6 +111,7 @@ class Alpha(TypedDict, total=False):
     flag: str
     flags: dict
     gini: dict
+    id: str
     idd: dict
     independent: bool
     landlocked: bool
@@ -153,6 +154,7 @@ class Capital(TypedDict, total=False):
     flag: str
     flags: dict
     gini: dict
+    id: str
     idd: dict
     independent: bool
     landlocked: bool
@@ -195,6 +197,7 @@ class Name(TypedDict, total=False):
     flag: str
     flags: dict
     gini: dict
+    id: str
     idd: dict
     independent: bool
     landlocked: bool

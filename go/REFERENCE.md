@@ -213,6 +213,7 @@ fmt.Println(alpha.GetName()) // "alpha"
 | `flag` | `string` | No | Flag emoji |
 | `flags` | `map[string]any` | No |  |
 | `gini` | `map[string]any` | No | Gini coefficient |
+| `id` | `string` | No |  |
 | `idd` | `map[string]any` | No | International direct dialing |
 | `independent` | `bool` | No | Independence status |
 | `landlocked` | `bool` | No | Landlocked status |
@@ -298,6 +299,7 @@ fmt.Println(capital.GetName()) // "capital"
 | `flag` | `string` | No | Flag emoji |
 | `flags` | `map[string]any` | No |  |
 | `gini` | `map[string]any` | No | Gini coefficient |
+| `id` | `string` | No |  |
 | `idd` | `map[string]any` | No | International direct dialing |
 | `independent` | `bool` | No | Independence status |
 | `landlocked` | `bool` | No | Landlocked status |
@@ -383,6 +385,7 @@ fmt.Println(name.GetName()) // "name"
 | `flag` | `string` | No | Flag emoji |
 | `flags` | `map[string]any` | No |  |
 | `gini` | `map[string]any` | No | Gini coefficient |
+| `id` | `string` | No |  |
 | `idd` | `map[string]any` | No | International direct dialing |
 | `independent` | `bool` | No | Independence status |
 | `landlocked` | `bool` | No | Landlocked status |

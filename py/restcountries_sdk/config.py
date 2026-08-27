@@ -37,6 +37,7 @@ def make_config():
         "options": {
           "active": False,
         },
+        "transport": "base",
       },
         },
         "options": {
@@ -348,6 +349,10 @@ def make_config():
             "type": "`$OBJECT`",
           },
           {
+            "name": "id",
+            "type": "`$STRING`",
+          },
+          {
             "name": "idd",
             "short": "International direct dialing",
             "type": "`$OBJECT`",
@@ -573,6 +578,10 @@ def make_config():
             "type": "`$OBJECT`",
           },
           {
+            "name": "id",
+            "type": "`$STRING`",
+          },
+          {
             "name": "idd",
             "short": "International direct dialing",
             "type": "`$OBJECT`",
@@ -796,6 +805,10 @@ def make_config():
             "name": "gini",
             "short": "Gini coefficient",
             "type": "`$OBJECT`",
+          },
+          {
+            "name": "id",
+            "type": "`$STRING`",
           },
           {
             "name": "idd",

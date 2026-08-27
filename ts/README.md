@@ -146,7 +146,7 @@ await entity.load({ id: 'example' })
 
 // Subsequent calls reuse the stored state
 const data = entity.data()
-console.log(data)
+console.log(data.id)
 ```
 
 ### Add custom middleware
@@ -354,6 +354,7 @@ API path: `/all`
 | `flag` | Flag emoji |
 | `flags` |  |
 | `gini` | Gini coefficient |
+| `id` |  |
 | `idd` | International direct dialing |
 | `independent` | Independence status |
 | `landlocked` | Landlocked status |
@@ -398,6 +399,7 @@ API path: `/alpha/{code}`
 | `flag` | Flag emoji |
 | `flags` |  |
 | `gini` | Gini coefficient |
+| `id` |  |
 | `idd` | International direct dialing |
 | `independent` | Independence status |
 | `landlocked` | Landlocked status |
@@ -442,6 +444,7 @@ API path: `/capital/{capital}`
 | `flag` | Flag emoji |
 | `flags` |  |
 | `gini` | Gini coefficient |
+| `id` |  |
 | `idd` | International direct dialing |
 | `independent` | Independence status |
 | `landlocked` | Landlocked status |
@@ -558,6 +561,7 @@ Create an instance: `const alpha = client.Alpha()`
 | `flag` | `string` | Flag emoji |
 | `flags` | `Record<string, any>` |  |
 | `gini` | `Record<string, any>` | Gini coefficient |
+| `id` | `string` |  |
 | `idd` | `Record<string, any>` | International direct dialing |
 | `independent` | `boolean` | Independence status |
 | `landlocked` | `boolean` | Landlocked status |
@@ -615,6 +619,7 @@ Create an instance: `const capital = client.Capital()`
 | `flag` | `string` | Flag emoji |
 | `flags` | `Record<string, any>` |  |
 | `gini` | `Record<string, any>` | Gini coefficient |
+| `id` | `string` |  |
 | `idd` | `Record<string, any>` | International direct dialing |
 | `independent` | `boolean` | Independence status |
 | `landlocked` | `boolean` | Landlocked status |
@@ -672,6 +677,7 @@ Create an instance: `const name = client.Name()`
 | `flag` | `string` | Flag emoji |
 | `flags` | `Record<string, any>` |  |
 | `gini` | `Record<string, any>` | Gini coefficient |
+| `id` | `string` |  |
 | `idd` | `Record<string, any>` | International direct dialing |
 | `independent` | `boolean` | Independence status |
 | `landlocked` | `boolean` | Landlocked status |

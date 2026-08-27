@@ -48,9 +48,13 @@ class CapitalEntityTest extends TestCase
 
         // LOAD
         $capital_ref01_ent = $client->Capital(null);
-        $capital_ref01_match_dt0 = [];
+        $capital_ref01_match_dt0 = [
+            "id" => $capital_ref01_data["id"],
+        ];
         $capital_ref01_data_dt0_loaded = $capital_ref01_ent->load($capital_ref01_match_dt0, null);
-        $this->assertNotNull($capital_ref01_data_dt0_loaded);
+        $capital_ref01_data_dt0_load_result = Helpers::to_map(is_object($capital_ref01_data_dt0_loaded) && method_exists($capital_ref01_data_dt0_loaded, 'data_get') ? $capital_ref01_data_dt0_loaded->data_get() : $capital_ref01_data_dt0_loaded);
+        $this->assertNotNull($capital_ref01_data_dt0_load_result);
+        $this->assertEquals($capital_ref01_data_dt0_load_result["id"], $capital_ref01_data["id"]);
 
     }
 }
