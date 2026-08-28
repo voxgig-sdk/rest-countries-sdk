@@ -55,41 +55,7 @@ class All(TypedDict, total=False):
 
 
 class AllListMatch(TypedDict, total=False):
-    altSpellings: list
-    area: float
-    borders: list
-    capital: list
-    capitalInfo: dict
-    car: dict
-    cca2: str
-    cca3: str
-    ccn3: str
-    cioc: str
-    coatOfArms: dict
-    continents: list
-    currencies: dict
-    demonyms: dict
-    fifa: str
-    flag: str
-    flags: dict
-    gini: dict
-    idd: dict
-    independent: bool
-    landlocked: bool
-    languages: dict
-    latlng: list
-    maps: dict
-    name: dict
-    population: int
-    postalCode: dict
-    region: str
-    startOfWeek: str
-    status: str
-    subregion: str
-    timezones: list
-    tld: list
-    translations: dict
-    unMember: bool
+    field: str
 
 
 class Alpha(TypedDict, total=False):
@@ -131,8 +97,12 @@ class Alpha(TypedDict, total=False):
     unMember: bool
 
 
-class AlphaLoadMatch(TypedDict):
+class AlphaLoadMatchRequired(TypedDict):
     id: str
+
+
+class AlphaLoadMatch(AlphaLoadMatchRequired, total=False):
+    field: str
 
 
 class Capital(TypedDict, total=False):
@@ -174,8 +144,12 @@ class Capital(TypedDict, total=False):
     unMember: bool
 
 
-class CapitalLoadMatch(TypedDict):
+class CapitalLoadMatchRequired(TypedDict):
     id: str
+
+
+class CapitalLoadMatch(CapitalLoadMatchRequired, total=False):
+    field: str
 
 
 class Name(TypedDict, total=False):
@@ -217,5 +191,10 @@ class Name(TypedDict, total=False):
     unMember: bool
 
 
-class NameLoadMatch(TypedDict):
+class NameLoadMatchRequired(TypedDict):
     id: str
+
+
+class NameLoadMatch(NameLoadMatchRequired, total=False):
+    field: str
+    full_text: bool

@@ -55,41 +55,7 @@ class All
 /** Request payload for All#list. */
 class AllListMatch
 {
-    public ?array $altSpellings = null;
-    public ?float $area = null;
-    public ?array $borders = null;
-    public ?array $capital = null;
-    public ?array $capitalInfo = null;
-    public ?array $car = null;
-    public ?string $cca2 = null;
-    public ?string $cca3 = null;
-    public ?string $ccn3 = null;
-    public ?string $cioc = null;
-    public ?array $coatOfArms = null;
-    public ?array $continents = null;
-    public ?array $currencies = null;
-    public ?array $demonyms = null;
-    public ?string $fifa = null;
-    public ?string $flag = null;
-    public ?array $flags = null;
-    public ?array $gini = null;
-    public ?array $idd = null;
-    public ?bool $independent = null;
-    public ?bool $landlocked = null;
-    public ?array $languages = null;
-    public ?array $latlng = null;
-    public ?array $maps = null;
-    public ?array $name = null;
-    public ?int $population = null;
-    public ?array $postalCode = null;
-    public ?string $region = null;
-    public ?string $startOfWeek = null;
-    public ?string $status = null;
-    public ?string $subregion = null;
-    public ?array $timezones = null;
-    public ?array $tld = null;
-    public ?array $translations = null;
-    public ?bool $unMember = null;
+    public ?string $field = null;
 }
 
 /** Alpha entity data model. */
@@ -137,6 +103,7 @@ class Alpha
 class AlphaLoadMatch
 {
     public string $id;
+    public ?string $field = null;
 }
 
 /** Capital entity data model. */
@@ -184,6 +151,7 @@ class Capital
 class CapitalLoadMatch
 {
     public string $id;
+    public ?string $field = null;
 }
 
 /** Name entity data model. */
@@ -231,5 +199,7 @@ class Name
 class NameLoadMatch
 {
     public string $id;
+    public ?string $field = null;
+    public ?bool $full_text = null;
 }
 

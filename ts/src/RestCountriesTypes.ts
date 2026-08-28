@@ -44,41 +44,7 @@ export interface All {
 }
 
 export interface AllListMatch {
-  altSpellings?: any[]
-  area?: number
-  borders?: any[]
-  capital?: any[]
-  capitalInfo?: Record<string, any>
-  car?: Record<string, any>
-  cca2?: string
-  cca3?: string
-  ccn3?: string
-  cioc?: string
-  coatOfArms?: Record<string, any>
-  continents?: any[]
-  currencies?: Record<string, any>
-  demonyms?: Record<string, any>
-  fifa?: string
-  flag?: string
-  flags?: Record<string, any>
-  gini?: Record<string, any>
-  idd?: Record<string, any>
-  independent?: boolean
-  landlocked?: boolean
-  languages?: Record<string, any>
-  latlng?: any[]
-  maps?: Record<string, any>
-  name?: Record<string, any>
-  population?: number
-  postalCode?: Record<string, any>
-  region?: string
-  startOfWeek?: string
-  status?: string
-  subregion?: string
-  timezones?: any[]
-  tld?: any[]
-  translations?: Record<string, any>
-  unMember?: boolean
+  field?: string
 }
 
 export interface Alpha {
@@ -122,6 +88,7 @@ export interface Alpha {
 
 export interface AlphaLoadMatch {
   id: string
+  field?: string
 }
 
 export interface Capital {
@@ -165,6 +132,7 @@ export interface Capital {
 
 export interface CapitalLoadMatch {
   id: string
+  field?: string
 }
 
 export interface Name {
@@ -208,5 +176,7 @@ export interface Name {
 
 export interface NameLoadMatch {
   id: string
+  field?: string
+  full_text?: boolean
 }
 

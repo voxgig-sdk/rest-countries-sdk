@@ -44,41 +44,7 @@
 ---@field unMember? boolean
 
 ---@class AllListMatch
----@field altSpellings? table
----@field area? number
----@field borders? table
----@field capital? table
----@field capitalInfo? table
----@field car? table
----@field cca2? string
----@field cca3? string
----@field ccn3? string
----@field cioc? string
----@field coatOfArms? table
----@field continents? table
----@field currencies? table
----@field demonyms? table
----@field fifa? string
----@field flag? string
----@field flags? table
----@field gini? table
----@field idd? table
----@field independent? boolean
----@field landlocked? boolean
----@field languages? table
----@field latlng? table
----@field maps? table
----@field name? table
----@field population? number
----@field postalCode? table
----@field region? string
----@field startOfWeek? string
----@field status? string
----@field subregion? string
----@field timezones? table
----@field tld? table
----@field translations? table
----@field unMember? boolean
+---@field field? string
 
 ---@class Alpha
 ---@field altSpellings? table
@@ -120,6 +86,7 @@
 
 ---@class AlphaLoadMatch
 ---@field id string
+---@field field? string
 
 ---@class Capital
 ---@field altSpellings? table
@@ -161,6 +128,7 @@
 
 ---@class CapitalLoadMatch
 ---@field id string
+---@field field? string
 
 ---@class Name
 ---@field altSpellings? table
@@ -202,6 +170,8 @@
 
 ---@class NameLoadMatch
 ---@field id string
+---@field field? string
+---@field full_text? boolean
 
 local M = {}
 
