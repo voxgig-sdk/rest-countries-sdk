@@ -233,8 +233,10 @@ module RestCountriesConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/all",
-                  "parts" => [
-                    "all",
+                  "segments" => [
+                    {
+                      "lit" => "all",
+                    },
                   ],
                   "select" => {
                     "exist" => [
@@ -245,6 +247,9 @@ module RestCountriesConfig
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
+                  "parts" => [
+                    "all",
+                  ],
                 },
               ],
             },
@@ -425,6 +430,10 @@ module RestCountriesConfig
               "type" => "`$BOOLEAN`",
             },
           ],
+          "id" => {
+            "field" => "id",
+            "name" => "id",
+          },
           "name" => "alpha",
           "op" => {
             "load" => {
@@ -455,15 +464,19 @@ module RestCountriesConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/alpha/{code}",
-                  "parts" => [
-                    "alpha",
-                    "{id}",
-                  ],
                   "rename" => {
                     "param" => {
                       "code" => "id",
                     },
                   },
+                  "segments" => [
+                    {
+                      "lit" => "alpha",
+                    },
+                    {
+                      "var" => "id",
+                    },
+                  ],
                   "select" => {
                     "exist" => [
                       "field",
@@ -474,6 +487,10 @@ module RestCountriesConfig
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
+                  "parts" => [
+                    "alpha",
+                    "{id}",
+                  ],
                 },
               ],
             },
@@ -654,6 +671,10 @@ module RestCountriesConfig
               "type" => "`$BOOLEAN`",
             },
           ],
+          "id" => {
+            "field" => "id",
+            "name" => "id",
+          },
           "name" => "capital",
           "op" => {
             "load" => {
@@ -684,15 +705,19 @@ module RestCountriesConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/capital/{capital}",
-                  "parts" => [
-                    "capital",
-                    "{id}",
-                  ],
                   "rename" => {
                     "param" => {
                       "capital" => "id",
                     },
                   },
+                  "segments" => [
+                    {
+                      "lit" => "capital",
+                    },
+                    {
+                      "var" => "id",
+                    },
+                  ],
                   "select" => {
                     "exist" => [
                       "field",
@@ -703,6 +728,10 @@ module RestCountriesConfig
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
+                  "parts" => [
+                    "capital",
+                    "{id}",
+                  ],
                 },
               ],
             },
@@ -883,6 +912,10 @@ module RestCountriesConfig
               "type" => "`$BOOLEAN`",
             },
           ],
+          "id" => {
+            "field" => "id",
+            "name" => "id",
+          },
           "name" => "name",
           "op" => {
             "load" => {
@@ -920,15 +953,19 @@ module RestCountriesConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/name/{name}",
-                  "parts" => [
-                    "name",
-                    "{id}",
-                  ],
                   "rename" => {
                     "param" => {
                       "name" => "id",
                     },
                   },
+                  "segments" => [
+                    {
+                      "lit" => "name",
+                    },
+                    {
+                      "var" => "id",
+                    },
+                  ],
                   "select" => {
                     "exist" => [
                       "field",
@@ -940,6 +977,10 @@ module RestCountriesConfig
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
+                  "parts" => [
+                    "name",
+                    "{id}",
+                  ],
                 },
               ],
             },

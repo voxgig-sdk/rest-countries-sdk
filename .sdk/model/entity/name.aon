@@ -254,15 +254,19 @@ main: kit: entity: name: {
           }
           method: "GET"
           orig: "/name/{name}"
-          parts: [
-            "name"
-            "{id}"
-          ]
           rename: {
             param: {
               name: "id"
             }
           }
+          segments: [
+            {
+              lit: "name"
+            }
+            {
+              var: "id"
+            }
+          ]
           select: {
             exist: [
               "field"

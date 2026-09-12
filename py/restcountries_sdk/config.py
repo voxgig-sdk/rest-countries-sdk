@@ -1,6 +1,14 @@
 # RestCountries SDK configuration
 
 
+# The sekreto plugin DEFINITIONS the model selected per feature, imported
+# above by name from the modules the catalogue's active `plugin.def`
+# entries declare. Handed to each feature (secrets builds its Sekreto
+# with them): a provider kind not listed here is unknown to that SDK.
+FEATURE_PLUGINS = {
+}
+
+
 _shared_config = None
 
 
@@ -242,8 +250,10 @@ def make_config():
                 "kind": "http",
                 "method": "GET",
                 "orig": "/all",
-                "parts": [
-                  "all",
+                "segments": [
+                  {
+                    "lit": "all",
+                  },
                 ],
                 "select": {
                   "exist": [
@@ -254,6 +264,9 @@ def make_config():
                   "req": "`reqdata`",
                   "res": "`body`",
                 },
+                "parts": [
+                  "all",
+                ],
               },
             ],
           },
@@ -434,6 +447,10 @@ def make_config():
             "type": "`$BOOLEAN`",
           },
         ],
+        "id": {
+          "field": "id",
+          "name": "id",
+        },
         "name": "alpha",
         "op": {
           "load": {
@@ -464,15 +481,19 @@ def make_config():
                 "kind": "http",
                 "method": "GET",
                 "orig": "/alpha/{code}",
-                "parts": [
-                  "alpha",
-                  "{id}",
-                ],
                 "rename": {
                   "param": {
                     "code": "id",
                   },
                 },
+                "segments": [
+                  {
+                    "lit": "alpha",
+                  },
+                  {
+                    "var": "id",
+                  },
+                ],
                 "select": {
                   "exist": [
                     "field",
@@ -483,6 +504,10 @@ def make_config():
                   "req": "`reqdata`",
                   "res": "`body`",
                 },
+                "parts": [
+                  "alpha",
+                  "{id}",
+                ],
               },
             ],
           },
@@ -663,6 +688,10 @@ def make_config():
             "type": "`$BOOLEAN`",
           },
         ],
+        "id": {
+          "field": "id",
+          "name": "id",
+        },
         "name": "capital",
         "op": {
           "load": {
@@ -693,15 +722,19 @@ def make_config():
                 "kind": "http",
                 "method": "GET",
                 "orig": "/capital/{capital}",
-                "parts": [
-                  "capital",
-                  "{id}",
-                ],
                 "rename": {
                   "param": {
                     "capital": "id",
                   },
                 },
+                "segments": [
+                  {
+                    "lit": "capital",
+                  },
+                  {
+                    "var": "id",
+                  },
+                ],
                 "select": {
                   "exist": [
                     "field",
@@ -712,6 +745,10 @@ def make_config():
                   "req": "`reqdata`",
                   "res": "`body`",
                 },
+                "parts": [
+                  "capital",
+                  "{id}",
+                ],
               },
             ],
           },
@@ -892,6 +929,10 @@ def make_config():
             "type": "`$BOOLEAN`",
           },
         ],
+        "id": {
+          "field": "id",
+          "name": "id",
+        },
         "name": "name",
         "op": {
           "load": {
@@ -929,15 +970,19 @@ def make_config():
                 "kind": "http",
                 "method": "GET",
                 "orig": "/name/{name}",
-                "parts": [
-                  "name",
-                  "{id}",
-                ],
                 "rename": {
                   "param": {
                     "name": "id",
                   },
                 },
+                "segments": [
+                  {
+                    "lit": "name",
+                  },
+                  {
+                    "var": "id",
+                  },
+                ],
                 "select": {
                   "exist": [
                     "field",
@@ -949,6 +994,10 @@ def make_config():
                   "req": "`reqdata`",
                   "res": "`body`",
                 },
+                "parts": [
+                  "name",
+                  "{id}",
+                ],
               },
             ],
           },

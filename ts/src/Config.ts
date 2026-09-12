@@ -10,6 +10,17 @@ const FEATURE_CLASS: Record<string, typeof BaseFeature> = {
 }
 
 
+// Per-feature plugin DEFINITIONS (voxgig/plugin `Definition` values), from
+// the model's active plugin groups. A feature that takes a `plugins` option
+// (secrets over sekreto) reads its own entry; a feature with no plugins has
+// none. Named imports above make each definition statically reachable, so
+// an SDK carries exactly the plugin modules its model selects — the same
+// leanness the old side-effect registry imports bought, without a registry.
+const FEATURE_PLUGINS: Record<string, any[]> = {
+  
+}
+
+
 class Config {
 
   makeFeature(this: any, fn: string) {
@@ -262,8 +273,10 @@ class Config {
               "kind": "http",
               "method": "GET",
               "orig": "/all",
-              "parts": [
-                "all"
+              "segments": [
+                {
+                  "lit": "all"
+                }
               ],
               "select": {
                 "exist": [
@@ -273,7 +286,10 @@ class Config {
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
-              }
+              },
+              "parts": [
+                "all"
+              ]
             }
           ]
         }
@@ -454,6 +470,10 @@ class Config {
           "type": "`$BOOLEAN`"
         }
       ],
+      "id": {
+        "field": "id",
+        "name": "id"
+      },
       "name": "alpha",
       "op": {
         "load": {
@@ -484,15 +504,19 @@ class Config {
               "kind": "http",
               "method": "GET",
               "orig": "/alpha/{code}",
-              "parts": [
-                "alpha",
-                "{id}"
-              ],
               "rename": {
                 "param": {
                   "code": "id"
                 }
               },
+              "segments": [
+                {
+                  "lit": "alpha"
+                },
+                {
+                  "var": "id"
+                }
+              ],
               "select": {
                 "exist": [
                   "field",
@@ -502,7 +526,11 @@ class Config {
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
-              }
+              },
+              "parts": [
+                "alpha",
+                "{id}"
+              ]
             }
           ]
         }
@@ -683,6 +711,10 @@ class Config {
           "type": "`$BOOLEAN`"
         }
       ],
+      "id": {
+        "field": "id",
+        "name": "id"
+      },
       "name": "capital",
       "op": {
         "load": {
@@ -713,15 +745,19 @@ class Config {
               "kind": "http",
               "method": "GET",
               "orig": "/capital/{capital}",
-              "parts": [
-                "capital",
-                "{id}"
-              ],
               "rename": {
                 "param": {
                   "capital": "id"
                 }
               },
+              "segments": [
+                {
+                  "lit": "capital"
+                },
+                {
+                  "var": "id"
+                }
+              ],
               "select": {
                 "exist": [
                   "field",
@@ -731,7 +767,11 @@ class Config {
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
-              }
+              },
+              "parts": [
+                "capital",
+                "{id}"
+              ]
             }
           ]
         }
@@ -912,6 +952,10 @@ class Config {
           "type": "`$BOOLEAN`"
         }
       ],
+      "id": {
+        "field": "id",
+        "name": "id"
+      },
       "name": "name",
       "op": {
         "load": {
@@ -949,15 +993,19 @@ class Config {
               "kind": "http",
               "method": "GET",
               "orig": "/name/{name}",
-              "parts": [
-                "name",
-                "{id}"
-              ],
               "rename": {
                 "param": {
                   "name": "id"
                 }
               },
+              "segments": [
+                {
+                  "lit": "name"
+                },
+                {
+                  "var": "id"
+                }
+              ],
               "select": {
                 "exist": [
                   "field",
@@ -968,7 +1016,11 @@ class Config {
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
-              }
+              },
+              "parts": [
+                "name",
+                "{id}"
+              ]
             }
           ]
         }
@@ -984,6 +1036,7 @@ class Config {
 const config = new Config()
 
 export {
-  config
+  config,
+  FEATURE_PLUGINS,
 }
 

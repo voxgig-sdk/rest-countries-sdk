@@ -246,15 +246,19 @@ main: kit: entity: alpha: {
           }
           method: "GET"
           orig: "/alpha/{code}"
-          parts: [
-            "alpha"
-            "{id}"
-          ]
           rename: {
             param: {
               code: "id"
             }
           }
+          segments: [
+            {
+              lit: "alpha"
+            }
+            {
+              var: "id"
+            }
+          ]
           select: {
             exist: [
               "field"

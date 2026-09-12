@@ -225,8 +225,10 @@ func MakeConfig() map[string]any {
 								"kind": "http",
 								"method": "GET",
 								"orig": "/all",
-								"parts": []any{
-									"all",
+								"segments": []any{
+									map[string]any{
+										"lit": "all",
+									},
 								},
 								"select": map[string]any{
 									"exist": []any{
@@ -236,6 +238,9 @@ func MakeConfig() map[string]any {
 								"transform": map[string]any{
 									"req": "`reqdata`",
 									"res": "`body`",
+								},
+								"parts": []any{
+									"all",
 								},
 							},
 						},
@@ -417,6 +422,10 @@ func MakeConfig() map[string]any {
 						"type": "`$BOOLEAN`",
 					},
 				},
+				"id": map[string]any{
+					"field": "id",
+					"name": "id",
+				},
 				"name": "alpha",
 				"op": map[string]any{
 					"load": map[string]any{
@@ -447,13 +456,17 @@ func MakeConfig() map[string]any {
 								"kind": "http",
 								"method": "GET",
 								"orig": "/alpha/{code}",
-								"parts": []any{
-									"alpha",
-									"{id}",
-								},
 								"rename": map[string]any{
 									"param": map[string]any{
 										"code": "id",
+									},
+								},
+								"segments": []any{
+									map[string]any{
+										"lit": "alpha",
+									},
+									map[string]any{
+										"var": "id",
 									},
 								},
 								"select": map[string]any{
@@ -465,6 +478,10 @@ func MakeConfig() map[string]any {
 								"transform": map[string]any{
 									"req": "`reqdata`",
 									"res": "`body`",
+								},
+								"parts": []any{
+									"alpha",
+									"{id}",
 								},
 							},
 						},
@@ -646,6 +663,10 @@ func MakeConfig() map[string]any {
 						"type": "`$BOOLEAN`",
 					},
 				},
+				"id": map[string]any{
+					"field": "id",
+					"name": "id",
+				},
 				"name": "capital",
 				"op": map[string]any{
 					"load": map[string]any{
@@ -676,13 +697,17 @@ func MakeConfig() map[string]any {
 								"kind": "http",
 								"method": "GET",
 								"orig": "/capital/{capital}",
-								"parts": []any{
-									"capital",
-									"{id}",
-								},
 								"rename": map[string]any{
 									"param": map[string]any{
 										"capital": "id",
+									},
+								},
+								"segments": []any{
+									map[string]any{
+										"lit": "capital",
+									},
+									map[string]any{
+										"var": "id",
 									},
 								},
 								"select": map[string]any{
@@ -694,6 +719,10 @@ func MakeConfig() map[string]any {
 								"transform": map[string]any{
 									"req": "`reqdata`",
 									"res": "`body`",
+								},
+								"parts": []any{
+									"capital",
+									"{id}",
 								},
 							},
 						},
@@ -875,6 +904,10 @@ func MakeConfig() map[string]any {
 						"type": "`$BOOLEAN`",
 					},
 				},
+				"id": map[string]any{
+					"field": "id",
+					"name": "id",
+				},
 				"name": "name",
 				"op": map[string]any{
 					"load": map[string]any{
@@ -912,13 +945,17 @@ func MakeConfig() map[string]any {
 								"kind": "http",
 								"method": "GET",
 								"orig": "/name/{name}",
-								"parts": []any{
-									"name",
-									"{id}",
-								},
 								"rename": map[string]any{
 									"param": map[string]any{
 										"name": "id",
+									},
+								},
+								"segments": []any{
+									map[string]any{
+										"lit": "name",
+									},
+									map[string]any{
+										"var": "id",
 									},
 								},
 								"select": map[string]any{
@@ -932,6 +969,10 @@ func MakeConfig() map[string]any {
 									"req": "`reqdata`",
 									"res": "`body`",
 								},
+								"parts": []any{
+									"name",
+									"{id}",
+								},
 							},
 						},
 					},
@@ -942,6 +983,17 @@ func MakeConfig() map[string]any {
 			},
 		},
 	}
+}
+
+// The plugin definitions the model selected per feature, as []any so a
+// feature package can consume them without core naming its types. Empty
+// when no active feature declares active plugin groups for this target.
+var featurePlugins = map[string][]any{
+}
+
+// FeaturePlugins is the definitions list for one feature's chain.
+func FeaturePlugins(name string) []any {
+	return featurePlugins[name]
 }
 
 var (

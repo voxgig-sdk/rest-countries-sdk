@@ -221,8 +221,10 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/all",
-                ["parts"] = {
-                  "all",
+                ["segments"] = {
+                  {
+                    ["lit"] = "all",
+                  },
                 },
                 ["select"] = {
                   ["exist"] = {
@@ -232,6 +234,9 @@ local function make_config()
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
+                },
+                ["parts"] = {
+                  "all",
                 },
               },
             },
@@ -413,6 +418,10 @@ local function make_config()
             ["type"] = "`$BOOLEAN`",
           },
         },
+        ["id"] = {
+          ["field"] = "id",
+          ["name"] = "id",
+        },
         ["name"] = "alpha",
         ["op"] = {
           ["load"] = {
@@ -443,13 +452,17 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/alpha/{code}",
-                ["parts"] = {
-                  "alpha",
-                  "{id}",
-                },
                 ["rename"] = {
                   ["param"] = {
                     ["code"] = "id",
+                  },
+                },
+                ["segments"] = {
+                  {
+                    ["lit"] = "alpha",
+                  },
+                  {
+                    ["var"] = "id",
                   },
                 },
                 ["select"] = {
@@ -461,6 +474,10 @@ local function make_config()
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
+                },
+                ["parts"] = {
+                  "alpha",
+                  "{id}",
                 },
               },
             },
@@ -642,6 +659,10 @@ local function make_config()
             ["type"] = "`$BOOLEAN`",
           },
         },
+        ["id"] = {
+          ["field"] = "id",
+          ["name"] = "id",
+        },
         ["name"] = "capital",
         ["op"] = {
           ["load"] = {
@@ -672,13 +693,17 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/capital/{capital}",
-                ["parts"] = {
-                  "capital",
-                  "{id}",
-                },
                 ["rename"] = {
                   ["param"] = {
                     ["capital"] = "id",
+                  },
+                },
+                ["segments"] = {
+                  {
+                    ["lit"] = "capital",
+                  },
+                  {
+                    ["var"] = "id",
                   },
                 },
                 ["select"] = {
@@ -690,6 +715,10 @@ local function make_config()
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
+                },
+                ["parts"] = {
+                  "capital",
+                  "{id}",
                 },
               },
             },
@@ -871,6 +900,10 @@ local function make_config()
             ["type"] = "`$BOOLEAN`",
           },
         },
+        ["id"] = {
+          ["field"] = "id",
+          ["name"] = "id",
+        },
         ["name"] = "name",
         ["op"] = {
           ["load"] = {
@@ -908,13 +941,17 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/name/{name}",
-                ["parts"] = {
-                  "name",
-                  "{id}",
-                },
                 ["rename"] = {
                   ["param"] = {
                     ["name"] = "id",
+                  },
+                },
+                ["segments"] = {
+                  {
+                    ["lit"] = "name",
+                  },
+                  {
+                    ["var"] = "id",
                   },
                 },
                 ["select"] = {
@@ -927,6 +964,10 @@ local function make_config()
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
+                },
+                ["parts"] = {
+                  "name",
+                  "{id}",
                 },
               },
             },
