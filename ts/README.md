@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { RestCountriesSDK } from '@voxgig-sdk/rest-countries'
+import { RestCountriesSDK } from '@voxgig-sdk/rest-countries-sdk'
 
 const client = new RestCountriesSDK()
 ```
@@ -785,7 +785,7 @@ rest-countries/
 Import the SDK from the package root:
 
 ```ts
-import { RestCountriesSDK } from '@voxgig-sdk/rest-countries'
+import { RestCountriesSDK } from '@voxgig-sdk/rest-countries-sdk'
 ```
 
 ### Entity state

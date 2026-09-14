@@ -105,7 +105,7 @@ local result, err = client:Alpha():load({ id = "test01" })
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/rest-countries` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rest-countries-sdk/releases) |
+| TypeScript | `@voxgig-sdk/rest-countries-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rest-countries-sdk/releases) |
 | Python | `voxgig-sdk-rest-countries` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rest-countries-sdk/releases) |
 | PHP | `voxgig-sdk/rest-countries` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rest-countries-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/rest-countries-sdk/go` | `go get github.com/voxgig-sdk/rest-countries-sdk/go@latest` |
@@ -119,7 +119,7 @@ local result, err = client:Alpha():load({ id = "test01" })
 ### TypeScript
 
 ```ts
-import { RestCountriesSDK } from '@voxgig-sdk/rest-countries'
+import { RestCountriesSDK } from '@voxgig-sdk/rest-countries-sdk'
 
 const client = new RestCountriesSDK()
 
