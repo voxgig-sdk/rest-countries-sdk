@@ -1,12 +1,18 @@
 # RestCountries SDK feature factory
 
 from restcountries_sdk.feature.base_feature import RestCountriesBaseFeature
+from restcountries_sdk.feature.ratelimit_feature import RestCountriesRatelimitFeature
+from restcountries_sdk.feature.retry_feature import RestCountriesRetryFeature
 from restcountries_sdk.feature.test_feature import RestCountriesTestFeature
+from restcountries_sdk.feature.timeout_feature import RestCountriesTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: RestCountriesBaseFeature(),
+    "ratelimit": lambda: RestCountriesRatelimitFeature(),
+    "retry": lambda: RestCountriesRetryFeature(),
     "test": lambda: RestCountriesTestFeature(),
+    "timeout": lambda: RestCountriesTimeoutFeature(),
 }
 
 

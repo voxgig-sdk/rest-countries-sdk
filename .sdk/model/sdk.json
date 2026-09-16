@@ -24,7 +24,71 @@
         "repr": "auto"
       },
       "contributor": {},
-      "docs": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
       "entity": {
         "all": {
           "active": true,
@@ -288,6 +352,12 @@
                         "type": "`$STRING`"
                       }
                     ]
+                  },
+                  "contract": {
+                    "id": "GET /all",
+                    "json": "{\"operationId\":\"getAllCountries\",\"parameters\":[{\"description\":\"Comma-separated list of fields to return\",\"example\":\"name,capital,population\",\"in\":\"query\",\"name\":\"fields\",\"required\":false,\"schema\":{\"type\":\"string\"}}],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"properties\":{\"altSpellings\":{\"description\":\"Alternative country name spellings\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"area\":{\"description\":\"Country area in square kilometers\",\"type\":\"number\"},\"borders\":{\"description\":\"Border countries (ISO 3166-1 alpha-3 codes)\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"capital\":{\"description\":\"Capital city or cities\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"capitalInfo\":{\"properties\":{\"latlng\":{\"items\":{\"type\":\"number\"},\"maxItems\":2,\"minItems\":2,\"type\":\"array\"}},\"type\":\"object\"},\"car\":{\"properties\":{\"side\":{\"enum\":[\"left\",\"right\"],\"type\":\"string\"},\"signs\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"type\":\"object\"},\"cca2\":{\"description\":\"ISO 3166-1 alpha-2 code\",\"type\":\"string\"},\"cca3\":{\"description\":\"ISO 3166-1 alpha-3 code\",\"type\":\"string\"},\"ccn3\":{\"description\":\"ISO 3166-1 numeric code\",\"type\":\"string\"},\"cioc\":{\"description\":\"International Olympic Committee code\",\"type\":\"string\"},\"coatOfArms\":{\"properties\":{\"png\":{\"format\":\"uri\",\"type\":\"string\"},\"svg\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"continents\":{\"description\":\"Continents\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"currencies\":{\"additionalProperties\":{\"properties\":{\"name\":{\"type\":\"string\"},\"symbol\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"demonyms\":{\"additionalProperties\":{\"properties\":{\"f\":{\"type\":\"string\"},\"m\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"fifa\":{\"description\":\"FIFA country code\",\"type\":\"string\"},\"flag\":{\"description\":\"Flag emoji\",\"type\":\"string\"},\"flags\":{\"properties\":{\"alt\":{\"type\":\"string\"},\"png\":{\"format\":\"uri\",\"type\":\"string\"},\"svg\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"gini\":{\"additionalProperties\":{\"type\":\"number\"},\"description\":\"Gini coefficient\",\"type\":\"object\"},\"idd\":{\"description\":\"International direct dialing\",\"properties\":{\"root\":{\"type\":\"string\"},\"suffixes\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"type\":\"object\"},\"independent\":{\"description\":\"Independence status\",\"type\":\"boolean\"},\"landlocked\":{\"description\":\"Landlocked status\",\"type\":\"boolean\"},\"languages\":{\"additionalProperties\":{\"type\":\"string\"},\"description\":\"Languages spoken\",\"type\":\"object\"},\"latlng\":{\"description\":\"Latitude and longitude\",\"items\":{\"type\":\"number\"},\"maxItems\":2,\"minItems\":2,\"type\":\"array\"},\"maps\":{\"properties\":{\"googleMaps\":{\"format\":\"uri\",\"type\":\"string\"},\"openStreetMaps\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"name\":{\"properties\":{\"common\":{\"description\":\"Common country name\",\"type\":\"string\"},\"nativeName\":{\"additionalProperties\":{\"properties\":{\"common\":{\"type\":\"string\"},\"official\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"official\":{\"description\":\"Official country name\",\"type\":\"string\"}},\"type\":\"object\"},\"population\":{\"description\":\"Country population\",\"type\":\"integer\"},\"postalCode\":{\"properties\":{\"format\":{\"type\":\"string\"},\"regex\":{\"type\":\"string\"}},\"type\":\"object\"},\"region\":{\"description\":\"Geographic region\",\"type\":\"string\"},\"startOfWeek\":{\"description\":\"Start of week day\",\"type\":\"string\"},\"status\":{\"description\":\"ISO 3166-1 assignment status\",\"type\":\"string\"},\"subregion\":{\"description\":\"Geographic subregion\",\"type\":\"string\"},\"timezones\":{\"description\":\"Timezones\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"tld\":{\"description\":\"Top-level domains\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"translations\":{\"additionalProperties\":{\"properties\":{\"common\":{\"type\":\"string\"},\"official\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"unMember\":{\"description\":\"UN membership status\",\"type\":\"boolean\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successful response\"},\"404\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"message\":{\"description\":\"Error message\",\"type\":\"string\"},\"status\":{\"description\":\"HTTP status code\",\"type\":\"integer\"}},\"type\":\"object\"}}},\"description\":\"Not found\"}},\"securitySource\":\"unspecified\"}",
+                    "source": "openapi3",
+                    "version": 1
                   },
                   "kind": "http",
                   "method": "GET",
@@ -596,6 +666,12 @@
                         "type": "`$STRING`"
                       }
                     ]
+                  },
+                  "contract": {
+                    "id": "GET /alpha/{code}",
+                    "json": "{\"operationId\":\"getCountryByCode\",\"parameters\":[{\"description\":\"Alpha-2, alpha-3 or CIOC country code\",\"example\":\"de\",\"in\":\"path\",\"name\":\"code\",\"required\":true,\"schema\":{\"type\":\"string\"}},{\"description\":\"Comma-separated list of fields to return\",\"in\":\"query\",\"name\":\"fields\",\"required\":false,\"schema\":{\"type\":\"string\"}}],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"properties\":{\"altSpellings\":{\"description\":\"Alternative country name spellings\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"area\":{\"description\":\"Country area in square kilometers\",\"type\":\"number\"},\"borders\":{\"description\":\"Border countries (ISO 3166-1 alpha-3 codes)\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"capital\":{\"description\":\"Capital city or cities\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"capitalInfo\":{\"properties\":{\"latlng\":{\"items\":{\"type\":\"number\"},\"maxItems\":2,\"minItems\":2,\"type\":\"array\"}},\"type\":\"object\"},\"car\":{\"properties\":{\"side\":{\"enum\":[\"left\",\"right\"],\"type\":\"string\"},\"signs\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"type\":\"object\"},\"cca2\":{\"description\":\"ISO 3166-1 alpha-2 code\",\"type\":\"string\"},\"cca3\":{\"description\":\"ISO 3166-1 alpha-3 code\",\"type\":\"string\"},\"ccn3\":{\"description\":\"ISO 3166-1 numeric code\",\"type\":\"string\"},\"cioc\":{\"description\":\"International Olympic Committee code\",\"type\":\"string\"},\"coatOfArms\":{\"properties\":{\"png\":{\"format\":\"uri\",\"type\":\"string\"},\"svg\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"continents\":{\"description\":\"Continents\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"currencies\":{\"additionalProperties\":{\"properties\":{\"name\":{\"type\":\"string\"},\"symbol\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"demonyms\":{\"additionalProperties\":{\"properties\":{\"f\":{\"type\":\"string\"},\"m\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"fifa\":{\"description\":\"FIFA country code\",\"type\":\"string\"},\"flag\":{\"description\":\"Flag emoji\",\"type\":\"string\"},\"flags\":{\"properties\":{\"alt\":{\"type\":\"string\"},\"png\":{\"format\":\"uri\",\"type\":\"string\"},\"svg\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"gini\":{\"additionalProperties\":{\"type\":\"number\"},\"description\":\"Gini coefficient\",\"type\":\"object\"},\"idd\":{\"description\":\"International direct dialing\",\"properties\":{\"root\":{\"type\":\"string\"},\"suffixes\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"type\":\"object\"},\"independent\":{\"description\":\"Independence status\",\"type\":\"boolean\"},\"landlocked\":{\"description\":\"Landlocked status\",\"type\":\"boolean\"},\"languages\":{\"additionalProperties\":{\"type\":\"string\"},\"description\":\"Languages spoken\",\"type\":\"object\"},\"latlng\":{\"description\":\"Latitude and longitude\",\"items\":{\"type\":\"number\"},\"maxItems\":2,\"minItems\":2,\"type\":\"array\"},\"maps\":{\"properties\":{\"googleMaps\":{\"format\":\"uri\",\"type\":\"string\"},\"openStreetMaps\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"name\":{\"properties\":{\"common\":{\"description\":\"Common country name\",\"type\":\"string\"},\"nativeName\":{\"additionalProperties\":{\"properties\":{\"common\":{\"type\":\"string\"},\"official\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"official\":{\"description\":\"Official country name\",\"type\":\"string\"}},\"type\":\"object\"},\"population\":{\"description\":\"Country population\",\"type\":\"integer\"},\"postalCode\":{\"properties\":{\"format\":{\"type\":\"string\"},\"regex\":{\"type\":\"string\"}},\"type\":\"object\"},\"region\":{\"description\":\"Geographic region\",\"type\":\"string\"},\"startOfWeek\":{\"description\":\"Start of week day\",\"type\":\"string\"},\"status\":{\"description\":\"ISO 3166-1 assignment status\",\"type\":\"string\"},\"subregion\":{\"description\":\"Geographic subregion\",\"type\":\"string\"},\"timezones\":{\"description\":\"Timezones\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"tld\":{\"description\":\"Top-level domains\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"translations\":{\"additionalProperties\":{\"properties\":{\"common\":{\"type\":\"string\"},\"official\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"unMember\":{\"description\":\"UN membership status\",\"type\":\"boolean\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successful response\"},\"404\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"message\":{\"description\":\"Error message\",\"type\":\"string\"},\"status\":{\"description\":\"HTTP status code\",\"type\":\"integer\"}},\"type\":\"object\"}}},\"description\":\"Country not found\"}},\"securitySource\":\"unspecified\"}",
+                    "source": "openapi3",
+                    "version": 1
                   },
                   "kind": "http",
                   "method": "GET",
@@ -913,6 +989,12 @@
                         "type": "`$STRING`"
                       }
                     ]
+                  },
+                  "contract": {
+                    "id": "GET /capital/{capital}",
+                    "json": "{\"operationId\":\"getCountriesByCapital\",\"parameters\":[{\"description\":\"Name of the capital city\",\"example\":\"berlin\",\"in\":\"path\",\"name\":\"capital\",\"required\":true,\"schema\":{\"type\":\"string\"}},{\"description\":\"Comma-separated list of fields to return\",\"in\":\"query\",\"name\":\"fields\",\"required\":false,\"schema\":{\"type\":\"string\"}}],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"properties\":{\"altSpellings\":{\"description\":\"Alternative country name spellings\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"area\":{\"description\":\"Country area in square kilometers\",\"type\":\"number\"},\"borders\":{\"description\":\"Border countries (ISO 3166-1 alpha-3 codes)\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"capital\":{\"description\":\"Capital city or cities\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"capitalInfo\":{\"properties\":{\"latlng\":{\"items\":{\"type\":\"number\"},\"maxItems\":2,\"minItems\":2,\"type\":\"array\"}},\"type\":\"object\"},\"car\":{\"properties\":{\"side\":{\"enum\":[\"left\",\"right\"],\"type\":\"string\"},\"signs\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"type\":\"object\"},\"cca2\":{\"description\":\"ISO 3166-1 alpha-2 code\",\"type\":\"string\"},\"cca3\":{\"description\":\"ISO 3166-1 alpha-3 code\",\"type\":\"string\"},\"ccn3\":{\"description\":\"ISO 3166-1 numeric code\",\"type\":\"string\"},\"cioc\":{\"description\":\"International Olympic Committee code\",\"type\":\"string\"},\"coatOfArms\":{\"properties\":{\"png\":{\"format\":\"uri\",\"type\":\"string\"},\"svg\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"continents\":{\"description\":\"Continents\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"currencies\":{\"additionalProperties\":{\"properties\":{\"name\":{\"type\":\"string\"},\"symbol\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"demonyms\":{\"additionalProperties\":{\"properties\":{\"f\":{\"type\":\"string\"},\"m\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"fifa\":{\"description\":\"FIFA country code\",\"type\":\"string\"},\"flag\":{\"description\":\"Flag emoji\",\"type\":\"string\"},\"flags\":{\"properties\":{\"alt\":{\"type\":\"string\"},\"png\":{\"format\":\"uri\",\"type\":\"string\"},\"svg\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"gini\":{\"additionalProperties\":{\"type\":\"number\"},\"description\":\"Gini coefficient\",\"type\":\"object\"},\"idd\":{\"description\":\"International direct dialing\",\"properties\":{\"root\":{\"type\":\"string\"},\"suffixes\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"type\":\"object\"},\"independent\":{\"description\":\"Independence status\",\"type\":\"boolean\"},\"landlocked\":{\"description\":\"Landlocked status\",\"type\":\"boolean\"},\"languages\":{\"additionalProperties\":{\"type\":\"string\"},\"description\":\"Languages spoken\",\"type\":\"object\"},\"latlng\":{\"description\":\"Latitude and longitude\",\"items\":{\"type\":\"number\"},\"maxItems\":2,\"minItems\":2,\"type\":\"array\"},\"maps\":{\"properties\":{\"googleMaps\":{\"format\":\"uri\",\"type\":\"string\"},\"openStreetMaps\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"name\":{\"properties\":{\"common\":{\"description\":\"Common country name\",\"type\":\"string\"},\"nativeName\":{\"additionalProperties\":{\"properties\":{\"common\":{\"type\":\"string\"},\"official\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"official\":{\"description\":\"Official country name\",\"type\":\"string\"}},\"type\":\"object\"},\"population\":{\"description\":\"Country population\",\"type\":\"integer\"},\"postalCode\":{\"properties\":{\"format\":{\"type\":\"string\"},\"regex\":{\"type\":\"string\"}},\"type\":\"object\"},\"region\":{\"description\":\"Geographic region\",\"type\":\"string\"},\"startOfWeek\":{\"description\":\"Start of week day\",\"type\":\"string\"},\"status\":{\"description\":\"ISO 3166-1 assignment status\",\"type\":\"string\"},\"subregion\":{\"description\":\"Geographic subregion\",\"type\":\"string\"},\"timezones\":{\"description\":\"Timezones\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"tld\":{\"description\":\"Top-level domains\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"translations\":{\"additionalProperties\":{\"properties\":{\"common\":{\"type\":\"string\"},\"official\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"unMember\":{\"description\":\"UN membership status\",\"type\":\"boolean\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successful response\"},\"404\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"message\":{\"description\":\"Error message\",\"type\":\"string\"},\"status\":{\"description\":\"HTTP status code\",\"type\":\"integer\"}},\"type\":\"object\"}}},\"description\":\"Country not found\"}},\"securitySource\":\"unspecified\"}",
+                    "source": "openapi3",
+                    "version": 1
                   },
                   "kind": "http",
                   "method": "GET",
@@ -1240,6 +1322,12 @@
                       }
                     ]
                   },
+                  "contract": {
+                    "id": "GET /name/{name}",
+                    "json": "{\"operationId\":\"getCountriesByName\",\"parameters\":[{\"description\":\"Name of the country to search for\",\"example\":\"germany\",\"in\":\"path\",\"name\":\"name\",\"required\":true,\"schema\":{\"type\":\"string\"}},{\"description\":\"Search by exact country name match\",\"in\":\"query\",\"name\":\"fullText\",\"required\":false,\"schema\":{\"default\":false,\"type\":\"boolean\"}},{\"description\":\"Comma-separated list of fields to return\",\"in\":\"query\",\"name\":\"fields\",\"required\":false,\"schema\":{\"type\":\"string\"}}],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"properties\":{\"altSpellings\":{\"description\":\"Alternative country name spellings\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"area\":{\"description\":\"Country area in square kilometers\",\"type\":\"number\"},\"borders\":{\"description\":\"Border countries (ISO 3166-1 alpha-3 codes)\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"capital\":{\"description\":\"Capital city or cities\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"capitalInfo\":{\"properties\":{\"latlng\":{\"items\":{\"type\":\"number\"},\"maxItems\":2,\"minItems\":2,\"type\":\"array\"}},\"type\":\"object\"},\"car\":{\"properties\":{\"side\":{\"enum\":[\"left\",\"right\"],\"type\":\"string\"},\"signs\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"type\":\"object\"},\"cca2\":{\"description\":\"ISO 3166-1 alpha-2 code\",\"type\":\"string\"},\"cca3\":{\"description\":\"ISO 3166-1 alpha-3 code\",\"type\":\"string\"},\"ccn3\":{\"description\":\"ISO 3166-1 numeric code\",\"type\":\"string\"},\"cioc\":{\"description\":\"International Olympic Committee code\",\"type\":\"string\"},\"coatOfArms\":{\"properties\":{\"png\":{\"format\":\"uri\",\"type\":\"string\"},\"svg\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"continents\":{\"description\":\"Continents\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"currencies\":{\"additionalProperties\":{\"properties\":{\"name\":{\"type\":\"string\"},\"symbol\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"demonyms\":{\"additionalProperties\":{\"properties\":{\"f\":{\"type\":\"string\"},\"m\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"fifa\":{\"description\":\"FIFA country code\",\"type\":\"string\"},\"flag\":{\"description\":\"Flag emoji\",\"type\":\"string\"},\"flags\":{\"properties\":{\"alt\":{\"type\":\"string\"},\"png\":{\"format\":\"uri\",\"type\":\"string\"},\"svg\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"gini\":{\"additionalProperties\":{\"type\":\"number\"},\"description\":\"Gini coefficient\",\"type\":\"object\"},\"idd\":{\"description\":\"International direct dialing\",\"properties\":{\"root\":{\"type\":\"string\"},\"suffixes\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"type\":\"object\"},\"independent\":{\"description\":\"Independence status\",\"type\":\"boolean\"},\"landlocked\":{\"description\":\"Landlocked status\",\"type\":\"boolean\"},\"languages\":{\"additionalProperties\":{\"type\":\"string\"},\"description\":\"Languages spoken\",\"type\":\"object\"},\"latlng\":{\"description\":\"Latitude and longitude\",\"items\":{\"type\":\"number\"},\"maxItems\":2,\"minItems\":2,\"type\":\"array\"},\"maps\":{\"properties\":{\"googleMaps\":{\"format\":\"uri\",\"type\":\"string\"},\"openStreetMaps\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"name\":{\"properties\":{\"common\":{\"description\":\"Common country name\",\"type\":\"string\"},\"nativeName\":{\"additionalProperties\":{\"properties\":{\"common\":{\"type\":\"string\"},\"official\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"official\":{\"description\":\"Official country name\",\"type\":\"string\"}},\"type\":\"object\"},\"population\":{\"description\":\"Country population\",\"type\":\"integer\"},\"postalCode\":{\"properties\":{\"format\":{\"type\":\"string\"},\"regex\":{\"type\":\"string\"}},\"type\":\"object\"},\"region\":{\"description\":\"Geographic region\",\"type\":\"string\"},\"startOfWeek\":{\"description\":\"Start of week day\",\"type\":\"string\"},\"status\":{\"description\":\"ISO 3166-1 assignment status\",\"type\":\"string\"},\"subregion\":{\"description\":\"Geographic subregion\",\"type\":\"string\"},\"timezones\":{\"description\":\"Timezones\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"tld\":{\"description\":\"Top-level domains\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"translations\":{\"additionalProperties\":{\"properties\":{\"common\":{\"type\":\"string\"},\"official\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"unMember\":{\"description\":\"UN membership status\",\"type\":\"boolean\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successful response\"},\"404\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"message\":{\"description\":\"Error message\",\"type\":\"string\"},\"status\":{\"description\":\"HTTP status code\",\"type\":\"integer\"}},\"type\":\"object\"}}},\"description\":\"Country not found\"}},\"securitySource\":\"unspecified\"}",
+                    "source": "openapi3",
+                    "version": 1
+                  },
                   "kind": "http",
                   "method": "GET",
                   "orig": "/name/{name}",
@@ -1277,13 +1365,223 @@
         }
       },
       "feature": {
+        "ratelimit": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false,
+              "burst": 5,
+              "rate": 5
+            },
+            "optspec": {
+              "now": "`$FUNCTION`",
+              "sleep": "`$FUNCTION`"
+            },
+            "strict": false
+          },
+          "hook": {
+            "GetData": {
+              "active": false,
+              "await": false
+            },
+            "GetMatch": {
+              "active": false,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": false,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": false,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PreRequest": {
+              "active": false,
+              "await": false
+            },
+            "PreResponse": {
+              "active": false,
+              "await": false
+            },
+            "PreResult": {
+              "active": false,
+              "await": false
+            },
+            "PreSpec": {
+              "active": false,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": false,
+              "await": false
+            }
+          },
+          "name": "ratelimit",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "go": {
+              "deps": {}
+            },
+            "go-cli": {
+              "deps": {}
+            },
+            "go-mcp": {
+              "deps": {}
+            },
+            "lua": {
+              "deps": {}
+            },
+            "php": {
+              "deps": {}
+            },
+            "py": {
+              "deps": {}
+            },
+            "rb": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Client-side rate limiting via a token bucket",
+          "transport": "wrap",
+          "version": "0.0.1"
+        },
+        "retry": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false,
+              "factor": 2,
+              "maxDelay": 2000,
+              "minDelay": 50,
+              "retries": 2,
+              "statuses": [
+                408,
+                425,
+                429,
+                500,
+                502,
+                503,
+                504
+              ]
+            },
+            "optspec": {
+              "jitter": "`$BOOLEAN`",
+              "sleep": "`$FUNCTION`"
+            },
+            "strict": false
+          },
+          "hook": {
+            "GetData": {
+              "active": false,
+              "await": false
+            },
+            "GetMatch": {
+              "active": false,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": false,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": false,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PreRequest": {
+              "active": false,
+              "await": false
+            },
+            "PreResponse": {
+              "active": false,
+              "await": false
+            },
+            "PreResult": {
+              "active": false,
+              "await": false
+            },
+            "PreSpec": {
+              "active": false,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": false,
+              "await": false
+            }
+          },
+          "name": "retry",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "go": {
+              "deps": {}
+            },
+            "go-cli": {
+              "deps": {}
+            },
+            "go-mcp": {
+              "deps": {}
+            },
+            "lua": {
+              "deps": {}
+            },
+            "php": {
+              "deps": {}
+            },
+            "py": {
+              "deps": {}
+            },
+            "rb": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Automatic retry of transient failures with exponential backoff",
+          "transport": "wrap",
+          "version": "0.0.1"
+        },
         "test": {
           "active": true,
           "base": "node_modules/@voxgig/sdkgen/project/.sdk",
           "config": {
             "options": {
               "active": false
-            }
+            },
+            "optspec": {
+              "entity": "`$MAP`",
+              "net": "`$MAP`"
+            },
+            "strict": false
           },
           "hook": {
             "GetData": {
@@ -1373,6 +1671,102 @@
           },
           "title": "In-memory mock transport for testing without a live server",
           "transport": "base",
+          "version": "0.0.1"
+        },
+        "timeout": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false,
+              "ms": 30000
+            },
+            "optspec": {
+              "clearTimer": "`$FUNCTION`",
+              "setTimer": "`$FUNCTION`"
+            },
+            "strict": false
+          },
+          "hook": {
+            "GetData": {
+              "active": false,
+              "await": false
+            },
+            "GetMatch": {
+              "active": false,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": false,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": false,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PreRequest": {
+              "active": false,
+              "await": false
+            },
+            "PreResponse": {
+              "active": false,
+              "await": false
+            },
+            "PreResult": {
+              "active": false,
+              "await": false
+            },
+            "PreSpec": {
+              "active": false,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": false,
+              "await": false
+            }
+          },
+          "name": "timeout",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "go": {
+              "deps": {}
+            },
+            "go-cli": {
+              "deps": {}
+            },
+            "go-mcp": {
+              "deps": {}
+            },
+            "lua": {
+              "deps": {}
+            },
+            "php": {
+              "deps": {}
+            },
+            "py": {
+              "deps": {}
+            },
+            "rb": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Per-request timeout with transport abort",
+          "transport": "wrap",
           "version": "0.0.1"
         }
       },
@@ -1523,6 +1917,48 @@
         "website": "https://restcountries.com"
       },
       "option": {},
+      "optspec": {
+        "allow": {
+          "method": "GET,PUT,POST,PATCH,DELETE,OPTIONS",
+          "op": "create,update,load,list,remove,command,direct,graphql"
+        },
+        "apikey": "",
+        "auth": {
+          "basic": false,
+          "prefix": ""
+        },
+        "base": "http://localhost:8000",
+        "clean": {
+          "keys": "key,token,id"
+        },
+        "entity": {
+          "`$CHILD`": {
+            "`$OPEN`": true,
+            "active": false,
+            "alias": {}
+          }
+        },
+        "extend": "`$ANY`",
+        "headers": {
+          "`$CHILD`": "`$STRING`"
+        },
+        "prefix": "",
+        "secret": "",
+        "server": {
+          "`$CHILD`": ""
+        },
+        "suffix": "",
+        "system": {
+          "fetch": "`$ANY`"
+        },
+        "test": {
+          "active": false,
+          "entity": {
+            "`$OPEN`": true
+          }
+        },
+        "utility": {}
+      },
       "repo": {
         "host": "github.com",
         "path": ""
@@ -2077,6 +2513,7 @@
           },
           "package": "@voxgig/sdkgen",
           "provides": {
+            "schema": true,
             "sekreto": true
           },
           "publish": {
@@ -2118,7 +2555,7 @@
         "live": {
           "app": false,
           "base": "",
-          "strict": false
+          "strict": true
         }
       }
     }

@@ -4,7 +4,10 @@ declare(strict_types=1);
 // RestCountries SDK feature factory
 
 require_once __DIR__ . '/feature/BaseFeature.php';
+require_once __DIR__ . '/feature/RatelimitFeature.php';
+require_once __DIR__ . '/feature/RetryFeature.php';
 require_once __DIR__ . '/feature/TestFeature.php';
+require_once __DIR__ . '/feature/TimeoutFeature.php';
 
 
 class RestCountriesFeatures
@@ -14,8 +17,14 @@ class RestCountriesFeatures
         switch ($name) {
             case "base":
                 return new RestCountriesBaseFeature();
+            case "ratelimit":
+                return new RestCountriesRatelimitFeature();
+            case "retry":
+                return new RestCountriesRetryFeature();
             case "test":
                 return new RestCountriesTestFeature();
+            case "timeout":
+                return new RestCountriesTimeoutFeature();
             default:
                 return new RestCountriesBaseFeature();
         }
@@ -31,7 +40,10 @@ class RestCountriesFeatures
     {
         switch ($name) {
             case "base":
+            case "ratelimit":
+            case "retry":
             case "test":
+            case "timeout":
                 return true;
             default:
                 return false;
