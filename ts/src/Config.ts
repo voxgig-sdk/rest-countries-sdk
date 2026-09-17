@@ -127,18 +127,18 @@ class Config {
 
     entity: {
       
-      all: {
-      },
-
-      alpha: {
-      },
-
-      capital: {
-      },
-
-      name: {
-      },
-
+        all: {
+        },
+  
+        alpha: {
+        },
+  
+        capital: {
+        },
+  
+        name: {
+        },
+  
     }
   }
 

@@ -105,12 +105,12 @@ local result, err = client:Alpha():load({ id = "test01" })
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/rest-countries-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rest-countries-sdk/releases) |
-| Python | `voxgig-sdk-rest-countries` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rest-countries-sdk/releases) |
-| PHP | `voxgig-sdk/rest-countries` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rest-countries-sdk/releases) |
+| TypeScript | `@voxgig-sdk/rest-countries-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rest-countries-sdk/tags) |
+| Python | `voxgig-sdk-rest-countries` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rest-countries-sdk/tags) |
+| PHP | `voxgig-sdk/rest-countries` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rest-countries-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/rest-countries-sdk/go` | `go get github.com/voxgig-sdk/rest-countries-sdk/go@latest` |
-| Ruby | `voxgig-sdk-rest-countries` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rest-countries-sdk/releases) |
-| Lua | `voxgig-sdk-rest-countries` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rest-countries-sdk/releases) |
+| Ruby | `voxgig-sdk-rest-countries` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rest-countries-sdk/tags) |
+| Lua | `voxgig-sdk-rest-countries` | publish pending — [install from git tag](https://github.com/voxgig-sdk/rest-countries-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/rest-countries-sdk/go-cli` | `go install github.com/voxgig-sdk/rest-countries-sdk/go-cli/cmd/rest-countries@latest` |
 | Go MCP server | `github.com/voxgig-sdk/rest-countries-sdk/go-mcp` | `go get github.com/voxgig-sdk/rest-countries-sdk/go-mcp@latest` |
 
