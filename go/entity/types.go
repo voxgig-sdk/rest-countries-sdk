@@ -1,7 +1,7 @@
 // Typed models for the RestCountries SDK.
 //
-// GENERATED from the API model: main.kit.entity.<e>.fields[] and per-op
-// params (op.<name>.points[].args.params[]). Field/param types come from the
+// GENERATED from the API model: main.kit.entity.<e>.fields{} and per-op
+// params (op.<name>.points[].g.params[]). Field/param types come from the
 // canonical type sentinels via @voxgig/sdkgen canonToType (source of truth:
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 package entity
@@ -14,41 +14,6 @@ import (
 
 // All is the typed data model for the all entity.
 type All struct {
-	AltSpellings *[]any `json:"altSpellings,omitempty"`
-	Area *float64 `json:"area,omitempty"`
-	Borders *[]any `json:"borders,omitempty"`
-	Capital *[]any `json:"capital,omitempty"`
-	CapitalInfo *map[string]any `json:"capitalInfo,omitempty"`
-	Car *map[string]any `json:"car,omitempty"`
-	Cca2 *string `json:"cca2,omitempty"`
-	Cca3 *string `json:"cca3,omitempty"`
-	Ccn3 *string `json:"ccn3,omitempty"`
-	Cioc *string `json:"cioc,omitempty"`
-	CoatOfArms *map[string]any `json:"coatOfArms,omitempty"`
-	Continents *[]any `json:"continents,omitempty"`
-	Currencies *map[string]any `json:"currencies,omitempty"`
-	Demonyms *map[string]any `json:"demonyms,omitempty"`
-	Fifa *string `json:"fifa,omitempty"`
-	Flag *string `json:"flag,omitempty"`
-	Flags *map[string]any `json:"flags,omitempty"`
-	Gini *map[string]any `json:"gini,omitempty"`
-	Idd *map[string]any `json:"idd,omitempty"`
-	Independent *bool `json:"independent,omitempty"`
-	Landlocked *bool `json:"landlocked,omitempty"`
-	Languages *map[string]any `json:"languages,omitempty"`
-	Latlng *[]any `json:"latlng,omitempty"`
-	Maps *map[string]any `json:"maps,omitempty"`
-	Name *map[string]any `json:"name,omitempty"`
-	Population *int `json:"population,omitempty"`
-	PostalCode *map[string]any `json:"postalCode,omitempty"`
-	Region *string `json:"region,omitempty"`
-	StartOfWeek *string `json:"startOfWeek,omitempty"`
-	Status *string `json:"status,omitempty"`
-	Subregion *string `json:"subregion,omitempty"`
-	Timezones *[]any `json:"timezones,omitempty"`
-	Tld *[]any `json:"tld,omitempty"`
-	Translations *map[string]any `json:"translations,omitempty"`
-	UnMember *bool `json:"unMember,omitempty"`
 }
 
 // AllListMatch is the typed request payload for All.ListTyped.
@@ -58,42 +23,6 @@ type AllListMatch struct {
 
 // Alpha is the typed data model for the alpha entity.
 type Alpha struct {
-	AltSpellings *[]any `json:"altSpellings,omitempty"`
-	Area *float64 `json:"area,omitempty"`
-	Borders *[]any `json:"borders,omitempty"`
-	Capital *[]any `json:"capital,omitempty"`
-	CapitalInfo *map[string]any `json:"capitalInfo,omitempty"`
-	Car *map[string]any `json:"car,omitempty"`
-	Cca2 *string `json:"cca2,omitempty"`
-	Cca3 *string `json:"cca3,omitempty"`
-	Ccn3 *string `json:"ccn3,omitempty"`
-	Cioc *string `json:"cioc,omitempty"`
-	CoatOfArms *map[string]any `json:"coatOfArms,omitempty"`
-	Continents *[]any `json:"continents,omitempty"`
-	Currencies *map[string]any `json:"currencies,omitempty"`
-	Demonyms *map[string]any `json:"demonyms,omitempty"`
-	Fifa *string `json:"fifa,omitempty"`
-	Flag *string `json:"flag,omitempty"`
-	Flags *map[string]any `json:"flags,omitempty"`
-	Gini *map[string]any `json:"gini,omitempty"`
-	Id *string `json:"id,omitempty"`
-	Idd *map[string]any `json:"idd,omitempty"`
-	Independent *bool `json:"independent,omitempty"`
-	Landlocked *bool `json:"landlocked,omitempty"`
-	Languages *map[string]any `json:"languages,omitempty"`
-	Latlng *[]any `json:"latlng,omitempty"`
-	Maps *map[string]any `json:"maps,omitempty"`
-	Name *map[string]any `json:"name,omitempty"`
-	Population *int `json:"population,omitempty"`
-	PostalCode *map[string]any `json:"postalCode,omitempty"`
-	Region *string `json:"region,omitempty"`
-	StartOfWeek *string `json:"startOfWeek,omitempty"`
-	Status *string `json:"status,omitempty"`
-	Subregion *string `json:"subregion,omitempty"`
-	Timezones *[]any `json:"timezones,omitempty"`
-	Tld *[]any `json:"tld,omitempty"`
-	Translations *map[string]any `json:"translations,omitempty"`
-	UnMember *bool `json:"unMember,omitempty"`
 }
 
 // AlphaLoadMatch is the typed request payload for Alpha.LoadTyped.
@@ -104,42 +33,6 @@ type AlphaLoadMatch struct {
 
 // Capital is the typed data model for the capital entity.
 type Capital struct {
-	AltSpellings *[]any `json:"altSpellings,omitempty"`
-	Area *float64 `json:"area,omitempty"`
-	Borders *[]any `json:"borders,omitempty"`
-	Capital *[]any `json:"capital,omitempty"`
-	CapitalInfo *map[string]any `json:"capitalInfo,omitempty"`
-	Car *map[string]any `json:"car,omitempty"`
-	Cca2 *string `json:"cca2,omitempty"`
-	Cca3 *string `json:"cca3,omitempty"`
-	Ccn3 *string `json:"ccn3,omitempty"`
-	Cioc *string `json:"cioc,omitempty"`
-	CoatOfArms *map[string]any `json:"coatOfArms,omitempty"`
-	Continents *[]any `json:"continents,omitempty"`
-	Currencies *map[string]any `json:"currencies,omitempty"`
-	Demonyms *map[string]any `json:"demonyms,omitempty"`
-	Fifa *string `json:"fifa,omitempty"`
-	Flag *string `json:"flag,omitempty"`
-	Flags *map[string]any `json:"flags,omitempty"`
-	Gini *map[string]any `json:"gini,omitempty"`
-	Id *string `json:"id,omitempty"`
-	Idd *map[string]any `json:"idd,omitempty"`
-	Independent *bool `json:"independent,omitempty"`
-	Landlocked *bool `json:"landlocked,omitempty"`
-	Languages *map[string]any `json:"languages,omitempty"`
-	Latlng *[]any `json:"latlng,omitempty"`
-	Maps *map[string]any `json:"maps,omitempty"`
-	Name *map[string]any `json:"name,omitempty"`
-	Population *int `json:"population,omitempty"`
-	PostalCode *map[string]any `json:"postalCode,omitempty"`
-	Region *string `json:"region,omitempty"`
-	StartOfWeek *string `json:"startOfWeek,omitempty"`
-	Status *string `json:"status,omitempty"`
-	Subregion *string `json:"subregion,omitempty"`
-	Timezones *[]any `json:"timezones,omitempty"`
-	Tld *[]any `json:"tld,omitempty"`
-	Translations *map[string]any `json:"translations,omitempty"`
-	UnMember *bool `json:"unMember,omitempty"`
 }
 
 // CapitalLoadMatch is the typed request payload for Capital.LoadTyped.
@@ -150,42 +43,6 @@ type CapitalLoadMatch struct {
 
 // Name is the typed data model for the name entity.
 type Name struct {
-	AltSpellings *[]any `json:"altSpellings,omitempty"`
-	Area *float64 `json:"area,omitempty"`
-	Borders *[]any `json:"borders,omitempty"`
-	Capital *[]any `json:"capital,omitempty"`
-	CapitalInfo *map[string]any `json:"capitalInfo,omitempty"`
-	Car *map[string]any `json:"car,omitempty"`
-	Cca2 *string `json:"cca2,omitempty"`
-	Cca3 *string `json:"cca3,omitempty"`
-	Ccn3 *string `json:"ccn3,omitempty"`
-	Cioc *string `json:"cioc,omitempty"`
-	CoatOfArms *map[string]any `json:"coatOfArms,omitempty"`
-	Continents *[]any `json:"continents,omitempty"`
-	Currencies *map[string]any `json:"currencies,omitempty"`
-	Demonyms *map[string]any `json:"demonyms,omitempty"`
-	Fifa *string `json:"fifa,omitempty"`
-	Flag *string `json:"flag,omitempty"`
-	Flags *map[string]any `json:"flags,omitempty"`
-	Gini *map[string]any `json:"gini,omitempty"`
-	Id *string `json:"id,omitempty"`
-	Idd *map[string]any `json:"idd,omitempty"`
-	Independent *bool `json:"independent,omitempty"`
-	Landlocked *bool `json:"landlocked,omitempty"`
-	Languages *map[string]any `json:"languages,omitempty"`
-	Latlng *[]any `json:"latlng,omitempty"`
-	Maps *map[string]any `json:"maps,omitempty"`
-	Name *map[string]any `json:"name,omitempty"`
-	Population *int `json:"population,omitempty"`
-	PostalCode *map[string]any `json:"postalCode,omitempty"`
-	Region *string `json:"region,omitempty"`
-	StartOfWeek *string `json:"startOfWeek,omitempty"`
-	Status *string `json:"status,omitempty"`
-	Subregion *string `json:"subregion,omitempty"`
-	Timezones *[]any `json:"timezones,omitempty"`
-	Tld *[]any `json:"tld,omitempty"`
-	Translations *map[string]any `json:"translations,omitempty"`
-	UnMember *bool `json:"unMember,omitempty"`
 }
 
 // NameLoadMatch is the typed request payload for Name.LoadTyped.

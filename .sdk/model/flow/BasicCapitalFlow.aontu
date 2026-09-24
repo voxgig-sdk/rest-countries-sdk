@@ -1,0 +1,32 @@
+# BasicCapitalFlow
+
+main: kit: flow: BasicCapitalFlow:
+{
+  entity: "capital",
+  kind: "basic",
+  name: "BasicCapitalFlow",
+  step: [
+    {
+      i: {
+        ref: "capital_ref01",
+        srcdatavar: "capital_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "capital01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-capital_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicCapitalFlow"
+}

@@ -1,0 +1,32 @@
+# BasicAlphaFlow
+
+main: kit: flow: BasicAlphaFlow:
+{
+  entity: "alpha",
+  kind: "basic",
+  name: "BasicAlphaFlow",
+  step: [
+    {
+      i: {
+        ref: "alpha_ref01",
+        srcdatavar: "alpha_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "alpha01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-alpha_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAlphaFlow"
+}

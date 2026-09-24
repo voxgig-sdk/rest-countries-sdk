@@ -1,0 +1,320 @@
+# Entity: alpha
+
+main: kit: entity: alpha: {
+
+  alias: field: {}
+
+  fields: {
+    altSpellings: {
+      h: "Alt Spellings"
+      n: "altSpellings"
+      r: false
+      sh: "Alternative country name spellings"
+      t: "`$ARRAY`"
+    }
+    area: {
+      h: "Area"
+      n: "area"
+      r: false
+      sh: "Country area in square kilometers"
+      t: "`$NUMBER`"
+    }
+    borders: {
+      h: "Borders"
+      n: "borders"
+      r: false
+      sh: "Border countries (ISO 3166-1 alpha-3 codes)"
+      t: "`$ARRAY`"
+    }
+    capital: {
+      h: "Capital"
+      n: "capital"
+      r: false
+      sh: "Capital city or cities"
+      t: "`$ARRAY`"
+    }
+    capitalInfo: {
+      h: "Capital Info"
+      n: "capitalInfo"
+      r: false
+      t: "`$OBJECT`"
+    }
+    car: {
+      h: "Car"
+      n: "car"
+      r: false
+      t: "`$OBJECT`"
+    }
+    cca2: {
+      h: "Cca2"
+      n: "cca2"
+      r: false
+      sh: "ISO 3166-1 alpha-2 code"
+      t: "`$STRING`"
+    }
+    cca3: {
+      h: "Cca3"
+      n: "cca3"
+      r: false
+      sh: "ISO 3166-1 alpha-3 code"
+      t: "`$STRING`"
+    }
+    ccn3: {
+      h: "Ccn3"
+      n: "ccn3"
+      r: false
+      sh: "ISO 3166-1 numeric code"
+      t: "`$STRING`"
+    }
+    cioc: {
+      h: "Cioc"
+      n: "cioc"
+      r: false
+      sh: "International Olympic Committee code"
+      t: "`$STRING`"
+    }
+    coatOfArms: {
+      h: "Coat Of Arms"
+      n: "coatOfArms"
+      r: false
+      t: "`$OBJECT`"
+    }
+    continents: {
+      h: "Continents"
+      n: "continents"
+      r: false
+      sh: "Continents"
+      t: "`$ARRAY`"
+    }
+    currencies: {
+      h: "Currencies"
+      n: "currencies"
+      r: false
+      t: "`$OBJECT`"
+    }
+    demonyms: {
+      h: "Demonyms"
+      n: "demonyms"
+      r: false
+      t: "`$OBJECT`"
+    }
+    fifa: {
+      h: "Fifa"
+      n: "fifa"
+      r: false
+      sh: "FIFA country code"
+      t: "`$STRING`"
+    }
+    flag: {
+      h: "Flag"
+      n: "flag"
+      r: false
+      sh: "Flag emoji"
+      t: "`$STRING`"
+    }
+    flags: {
+      h: "Flags"
+      n: "flags"
+      r: false
+      t: "`$OBJECT`"
+    }
+    gini: {
+      h: "Gini"
+      n: "gini"
+      r: false
+      sh: "Gini coefficient"
+      t: "`$OBJECT`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    idd: {
+      h: "Idd"
+      n: "idd"
+      r: false
+      sh: "International direct dialing"
+      t: "`$OBJECT`"
+    }
+    independent: {
+      h: "Independent"
+      n: "independent"
+      r: false
+      sh: "Independence status"
+      t: "`$BOOLEAN`"
+    }
+    landlocked: {
+      h: "Landlocked"
+      n: "landlocked"
+      r: false
+      sh: "Landlocked status"
+      t: "`$BOOLEAN`"
+    }
+    languages: {
+      h: "Languages"
+      n: "languages"
+      r: false
+      sh: "Languages spoken"
+      t: "`$OBJECT`"
+    }
+    latlng: {
+      h: "Latlng"
+      n: "latlng"
+      r: false
+      sh: "Latitude and longitude"
+      t: "`$ARRAY`"
+    }
+    maps: {
+      h: "Maps"
+      n: "maps"
+      r: false
+      t: "`$OBJECT`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$OBJECT`"
+    }
+    population: {
+      h: "Population"
+      n: "population"
+      r: false
+      sh: "Country population"
+      t: "`$INTEGER`"
+    }
+    postalCode: {
+      h: "Postal Code"
+      n: "postalCode"
+      r: false
+      t: "`$OBJECT`"
+    }
+    region: {
+      h: "Region"
+      n: "region"
+      r: false
+      sh: "Geographic region"
+      t: "`$STRING`"
+    }
+    startOfWeek: {
+      h: "Start Of Week"
+      n: "startOfWeek"
+      r: false
+      sh: "Start of week day"
+      t: "`$STRING`"
+    }
+    status: {
+      h: "Status"
+      n: "status"
+      r: false
+      sh: "ISO 3166-1 assignment status"
+      t: "`$STRING`"
+    }
+    subregion: {
+      h: "Subregion"
+      n: "subregion"
+      r: false
+      sh: "Geographic subregion"
+      t: "`$STRING`"
+    }
+    timezones: {
+      h: "Timezones"
+      n: "timezones"
+      r: false
+      sh: "Timezones"
+      t: "`$ARRAY`"
+    }
+    tld: {
+      h: "Tld"
+      n: "tld"
+      r: false
+      sh: "Top-level domains"
+      t: "`$ARRAY`"
+    }
+    translations: {
+      h: "Translations"
+      n: "translations"
+      r: false
+      t: "`$OBJECT`"
+    }
+    unMember: {
+      h: "Un Member"
+      n: "unMember"
+      r: false
+      sh: "UN membership status"
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "alpha"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /alpha/{code}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "de"
+                k: "param"
+                n: "id"
+                or: "code"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "field"
+                or: "field"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/alpha/{code}"
+          q: {
+            exist: [
+              "field"
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              code: "id"
+            }
+          }
+          s: [
+            {
+              lit: "alpha"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

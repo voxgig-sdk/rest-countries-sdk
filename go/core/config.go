@@ -94,168 +94,203 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "altSpellings",
-						"short": "Alternative country name spellings",
+						"title": "Alt Spellings",
 						"type": "`$ARRAY`",
+						"short": "Alternative country name spellings",
 					},
 					map[string]any{
 						"name": "area",
-						"short": "Country area in square kilometers",
+						"title": "Area",
 						"type": "`$NUMBER`",
+						"short": "Country area in square kilometers",
 					},
 					map[string]any{
 						"name": "borders",
-						"short": "Border countries (ISO 3166-1 alpha-3 codes)",
+						"title": "Borders",
 						"type": "`$ARRAY`",
+						"short": "Border countries (ISO 3166-1 alpha-3 codes)",
 					},
 					map[string]any{
 						"name": "capital",
-						"short": "Capital city or cities",
+						"title": "Capital",
 						"type": "`$ARRAY`",
+						"short": "Capital city or cities",
 					},
 					map[string]any{
 						"name": "capitalInfo",
+						"title": "Capital Info",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "car",
+						"title": "Car",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "cca2",
-						"short": "ISO 3166-1 alpha-2 code",
+						"title": "Cca2",
 						"type": "`$STRING`",
+						"short": "ISO 3166-1 alpha-2 code",
 					},
 					map[string]any{
 						"name": "cca3",
-						"short": "ISO 3166-1 alpha-3 code",
+						"title": "Cca3",
 						"type": "`$STRING`",
+						"short": "ISO 3166-1 alpha-3 code",
 					},
 					map[string]any{
 						"name": "ccn3",
-						"short": "ISO 3166-1 numeric code",
+						"title": "Ccn3",
 						"type": "`$STRING`",
+						"short": "ISO 3166-1 numeric code",
 					},
 					map[string]any{
 						"name": "cioc",
-						"short": "International Olympic Committee code",
+						"title": "Cioc",
 						"type": "`$STRING`",
+						"short": "International Olympic Committee code",
 					},
 					map[string]any{
 						"name": "coatOfArms",
+						"title": "Coat Of Arms",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "continents",
-						"short": "Continents",
+						"title": "Continents",
 						"type": "`$ARRAY`",
+						"short": "Continents",
 					},
 					map[string]any{
 						"name": "currencies",
+						"title": "Currencies",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "demonyms",
+						"title": "Demonyms",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "fifa",
-						"short": "FIFA country code",
+						"title": "Fifa",
 						"type": "`$STRING`",
+						"short": "FIFA country code",
 					},
 					map[string]any{
 						"name": "flag",
-						"short": "Flag emoji",
+						"title": "Flag",
 						"type": "`$STRING`",
+						"short": "Flag emoji",
 					},
 					map[string]any{
 						"name": "flags",
+						"title": "Flags",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "gini",
-						"short": "Gini coefficient",
+						"title": "Gini",
 						"type": "`$OBJECT`",
+						"short": "Gini coefficient",
 					},
 					map[string]any{
 						"name": "idd",
-						"short": "International direct dialing",
+						"title": "Idd",
 						"type": "`$OBJECT`",
+						"short": "International direct dialing",
 					},
 					map[string]any{
 						"name": "independent",
-						"short": "Independence status",
+						"title": "Independent",
 						"type": "`$BOOLEAN`",
+						"short": "Independence status",
 					},
 					map[string]any{
 						"name": "landlocked",
-						"short": "Landlocked status",
+						"title": "Landlocked",
 						"type": "`$BOOLEAN`",
+						"short": "Landlocked status",
 					},
 					map[string]any{
 						"name": "languages",
-						"short": "Languages spoken",
+						"title": "Languages",
 						"type": "`$OBJECT`",
+						"short": "Languages spoken",
 					},
 					map[string]any{
 						"name": "latlng",
-						"short": "Latitude and longitude",
+						"title": "Latlng",
 						"type": "`$ARRAY`",
+						"short": "Latitude and longitude",
 					},
 					map[string]any{
 						"name": "maps",
+						"title": "Maps",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "name",
+						"title": "Name",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "population",
-						"short": "Country population",
+						"title": "Population",
 						"type": "`$INTEGER`",
+						"short": "Country population",
 					},
 					map[string]any{
 						"name": "postalCode",
+						"title": "Postal Code",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "region",
-						"short": "Geographic region",
+						"title": "Region",
 						"type": "`$STRING`",
+						"short": "Geographic region",
 					},
 					map[string]any{
 						"name": "startOfWeek",
-						"short": "Start of week day",
+						"title": "Start Of Week",
 						"type": "`$STRING`",
+						"short": "Start of week day",
 					},
 					map[string]any{
 						"name": "status",
-						"short": "ISO 3166-1 assignment status",
+						"title": "Status",
 						"type": "`$STRING`",
+						"short": "ISO 3166-1 assignment status",
 					},
 					map[string]any{
 						"name": "subregion",
-						"short": "Geographic subregion",
+						"title": "Subregion",
 						"type": "`$STRING`",
+						"short": "Geographic subregion",
 					},
 					map[string]any{
 						"name": "timezones",
-						"short": "Timezones",
+						"title": "Timezones",
 						"type": "`$ARRAY`",
+						"short": "Timezones",
 					},
 					map[string]any{
 						"name": "tld",
-						"short": "Top-level domains",
+						"title": "Tld",
 						"type": "`$ARRAY`",
+						"short": "Top-level domains",
 					},
 					map[string]any{
 						"name": "translations",
+						"title": "Translations",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "unMember",
-						"short": "UN membership status",
+						"title": "Un Member",
 						"type": "`$BOOLEAN`",
+						"short": "UN membership status",
 					},
 				},
 				"name": "all",
@@ -265,17 +300,6 @@ func MakeConfig() map[string]any {
 						"name": "list",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{
-									"query": []any{
-										map[string]any{
-											"example": "name,capital,population",
-											"kind": "query",
-											"name": "field",
-											"orig": "field",
-											"type": "`$STRING`",
-										},
-									},
-								},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/all",
@@ -284,17 +308,29 @@ func MakeConfig() map[string]any {
 										"lit": "all",
 									},
 								},
-								"select": map[string]any{
-									"exist": []any{
-										"field",
-									},
+								"parts": []any{
+									"all",
 								},
+								"rename": map[string]any{},
 								"transform": map[string]any{
 									"req": "`reqdata`",
 									"res": "`body`",
 								},
-								"parts": []any{
-									"all",
+								"args": map[string]any{
+									"query": []any{
+										map[string]any{
+											"name": "field",
+											"orig": "field",
+											"type": "`$STRING`",
+											"kind": "query",
+											"example": "name,capital,population",
+										},
+									},
+								},
+								"select": map[string]any{
+									"exist": []any{
+										"field",
+									},
 								},
 							},
 						},
@@ -308,172 +344,208 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "altSpellings",
-						"short": "Alternative country name spellings",
+						"title": "Alt Spellings",
 						"type": "`$ARRAY`",
+						"short": "Alternative country name spellings",
 					},
 					map[string]any{
 						"name": "area",
-						"short": "Country area in square kilometers",
+						"title": "Area",
 						"type": "`$NUMBER`",
+						"short": "Country area in square kilometers",
 					},
 					map[string]any{
 						"name": "borders",
-						"short": "Border countries (ISO 3166-1 alpha-3 codes)",
+						"title": "Borders",
 						"type": "`$ARRAY`",
+						"short": "Border countries (ISO 3166-1 alpha-3 codes)",
 					},
 					map[string]any{
 						"name": "capital",
-						"short": "Capital city or cities",
+						"title": "Capital",
 						"type": "`$ARRAY`",
+						"short": "Capital city or cities",
 					},
 					map[string]any{
 						"name": "capitalInfo",
+						"title": "Capital Info",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "car",
+						"title": "Car",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "cca2",
-						"short": "ISO 3166-1 alpha-2 code",
+						"title": "Cca2",
 						"type": "`$STRING`",
+						"short": "ISO 3166-1 alpha-2 code",
 					},
 					map[string]any{
 						"name": "cca3",
-						"short": "ISO 3166-1 alpha-3 code",
+						"title": "Cca3",
 						"type": "`$STRING`",
+						"short": "ISO 3166-1 alpha-3 code",
 					},
 					map[string]any{
 						"name": "ccn3",
-						"short": "ISO 3166-1 numeric code",
+						"title": "Ccn3",
 						"type": "`$STRING`",
+						"short": "ISO 3166-1 numeric code",
 					},
 					map[string]any{
 						"name": "cioc",
-						"short": "International Olympic Committee code",
+						"title": "Cioc",
 						"type": "`$STRING`",
+						"short": "International Olympic Committee code",
 					},
 					map[string]any{
 						"name": "coatOfArms",
+						"title": "Coat Of Arms",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "continents",
-						"short": "Continents",
+						"title": "Continents",
 						"type": "`$ARRAY`",
+						"short": "Continents",
 					},
 					map[string]any{
 						"name": "currencies",
+						"title": "Currencies",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "demonyms",
+						"title": "Demonyms",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "fifa",
-						"short": "FIFA country code",
+						"title": "Fifa",
 						"type": "`$STRING`",
+						"short": "FIFA country code",
 					},
 					map[string]any{
 						"name": "flag",
-						"short": "Flag emoji",
+						"title": "Flag",
 						"type": "`$STRING`",
+						"short": "Flag emoji",
 					},
 					map[string]any{
 						"name": "flags",
+						"title": "Flags",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "gini",
-						"short": "Gini coefficient",
+						"title": "Gini",
 						"type": "`$OBJECT`",
+						"short": "Gini coefficient",
 					},
 					map[string]any{
 						"name": "id",
+						"title": "Id",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "idd",
-						"short": "International direct dialing",
+						"title": "Idd",
 						"type": "`$OBJECT`",
+						"short": "International direct dialing",
 					},
 					map[string]any{
 						"name": "independent",
-						"short": "Independence status",
+						"title": "Independent",
 						"type": "`$BOOLEAN`",
+						"short": "Independence status",
 					},
 					map[string]any{
 						"name": "landlocked",
-						"short": "Landlocked status",
+						"title": "Landlocked",
 						"type": "`$BOOLEAN`",
+						"short": "Landlocked status",
 					},
 					map[string]any{
 						"name": "languages",
-						"short": "Languages spoken",
+						"title": "Languages",
 						"type": "`$OBJECT`",
+						"short": "Languages spoken",
 					},
 					map[string]any{
 						"name": "latlng",
-						"short": "Latitude and longitude",
+						"title": "Latlng",
 						"type": "`$ARRAY`",
+						"short": "Latitude and longitude",
 					},
 					map[string]any{
 						"name": "maps",
+						"title": "Maps",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "name",
+						"title": "Name",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "population",
-						"short": "Country population",
+						"title": "Population",
 						"type": "`$INTEGER`",
+						"short": "Country population",
 					},
 					map[string]any{
 						"name": "postalCode",
+						"title": "Postal Code",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "region",
-						"short": "Geographic region",
+						"title": "Region",
 						"type": "`$STRING`",
+						"short": "Geographic region",
 					},
 					map[string]any{
 						"name": "startOfWeek",
-						"short": "Start of week day",
+						"title": "Start Of Week",
 						"type": "`$STRING`",
+						"short": "Start of week day",
 					},
 					map[string]any{
 						"name": "status",
-						"short": "ISO 3166-1 assignment status",
+						"title": "Status",
 						"type": "`$STRING`",
+						"short": "ISO 3166-1 assignment status",
 					},
 					map[string]any{
 						"name": "subregion",
-						"short": "Geographic subregion",
+						"title": "Subregion",
 						"type": "`$STRING`",
+						"short": "Geographic subregion",
 					},
 					map[string]any{
 						"name": "timezones",
-						"short": "Timezones",
+						"title": "Timezones",
 						"type": "`$ARRAY`",
+						"short": "Timezones",
 					},
 					map[string]any{
 						"name": "tld",
-						"short": "Top-level domains",
+						"title": "Tld",
 						"type": "`$ARRAY`",
+						"short": "Top-level domains",
 					},
 					map[string]any{
 						"name": "translations",
+						"title": "Translations",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "unMember",
-						"short": "UN membership status",
+						"title": "Un Member",
 						"type": "`$BOOLEAN`",
+						"short": "UN membership status",
 					},
 				},
 				"id": map[string]any{
@@ -487,34 +559,9 @@ func MakeConfig() map[string]any {
 						"name": "load",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{
-									"params": []any{
-										map[string]any{
-											"example": "de",
-											"kind": "param",
-											"name": "id",
-											"orig": "code",
-											"reqd": true,
-											"type": "`$STRING`",
-										},
-									},
-									"query": []any{
-										map[string]any{
-											"kind": "query",
-											"name": "field",
-											"orig": "field",
-											"type": "`$STRING`",
-										},
-									},
-								},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/alpha/{code}",
-								"rename": map[string]any{
-									"param": map[string]any{
-										"code": "id",
-									},
-								},
 								"segments": []any{
 									map[string]any{
 										"lit": "alpha",
@@ -523,19 +570,44 @@ func MakeConfig() map[string]any {
 										"var": "id",
 									},
 								},
-								"select": map[string]any{
-									"exist": []any{
-										"field",
-										"id",
+								"parts": []any{
+									"alpha",
+									"{id}",
+								},
+								"rename": map[string]any{
+									"param": map[string]any{
+										"code": "id",
 									},
 								},
 								"transform": map[string]any{
 									"req": "`reqdata`",
 									"res": "`body`",
 								},
-								"parts": []any{
-									"alpha",
-									"{id}",
+								"args": map[string]any{
+									"params": []any{
+										map[string]any{
+											"name": "id",
+											"orig": "code",
+											"type": "`$STRING`",
+											"kind": "param",
+											"reqd": true,
+											"example": "de",
+										},
+									},
+									"query": []any{
+										map[string]any{
+											"name": "field",
+											"orig": "field",
+											"type": "`$STRING`",
+											"kind": "query",
+										},
+									},
+								},
+								"select": map[string]any{
+									"exist": []any{
+										"field",
+										"id",
+									},
 								},
 							},
 						},
@@ -549,172 +621,208 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "altSpellings",
-						"short": "Alternative country name spellings",
+						"title": "Alt Spellings",
 						"type": "`$ARRAY`",
+						"short": "Alternative country name spellings",
 					},
 					map[string]any{
 						"name": "area",
-						"short": "Country area in square kilometers",
+						"title": "Area",
 						"type": "`$NUMBER`",
+						"short": "Country area in square kilometers",
 					},
 					map[string]any{
 						"name": "borders",
-						"short": "Border countries (ISO 3166-1 alpha-3 codes)",
+						"title": "Borders",
 						"type": "`$ARRAY`",
+						"short": "Border countries (ISO 3166-1 alpha-3 codes)",
 					},
 					map[string]any{
 						"name": "capital",
-						"short": "Capital city or cities",
+						"title": "Capital",
 						"type": "`$ARRAY`",
+						"short": "Capital city or cities",
 					},
 					map[string]any{
 						"name": "capitalInfo",
+						"title": "Capital Info",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "car",
+						"title": "Car",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "cca2",
-						"short": "ISO 3166-1 alpha-2 code",
+						"title": "Cca2",
 						"type": "`$STRING`",
+						"short": "ISO 3166-1 alpha-2 code",
 					},
 					map[string]any{
 						"name": "cca3",
-						"short": "ISO 3166-1 alpha-3 code",
+						"title": "Cca3",
 						"type": "`$STRING`",
+						"short": "ISO 3166-1 alpha-3 code",
 					},
 					map[string]any{
 						"name": "ccn3",
-						"short": "ISO 3166-1 numeric code",
+						"title": "Ccn3",
 						"type": "`$STRING`",
+						"short": "ISO 3166-1 numeric code",
 					},
 					map[string]any{
 						"name": "cioc",
-						"short": "International Olympic Committee code",
+						"title": "Cioc",
 						"type": "`$STRING`",
+						"short": "International Olympic Committee code",
 					},
 					map[string]any{
 						"name": "coatOfArms",
+						"title": "Coat Of Arms",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "continents",
-						"short": "Continents",
+						"title": "Continents",
 						"type": "`$ARRAY`",
+						"short": "Continents",
 					},
 					map[string]any{
 						"name": "currencies",
+						"title": "Currencies",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "demonyms",
+						"title": "Demonyms",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "fifa",
-						"short": "FIFA country code",
+						"title": "Fifa",
 						"type": "`$STRING`",
+						"short": "FIFA country code",
 					},
 					map[string]any{
 						"name": "flag",
-						"short": "Flag emoji",
+						"title": "Flag",
 						"type": "`$STRING`",
+						"short": "Flag emoji",
 					},
 					map[string]any{
 						"name": "flags",
+						"title": "Flags",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "gini",
-						"short": "Gini coefficient",
+						"title": "Gini",
 						"type": "`$OBJECT`",
+						"short": "Gini coefficient",
 					},
 					map[string]any{
 						"name": "id",
+						"title": "Id",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "idd",
-						"short": "International direct dialing",
+						"title": "Idd",
 						"type": "`$OBJECT`",
+						"short": "International direct dialing",
 					},
 					map[string]any{
 						"name": "independent",
-						"short": "Independence status",
+						"title": "Independent",
 						"type": "`$BOOLEAN`",
+						"short": "Independence status",
 					},
 					map[string]any{
 						"name": "landlocked",
-						"short": "Landlocked status",
+						"title": "Landlocked",
 						"type": "`$BOOLEAN`",
+						"short": "Landlocked status",
 					},
 					map[string]any{
 						"name": "languages",
-						"short": "Languages spoken",
+						"title": "Languages",
 						"type": "`$OBJECT`",
+						"short": "Languages spoken",
 					},
 					map[string]any{
 						"name": "latlng",
-						"short": "Latitude and longitude",
+						"title": "Latlng",
 						"type": "`$ARRAY`",
+						"short": "Latitude and longitude",
 					},
 					map[string]any{
 						"name": "maps",
+						"title": "Maps",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "name",
+						"title": "Name",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "population",
-						"short": "Country population",
+						"title": "Population",
 						"type": "`$INTEGER`",
+						"short": "Country population",
 					},
 					map[string]any{
 						"name": "postalCode",
+						"title": "Postal Code",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "region",
-						"short": "Geographic region",
+						"title": "Region",
 						"type": "`$STRING`",
+						"short": "Geographic region",
 					},
 					map[string]any{
 						"name": "startOfWeek",
-						"short": "Start of week day",
+						"title": "Start Of Week",
 						"type": "`$STRING`",
+						"short": "Start of week day",
 					},
 					map[string]any{
 						"name": "status",
-						"short": "ISO 3166-1 assignment status",
+						"title": "Status",
 						"type": "`$STRING`",
+						"short": "ISO 3166-1 assignment status",
 					},
 					map[string]any{
 						"name": "subregion",
-						"short": "Geographic subregion",
+						"title": "Subregion",
 						"type": "`$STRING`",
+						"short": "Geographic subregion",
 					},
 					map[string]any{
 						"name": "timezones",
-						"short": "Timezones",
+						"title": "Timezones",
 						"type": "`$ARRAY`",
+						"short": "Timezones",
 					},
 					map[string]any{
 						"name": "tld",
-						"short": "Top-level domains",
+						"title": "Tld",
 						"type": "`$ARRAY`",
+						"short": "Top-level domains",
 					},
 					map[string]any{
 						"name": "translations",
+						"title": "Translations",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "unMember",
-						"short": "UN membership status",
+						"title": "Un Member",
 						"type": "`$BOOLEAN`",
+						"short": "UN membership status",
 					},
 				},
 				"id": map[string]any{
@@ -728,34 +836,9 @@ func MakeConfig() map[string]any {
 						"name": "load",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{
-									"params": []any{
-										map[string]any{
-											"example": "berlin",
-											"kind": "param",
-											"name": "id",
-											"orig": "capital",
-											"reqd": true,
-											"type": "`$STRING`",
-										},
-									},
-									"query": []any{
-										map[string]any{
-											"kind": "query",
-											"name": "field",
-											"orig": "field",
-											"type": "`$STRING`",
-										},
-									},
-								},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/capital/{capital}",
-								"rename": map[string]any{
-									"param": map[string]any{
-										"capital": "id",
-									},
-								},
 								"segments": []any{
 									map[string]any{
 										"lit": "capital",
@@ -764,19 +847,44 @@ func MakeConfig() map[string]any {
 										"var": "id",
 									},
 								},
-								"select": map[string]any{
-									"exist": []any{
-										"field",
-										"id",
+								"parts": []any{
+									"capital",
+									"{id}",
+								},
+								"rename": map[string]any{
+									"param": map[string]any{
+										"capital": "id",
 									},
 								},
 								"transform": map[string]any{
 									"req": "`reqdata`",
 									"res": "`body`",
 								},
-								"parts": []any{
-									"capital",
-									"{id}",
+								"args": map[string]any{
+									"params": []any{
+										map[string]any{
+											"name": "id",
+											"orig": "capital",
+											"type": "`$STRING`",
+											"kind": "param",
+											"reqd": true,
+											"example": "berlin",
+										},
+									},
+									"query": []any{
+										map[string]any{
+											"name": "field",
+											"orig": "field",
+											"type": "`$STRING`",
+											"kind": "query",
+										},
+									},
+								},
+								"select": map[string]any{
+									"exist": []any{
+										"field",
+										"id",
+									},
 								},
 							},
 						},
@@ -790,172 +898,208 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "altSpellings",
-						"short": "Alternative country name spellings",
+						"title": "Alt Spellings",
 						"type": "`$ARRAY`",
+						"short": "Alternative country name spellings",
 					},
 					map[string]any{
 						"name": "area",
-						"short": "Country area in square kilometers",
+						"title": "Area",
 						"type": "`$NUMBER`",
+						"short": "Country area in square kilometers",
 					},
 					map[string]any{
 						"name": "borders",
-						"short": "Border countries (ISO 3166-1 alpha-3 codes)",
+						"title": "Borders",
 						"type": "`$ARRAY`",
+						"short": "Border countries (ISO 3166-1 alpha-3 codes)",
 					},
 					map[string]any{
 						"name": "capital",
-						"short": "Capital city or cities",
+						"title": "Capital",
 						"type": "`$ARRAY`",
+						"short": "Capital city or cities",
 					},
 					map[string]any{
 						"name": "capitalInfo",
+						"title": "Capital Info",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "car",
+						"title": "Car",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "cca2",
-						"short": "ISO 3166-1 alpha-2 code",
+						"title": "Cca2",
 						"type": "`$STRING`",
+						"short": "ISO 3166-1 alpha-2 code",
 					},
 					map[string]any{
 						"name": "cca3",
-						"short": "ISO 3166-1 alpha-3 code",
+						"title": "Cca3",
 						"type": "`$STRING`",
+						"short": "ISO 3166-1 alpha-3 code",
 					},
 					map[string]any{
 						"name": "ccn3",
-						"short": "ISO 3166-1 numeric code",
+						"title": "Ccn3",
 						"type": "`$STRING`",
+						"short": "ISO 3166-1 numeric code",
 					},
 					map[string]any{
 						"name": "cioc",
-						"short": "International Olympic Committee code",
+						"title": "Cioc",
 						"type": "`$STRING`",
+						"short": "International Olympic Committee code",
 					},
 					map[string]any{
 						"name": "coatOfArms",
+						"title": "Coat Of Arms",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "continents",
-						"short": "Continents",
+						"title": "Continents",
 						"type": "`$ARRAY`",
+						"short": "Continents",
 					},
 					map[string]any{
 						"name": "currencies",
+						"title": "Currencies",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "demonyms",
+						"title": "Demonyms",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "fifa",
-						"short": "FIFA country code",
+						"title": "Fifa",
 						"type": "`$STRING`",
+						"short": "FIFA country code",
 					},
 					map[string]any{
 						"name": "flag",
-						"short": "Flag emoji",
+						"title": "Flag",
 						"type": "`$STRING`",
+						"short": "Flag emoji",
 					},
 					map[string]any{
 						"name": "flags",
+						"title": "Flags",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "gini",
-						"short": "Gini coefficient",
+						"title": "Gini",
 						"type": "`$OBJECT`",
+						"short": "Gini coefficient",
 					},
 					map[string]any{
 						"name": "id",
+						"title": "Id",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "idd",
-						"short": "International direct dialing",
+						"title": "Idd",
 						"type": "`$OBJECT`",
+						"short": "International direct dialing",
 					},
 					map[string]any{
 						"name": "independent",
-						"short": "Independence status",
+						"title": "Independent",
 						"type": "`$BOOLEAN`",
+						"short": "Independence status",
 					},
 					map[string]any{
 						"name": "landlocked",
-						"short": "Landlocked status",
+						"title": "Landlocked",
 						"type": "`$BOOLEAN`",
+						"short": "Landlocked status",
 					},
 					map[string]any{
 						"name": "languages",
-						"short": "Languages spoken",
+						"title": "Languages",
 						"type": "`$OBJECT`",
+						"short": "Languages spoken",
 					},
 					map[string]any{
 						"name": "latlng",
-						"short": "Latitude and longitude",
+						"title": "Latlng",
 						"type": "`$ARRAY`",
+						"short": "Latitude and longitude",
 					},
 					map[string]any{
 						"name": "maps",
+						"title": "Maps",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "name",
+						"title": "Name",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "population",
-						"short": "Country population",
+						"title": "Population",
 						"type": "`$INTEGER`",
+						"short": "Country population",
 					},
 					map[string]any{
 						"name": "postalCode",
+						"title": "Postal Code",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "region",
-						"short": "Geographic region",
+						"title": "Region",
 						"type": "`$STRING`",
+						"short": "Geographic region",
 					},
 					map[string]any{
 						"name": "startOfWeek",
-						"short": "Start of week day",
+						"title": "Start Of Week",
 						"type": "`$STRING`",
+						"short": "Start of week day",
 					},
 					map[string]any{
 						"name": "status",
-						"short": "ISO 3166-1 assignment status",
+						"title": "Status",
 						"type": "`$STRING`",
+						"short": "ISO 3166-1 assignment status",
 					},
 					map[string]any{
 						"name": "subregion",
-						"short": "Geographic subregion",
+						"title": "Subregion",
 						"type": "`$STRING`",
+						"short": "Geographic subregion",
 					},
 					map[string]any{
 						"name": "timezones",
-						"short": "Timezones",
+						"title": "Timezones",
 						"type": "`$ARRAY`",
+						"short": "Timezones",
 					},
 					map[string]any{
 						"name": "tld",
-						"short": "Top-level domains",
+						"title": "Tld",
 						"type": "`$ARRAY`",
+						"short": "Top-level domains",
 					},
 					map[string]any{
 						"name": "translations",
+						"title": "Translations",
 						"type": "`$OBJECT`",
 					},
 					map[string]any{
 						"name": "unMember",
-						"short": "UN membership status",
+						"title": "Un Member",
 						"type": "`$BOOLEAN`",
+						"short": "UN membership status",
 					},
 				},
 				"id": map[string]any{
@@ -969,41 +1113,9 @@ func MakeConfig() map[string]any {
 						"name": "load",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{
-									"params": []any{
-										map[string]any{
-											"example": "germany",
-											"kind": "param",
-											"name": "id",
-											"orig": "name",
-											"reqd": true,
-											"type": "`$STRING`",
-										},
-									},
-									"query": []any{
-										map[string]any{
-											"kind": "query",
-											"name": "field",
-											"orig": "field",
-											"type": "`$STRING`",
-										},
-										map[string]any{
-											"example": false,
-											"kind": "query",
-											"name": "full_text",
-											"orig": "full_text",
-											"type": "`$BOOLEAN`",
-										},
-									},
-								},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/name/{name}",
-								"rename": map[string]any{
-									"param": map[string]any{
-										"name": "id",
-									},
-								},
 								"segments": []any{
 									map[string]any{
 										"lit": "name",
@@ -1012,20 +1124,52 @@ func MakeConfig() map[string]any {
 										"var": "id",
 									},
 								},
-								"select": map[string]any{
-									"exist": []any{
-										"field",
-										"full_text",
-										"id",
+								"parts": []any{
+									"name",
+									"{id}",
+								},
+								"rename": map[string]any{
+									"param": map[string]any{
+										"name": "id",
 									},
 								},
 								"transform": map[string]any{
 									"req": "`reqdata`",
 									"res": "`body`",
 								},
-								"parts": []any{
-									"name",
-									"{id}",
+								"args": map[string]any{
+									"params": []any{
+										map[string]any{
+											"name": "id",
+											"orig": "name",
+											"type": "`$STRING`",
+											"kind": "param",
+											"reqd": true,
+											"example": "germany",
+										},
+									},
+									"query": []any{
+										map[string]any{
+											"name": "field",
+											"orig": "field",
+											"type": "`$STRING`",
+											"kind": "query",
+										},
+										map[string]any{
+											"name": "full_text",
+											"orig": "full_text",
+											"type": "`$BOOLEAN`",
+											"kind": "query",
+											"example": false,
+										},
+									},
+								},
+								"select": map[string]any{
+									"exist": []any{
+										"field",
+										"full_text",
+										"id",
+									},
 								},
 							},
 						},

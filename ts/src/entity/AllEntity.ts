@@ -19,7 +19,6 @@ import type {
   AllListMatch,
 } from '../RestCountriesTypes'
 
-// TODO: needs Entity superclass
 class AllEntity extends RestCountriesEntityBase<All> {
 
   constructor(client: RestCountriesSDK, entopts: any) {

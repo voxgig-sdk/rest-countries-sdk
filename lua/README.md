@@ -43,7 +43,7 @@ local alls, err = client:All():list()
 if err then error(err) end
 
 for _, item in ipairs(alls) do
-  print(item["cca2"])
+  print(item)
 end
 ```
 

@@ -24,249 +24,350 @@
         "repr": "auto"
       },
       "contributor": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
       "entity": {
         "all": {
           "active": true,
           "alias": {
             "field": {}
           },
-          "fields": [
-            {
-              "active": true,
-              "name": "altSpellings",
-              "req": false,
-              "short": "Alternative country name spellings",
-              "type": "`$ARRAY`"
+          "fields": {
+            "altSpellings": {
+              "a": true,
+              "h": "Alt Spellings",
+              "n": "altSpellings",
+              "r": false,
+              "sh": "Alternative country name spellings",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "area",
-              "req": false,
-              "short": "Country area in square kilometers",
-              "type": "`$NUMBER`"
+            "area": {
+              "a": true,
+              "h": "Area",
+              "n": "area",
+              "r": false,
+              "sh": "Country area in square kilometers",
+              "t": "`$NUMBER`"
             },
-            {
-              "active": true,
-              "name": "borders",
-              "req": false,
-              "short": "Border countries (ISO 3166-1 alpha-3 codes)",
-              "type": "`$ARRAY`"
+            "borders": {
+              "a": true,
+              "h": "Borders",
+              "n": "borders",
+              "r": false,
+              "sh": "Border countries (ISO 3166-1 alpha-3 codes)",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "capital",
-              "req": false,
-              "short": "Capital city or cities",
-              "type": "`$ARRAY`"
+            "capital": {
+              "a": true,
+              "h": "Capital",
+              "n": "capital",
+              "r": false,
+              "sh": "Capital city or cities",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "capitalInfo",
-              "req": false,
-              "type": "`$OBJECT`"
+            "capitalInfo": {
+              "a": true,
+              "h": "Capital Info",
+              "n": "capitalInfo",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "car",
-              "req": false,
-              "type": "`$OBJECT`"
+            "car": {
+              "a": true,
+              "h": "Car",
+              "n": "car",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "cca2",
-              "req": false,
-              "short": "ISO 3166-1 alpha-2 code",
-              "type": "`$STRING`"
+            "cca2": {
+              "a": true,
+              "h": "Cca2",
+              "n": "cca2",
+              "r": false,
+              "sh": "ISO 3166-1 alpha-2 code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "cca3",
-              "req": false,
-              "short": "ISO 3166-1 alpha-3 code",
-              "type": "`$STRING`"
+            "cca3": {
+              "a": true,
+              "h": "Cca3",
+              "n": "cca3",
+              "r": false,
+              "sh": "ISO 3166-1 alpha-3 code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "ccn3",
-              "req": false,
-              "short": "ISO 3166-1 numeric code",
-              "type": "`$STRING`"
+            "ccn3": {
+              "a": true,
+              "h": "Ccn3",
+              "n": "ccn3",
+              "r": false,
+              "sh": "ISO 3166-1 numeric code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "cioc",
-              "req": false,
-              "short": "International Olympic Committee code",
-              "type": "`$STRING`"
+            "cioc": {
+              "a": true,
+              "h": "Cioc",
+              "n": "cioc",
+              "r": false,
+              "sh": "International Olympic Committee code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "coatOfArms",
-              "req": false,
-              "type": "`$OBJECT`"
+            "coatOfArms": {
+              "a": true,
+              "h": "Coat Of Arms",
+              "n": "coatOfArms",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "continents",
-              "req": false,
-              "short": "Continents",
-              "type": "`$ARRAY`"
+            "continents": {
+              "a": true,
+              "h": "Continents",
+              "n": "continents",
+              "r": false,
+              "sh": "Continents",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "currencies",
-              "req": false,
-              "type": "`$OBJECT`"
+            "currencies": {
+              "a": true,
+              "h": "Currencies",
+              "n": "currencies",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "demonyms",
-              "req": false,
-              "type": "`$OBJECT`"
+            "demonyms": {
+              "a": true,
+              "h": "Demonyms",
+              "n": "demonyms",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "fifa",
-              "req": false,
-              "short": "FIFA country code",
-              "type": "`$STRING`"
+            "fifa": {
+              "a": true,
+              "h": "Fifa",
+              "n": "fifa",
+              "r": false,
+              "sh": "FIFA country code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "flag",
-              "req": false,
-              "short": "Flag emoji",
-              "type": "`$STRING`"
+            "flag": {
+              "a": true,
+              "h": "Flag",
+              "n": "flag",
+              "r": false,
+              "sh": "Flag emoji",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "flags",
-              "req": false,
-              "type": "`$OBJECT`"
+            "flags": {
+              "a": true,
+              "h": "Flags",
+              "n": "flags",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "gini",
-              "req": false,
-              "short": "Gini coefficient",
-              "type": "`$OBJECT`"
+            "gini": {
+              "a": true,
+              "h": "Gini",
+              "n": "gini",
+              "r": false,
+              "sh": "Gini coefficient",
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "idd",
-              "req": false,
-              "short": "International direct dialing",
-              "type": "`$OBJECT`"
+            "idd": {
+              "a": true,
+              "h": "Idd",
+              "n": "idd",
+              "r": false,
+              "sh": "International direct dialing",
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "independent",
-              "req": false,
-              "short": "Independence status",
-              "type": "`$BOOLEAN`"
+            "independent": {
+              "a": true,
+              "h": "Independent",
+              "n": "independent",
+              "r": false,
+              "sh": "Independence status",
+              "t": "`$BOOLEAN`"
             },
-            {
-              "active": true,
-              "name": "landlocked",
-              "req": false,
-              "short": "Landlocked status",
-              "type": "`$BOOLEAN`"
+            "landlocked": {
+              "a": true,
+              "h": "Landlocked",
+              "n": "landlocked",
+              "r": false,
+              "sh": "Landlocked status",
+              "t": "`$BOOLEAN`"
             },
-            {
-              "active": true,
-              "name": "languages",
-              "req": false,
-              "short": "Languages spoken",
-              "type": "`$OBJECT`"
+            "languages": {
+              "a": true,
+              "h": "Languages",
+              "n": "languages",
+              "r": false,
+              "sh": "Languages spoken",
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "latlng",
-              "req": false,
-              "short": "Latitude and longitude",
-              "type": "`$ARRAY`"
+            "latlng": {
+              "a": true,
+              "h": "Latlng",
+              "n": "latlng",
+              "r": false,
+              "sh": "Latitude and longitude",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "maps",
-              "req": false,
-              "type": "`$OBJECT`"
+            "maps": {
+              "a": true,
+              "h": "Maps",
+              "n": "maps",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "name",
-              "req": false,
-              "type": "`$OBJECT`"
+            "name": {
+              "a": true,
+              "h": "Name",
+              "n": "name",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "population",
-              "req": false,
-              "short": "Country population",
-              "type": "`$INTEGER`"
+            "population": {
+              "a": true,
+              "h": "Population",
+              "n": "population",
+              "r": false,
+              "sh": "Country population",
+              "t": "`$INTEGER`"
             },
-            {
-              "active": true,
-              "name": "postalCode",
-              "req": false,
-              "type": "`$OBJECT`"
+            "postalCode": {
+              "a": true,
+              "h": "Postal Code",
+              "n": "postalCode",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "region",
-              "req": false,
-              "short": "Geographic region",
-              "type": "`$STRING`"
+            "region": {
+              "a": true,
+              "h": "Region",
+              "n": "region",
+              "r": false,
+              "sh": "Geographic region",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "startOfWeek",
-              "req": false,
-              "short": "Start of week day",
-              "type": "`$STRING`"
+            "startOfWeek": {
+              "a": true,
+              "h": "Start Of Week",
+              "n": "startOfWeek",
+              "r": false,
+              "sh": "Start of week day",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "status",
-              "req": false,
-              "short": "ISO 3166-1 assignment status",
-              "type": "`$STRING`"
+            "status": {
+              "a": true,
+              "h": "Status",
+              "n": "status",
+              "r": false,
+              "sh": "ISO 3166-1 assignment status",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "subregion",
-              "req": false,
-              "short": "Geographic subregion",
-              "type": "`$STRING`"
+            "subregion": {
+              "a": true,
+              "h": "Subregion",
+              "n": "subregion",
+              "r": false,
+              "sh": "Geographic subregion",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "timezones",
-              "req": false,
-              "short": "Timezones",
-              "type": "`$ARRAY`"
+            "timezones": {
+              "a": true,
+              "h": "Timezones",
+              "n": "timezones",
+              "r": false,
+              "sh": "Timezones",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "tld",
-              "req": false,
-              "short": "Top-level domains",
-              "type": "`$ARRAY`"
+            "tld": {
+              "a": true,
+              "h": "Tld",
+              "n": "tld",
+              "r": false,
+              "sh": "Top-level domains",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "translations",
-              "req": false,
-              "type": "`$OBJECT`"
+            "translations": {
+              "a": true,
+              "h": "Translations",
+              "n": "translations",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "unMember",
-              "req": false,
-              "short": "UN membership status",
-              "type": "`$BOOLEAN`"
+            "unMember": {
+              "a": true,
+              "h": "Un Member",
+              "n": "unMember",
+              "r": false,
+              "sh": "UN membership status",
+              "t": "`$BOOLEAN`"
             }
-          ],
+          },
           "name": "all",
           "op": {
             "list": {
@@ -274,40 +375,40 @@
               "name": "list",
               "points": [
                 {
-                  "active": true,
-                  "args": {
+                  "a": true,
+                  "co": {
+                    "id": "GET /all",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
                     "query": [
                       {
-                        "active": true,
-                        "example": "name,capital,population",
-                        "kind": "query",
-                        "name": "field",
-                        "orig": "field",
-                        "reqd": false,
-                        "type": "`$STRING`"
+                        "a": true,
+                        "ex": "name,capital,population",
+                        "k": "query",
+                        "n": "field",
+                        "or": "field",
+                        "r": false,
+                        "t": "`$STRING`"
                       }
                     ]
                   },
-                  "contract": {
-                    "id": "GET /all",
-                    "json": "{\"operationId\":\"getAllCountries\",\"parameters\":[{\"description\":\"Comma-separated list of fields to return\",\"example\":\"name,capital,population\",\"in\":\"query\",\"name\":\"fields\",\"required\":false,\"schema\":{\"type\":\"string\"}}],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"properties\":{\"altSpellings\":{\"description\":\"Alternative country name spellings\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"area\":{\"description\":\"Country area in square kilometers\",\"type\":\"number\"},\"borders\":{\"description\":\"Border countries (ISO 3166-1 alpha-3 codes)\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"capital\":{\"description\":\"Capital city or cities\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"capitalInfo\":{\"properties\":{\"latlng\":{\"items\":{\"type\":\"number\"},\"maxItems\":2,\"minItems\":2,\"type\":\"array\"}},\"type\":\"object\"},\"car\":{\"properties\":{\"side\":{\"enum\":[\"left\",\"right\"],\"type\":\"string\"},\"signs\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"type\":\"object\"},\"cca2\":{\"description\":\"ISO 3166-1 alpha-2 code\",\"type\":\"string\"},\"cca3\":{\"description\":\"ISO 3166-1 alpha-3 code\",\"type\":\"string\"},\"ccn3\":{\"description\":\"ISO 3166-1 numeric code\",\"type\":\"string\"},\"cioc\":{\"description\":\"International Olympic Committee code\",\"type\":\"string\"},\"coatOfArms\":{\"properties\":{\"png\":{\"format\":\"uri\",\"type\":\"string\"},\"svg\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"continents\":{\"description\":\"Continents\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"currencies\":{\"additionalProperties\":{\"properties\":{\"name\":{\"type\":\"string\"},\"symbol\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"demonyms\":{\"additionalProperties\":{\"properties\":{\"f\":{\"type\":\"string\"},\"m\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"fifa\":{\"description\":\"FIFA country code\",\"type\":\"string\"},\"flag\":{\"description\":\"Flag emoji\",\"type\":\"string\"},\"flags\":{\"properties\":{\"alt\":{\"type\":\"string\"},\"png\":{\"format\":\"uri\",\"type\":\"string\"},\"svg\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"gini\":{\"additionalProperties\":{\"type\":\"number\"},\"description\":\"Gini coefficient\",\"type\":\"object\"},\"idd\":{\"description\":\"International direct dialing\",\"properties\":{\"root\":{\"type\":\"string\"},\"suffixes\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"type\":\"object\"},\"independent\":{\"description\":\"Independence status\",\"type\":\"boolean\"},\"landlocked\":{\"description\":\"Landlocked status\",\"type\":\"boolean\"},\"languages\":{\"additionalProperties\":{\"type\":\"string\"},\"description\":\"Languages spoken\",\"type\":\"object\"},\"latlng\":{\"description\":\"Latitude and longitude\",\"items\":{\"type\":\"number\"},\"maxItems\":2,\"minItems\":2,\"type\":\"array\"},\"maps\":{\"properties\":{\"googleMaps\":{\"format\":\"uri\",\"type\":\"string\"},\"openStreetMaps\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"name\":{\"properties\":{\"common\":{\"description\":\"Common country name\",\"type\":\"string\"},\"nativeName\":{\"additionalProperties\":{\"properties\":{\"common\":{\"type\":\"string\"},\"official\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"official\":{\"description\":\"Official country name\",\"type\":\"string\"}},\"type\":\"object\"},\"population\":{\"description\":\"Country population\",\"type\":\"integer\"},\"postalCode\":{\"properties\":{\"format\":{\"type\":\"string\"},\"regex\":{\"type\":\"string\"}},\"type\":\"object\"},\"region\":{\"description\":\"Geographic region\",\"type\":\"string\"},\"startOfWeek\":{\"description\":\"Start of week day\",\"type\":\"string\"},\"status\":{\"description\":\"ISO 3166-1 assignment status\",\"type\":\"string\"},\"subregion\":{\"description\":\"Geographic subregion\",\"type\":\"string\"},\"timezones\":{\"description\":\"Timezones\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"tld\":{\"description\":\"Top-level domains\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"translations\":{\"additionalProperties\":{\"properties\":{\"common\":{\"type\":\"string\"},\"official\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"unMember\":{\"description\":\"UN membership status\",\"type\":\"boolean\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successful response\"},\"404\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"message\":{\"description\":\"Error message\",\"type\":\"string\"},\"status\":{\"description\":\"HTTP status code\",\"type\":\"integer\"}},\"type\":\"object\"}}},\"description\":\"Not found\"}},\"securitySource\":\"unspecified\"}",
-                    "source": "openapi3",
-                    "version": 1
-                  },
-                  "kind": "http",
-                  "method": "GET",
-                  "orig": "/all",
-                  "segments": [
-                    {
-                      "lit": "all"
-                    }
-                  ],
-                  "select": {
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/all",
+                  "q": {
                     "exist": [
                       "field"
                     ]
                   },
-                  "transform": {
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "all"
+                    }
+                  ],
+                  "t": {
                     "req": "`reqdata`",
                     "res": "`body`"
                   }
@@ -324,249 +425,285 @@
           "alias": {
             "field": {}
           },
-          "fields": [
-            {
-              "active": true,
-              "name": "altSpellings",
-              "req": false,
-              "short": "Alternative country name spellings",
-              "type": "`$ARRAY`"
+          "fields": {
+            "altSpellings": {
+              "a": true,
+              "h": "Alt Spellings",
+              "n": "altSpellings",
+              "r": false,
+              "sh": "Alternative country name spellings",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "area",
-              "req": false,
-              "short": "Country area in square kilometers",
-              "type": "`$NUMBER`"
+            "area": {
+              "a": true,
+              "h": "Area",
+              "n": "area",
+              "r": false,
+              "sh": "Country area in square kilometers",
+              "t": "`$NUMBER`"
             },
-            {
-              "active": true,
-              "name": "borders",
-              "req": false,
-              "short": "Border countries (ISO 3166-1 alpha-3 codes)",
-              "type": "`$ARRAY`"
+            "borders": {
+              "a": true,
+              "h": "Borders",
+              "n": "borders",
+              "r": false,
+              "sh": "Border countries (ISO 3166-1 alpha-3 codes)",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "capital",
-              "req": false,
-              "short": "Capital city or cities",
-              "type": "`$ARRAY`"
+            "capital": {
+              "a": true,
+              "h": "Capital",
+              "n": "capital",
+              "r": false,
+              "sh": "Capital city or cities",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "capitalInfo",
-              "req": false,
-              "type": "`$OBJECT`"
+            "capitalInfo": {
+              "a": true,
+              "h": "Capital Info",
+              "n": "capitalInfo",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "car",
-              "req": false,
-              "type": "`$OBJECT`"
+            "car": {
+              "a": true,
+              "h": "Car",
+              "n": "car",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "cca2",
-              "req": false,
-              "short": "ISO 3166-1 alpha-2 code",
-              "type": "`$STRING`"
+            "cca2": {
+              "a": true,
+              "h": "Cca2",
+              "n": "cca2",
+              "r": false,
+              "sh": "ISO 3166-1 alpha-2 code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "cca3",
-              "req": false,
-              "short": "ISO 3166-1 alpha-3 code",
-              "type": "`$STRING`"
+            "cca3": {
+              "a": true,
+              "h": "Cca3",
+              "n": "cca3",
+              "r": false,
+              "sh": "ISO 3166-1 alpha-3 code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "ccn3",
-              "req": false,
-              "short": "ISO 3166-1 numeric code",
-              "type": "`$STRING`"
+            "ccn3": {
+              "a": true,
+              "h": "Ccn3",
+              "n": "ccn3",
+              "r": false,
+              "sh": "ISO 3166-1 numeric code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "cioc",
-              "req": false,
-              "short": "International Olympic Committee code",
-              "type": "`$STRING`"
+            "cioc": {
+              "a": true,
+              "h": "Cioc",
+              "n": "cioc",
+              "r": false,
+              "sh": "International Olympic Committee code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "coatOfArms",
-              "req": false,
-              "type": "`$OBJECT`"
+            "coatOfArms": {
+              "a": true,
+              "h": "Coat Of Arms",
+              "n": "coatOfArms",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "continents",
-              "req": false,
-              "short": "Continents",
-              "type": "`$ARRAY`"
+            "continents": {
+              "a": true,
+              "h": "Continents",
+              "n": "continents",
+              "r": false,
+              "sh": "Continents",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "currencies",
-              "req": false,
-              "type": "`$OBJECT`"
+            "currencies": {
+              "a": true,
+              "h": "Currencies",
+              "n": "currencies",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "demonyms",
-              "req": false,
-              "type": "`$OBJECT`"
+            "demonyms": {
+              "a": true,
+              "h": "Demonyms",
+              "n": "demonyms",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "fifa",
-              "req": false,
-              "short": "FIFA country code",
-              "type": "`$STRING`"
+            "fifa": {
+              "a": true,
+              "h": "Fifa",
+              "n": "fifa",
+              "r": false,
+              "sh": "FIFA country code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "flag",
-              "req": false,
-              "short": "Flag emoji",
-              "type": "`$STRING`"
+            "flag": {
+              "a": true,
+              "h": "Flag",
+              "n": "flag",
+              "r": false,
+              "sh": "Flag emoji",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "flags",
-              "req": false,
-              "type": "`$OBJECT`"
+            "flags": {
+              "a": true,
+              "h": "Flags",
+              "n": "flags",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "gini",
-              "req": false,
-              "short": "Gini coefficient",
-              "type": "`$OBJECT`"
+            "gini": {
+              "a": true,
+              "h": "Gini",
+              "n": "gini",
+              "r": false,
+              "sh": "Gini coefficient",
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "id",
-              "req": false,
-              "type": "`$STRING`"
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "idd",
-              "req": false,
-              "short": "International direct dialing",
-              "type": "`$OBJECT`"
+            "idd": {
+              "a": true,
+              "h": "Idd",
+              "n": "idd",
+              "r": false,
+              "sh": "International direct dialing",
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "independent",
-              "req": false,
-              "short": "Independence status",
-              "type": "`$BOOLEAN`"
+            "independent": {
+              "a": true,
+              "h": "Independent",
+              "n": "independent",
+              "r": false,
+              "sh": "Independence status",
+              "t": "`$BOOLEAN`"
             },
-            {
-              "active": true,
-              "name": "landlocked",
-              "req": false,
-              "short": "Landlocked status",
-              "type": "`$BOOLEAN`"
+            "landlocked": {
+              "a": true,
+              "h": "Landlocked",
+              "n": "landlocked",
+              "r": false,
+              "sh": "Landlocked status",
+              "t": "`$BOOLEAN`"
             },
-            {
-              "active": true,
-              "name": "languages",
-              "req": false,
-              "short": "Languages spoken",
-              "type": "`$OBJECT`"
+            "languages": {
+              "a": true,
+              "h": "Languages",
+              "n": "languages",
+              "r": false,
+              "sh": "Languages spoken",
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "latlng",
-              "req": false,
-              "short": "Latitude and longitude",
-              "type": "`$ARRAY`"
+            "latlng": {
+              "a": true,
+              "h": "Latlng",
+              "n": "latlng",
+              "r": false,
+              "sh": "Latitude and longitude",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "maps",
-              "req": false,
-              "type": "`$OBJECT`"
+            "maps": {
+              "a": true,
+              "h": "Maps",
+              "n": "maps",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "name",
-              "req": false,
-              "type": "`$OBJECT`"
+            "name": {
+              "a": true,
+              "h": "Name",
+              "n": "name",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "population",
-              "req": false,
-              "short": "Country population",
-              "type": "`$INTEGER`"
+            "population": {
+              "a": true,
+              "h": "Population",
+              "n": "population",
+              "r": false,
+              "sh": "Country population",
+              "t": "`$INTEGER`"
             },
-            {
-              "active": true,
-              "name": "postalCode",
-              "req": false,
-              "type": "`$OBJECT`"
+            "postalCode": {
+              "a": true,
+              "h": "Postal Code",
+              "n": "postalCode",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "region",
-              "req": false,
-              "short": "Geographic region",
-              "type": "`$STRING`"
+            "region": {
+              "a": true,
+              "h": "Region",
+              "n": "region",
+              "r": false,
+              "sh": "Geographic region",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "startOfWeek",
-              "req": false,
-              "short": "Start of week day",
-              "type": "`$STRING`"
+            "startOfWeek": {
+              "a": true,
+              "h": "Start Of Week",
+              "n": "startOfWeek",
+              "r": false,
+              "sh": "Start of week day",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "status",
-              "req": false,
-              "short": "ISO 3166-1 assignment status",
-              "type": "`$STRING`"
+            "status": {
+              "a": true,
+              "h": "Status",
+              "n": "status",
+              "r": false,
+              "sh": "ISO 3166-1 assignment status",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "subregion",
-              "req": false,
-              "short": "Geographic subregion",
-              "type": "`$STRING`"
+            "subregion": {
+              "a": true,
+              "h": "Subregion",
+              "n": "subregion",
+              "r": false,
+              "sh": "Geographic subregion",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "timezones",
-              "req": false,
-              "short": "Timezones",
-              "type": "`$ARRAY`"
+            "timezones": {
+              "a": true,
+              "h": "Timezones",
+              "n": "timezones",
+              "r": false,
+              "sh": "Timezones",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "tld",
-              "req": false,
-              "short": "Top-level domains",
-              "type": "`$ARRAY`"
+            "tld": {
+              "a": true,
+              "h": "Tld",
+              "n": "tld",
+              "r": false,
+              "sh": "Top-level domains",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "translations",
-              "req": false,
-              "type": "`$OBJECT`"
+            "translations": {
+              "a": true,
+              "h": "Translations",
+              "n": "translations",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "unMember",
-              "req": false,
-              "short": "UN membership status",
-              "type": "`$BOOLEAN`"
+            "unMember": {
+              "a": true,
+              "h": "Un Member",
+              "n": "unMember",
+              "r": false,
+              "sh": "UN membership status",
+              "t": "`$BOOLEAN`"
             }
-          ],
+          },
           "id": {
             "field": "id",
             "name": "id"
@@ -578,45 +715,50 @@
               "name": "load",
               "points": [
                 {
-                  "active": true,
-                  "args": {
+                  "a": true,
+                  "co": {
+                    "id": "GET /alpha/{code}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
                     "params": [
                       {
-                        "active": true,
-                        "example": "de",
-                        "kind": "param",
-                        "name": "id",
-                        "orig": "code",
-                        "reqd": true,
-                        "type": "`$STRING`"
+                        "a": true,
+                        "ex": "de",
+                        "k": "param",
+                        "n": "id",
+                        "or": "code",
+                        "r": true,
+                        "t": "`$STRING`"
                       }
                     ],
                     "query": [
                       {
-                        "active": true,
-                        "kind": "query",
-                        "name": "field",
-                        "orig": "field",
-                        "reqd": false,
-                        "type": "`$STRING`"
+                        "a": true,
+                        "k": "query",
+                        "n": "field",
+                        "or": "field",
+                        "r": false,
+                        "t": "`$STRING`"
                       }
                     ]
                   },
-                  "contract": {
-                    "id": "GET /alpha/{code}",
-                    "json": "{\"operationId\":\"getCountryByCode\",\"parameters\":[{\"description\":\"Alpha-2, alpha-3 or CIOC country code\",\"example\":\"de\",\"in\":\"path\",\"name\":\"code\",\"required\":true,\"schema\":{\"type\":\"string\"}},{\"description\":\"Comma-separated list of fields to return\",\"in\":\"query\",\"name\":\"fields\",\"required\":false,\"schema\":{\"type\":\"string\"}}],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"properties\":{\"altSpellings\":{\"description\":\"Alternative country name spellings\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"area\":{\"description\":\"Country area in square kilometers\",\"type\":\"number\"},\"borders\":{\"description\":\"Border countries (ISO 3166-1 alpha-3 codes)\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"capital\":{\"description\":\"Capital city or cities\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"capitalInfo\":{\"properties\":{\"latlng\":{\"items\":{\"type\":\"number\"},\"maxItems\":2,\"minItems\":2,\"type\":\"array\"}},\"type\":\"object\"},\"car\":{\"properties\":{\"side\":{\"enum\":[\"left\",\"right\"],\"type\":\"string\"},\"signs\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"type\":\"object\"},\"cca2\":{\"description\":\"ISO 3166-1 alpha-2 code\",\"type\":\"string\"},\"cca3\":{\"description\":\"ISO 3166-1 alpha-3 code\",\"type\":\"string\"},\"ccn3\":{\"description\":\"ISO 3166-1 numeric code\",\"type\":\"string\"},\"cioc\":{\"description\":\"International Olympic Committee code\",\"type\":\"string\"},\"coatOfArms\":{\"properties\":{\"png\":{\"format\":\"uri\",\"type\":\"string\"},\"svg\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"continents\":{\"description\":\"Continents\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"currencies\":{\"additionalProperties\":{\"properties\":{\"name\":{\"type\":\"string\"},\"symbol\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"demonyms\":{\"additionalProperties\":{\"properties\":{\"f\":{\"type\":\"string\"},\"m\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"fifa\":{\"description\":\"FIFA country code\",\"type\":\"string\"},\"flag\":{\"description\":\"Flag emoji\",\"type\":\"string\"},\"flags\":{\"properties\":{\"alt\":{\"type\":\"string\"},\"png\":{\"format\":\"uri\",\"type\":\"string\"},\"svg\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"gini\":{\"additionalProperties\":{\"type\":\"number\"},\"description\":\"Gini coefficient\",\"type\":\"object\"},\"idd\":{\"description\":\"International direct dialing\",\"properties\":{\"root\":{\"type\":\"string\"},\"suffixes\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"type\":\"object\"},\"independent\":{\"description\":\"Independence status\",\"type\":\"boolean\"},\"landlocked\":{\"description\":\"Landlocked status\",\"type\":\"boolean\"},\"languages\":{\"additionalProperties\":{\"type\":\"string\"},\"description\":\"Languages spoken\",\"type\":\"object\"},\"latlng\":{\"description\":\"Latitude and longitude\",\"items\":{\"type\":\"number\"},\"maxItems\":2,\"minItems\":2,\"type\":\"array\"},\"maps\":{\"properties\":{\"googleMaps\":{\"format\":\"uri\",\"type\":\"string\"},\"openStreetMaps\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"name\":{\"properties\":{\"common\":{\"description\":\"Common country name\",\"type\":\"string\"},\"nativeName\":{\"additionalProperties\":{\"properties\":{\"common\":{\"type\":\"string\"},\"official\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"official\":{\"description\":\"Official country name\",\"type\":\"string\"}},\"type\":\"object\"},\"population\":{\"description\":\"Country population\",\"type\":\"integer\"},\"postalCode\":{\"properties\":{\"format\":{\"type\":\"string\"},\"regex\":{\"type\":\"string\"}},\"type\":\"object\"},\"region\":{\"description\":\"Geographic region\",\"type\":\"string\"},\"startOfWeek\":{\"description\":\"Start of week day\",\"type\":\"string\"},\"status\":{\"description\":\"ISO 3166-1 assignment status\",\"type\":\"string\"},\"subregion\":{\"description\":\"Geographic subregion\",\"type\":\"string\"},\"timezones\":{\"description\":\"Timezones\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"tld\":{\"description\":\"Top-level domains\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"translations\":{\"additionalProperties\":{\"properties\":{\"common\":{\"type\":\"string\"},\"official\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"unMember\":{\"description\":\"UN membership status\",\"type\":\"boolean\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successful response\"},\"404\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"message\":{\"description\":\"Error message\",\"type\":\"string\"},\"status\":{\"description\":\"HTTP status code\",\"type\":\"integer\"}},\"type\":\"object\"}}},\"description\":\"Country not found\"}},\"securitySource\":\"unspecified\"}",
-                    "source": "openapi3",
-                    "version": 1
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/alpha/{code}",
+                  "q": {
+                    "exist": [
+                      "field",
+                      "id"
+                    ]
                   },
-                  "kind": "http",
-                  "method": "GET",
-                  "orig": "/alpha/{code}",
-                  "rename": {
+                  "r": {
                     "param": {
                       "code": "id"
                     }
                   },
-                  "segments": [
+                  "s": [
                     {
                       "lit": "alpha"
                     },
@@ -624,13 +766,7 @@
                       "var": "id"
                     }
                   ],
-                  "select": {
-                    "exist": [
-                      "field",
-                      "id"
-                    ]
-                  },
-                  "transform": {
+                  "t": {
                     "req": "`reqdata`",
                     "res": "`body`"
                   }
@@ -647,249 +783,285 @@
           "alias": {
             "field": {}
           },
-          "fields": [
-            {
-              "active": true,
-              "name": "altSpellings",
-              "req": false,
-              "short": "Alternative country name spellings",
-              "type": "`$ARRAY`"
+          "fields": {
+            "altSpellings": {
+              "a": true,
+              "h": "Alt Spellings",
+              "n": "altSpellings",
+              "r": false,
+              "sh": "Alternative country name spellings",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "area",
-              "req": false,
-              "short": "Country area in square kilometers",
-              "type": "`$NUMBER`"
+            "area": {
+              "a": true,
+              "h": "Area",
+              "n": "area",
+              "r": false,
+              "sh": "Country area in square kilometers",
+              "t": "`$NUMBER`"
             },
-            {
-              "active": true,
-              "name": "borders",
-              "req": false,
-              "short": "Border countries (ISO 3166-1 alpha-3 codes)",
-              "type": "`$ARRAY`"
+            "borders": {
+              "a": true,
+              "h": "Borders",
+              "n": "borders",
+              "r": false,
+              "sh": "Border countries (ISO 3166-1 alpha-3 codes)",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "capital",
-              "req": false,
-              "short": "Capital city or cities",
-              "type": "`$ARRAY`"
+            "capital": {
+              "a": true,
+              "h": "Capital",
+              "n": "capital",
+              "r": false,
+              "sh": "Capital city or cities",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "capitalInfo",
-              "req": false,
-              "type": "`$OBJECT`"
+            "capitalInfo": {
+              "a": true,
+              "h": "Capital Info",
+              "n": "capitalInfo",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "car",
-              "req": false,
-              "type": "`$OBJECT`"
+            "car": {
+              "a": true,
+              "h": "Car",
+              "n": "car",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "cca2",
-              "req": false,
-              "short": "ISO 3166-1 alpha-2 code",
-              "type": "`$STRING`"
+            "cca2": {
+              "a": true,
+              "h": "Cca2",
+              "n": "cca2",
+              "r": false,
+              "sh": "ISO 3166-1 alpha-2 code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "cca3",
-              "req": false,
-              "short": "ISO 3166-1 alpha-3 code",
-              "type": "`$STRING`"
+            "cca3": {
+              "a": true,
+              "h": "Cca3",
+              "n": "cca3",
+              "r": false,
+              "sh": "ISO 3166-1 alpha-3 code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "ccn3",
-              "req": false,
-              "short": "ISO 3166-1 numeric code",
-              "type": "`$STRING`"
+            "ccn3": {
+              "a": true,
+              "h": "Ccn3",
+              "n": "ccn3",
+              "r": false,
+              "sh": "ISO 3166-1 numeric code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "cioc",
-              "req": false,
-              "short": "International Olympic Committee code",
-              "type": "`$STRING`"
+            "cioc": {
+              "a": true,
+              "h": "Cioc",
+              "n": "cioc",
+              "r": false,
+              "sh": "International Olympic Committee code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "coatOfArms",
-              "req": false,
-              "type": "`$OBJECT`"
+            "coatOfArms": {
+              "a": true,
+              "h": "Coat Of Arms",
+              "n": "coatOfArms",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "continents",
-              "req": false,
-              "short": "Continents",
-              "type": "`$ARRAY`"
+            "continents": {
+              "a": true,
+              "h": "Continents",
+              "n": "continents",
+              "r": false,
+              "sh": "Continents",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "currencies",
-              "req": false,
-              "type": "`$OBJECT`"
+            "currencies": {
+              "a": true,
+              "h": "Currencies",
+              "n": "currencies",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "demonyms",
-              "req": false,
-              "type": "`$OBJECT`"
+            "demonyms": {
+              "a": true,
+              "h": "Demonyms",
+              "n": "demonyms",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "fifa",
-              "req": false,
-              "short": "FIFA country code",
-              "type": "`$STRING`"
+            "fifa": {
+              "a": true,
+              "h": "Fifa",
+              "n": "fifa",
+              "r": false,
+              "sh": "FIFA country code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "flag",
-              "req": false,
-              "short": "Flag emoji",
-              "type": "`$STRING`"
+            "flag": {
+              "a": true,
+              "h": "Flag",
+              "n": "flag",
+              "r": false,
+              "sh": "Flag emoji",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "flags",
-              "req": false,
-              "type": "`$OBJECT`"
+            "flags": {
+              "a": true,
+              "h": "Flags",
+              "n": "flags",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "gini",
-              "req": false,
-              "short": "Gini coefficient",
-              "type": "`$OBJECT`"
+            "gini": {
+              "a": true,
+              "h": "Gini",
+              "n": "gini",
+              "r": false,
+              "sh": "Gini coefficient",
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "id",
-              "req": false,
-              "type": "`$STRING`"
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "idd",
-              "req": false,
-              "short": "International direct dialing",
-              "type": "`$OBJECT`"
+            "idd": {
+              "a": true,
+              "h": "Idd",
+              "n": "idd",
+              "r": false,
+              "sh": "International direct dialing",
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "independent",
-              "req": false,
-              "short": "Independence status",
-              "type": "`$BOOLEAN`"
+            "independent": {
+              "a": true,
+              "h": "Independent",
+              "n": "independent",
+              "r": false,
+              "sh": "Independence status",
+              "t": "`$BOOLEAN`"
             },
-            {
-              "active": true,
-              "name": "landlocked",
-              "req": false,
-              "short": "Landlocked status",
-              "type": "`$BOOLEAN`"
+            "landlocked": {
+              "a": true,
+              "h": "Landlocked",
+              "n": "landlocked",
+              "r": false,
+              "sh": "Landlocked status",
+              "t": "`$BOOLEAN`"
             },
-            {
-              "active": true,
-              "name": "languages",
-              "req": false,
-              "short": "Languages spoken",
-              "type": "`$OBJECT`"
+            "languages": {
+              "a": true,
+              "h": "Languages",
+              "n": "languages",
+              "r": false,
+              "sh": "Languages spoken",
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "latlng",
-              "req": false,
-              "short": "Latitude and longitude",
-              "type": "`$ARRAY`"
+            "latlng": {
+              "a": true,
+              "h": "Latlng",
+              "n": "latlng",
+              "r": false,
+              "sh": "Latitude and longitude",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "maps",
-              "req": false,
-              "type": "`$OBJECT`"
+            "maps": {
+              "a": true,
+              "h": "Maps",
+              "n": "maps",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "name",
-              "req": false,
-              "type": "`$OBJECT`"
+            "name": {
+              "a": true,
+              "h": "Name",
+              "n": "name",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "population",
-              "req": false,
-              "short": "Country population",
-              "type": "`$INTEGER`"
+            "population": {
+              "a": true,
+              "h": "Population",
+              "n": "population",
+              "r": false,
+              "sh": "Country population",
+              "t": "`$INTEGER`"
             },
-            {
-              "active": true,
-              "name": "postalCode",
-              "req": false,
-              "type": "`$OBJECT`"
+            "postalCode": {
+              "a": true,
+              "h": "Postal Code",
+              "n": "postalCode",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "region",
-              "req": false,
-              "short": "Geographic region",
-              "type": "`$STRING`"
+            "region": {
+              "a": true,
+              "h": "Region",
+              "n": "region",
+              "r": false,
+              "sh": "Geographic region",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "startOfWeek",
-              "req": false,
-              "short": "Start of week day",
-              "type": "`$STRING`"
+            "startOfWeek": {
+              "a": true,
+              "h": "Start Of Week",
+              "n": "startOfWeek",
+              "r": false,
+              "sh": "Start of week day",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "status",
-              "req": false,
-              "short": "ISO 3166-1 assignment status",
-              "type": "`$STRING`"
+            "status": {
+              "a": true,
+              "h": "Status",
+              "n": "status",
+              "r": false,
+              "sh": "ISO 3166-1 assignment status",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "subregion",
-              "req": false,
-              "short": "Geographic subregion",
-              "type": "`$STRING`"
+            "subregion": {
+              "a": true,
+              "h": "Subregion",
+              "n": "subregion",
+              "r": false,
+              "sh": "Geographic subregion",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "timezones",
-              "req": false,
-              "short": "Timezones",
-              "type": "`$ARRAY`"
+            "timezones": {
+              "a": true,
+              "h": "Timezones",
+              "n": "timezones",
+              "r": false,
+              "sh": "Timezones",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "tld",
-              "req": false,
-              "short": "Top-level domains",
-              "type": "`$ARRAY`"
+            "tld": {
+              "a": true,
+              "h": "Tld",
+              "n": "tld",
+              "r": false,
+              "sh": "Top-level domains",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "translations",
-              "req": false,
-              "type": "`$OBJECT`"
+            "translations": {
+              "a": true,
+              "h": "Translations",
+              "n": "translations",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "unMember",
-              "req": false,
-              "short": "UN membership status",
-              "type": "`$BOOLEAN`"
+            "unMember": {
+              "a": true,
+              "h": "Un Member",
+              "n": "unMember",
+              "r": false,
+              "sh": "UN membership status",
+              "t": "`$BOOLEAN`"
             }
-          ],
+          },
           "id": {
             "field": "id",
             "name": "id"
@@ -901,45 +1073,50 @@
               "name": "load",
               "points": [
                 {
-                  "active": true,
-                  "args": {
+                  "a": true,
+                  "co": {
+                    "id": "GET /capital/{capital}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
                     "params": [
                       {
-                        "active": true,
-                        "example": "berlin",
-                        "kind": "param",
-                        "name": "id",
-                        "orig": "capital",
-                        "reqd": true,
-                        "type": "`$STRING`"
+                        "a": true,
+                        "ex": "berlin",
+                        "k": "param",
+                        "n": "id",
+                        "or": "capital",
+                        "r": true,
+                        "t": "`$STRING`"
                       }
                     ],
                     "query": [
                       {
-                        "active": true,
-                        "kind": "query",
-                        "name": "field",
-                        "orig": "field",
-                        "reqd": false,
-                        "type": "`$STRING`"
+                        "a": true,
+                        "k": "query",
+                        "n": "field",
+                        "or": "field",
+                        "r": false,
+                        "t": "`$STRING`"
                       }
                     ]
                   },
-                  "contract": {
-                    "id": "GET /capital/{capital}",
-                    "json": "{\"operationId\":\"getCountriesByCapital\",\"parameters\":[{\"description\":\"Name of the capital city\",\"example\":\"berlin\",\"in\":\"path\",\"name\":\"capital\",\"required\":true,\"schema\":{\"type\":\"string\"}},{\"description\":\"Comma-separated list of fields to return\",\"in\":\"query\",\"name\":\"fields\",\"required\":false,\"schema\":{\"type\":\"string\"}}],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"properties\":{\"altSpellings\":{\"description\":\"Alternative country name spellings\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"area\":{\"description\":\"Country area in square kilometers\",\"type\":\"number\"},\"borders\":{\"description\":\"Border countries (ISO 3166-1 alpha-3 codes)\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"capital\":{\"description\":\"Capital city or cities\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"capitalInfo\":{\"properties\":{\"latlng\":{\"items\":{\"type\":\"number\"},\"maxItems\":2,\"minItems\":2,\"type\":\"array\"}},\"type\":\"object\"},\"car\":{\"properties\":{\"side\":{\"enum\":[\"left\",\"right\"],\"type\":\"string\"},\"signs\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"type\":\"object\"},\"cca2\":{\"description\":\"ISO 3166-1 alpha-2 code\",\"type\":\"string\"},\"cca3\":{\"description\":\"ISO 3166-1 alpha-3 code\",\"type\":\"string\"},\"ccn3\":{\"description\":\"ISO 3166-1 numeric code\",\"type\":\"string\"},\"cioc\":{\"description\":\"International Olympic Committee code\",\"type\":\"string\"},\"coatOfArms\":{\"properties\":{\"png\":{\"format\":\"uri\",\"type\":\"string\"},\"svg\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"continents\":{\"description\":\"Continents\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"currencies\":{\"additionalProperties\":{\"properties\":{\"name\":{\"type\":\"string\"},\"symbol\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"demonyms\":{\"additionalProperties\":{\"properties\":{\"f\":{\"type\":\"string\"},\"m\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"fifa\":{\"description\":\"FIFA country code\",\"type\":\"string\"},\"flag\":{\"description\":\"Flag emoji\",\"type\":\"string\"},\"flags\":{\"properties\":{\"alt\":{\"type\":\"string\"},\"png\":{\"format\":\"uri\",\"type\":\"string\"},\"svg\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"gini\":{\"additionalProperties\":{\"type\":\"number\"},\"description\":\"Gini coefficient\",\"type\":\"object\"},\"idd\":{\"description\":\"International direct dialing\",\"properties\":{\"root\":{\"type\":\"string\"},\"suffixes\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"type\":\"object\"},\"independent\":{\"description\":\"Independence status\",\"type\":\"boolean\"},\"landlocked\":{\"description\":\"Landlocked status\",\"type\":\"boolean\"},\"languages\":{\"additionalProperties\":{\"type\":\"string\"},\"description\":\"Languages spoken\",\"type\":\"object\"},\"latlng\":{\"description\":\"Latitude and longitude\",\"items\":{\"type\":\"number\"},\"maxItems\":2,\"minItems\":2,\"type\":\"array\"},\"maps\":{\"properties\":{\"googleMaps\":{\"format\":\"uri\",\"type\":\"string\"},\"openStreetMaps\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"name\":{\"properties\":{\"common\":{\"description\":\"Common country name\",\"type\":\"string\"},\"nativeName\":{\"additionalProperties\":{\"properties\":{\"common\":{\"type\":\"string\"},\"official\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"official\":{\"description\":\"Official country name\",\"type\":\"string\"}},\"type\":\"object\"},\"population\":{\"description\":\"Country population\",\"type\":\"integer\"},\"postalCode\":{\"properties\":{\"format\":{\"type\":\"string\"},\"regex\":{\"type\":\"string\"}},\"type\":\"object\"},\"region\":{\"description\":\"Geographic region\",\"type\":\"string\"},\"startOfWeek\":{\"description\":\"Start of week day\",\"type\":\"string\"},\"status\":{\"description\":\"ISO 3166-1 assignment status\",\"type\":\"string\"},\"subregion\":{\"description\":\"Geographic subregion\",\"type\":\"string\"},\"timezones\":{\"description\":\"Timezones\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"tld\":{\"description\":\"Top-level domains\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"translations\":{\"additionalProperties\":{\"properties\":{\"common\":{\"type\":\"string\"},\"official\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"unMember\":{\"description\":\"UN membership status\",\"type\":\"boolean\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successful response\"},\"404\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"message\":{\"description\":\"Error message\",\"type\":\"string\"},\"status\":{\"description\":\"HTTP status code\",\"type\":\"integer\"}},\"type\":\"object\"}}},\"description\":\"Country not found\"}},\"securitySource\":\"unspecified\"}",
-                    "source": "openapi3",
-                    "version": 1
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/capital/{capital}",
+                  "q": {
+                    "exist": [
+                      "field",
+                      "id"
+                    ]
                   },
-                  "kind": "http",
-                  "method": "GET",
-                  "orig": "/capital/{capital}",
-                  "rename": {
+                  "r": {
                     "param": {
                       "capital": "id"
                     }
                   },
-                  "segments": [
+                  "s": [
                     {
                       "lit": "capital"
                     },
@@ -947,13 +1124,7 @@
                       "var": "id"
                     }
                   ],
-                  "select": {
-                    "exist": [
-                      "field",
-                      "id"
-                    ]
-                  },
-                  "transform": {
+                  "t": {
                     "req": "`reqdata`",
                     "res": "`body`"
                   }
@@ -970,249 +1141,285 @@
           "alias": {
             "field": {}
           },
-          "fields": [
-            {
-              "active": true,
-              "name": "altSpellings",
-              "req": false,
-              "short": "Alternative country name spellings",
-              "type": "`$ARRAY`"
+          "fields": {
+            "altSpellings": {
+              "a": true,
+              "h": "Alt Spellings",
+              "n": "altSpellings",
+              "r": false,
+              "sh": "Alternative country name spellings",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "area",
-              "req": false,
-              "short": "Country area in square kilometers",
-              "type": "`$NUMBER`"
+            "area": {
+              "a": true,
+              "h": "Area",
+              "n": "area",
+              "r": false,
+              "sh": "Country area in square kilometers",
+              "t": "`$NUMBER`"
             },
-            {
-              "active": true,
-              "name": "borders",
-              "req": false,
-              "short": "Border countries (ISO 3166-1 alpha-3 codes)",
-              "type": "`$ARRAY`"
+            "borders": {
+              "a": true,
+              "h": "Borders",
+              "n": "borders",
+              "r": false,
+              "sh": "Border countries (ISO 3166-1 alpha-3 codes)",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "capital",
-              "req": false,
-              "short": "Capital city or cities",
-              "type": "`$ARRAY`"
+            "capital": {
+              "a": true,
+              "h": "Capital",
+              "n": "capital",
+              "r": false,
+              "sh": "Capital city or cities",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "capitalInfo",
-              "req": false,
-              "type": "`$OBJECT`"
+            "capitalInfo": {
+              "a": true,
+              "h": "Capital Info",
+              "n": "capitalInfo",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "car",
-              "req": false,
-              "type": "`$OBJECT`"
+            "car": {
+              "a": true,
+              "h": "Car",
+              "n": "car",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "cca2",
-              "req": false,
-              "short": "ISO 3166-1 alpha-2 code",
-              "type": "`$STRING`"
+            "cca2": {
+              "a": true,
+              "h": "Cca2",
+              "n": "cca2",
+              "r": false,
+              "sh": "ISO 3166-1 alpha-2 code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "cca3",
-              "req": false,
-              "short": "ISO 3166-1 alpha-3 code",
-              "type": "`$STRING`"
+            "cca3": {
+              "a": true,
+              "h": "Cca3",
+              "n": "cca3",
+              "r": false,
+              "sh": "ISO 3166-1 alpha-3 code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "ccn3",
-              "req": false,
-              "short": "ISO 3166-1 numeric code",
-              "type": "`$STRING`"
+            "ccn3": {
+              "a": true,
+              "h": "Ccn3",
+              "n": "ccn3",
+              "r": false,
+              "sh": "ISO 3166-1 numeric code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "cioc",
-              "req": false,
-              "short": "International Olympic Committee code",
-              "type": "`$STRING`"
+            "cioc": {
+              "a": true,
+              "h": "Cioc",
+              "n": "cioc",
+              "r": false,
+              "sh": "International Olympic Committee code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "coatOfArms",
-              "req": false,
-              "type": "`$OBJECT`"
+            "coatOfArms": {
+              "a": true,
+              "h": "Coat Of Arms",
+              "n": "coatOfArms",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "continents",
-              "req": false,
-              "short": "Continents",
-              "type": "`$ARRAY`"
+            "continents": {
+              "a": true,
+              "h": "Continents",
+              "n": "continents",
+              "r": false,
+              "sh": "Continents",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "currencies",
-              "req": false,
-              "type": "`$OBJECT`"
+            "currencies": {
+              "a": true,
+              "h": "Currencies",
+              "n": "currencies",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "demonyms",
-              "req": false,
-              "type": "`$OBJECT`"
+            "demonyms": {
+              "a": true,
+              "h": "Demonyms",
+              "n": "demonyms",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "fifa",
-              "req": false,
-              "short": "FIFA country code",
-              "type": "`$STRING`"
+            "fifa": {
+              "a": true,
+              "h": "Fifa",
+              "n": "fifa",
+              "r": false,
+              "sh": "FIFA country code",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "flag",
-              "req": false,
-              "short": "Flag emoji",
-              "type": "`$STRING`"
+            "flag": {
+              "a": true,
+              "h": "Flag",
+              "n": "flag",
+              "r": false,
+              "sh": "Flag emoji",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "flags",
-              "req": false,
-              "type": "`$OBJECT`"
+            "flags": {
+              "a": true,
+              "h": "Flags",
+              "n": "flags",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "gini",
-              "req": false,
-              "short": "Gini coefficient",
-              "type": "`$OBJECT`"
+            "gini": {
+              "a": true,
+              "h": "Gini",
+              "n": "gini",
+              "r": false,
+              "sh": "Gini coefficient",
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "id",
-              "req": false,
-              "type": "`$STRING`"
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "idd",
-              "req": false,
-              "short": "International direct dialing",
-              "type": "`$OBJECT`"
+            "idd": {
+              "a": true,
+              "h": "Idd",
+              "n": "idd",
+              "r": false,
+              "sh": "International direct dialing",
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "independent",
-              "req": false,
-              "short": "Independence status",
-              "type": "`$BOOLEAN`"
+            "independent": {
+              "a": true,
+              "h": "Independent",
+              "n": "independent",
+              "r": false,
+              "sh": "Independence status",
+              "t": "`$BOOLEAN`"
             },
-            {
-              "active": true,
-              "name": "landlocked",
-              "req": false,
-              "short": "Landlocked status",
-              "type": "`$BOOLEAN`"
+            "landlocked": {
+              "a": true,
+              "h": "Landlocked",
+              "n": "landlocked",
+              "r": false,
+              "sh": "Landlocked status",
+              "t": "`$BOOLEAN`"
             },
-            {
-              "active": true,
-              "name": "languages",
-              "req": false,
-              "short": "Languages spoken",
-              "type": "`$OBJECT`"
+            "languages": {
+              "a": true,
+              "h": "Languages",
+              "n": "languages",
+              "r": false,
+              "sh": "Languages spoken",
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "latlng",
-              "req": false,
-              "short": "Latitude and longitude",
-              "type": "`$ARRAY`"
+            "latlng": {
+              "a": true,
+              "h": "Latlng",
+              "n": "latlng",
+              "r": false,
+              "sh": "Latitude and longitude",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "maps",
-              "req": false,
-              "type": "`$OBJECT`"
+            "maps": {
+              "a": true,
+              "h": "Maps",
+              "n": "maps",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "name",
-              "req": false,
-              "type": "`$OBJECT`"
+            "name": {
+              "a": true,
+              "h": "Name",
+              "n": "name",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "population",
-              "req": false,
-              "short": "Country population",
-              "type": "`$INTEGER`"
+            "population": {
+              "a": true,
+              "h": "Population",
+              "n": "population",
+              "r": false,
+              "sh": "Country population",
+              "t": "`$INTEGER`"
             },
-            {
-              "active": true,
-              "name": "postalCode",
-              "req": false,
-              "type": "`$OBJECT`"
+            "postalCode": {
+              "a": true,
+              "h": "Postal Code",
+              "n": "postalCode",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "region",
-              "req": false,
-              "short": "Geographic region",
-              "type": "`$STRING`"
+            "region": {
+              "a": true,
+              "h": "Region",
+              "n": "region",
+              "r": false,
+              "sh": "Geographic region",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "startOfWeek",
-              "req": false,
-              "short": "Start of week day",
-              "type": "`$STRING`"
+            "startOfWeek": {
+              "a": true,
+              "h": "Start Of Week",
+              "n": "startOfWeek",
+              "r": false,
+              "sh": "Start of week day",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "status",
-              "req": false,
-              "short": "ISO 3166-1 assignment status",
-              "type": "`$STRING`"
+            "status": {
+              "a": true,
+              "h": "Status",
+              "n": "status",
+              "r": false,
+              "sh": "ISO 3166-1 assignment status",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "subregion",
-              "req": false,
-              "short": "Geographic subregion",
-              "type": "`$STRING`"
+            "subregion": {
+              "a": true,
+              "h": "Subregion",
+              "n": "subregion",
+              "r": false,
+              "sh": "Geographic subregion",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "timezones",
-              "req": false,
-              "short": "Timezones",
-              "type": "`$ARRAY`"
+            "timezones": {
+              "a": true,
+              "h": "Timezones",
+              "n": "timezones",
+              "r": false,
+              "sh": "Timezones",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "tld",
-              "req": false,
-              "short": "Top-level domains",
-              "type": "`$ARRAY`"
+            "tld": {
+              "a": true,
+              "h": "Tld",
+              "n": "tld",
+              "r": false,
+              "sh": "Top-level domains",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "translations",
-              "req": false,
-              "type": "`$OBJECT`"
+            "translations": {
+              "a": true,
+              "h": "Translations",
+              "n": "translations",
+              "r": false,
+              "t": "`$OBJECT`"
             },
-            {
-              "active": true,
-              "name": "unMember",
-              "req": false,
-              "short": "UN membership status",
-              "type": "`$BOOLEAN`"
+            "unMember": {
+              "a": true,
+              "h": "Un Member",
+              "n": "unMember",
+              "r": false,
+              "sh": "UN membership status",
+              "t": "`$BOOLEAN`"
             }
-          ],
+          },
           "id": {
             "field": "id",
             "name": "id"
@@ -1224,54 +1431,60 @@
               "name": "load",
               "points": [
                 {
-                  "active": true,
-                  "args": {
+                  "a": true,
+                  "co": {
+                    "id": "GET /name/{name}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
                     "params": [
                       {
-                        "active": true,
-                        "example": "germany",
-                        "kind": "param",
-                        "name": "id",
-                        "orig": "name",
-                        "reqd": true,
-                        "type": "`$STRING`"
+                        "a": true,
+                        "ex": "germany",
+                        "k": "param",
+                        "n": "id",
+                        "or": "name",
+                        "r": true,
+                        "t": "`$STRING`"
                       }
                     ],
                     "query": [
                       {
-                        "active": true,
-                        "kind": "query",
-                        "name": "field",
-                        "orig": "field",
-                        "reqd": false,
-                        "type": "`$STRING`"
+                        "a": true,
+                        "k": "query",
+                        "n": "field",
+                        "or": "field",
+                        "r": false,
+                        "t": "`$STRING`"
                       },
                       {
-                        "active": true,
-                        "example": false,
-                        "kind": "query",
-                        "name": "full_text",
-                        "orig": "full_text",
-                        "reqd": false,
-                        "type": "`$BOOLEAN`"
+                        "a": true,
+                        "ex": false,
+                        "k": "query",
+                        "n": "full_text",
+                        "or": "full_text",
+                        "r": false,
+                        "t": "`$BOOLEAN`"
                       }
                     ]
                   },
-                  "contract": {
-                    "id": "GET /name/{name}",
-                    "json": "{\"operationId\":\"getCountriesByName\",\"parameters\":[{\"description\":\"Name of the country to search for\",\"example\":\"germany\",\"in\":\"path\",\"name\":\"name\",\"required\":true,\"schema\":{\"type\":\"string\"}},{\"description\":\"Search by exact country name match\",\"in\":\"query\",\"name\":\"fullText\",\"required\":false,\"schema\":{\"default\":false,\"type\":\"boolean\"}},{\"description\":\"Comma-separated list of fields to return\",\"in\":\"query\",\"name\":\"fields\",\"required\":false,\"schema\":{\"type\":\"string\"}}],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"items\":{\"properties\":{\"altSpellings\":{\"description\":\"Alternative country name spellings\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"area\":{\"description\":\"Country area in square kilometers\",\"type\":\"number\"},\"borders\":{\"description\":\"Border countries (ISO 3166-1 alpha-3 codes)\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"capital\":{\"description\":\"Capital city or cities\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"capitalInfo\":{\"properties\":{\"latlng\":{\"items\":{\"type\":\"number\"},\"maxItems\":2,\"minItems\":2,\"type\":\"array\"}},\"type\":\"object\"},\"car\":{\"properties\":{\"side\":{\"enum\":[\"left\",\"right\"],\"type\":\"string\"},\"signs\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"type\":\"object\"},\"cca2\":{\"description\":\"ISO 3166-1 alpha-2 code\",\"type\":\"string\"},\"cca3\":{\"description\":\"ISO 3166-1 alpha-3 code\",\"type\":\"string\"},\"ccn3\":{\"description\":\"ISO 3166-1 numeric code\",\"type\":\"string\"},\"cioc\":{\"description\":\"International Olympic Committee code\",\"type\":\"string\"},\"coatOfArms\":{\"properties\":{\"png\":{\"format\":\"uri\",\"type\":\"string\"},\"svg\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"continents\":{\"description\":\"Continents\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"currencies\":{\"additionalProperties\":{\"properties\":{\"name\":{\"type\":\"string\"},\"symbol\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"demonyms\":{\"additionalProperties\":{\"properties\":{\"f\":{\"type\":\"string\"},\"m\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"fifa\":{\"description\":\"FIFA country code\",\"type\":\"string\"},\"flag\":{\"description\":\"Flag emoji\",\"type\":\"string\"},\"flags\":{\"properties\":{\"alt\":{\"type\":\"string\"},\"png\":{\"format\":\"uri\",\"type\":\"string\"},\"svg\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"gini\":{\"additionalProperties\":{\"type\":\"number\"},\"description\":\"Gini coefficient\",\"type\":\"object\"},\"idd\":{\"description\":\"International direct dialing\",\"properties\":{\"root\":{\"type\":\"string\"},\"suffixes\":{\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"type\":\"object\"},\"independent\":{\"description\":\"Independence status\",\"type\":\"boolean\"},\"landlocked\":{\"description\":\"Landlocked status\",\"type\":\"boolean\"},\"languages\":{\"additionalProperties\":{\"type\":\"string\"},\"description\":\"Languages spoken\",\"type\":\"object\"},\"latlng\":{\"description\":\"Latitude and longitude\",\"items\":{\"type\":\"number\"},\"maxItems\":2,\"minItems\":2,\"type\":\"array\"},\"maps\":{\"properties\":{\"googleMaps\":{\"format\":\"uri\",\"type\":\"string\"},\"openStreetMaps\":{\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"name\":{\"properties\":{\"common\":{\"description\":\"Common country name\",\"type\":\"string\"},\"nativeName\":{\"additionalProperties\":{\"properties\":{\"common\":{\"type\":\"string\"},\"official\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"official\":{\"description\":\"Official country name\",\"type\":\"string\"}},\"type\":\"object\"},\"population\":{\"description\":\"Country population\",\"type\":\"integer\"},\"postalCode\":{\"properties\":{\"format\":{\"type\":\"string\"},\"regex\":{\"type\":\"string\"}},\"type\":\"object\"},\"region\":{\"description\":\"Geographic region\",\"type\":\"string\"},\"startOfWeek\":{\"description\":\"Start of week day\",\"type\":\"string\"},\"status\":{\"description\":\"ISO 3166-1 assignment status\",\"type\":\"string\"},\"subregion\":{\"description\":\"Geographic subregion\",\"type\":\"string\"},\"timezones\":{\"description\":\"Timezones\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"tld\":{\"description\":\"Top-level domains\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"translations\":{\"additionalProperties\":{\"properties\":{\"common\":{\"type\":\"string\"},\"official\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"object\"},\"unMember\":{\"description\":\"UN membership status\",\"type\":\"boolean\"}},\"type\":\"object\"},\"type\":\"array\"}}},\"description\":\"Successful response\"},\"404\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"message\":{\"description\":\"Error message\",\"type\":\"string\"},\"status\":{\"description\":\"HTTP status code\",\"type\":\"integer\"}},\"type\":\"object\"}}},\"description\":\"Country not found\"}},\"securitySource\":\"unspecified\"}",
-                    "source": "openapi3",
-                    "version": 1
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/name/{name}",
+                  "q": {
+                    "exist": [
+                      "field",
+                      "full_text",
+                      "id"
+                    ]
                   },
-                  "kind": "http",
-                  "method": "GET",
-                  "orig": "/name/{name}",
-                  "rename": {
+                  "r": {
                     "param": {
                       "name": "id"
                     }
                   },
-                  "segments": [
+                  "s": [
                     {
                       "lit": "name"
                     },
@@ -1279,14 +1492,7 @@
                       "var": "id"
                     }
                   ],
-                  "select": {
-                    "exist": [
-                      "field",
-                      "full_text",
-                      "id"
-                    ]
-                  },
-                  "transform": {
+                  "t": {
                     "req": "`reqdata`",
                     "res": "`body`"
                   }
@@ -1715,13 +1921,13 @@
           "param": {},
           "step": [
             {
-              "active": true,
-              "data": {},
-              "input": {},
-              "match": {},
-              "op": "list",
-              "spec": [],
-              "valid": [
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
                 {
                   "apply": "ItemExists",
                   "def": {
@@ -1741,19 +1947,19 @@
           "param": {},
           "step": [
             {
-              "active": true,
-              "data": {},
-              "input": {
+              "a": true,
+              "d": {},
+              "i": {
                 "ref": "alpha_ref01",
                 "srcdatavar": "alpha_ref01_data",
                 "suffix": "_dt0"
               },
-              "match": {
+              "m": {
                 "id": "alpha01"
               },
-              "op": "load",
-              "spec": [],
-              "valid": [
+              "o": "load",
+              "s": [],
+              "v": [
                 {
                   "apply": "TextFieldMark",
                   "def": {
@@ -1773,19 +1979,19 @@
           "param": {},
           "step": [
             {
-              "active": true,
-              "data": {},
-              "input": {
+              "a": true,
+              "d": {},
+              "i": {
                 "ref": "capital_ref01",
                 "srcdatavar": "capital_ref01_data",
                 "suffix": "_dt0"
               },
-              "match": {
+              "m": {
                 "id": "capital01"
               },
-              "op": "load",
-              "spec": [],
-              "valid": [
+              "o": "load",
+              "s": [],
+              "v": [
                 {
                   "apply": "TextFieldMark",
                   "def": {
@@ -1805,19 +2011,19 @@
           "param": {},
           "step": [
             {
-              "active": true,
-              "data": {},
-              "input": {
+              "a": true,
+              "d": {},
+              "i": {
                 "ref": "name_ref01",
                 "srcdatavar": "name_ref01_data",
                 "suffix": "_dt0"
               },
-              "match": {
+              "m": {
                 "id": "name01"
               },
-              "op": "load",
-              "spec": [],
-              "valid": [
+              "o": "load",
+              "s": [],
+              "v": [
                 {
                   "apply": "TextFieldMark",
                   "def": {

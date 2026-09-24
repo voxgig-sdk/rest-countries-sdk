@@ -11,19 +11,12 @@ const FEATURE_CLASS = {
     test: TestFeature_1.TestFeature,
     timeout: TimeoutFeature_1.TimeoutFeature,
 };
-// Per-feature plugin DEFINITIONS (voxgig/plugin `Definition` values), from
-// the model's active plugin groups. A feature that takes a `plugins` option
-// (secrets over sekreto) reads its own entry; a feature with no plugins has
-// none. Named imports above make each definition statically reachable, so
-// an SDK carries exactly the plugin modules its model selects — the same
-// leanness the old side-effect registry imports bought, without a registry.
 const FEATURE_PLUGINS = {};
 exports.FEATURE_PLUGINS = FEATURE_PLUGINS;
 class Config {
     makeFeature(fn) {
         const fc = FEATURE_CLASS[fn];
         const fi = new fc();
-        // TODO: errors etc
         return fi;
     }
     // False for a feature added at runtime via options.extend (station's
@@ -117,168 +110,203 @@ class Config {
             "fields": [
                 {
                     "name": "altSpellings",
-                    "short": "Alternative country name spellings",
-                    "type": "`$ARRAY`"
+                    "title": "Alt Spellings",
+                    "type": "`$ARRAY`",
+                    "short": "Alternative country name spellings"
                 },
                 {
                     "name": "area",
-                    "short": "Country area in square kilometers",
-                    "type": "`$NUMBER`"
+                    "title": "Area",
+                    "type": "`$NUMBER`",
+                    "short": "Country area in square kilometers"
                 },
                 {
                     "name": "borders",
-                    "short": "Border countries (ISO 3166-1 alpha-3 codes)",
-                    "type": "`$ARRAY`"
+                    "title": "Borders",
+                    "type": "`$ARRAY`",
+                    "short": "Border countries (ISO 3166-1 alpha-3 codes)"
                 },
                 {
                     "name": "capital",
-                    "short": "Capital city or cities",
-                    "type": "`$ARRAY`"
+                    "title": "Capital",
+                    "type": "`$ARRAY`",
+                    "short": "Capital city or cities"
                 },
                 {
                     "name": "capitalInfo",
+                    "title": "Capital Info",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "car",
+                    "title": "Car",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "cca2",
-                    "short": "ISO 3166-1 alpha-2 code",
-                    "type": "`$STRING`"
+                    "title": "Cca2",
+                    "type": "`$STRING`",
+                    "short": "ISO 3166-1 alpha-2 code"
                 },
                 {
                     "name": "cca3",
-                    "short": "ISO 3166-1 alpha-3 code",
-                    "type": "`$STRING`"
+                    "title": "Cca3",
+                    "type": "`$STRING`",
+                    "short": "ISO 3166-1 alpha-3 code"
                 },
                 {
                     "name": "ccn3",
-                    "short": "ISO 3166-1 numeric code",
-                    "type": "`$STRING`"
+                    "title": "Ccn3",
+                    "type": "`$STRING`",
+                    "short": "ISO 3166-1 numeric code"
                 },
                 {
                     "name": "cioc",
-                    "short": "International Olympic Committee code",
-                    "type": "`$STRING`"
+                    "title": "Cioc",
+                    "type": "`$STRING`",
+                    "short": "International Olympic Committee code"
                 },
                 {
                     "name": "coatOfArms",
+                    "title": "Coat Of Arms",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "continents",
-                    "short": "Continents",
-                    "type": "`$ARRAY`"
+                    "title": "Continents",
+                    "type": "`$ARRAY`",
+                    "short": "Continents"
                 },
                 {
                     "name": "currencies",
+                    "title": "Currencies",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "demonyms",
+                    "title": "Demonyms",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "fifa",
-                    "short": "FIFA country code",
-                    "type": "`$STRING`"
+                    "title": "Fifa",
+                    "type": "`$STRING`",
+                    "short": "FIFA country code"
                 },
                 {
                     "name": "flag",
-                    "short": "Flag emoji",
-                    "type": "`$STRING`"
+                    "title": "Flag",
+                    "type": "`$STRING`",
+                    "short": "Flag emoji"
                 },
                 {
                     "name": "flags",
+                    "title": "Flags",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "gini",
-                    "short": "Gini coefficient",
-                    "type": "`$OBJECT`"
+                    "title": "Gini",
+                    "type": "`$OBJECT`",
+                    "short": "Gini coefficient"
                 },
                 {
                     "name": "idd",
-                    "short": "International direct dialing",
-                    "type": "`$OBJECT`"
+                    "title": "Idd",
+                    "type": "`$OBJECT`",
+                    "short": "International direct dialing"
                 },
                 {
                     "name": "independent",
-                    "short": "Independence status",
-                    "type": "`$BOOLEAN`"
+                    "title": "Independent",
+                    "type": "`$BOOLEAN`",
+                    "short": "Independence status"
                 },
                 {
                     "name": "landlocked",
-                    "short": "Landlocked status",
-                    "type": "`$BOOLEAN`"
+                    "title": "Landlocked",
+                    "type": "`$BOOLEAN`",
+                    "short": "Landlocked status"
                 },
                 {
                     "name": "languages",
-                    "short": "Languages spoken",
-                    "type": "`$OBJECT`"
+                    "title": "Languages",
+                    "type": "`$OBJECT`",
+                    "short": "Languages spoken"
                 },
                 {
                     "name": "latlng",
-                    "short": "Latitude and longitude",
-                    "type": "`$ARRAY`"
+                    "title": "Latlng",
+                    "type": "`$ARRAY`",
+                    "short": "Latitude and longitude"
                 },
                 {
                     "name": "maps",
+                    "title": "Maps",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "name",
+                    "title": "Name",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "population",
-                    "short": "Country population",
-                    "type": "`$INTEGER`"
+                    "title": "Population",
+                    "type": "`$INTEGER`",
+                    "short": "Country population"
                 },
                 {
                     "name": "postalCode",
+                    "title": "Postal Code",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "region",
-                    "short": "Geographic region",
-                    "type": "`$STRING`"
+                    "title": "Region",
+                    "type": "`$STRING`",
+                    "short": "Geographic region"
                 },
                 {
                     "name": "startOfWeek",
-                    "short": "Start of week day",
-                    "type": "`$STRING`"
+                    "title": "Start Of Week",
+                    "type": "`$STRING`",
+                    "short": "Start of week day"
                 },
                 {
                     "name": "status",
-                    "short": "ISO 3166-1 assignment status",
-                    "type": "`$STRING`"
+                    "title": "Status",
+                    "type": "`$STRING`",
+                    "short": "ISO 3166-1 assignment status"
                 },
                 {
                     "name": "subregion",
-                    "short": "Geographic subregion",
-                    "type": "`$STRING`"
+                    "title": "Subregion",
+                    "type": "`$STRING`",
+                    "short": "Geographic subregion"
                 },
                 {
                     "name": "timezones",
-                    "short": "Timezones",
-                    "type": "`$ARRAY`"
+                    "title": "Timezones",
+                    "type": "`$ARRAY`",
+                    "short": "Timezones"
                 },
                 {
                     "name": "tld",
-                    "short": "Top-level domains",
-                    "type": "`$ARRAY`"
+                    "title": "Tld",
+                    "type": "`$ARRAY`",
+                    "short": "Top-level domains"
                 },
                 {
                     "name": "translations",
+                    "title": "Translations",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "unMember",
-                    "short": "UN membership status",
-                    "type": "`$BOOLEAN`"
+                    "title": "Un Member",
+                    "type": "`$BOOLEAN`",
+                    "short": "UN membership status"
                 }
             ],
             "name": "all",
@@ -288,17 +316,6 @@ class Config {
                     "name": "list",
                     "points": [
                         {
-                            "args": {
-                                "query": [
-                                    {
-                                        "example": "name,capital,population",
-                                        "kind": "query",
-                                        "name": "field",
-                                        "orig": "field",
-                                        "type": "`$STRING`"
-                                    }
-                                ]
-                            },
                             "kind": "http",
                             "method": "GET",
                             "orig": "/all",
@@ -307,18 +324,30 @@ class Config {
                                     "lit": "all"
                                 }
                             ],
-                            "select": {
-                                "exist": [
-                                    "field"
-                                ]
-                            },
+                            "parts": [
+                                "all"
+                            ],
+                            "rename": {},
                             "transform": {
                                 "req": "`reqdata`",
                                 "res": "`body`"
                             },
-                            "parts": [
-                                "all"
-                            ]
+                            "args": {
+                                "query": [
+                                    {
+                                        "name": "field",
+                                        "orig": "field",
+                                        "type": "`$STRING`",
+                                        "kind": "query",
+                                        "example": "name,capital,population"
+                                    }
+                                ]
+                            },
+                            "select": {
+                                "exist": [
+                                    "field"
+                                ]
+                            }
                         }
                     ]
                 }
@@ -331,172 +360,208 @@ class Config {
             "fields": [
                 {
                     "name": "altSpellings",
-                    "short": "Alternative country name spellings",
-                    "type": "`$ARRAY`"
+                    "title": "Alt Spellings",
+                    "type": "`$ARRAY`",
+                    "short": "Alternative country name spellings"
                 },
                 {
                     "name": "area",
-                    "short": "Country area in square kilometers",
-                    "type": "`$NUMBER`"
+                    "title": "Area",
+                    "type": "`$NUMBER`",
+                    "short": "Country area in square kilometers"
                 },
                 {
                     "name": "borders",
-                    "short": "Border countries (ISO 3166-1 alpha-3 codes)",
-                    "type": "`$ARRAY`"
+                    "title": "Borders",
+                    "type": "`$ARRAY`",
+                    "short": "Border countries (ISO 3166-1 alpha-3 codes)"
                 },
                 {
                     "name": "capital",
-                    "short": "Capital city or cities",
-                    "type": "`$ARRAY`"
+                    "title": "Capital",
+                    "type": "`$ARRAY`",
+                    "short": "Capital city or cities"
                 },
                 {
                     "name": "capitalInfo",
+                    "title": "Capital Info",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "car",
+                    "title": "Car",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "cca2",
-                    "short": "ISO 3166-1 alpha-2 code",
-                    "type": "`$STRING`"
+                    "title": "Cca2",
+                    "type": "`$STRING`",
+                    "short": "ISO 3166-1 alpha-2 code"
                 },
                 {
                     "name": "cca3",
-                    "short": "ISO 3166-1 alpha-3 code",
-                    "type": "`$STRING`"
+                    "title": "Cca3",
+                    "type": "`$STRING`",
+                    "short": "ISO 3166-1 alpha-3 code"
                 },
                 {
                     "name": "ccn3",
-                    "short": "ISO 3166-1 numeric code",
-                    "type": "`$STRING`"
+                    "title": "Ccn3",
+                    "type": "`$STRING`",
+                    "short": "ISO 3166-1 numeric code"
                 },
                 {
                     "name": "cioc",
-                    "short": "International Olympic Committee code",
-                    "type": "`$STRING`"
+                    "title": "Cioc",
+                    "type": "`$STRING`",
+                    "short": "International Olympic Committee code"
                 },
                 {
                     "name": "coatOfArms",
+                    "title": "Coat Of Arms",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "continents",
-                    "short": "Continents",
-                    "type": "`$ARRAY`"
+                    "title": "Continents",
+                    "type": "`$ARRAY`",
+                    "short": "Continents"
                 },
                 {
                     "name": "currencies",
+                    "title": "Currencies",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "demonyms",
+                    "title": "Demonyms",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "fifa",
-                    "short": "FIFA country code",
-                    "type": "`$STRING`"
+                    "title": "Fifa",
+                    "type": "`$STRING`",
+                    "short": "FIFA country code"
                 },
                 {
                     "name": "flag",
-                    "short": "Flag emoji",
-                    "type": "`$STRING`"
+                    "title": "Flag",
+                    "type": "`$STRING`",
+                    "short": "Flag emoji"
                 },
                 {
                     "name": "flags",
+                    "title": "Flags",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "gini",
-                    "short": "Gini coefficient",
-                    "type": "`$OBJECT`"
+                    "title": "Gini",
+                    "type": "`$OBJECT`",
+                    "short": "Gini coefficient"
                 },
                 {
                     "name": "id",
+                    "title": "Id",
                     "type": "`$STRING`"
                 },
                 {
                     "name": "idd",
-                    "short": "International direct dialing",
-                    "type": "`$OBJECT`"
+                    "title": "Idd",
+                    "type": "`$OBJECT`",
+                    "short": "International direct dialing"
                 },
                 {
                     "name": "independent",
-                    "short": "Independence status",
-                    "type": "`$BOOLEAN`"
+                    "title": "Independent",
+                    "type": "`$BOOLEAN`",
+                    "short": "Independence status"
                 },
                 {
                     "name": "landlocked",
-                    "short": "Landlocked status",
-                    "type": "`$BOOLEAN`"
+                    "title": "Landlocked",
+                    "type": "`$BOOLEAN`",
+                    "short": "Landlocked status"
                 },
                 {
                     "name": "languages",
-                    "short": "Languages spoken",
-                    "type": "`$OBJECT`"
+                    "title": "Languages",
+                    "type": "`$OBJECT`",
+                    "short": "Languages spoken"
                 },
                 {
                     "name": "latlng",
-                    "short": "Latitude and longitude",
-                    "type": "`$ARRAY`"
+                    "title": "Latlng",
+                    "type": "`$ARRAY`",
+                    "short": "Latitude and longitude"
                 },
                 {
                     "name": "maps",
+                    "title": "Maps",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "name",
+                    "title": "Name",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "population",
-                    "short": "Country population",
-                    "type": "`$INTEGER`"
+                    "title": "Population",
+                    "type": "`$INTEGER`",
+                    "short": "Country population"
                 },
                 {
                     "name": "postalCode",
+                    "title": "Postal Code",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "region",
-                    "short": "Geographic region",
-                    "type": "`$STRING`"
+                    "title": "Region",
+                    "type": "`$STRING`",
+                    "short": "Geographic region"
                 },
                 {
                     "name": "startOfWeek",
-                    "short": "Start of week day",
-                    "type": "`$STRING`"
+                    "title": "Start Of Week",
+                    "type": "`$STRING`",
+                    "short": "Start of week day"
                 },
                 {
                     "name": "status",
-                    "short": "ISO 3166-1 assignment status",
-                    "type": "`$STRING`"
+                    "title": "Status",
+                    "type": "`$STRING`",
+                    "short": "ISO 3166-1 assignment status"
                 },
                 {
                     "name": "subregion",
-                    "short": "Geographic subregion",
-                    "type": "`$STRING`"
+                    "title": "Subregion",
+                    "type": "`$STRING`",
+                    "short": "Geographic subregion"
                 },
                 {
                     "name": "timezones",
-                    "short": "Timezones",
-                    "type": "`$ARRAY`"
+                    "title": "Timezones",
+                    "type": "`$ARRAY`",
+                    "short": "Timezones"
                 },
                 {
                     "name": "tld",
-                    "short": "Top-level domains",
-                    "type": "`$ARRAY`"
+                    "title": "Tld",
+                    "type": "`$ARRAY`",
+                    "short": "Top-level domains"
                 },
                 {
                     "name": "translations",
+                    "title": "Translations",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "unMember",
-                    "short": "UN membership status",
-                    "type": "`$BOOLEAN`"
+                    "title": "Un Member",
+                    "type": "`$BOOLEAN`",
+                    "short": "UN membership status"
                 }
             ],
             "id": {
@@ -510,34 +575,9 @@ class Config {
                     "name": "load",
                     "points": [
                         {
-                            "args": {
-                                "params": [
-                                    {
-                                        "example": "de",
-                                        "kind": "param",
-                                        "name": "id",
-                                        "orig": "code",
-                                        "reqd": true,
-                                        "type": "`$STRING`"
-                                    }
-                                ],
-                                "query": [
-                                    {
-                                        "kind": "query",
-                                        "name": "field",
-                                        "orig": "field",
-                                        "type": "`$STRING`"
-                                    }
-                                ]
-                            },
                             "kind": "http",
                             "method": "GET",
                             "orig": "/alpha/{code}",
-                            "rename": {
-                                "param": {
-                                    "code": "id"
-                                }
-                            },
                             "segments": [
                                 {
                                     "lit": "alpha"
@@ -546,20 +586,45 @@ class Config {
                                     "var": "id"
                                 }
                             ],
-                            "select": {
-                                "exist": [
-                                    "field",
-                                    "id"
-                                ]
+                            "parts": [
+                                "alpha",
+                                "{id}"
+                            ],
+                            "rename": {
+                                "param": {
+                                    "code": "id"
+                                }
                             },
                             "transform": {
                                 "req": "`reqdata`",
                                 "res": "`body`"
                             },
-                            "parts": [
-                                "alpha",
-                                "{id}"
-                            ]
+                            "args": {
+                                "params": [
+                                    {
+                                        "name": "id",
+                                        "orig": "code",
+                                        "type": "`$STRING`",
+                                        "kind": "param",
+                                        "reqd": true,
+                                        "example": "de"
+                                    }
+                                ],
+                                "query": [
+                                    {
+                                        "name": "field",
+                                        "orig": "field",
+                                        "type": "`$STRING`",
+                                        "kind": "query"
+                                    }
+                                ]
+                            },
+                            "select": {
+                                "exist": [
+                                    "field",
+                                    "id"
+                                ]
+                            }
                         }
                     ]
                 }
@@ -572,172 +637,208 @@ class Config {
             "fields": [
                 {
                     "name": "altSpellings",
-                    "short": "Alternative country name spellings",
-                    "type": "`$ARRAY`"
+                    "title": "Alt Spellings",
+                    "type": "`$ARRAY`",
+                    "short": "Alternative country name spellings"
                 },
                 {
                     "name": "area",
-                    "short": "Country area in square kilometers",
-                    "type": "`$NUMBER`"
+                    "title": "Area",
+                    "type": "`$NUMBER`",
+                    "short": "Country area in square kilometers"
                 },
                 {
                     "name": "borders",
-                    "short": "Border countries (ISO 3166-1 alpha-3 codes)",
-                    "type": "`$ARRAY`"
+                    "title": "Borders",
+                    "type": "`$ARRAY`",
+                    "short": "Border countries (ISO 3166-1 alpha-3 codes)"
                 },
                 {
                     "name": "capital",
-                    "short": "Capital city or cities",
-                    "type": "`$ARRAY`"
+                    "title": "Capital",
+                    "type": "`$ARRAY`",
+                    "short": "Capital city or cities"
                 },
                 {
                     "name": "capitalInfo",
+                    "title": "Capital Info",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "car",
+                    "title": "Car",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "cca2",
-                    "short": "ISO 3166-1 alpha-2 code",
-                    "type": "`$STRING`"
+                    "title": "Cca2",
+                    "type": "`$STRING`",
+                    "short": "ISO 3166-1 alpha-2 code"
                 },
                 {
                     "name": "cca3",
-                    "short": "ISO 3166-1 alpha-3 code",
-                    "type": "`$STRING`"
+                    "title": "Cca3",
+                    "type": "`$STRING`",
+                    "short": "ISO 3166-1 alpha-3 code"
                 },
                 {
                     "name": "ccn3",
-                    "short": "ISO 3166-1 numeric code",
-                    "type": "`$STRING`"
+                    "title": "Ccn3",
+                    "type": "`$STRING`",
+                    "short": "ISO 3166-1 numeric code"
                 },
                 {
                     "name": "cioc",
-                    "short": "International Olympic Committee code",
-                    "type": "`$STRING`"
+                    "title": "Cioc",
+                    "type": "`$STRING`",
+                    "short": "International Olympic Committee code"
                 },
                 {
                     "name": "coatOfArms",
+                    "title": "Coat Of Arms",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "continents",
-                    "short": "Continents",
-                    "type": "`$ARRAY`"
+                    "title": "Continents",
+                    "type": "`$ARRAY`",
+                    "short": "Continents"
                 },
                 {
                     "name": "currencies",
+                    "title": "Currencies",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "demonyms",
+                    "title": "Demonyms",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "fifa",
-                    "short": "FIFA country code",
-                    "type": "`$STRING`"
+                    "title": "Fifa",
+                    "type": "`$STRING`",
+                    "short": "FIFA country code"
                 },
                 {
                     "name": "flag",
-                    "short": "Flag emoji",
-                    "type": "`$STRING`"
+                    "title": "Flag",
+                    "type": "`$STRING`",
+                    "short": "Flag emoji"
                 },
                 {
                     "name": "flags",
+                    "title": "Flags",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "gini",
-                    "short": "Gini coefficient",
-                    "type": "`$OBJECT`"
+                    "title": "Gini",
+                    "type": "`$OBJECT`",
+                    "short": "Gini coefficient"
                 },
                 {
                     "name": "id",
+                    "title": "Id",
                     "type": "`$STRING`"
                 },
                 {
                     "name": "idd",
-                    "short": "International direct dialing",
-                    "type": "`$OBJECT`"
+                    "title": "Idd",
+                    "type": "`$OBJECT`",
+                    "short": "International direct dialing"
                 },
                 {
                     "name": "independent",
-                    "short": "Independence status",
-                    "type": "`$BOOLEAN`"
+                    "title": "Independent",
+                    "type": "`$BOOLEAN`",
+                    "short": "Independence status"
                 },
                 {
                     "name": "landlocked",
-                    "short": "Landlocked status",
-                    "type": "`$BOOLEAN`"
+                    "title": "Landlocked",
+                    "type": "`$BOOLEAN`",
+                    "short": "Landlocked status"
                 },
                 {
                     "name": "languages",
-                    "short": "Languages spoken",
-                    "type": "`$OBJECT`"
+                    "title": "Languages",
+                    "type": "`$OBJECT`",
+                    "short": "Languages spoken"
                 },
                 {
                     "name": "latlng",
-                    "short": "Latitude and longitude",
-                    "type": "`$ARRAY`"
+                    "title": "Latlng",
+                    "type": "`$ARRAY`",
+                    "short": "Latitude and longitude"
                 },
                 {
                     "name": "maps",
+                    "title": "Maps",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "name",
+                    "title": "Name",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "population",
-                    "short": "Country population",
-                    "type": "`$INTEGER`"
+                    "title": "Population",
+                    "type": "`$INTEGER`",
+                    "short": "Country population"
                 },
                 {
                     "name": "postalCode",
+                    "title": "Postal Code",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "region",
-                    "short": "Geographic region",
-                    "type": "`$STRING`"
+                    "title": "Region",
+                    "type": "`$STRING`",
+                    "short": "Geographic region"
                 },
                 {
                     "name": "startOfWeek",
-                    "short": "Start of week day",
-                    "type": "`$STRING`"
+                    "title": "Start Of Week",
+                    "type": "`$STRING`",
+                    "short": "Start of week day"
                 },
                 {
                     "name": "status",
-                    "short": "ISO 3166-1 assignment status",
-                    "type": "`$STRING`"
+                    "title": "Status",
+                    "type": "`$STRING`",
+                    "short": "ISO 3166-1 assignment status"
                 },
                 {
                     "name": "subregion",
-                    "short": "Geographic subregion",
-                    "type": "`$STRING`"
+                    "title": "Subregion",
+                    "type": "`$STRING`",
+                    "short": "Geographic subregion"
                 },
                 {
                     "name": "timezones",
-                    "short": "Timezones",
-                    "type": "`$ARRAY`"
+                    "title": "Timezones",
+                    "type": "`$ARRAY`",
+                    "short": "Timezones"
                 },
                 {
                     "name": "tld",
-                    "short": "Top-level domains",
-                    "type": "`$ARRAY`"
+                    "title": "Tld",
+                    "type": "`$ARRAY`",
+                    "short": "Top-level domains"
                 },
                 {
                     "name": "translations",
+                    "title": "Translations",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "unMember",
-                    "short": "UN membership status",
-                    "type": "`$BOOLEAN`"
+                    "title": "Un Member",
+                    "type": "`$BOOLEAN`",
+                    "short": "UN membership status"
                 }
             ],
             "id": {
@@ -751,34 +852,9 @@ class Config {
                     "name": "load",
                     "points": [
                         {
-                            "args": {
-                                "params": [
-                                    {
-                                        "example": "berlin",
-                                        "kind": "param",
-                                        "name": "id",
-                                        "orig": "capital",
-                                        "reqd": true,
-                                        "type": "`$STRING`"
-                                    }
-                                ],
-                                "query": [
-                                    {
-                                        "kind": "query",
-                                        "name": "field",
-                                        "orig": "field",
-                                        "type": "`$STRING`"
-                                    }
-                                ]
-                            },
                             "kind": "http",
                             "method": "GET",
                             "orig": "/capital/{capital}",
-                            "rename": {
-                                "param": {
-                                    "capital": "id"
-                                }
-                            },
                             "segments": [
                                 {
                                     "lit": "capital"
@@ -787,20 +863,45 @@ class Config {
                                     "var": "id"
                                 }
                             ],
-                            "select": {
-                                "exist": [
-                                    "field",
-                                    "id"
-                                ]
+                            "parts": [
+                                "capital",
+                                "{id}"
+                            ],
+                            "rename": {
+                                "param": {
+                                    "capital": "id"
+                                }
                             },
                             "transform": {
                                 "req": "`reqdata`",
                                 "res": "`body`"
                             },
-                            "parts": [
-                                "capital",
-                                "{id}"
-                            ]
+                            "args": {
+                                "params": [
+                                    {
+                                        "name": "id",
+                                        "orig": "capital",
+                                        "type": "`$STRING`",
+                                        "kind": "param",
+                                        "reqd": true,
+                                        "example": "berlin"
+                                    }
+                                ],
+                                "query": [
+                                    {
+                                        "name": "field",
+                                        "orig": "field",
+                                        "type": "`$STRING`",
+                                        "kind": "query"
+                                    }
+                                ]
+                            },
+                            "select": {
+                                "exist": [
+                                    "field",
+                                    "id"
+                                ]
+                            }
                         }
                     ]
                 }
@@ -813,172 +914,208 @@ class Config {
             "fields": [
                 {
                     "name": "altSpellings",
-                    "short": "Alternative country name spellings",
-                    "type": "`$ARRAY`"
+                    "title": "Alt Spellings",
+                    "type": "`$ARRAY`",
+                    "short": "Alternative country name spellings"
                 },
                 {
                     "name": "area",
-                    "short": "Country area in square kilometers",
-                    "type": "`$NUMBER`"
+                    "title": "Area",
+                    "type": "`$NUMBER`",
+                    "short": "Country area in square kilometers"
                 },
                 {
                     "name": "borders",
-                    "short": "Border countries (ISO 3166-1 alpha-3 codes)",
-                    "type": "`$ARRAY`"
+                    "title": "Borders",
+                    "type": "`$ARRAY`",
+                    "short": "Border countries (ISO 3166-1 alpha-3 codes)"
                 },
                 {
                     "name": "capital",
-                    "short": "Capital city or cities",
-                    "type": "`$ARRAY`"
+                    "title": "Capital",
+                    "type": "`$ARRAY`",
+                    "short": "Capital city or cities"
                 },
                 {
                     "name": "capitalInfo",
+                    "title": "Capital Info",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "car",
+                    "title": "Car",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "cca2",
-                    "short": "ISO 3166-1 alpha-2 code",
-                    "type": "`$STRING`"
+                    "title": "Cca2",
+                    "type": "`$STRING`",
+                    "short": "ISO 3166-1 alpha-2 code"
                 },
                 {
                     "name": "cca3",
-                    "short": "ISO 3166-1 alpha-3 code",
-                    "type": "`$STRING`"
+                    "title": "Cca3",
+                    "type": "`$STRING`",
+                    "short": "ISO 3166-1 alpha-3 code"
                 },
                 {
                     "name": "ccn3",
-                    "short": "ISO 3166-1 numeric code",
-                    "type": "`$STRING`"
+                    "title": "Ccn3",
+                    "type": "`$STRING`",
+                    "short": "ISO 3166-1 numeric code"
                 },
                 {
                     "name": "cioc",
-                    "short": "International Olympic Committee code",
-                    "type": "`$STRING`"
+                    "title": "Cioc",
+                    "type": "`$STRING`",
+                    "short": "International Olympic Committee code"
                 },
                 {
                     "name": "coatOfArms",
+                    "title": "Coat Of Arms",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "continents",
-                    "short": "Continents",
-                    "type": "`$ARRAY`"
+                    "title": "Continents",
+                    "type": "`$ARRAY`",
+                    "short": "Continents"
                 },
                 {
                     "name": "currencies",
+                    "title": "Currencies",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "demonyms",
+                    "title": "Demonyms",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "fifa",
-                    "short": "FIFA country code",
-                    "type": "`$STRING`"
+                    "title": "Fifa",
+                    "type": "`$STRING`",
+                    "short": "FIFA country code"
                 },
                 {
                     "name": "flag",
-                    "short": "Flag emoji",
-                    "type": "`$STRING`"
+                    "title": "Flag",
+                    "type": "`$STRING`",
+                    "short": "Flag emoji"
                 },
                 {
                     "name": "flags",
+                    "title": "Flags",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "gini",
-                    "short": "Gini coefficient",
-                    "type": "`$OBJECT`"
+                    "title": "Gini",
+                    "type": "`$OBJECT`",
+                    "short": "Gini coefficient"
                 },
                 {
                     "name": "id",
+                    "title": "Id",
                     "type": "`$STRING`"
                 },
                 {
                     "name": "idd",
-                    "short": "International direct dialing",
-                    "type": "`$OBJECT`"
+                    "title": "Idd",
+                    "type": "`$OBJECT`",
+                    "short": "International direct dialing"
                 },
                 {
                     "name": "independent",
-                    "short": "Independence status",
-                    "type": "`$BOOLEAN`"
+                    "title": "Independent",
+                    "type": "`$BOOLEAN`",
+                    "short": "Independence status"
                 },
                 {
                     "name": "landlocked",
-                    "short": "Landlocked status",
-                    "type": "`$BOOLEAN`"
+                    "title": "Landlocked",
+                    "type": "`$BOOLEAN`",
+                    "short": "Landlocked status"
                 },
                 {
                     "name": "languages",
-                    "short": "Languages spoken",
-                    "type": "`$OBJECT`"
+                    "title": "Languages",
+                    "type": "`$OBJECT`",
+                    "short": "Languages spoken"
                 },
                 {
                     "name": "latlng",
-                    "short": "Latitude and longitude",
-                    "type": "`$ARRAY`"
+                    "title": "Latlng",
+                    "type": "`$ARRAY`",
+                    "short": "Latitude and longitude"
                 },
                 {
                     "name": "maps",
+                    "title": "Maps",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "name",
+                    "title": "Name",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "population",
-                    "short": "Country population",
-                    "type": "`$INTEGER`"
+                    "title": "Population",
+                    "type": "`$INTEGER`",
+                    "short": "Country population"
                 },
                 {
                     "name": "postalCode",
+                    "title": "Postal Code",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "region",
-                    "short": "Geographic region",
-                    "type": "`$STRING`"
+                    "title": "Region",
+                    "type": "`$STRING`",
+                    "short": "Geographic region"
                 },
                 {
                     "name": "startOfWeek",
-                    "short": "Start of week day",
-                    "type": "`$STRING`"
+                    "title": "Start Of Week",
+                    "type": "`$STRING`",
+                    "short": "Start of week day"
                 },
                 {
                     "name": "status",
-                    "short": "ISO 3166-1 assignment status",
-                    "type": "`$STRING`"
+                    "title": "Status",
+                    "type": "`$STRING`",
+                    "short": "ISO 3166-1 assignment status"
                 },
                 {
                     "name": "subregion",
-                    "short": "Geographic subregion",
-                    "type": "`$STRING`"
+                    "title": "Subregion",
+                    "type": "`$STRING`",
+                    "short": "Geographic subregion"
                 },
                 {
                     "name": "timezones",
-                    "short": "Timezones",
-                    "type": "`$ARRAY`"
+                    "title": "Timezones",
+                    "type": "`$ARRAY`",
+                    "short": "Timezones"
                 },
                 {
                     "name": "tld",
-                    "short": "Top-level domains",
-                    "type": "`$ARRAY`"
+                    "title": "Tld",
+                    "type": "`$ARRAY`",
+                    "short": "Top-level domains"
                 },
                 {
                     "name": "translations",
+                    "title": "Translations",
                     "type": "`$OBJECT`"
                 },
                 {
                     "name": "unMember",
-                    "short": "UN membership status",
-                    "type": "`$BOOLEAN`"
+                    "title": "Un Member",
+                    "type": "`$BOOLEAN`",
+                    "short": "UN membership status"
                 }
             ],
             "id": {
@@ -992,41 +1129,9 @@ class Config {
                     "name": "load",
                     "points": [
                         {
-                            "args": {
-                                "params": [
-                                    {
-                                        "example": "germany",
-                                        "kind": "param",
-                                        "name": "id",
-                                        "orig": "name",
-                                        "reqd": true,
-                                        "type": "`$STRING`"
-                                    }
-                                ],
-                                "query": [
-                                    {
-                                        "kind": "query",
-                                        "name": "field",
-                                        "orig": "field",
-                                        "type": "`$STRING`"
-                                    },
-                                    {
-                                        "example": false,
-                                        "kind": "query",
-                                        "name": "full_text",
-                                        "orig": "full_text",
-                                        "type": "`$BOOLEAN`"
-                                    }
-                                ]
-                            },
                             "kind": "http",
                             "method": "GET",
                             "orig": "/name/{name}",
-                            "rename": {
-                                "param": {
-                                    "name": "id"
-                                }
-                            },
                             "segments": [
                                 {
                                     "lit": "name"
@@ -1035,21 +1140,53 @@ class Config {
                                     "var": "id"
                                 }
                             ],
+                            "parts": [
+                                "name",
+                                "{id}"
+                            ],
+                            "rename": {
+                                "param": {
+                                    "name": "id"
+                                }
+                            },
+                            "transform": {
+                                "req": "`reqdata`",
+                                "res": "`body`"
+                            },
+                            "args": {
+                                "params": [
+                                    {
+                                        "name": "id",
+                                        "orig": "name",
+                                        "type": "`$STRING`",
+                                        "kind": "param",
+                                        "reqd": true,
+                                        "example": "germany"
+                                    }
+                                ],
+                                "query": [
+                                    {
+                                        "name": "field",
+                                        "orig": "field",
+                                        "type": "`$STRING`",
+                                        "kind": "query"
+                                    },
+                                    {
+                                        "name": "full_text",
+                                        "orig": "full_text",
+                                        "type": "`$BOOLEAN`",
+                                        "kind": "query",
+                                        "example": false
+                                    }
+                                ]
+                            },
                             "select": {
                                 "exist": [
                                     "field",
                                     "full_text",
                                     "id"
                                 ]
-                            },
-                            "transform": {
-                                "req": "`reqdata`",
-                                "res": "`body`"
-                            },
-                            "parts": [
-                                "name",
-                                "{id}"
-                            ]
+                            }
                         }
                     ]
                 }
